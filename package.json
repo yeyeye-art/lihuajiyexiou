@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc --noEmit",
-    "build": "node scripts/normalize-patterns.mjs && node scripts/seed-database.mjs && node scripts/build.mjs",
+    "build": "node scripts/normalize-patterns.mjs && node scripts/seed-database.mjs && node scripts/build.mjs && node scripts/verify-pages.mjs",
     "export:assets": "node scripts/package-assets-repo.mjs",
     "db:normalize": "node scripts/normalize-patterns.mjs && node scripts/seed-database.mjs",
     "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs scripts/met-clouds.test.cjs scripts/suxiu.test.cjs scripts/stitch.test.cjs scripts/stitch-course.test.cjs scripts/digital-tools.test.cjs scripts/learning-paths.test.cjs scripts/santao-cinematic.test.cjs scripts/ar-santao.test.cjs"

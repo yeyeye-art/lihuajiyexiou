@@ -27,8 +27,8 @@ gh auth login
 
 ```bash
 # 克隆仓库
-gh repo clone javanokia/lihuaji
-cd lihuaji
+gh repo clone yeyeye-art/lihuajiyexiou
+cd lihuajiyexiou
 
 # 安装依赖
 npm install
@@ -77,7 +77,7 @@ npm run build
 
 > ### ⚠️ 静态架构开发铁律
 > 1. **零后端依赖**：本项目托管于免费 GitHub Pages，**严禁引入任何真实后端接口 (`/api/*`)、本地服务依赖 (`localhost:3000`) 或反代穿透隧道 (`trycloudflare.com`)**。
-> 2. **全量相对路径**：必须支持 `/lihuaji/` 级联二级目录部署，所有图片、音频与资源引用必须通过相对路径或 Vite `base: './'` 解析。
+> 2. **全量相对路径**：必须支持 `/lihuajiyexiou/` 级联二级目录部署，所有图片、音频与资源引用必须通过相对路径或 Vite `base: '/lihuajiyexiou/'` 解析。
 > 3. **数据一致性**：若涉及文化知识、纹样出处变动，必须具有真实的官方文献/馆藏来源（CC0/公有领域）。
 
 ---
@@ -121,7 +121,7 @@ PR 审核通过且 CI 全部打绿勾（Pass）后合并：
 gh pr merge --squash --delete-branch
 ```
 
-**自动上线**：分支合并到 `main` 后，GitHub Actions 部署工作流会自动触发，几十秒内即可在 [生产站点](https://javanokia.github.io/lihuaji/) 查看最新上线效果。
+**自动上线**：分支合并到 `main` 后，GitHub Actions 部署工作流会自动触发，部署成功后可在 [生产站点](https://yeyeye-art.github.io/lihuajiyexiou/) 查看最新上线效果。
 
 ---
 
