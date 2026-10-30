@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      scope: '/lihuajiyexiou/',
       registerType: 'autoUpdate',
       includeAssets: ['assets/icon.png', 'assets/fonts/lihua-serif.woff2'],
       manifest: {
@@ -15,7 +16,10 @@ export default defineConfig({
         theme_color: '#F8F6EF',
         background_color: '#F8F6EF',
         display: 'standalone',
+        lang: 'zh-CN',
+        id: './',
         start_url: './',
+        scope: './',
         icons: [
           {
             src: 'assets/icon.png',
@@ -30,14 +34,18 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        cacheId: 'lihuajiyexiou-v1',
+        cleanupOutdatedCaches: true,
+        // Embedded AR and face HTML must not receive the React shell.
+        navigateFallbackAllowlist: [/^\/lihuajiyexiou\/(?:index\.html)?(?:\?.*)?$/],
+        globPatterns: ['**/*.{js,css,html,json,ico,png,svg,webp,woff2}'],
         globIgnores: ['**/vendor-three*.js', '**/assets/vendor/three/**'],
         runtimeCaching: [
           {
             urlPattern: /.*\/vendor-three.*\.js/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'vendor-three-cache',
+              cacheName: 'lihuajiyexiou-v1-three',
               expiration: {
                 maxEntries: 5,
                 maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
@@ -48,7 +56,7 @@ export default defineConfig({
             urlPattern: /.*\/content\/.*\.json/,
             handler: 'StaleWhileRevalidate',
             options: {
-              cacheName: 'content-json-cache',
+              cacheName: 'lihuajiyexiou-v1-content',
               expiration: {
                 maxEntries: 30,
                 maxAgeSeconds: 60 * 60 * 24 * 7, // 7 days
@@ -59,10 +67,24 @@ export default defineConfig({
             urlPattern: /.*\/assets\/.*\.(webp|png|jpg|svg|woff2)/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'assets-media-cache',
+              cacheName: 'lihuajiyexiou-v1-media',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              },
+            },
+          },
+          {
+            urlPattern: ({ url }) =>
+              url.origin === self.location.origin &&
+              /^\/lihuajiyexiou\/(?:assets\/|face\.(?:html|js)$)/.test(url.pathname),
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'lihuajiyexiou-v1-static',
+              networkTimeoutSeconds: 5,
+              expiration: {
+                maxEntries: 300,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
               },
             },
           },
@@ -70,17 +92,15 @@ export default defineConfig({
       },
     }),
   ],
-  base: './',
+  base: '/lihuajiyexiou/',
   server: {
     host: true,
-    port: 5180,
-    strictPort: true,
   },
   optimizeDeps: {
     exclude: ['assets/vendor/**'],
   },
   build: {
-    outDir: 'dist',
+    outDir: '_site',
     assetsDir: 'assets-app',
     emptyOutDir: true,
     rollupOptions: {
