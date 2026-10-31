@@ -13,7 +13,7 @@ const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })
 const Library = lazy(() => import('./pages/Library').then((m) => ({ default: m.Library })));
 const Gallery = lazy(() => import('./pages/Gallery').then((m) => ({ default: m.Gallery })));
 const ProductDetail = lazy(() => import('./pages/ProductDetail').then((m) => ({ default: m.ProductDetail })));
-const Create = lazy(() => import('./pages/Create').then((m) => ({ default: m.Create })));
+const EmbroideryStudio = lazy(() => import('./pages/EmbroideryStudio').then((m) => ({ default: m.EmbroideryStudio })));
 const Game = lazy(() => import('./pages/Game').then((m) => ({ default: m.Game })));
 const Face = lazy(() => import('./pages/Face').then((m) => ({ default: m.Face })));
 const Ar = lazy(() => import('./pages/Ar').then((m) => ({ default: m.Ar })));
@@ -24,7 +24,6 @@ const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About
 const Palette = lazy(() => import('./pages/Palette').then((m) => ({ default: m.Palette })));
 const Search = lazy(() => import('./pages/Search').then((m) => ({ default: m.Search })));
 const Exhibit = lazy(() => import('./pages/Exhibit').then((m) => ({ default: m.Exhibit })));
-const Story = lazy(() => import('./pages/Story').then((m) => ({ default: m.Story })));
 
 export const App: React.FC = () => {
   const { page, param } = useHashRoute();
@@ -54,7 +53,7 @@ export const App: React.FC = () => {
       case 'product':
         return <ProductDetail id={param} />;
       case 'create':
-        return <Create id={param} />;
+        return <EmbroideryStudio param={param} />;
       case 'game':
         return <Game />;
       case 'face':
@@ -75,8 +74,6 @@ export const App: React.FC = () => {
         return <Search query={param} />;
       case 'exhibit':
         return <Exhibit />;
-      case 'story':
-        return <Story />;
       default:
         return <About />;
     }

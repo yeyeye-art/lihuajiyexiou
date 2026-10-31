@@ -7,10 +7,9 @@ export interface RouteState {
 }
 
 export const pageNames: Record<string, string> = {
-  story: '故事译绣',
   home: '首页',
   library: '灵感 · 祥云纹样库',
-  create: '译绣 · 照片转稿',
+  create: '译绣',
   ar: '针法与 AR 教学',
   face: '文创试搭',
   gallery: '梨花绣馆',
@@ -71,7 +70,13 @@ export function parseHash(rawHash: string): RouteState {
   const hash = rawHash.replace(/^#/, '');
   const [firstPart, ...rest] = hash.split('/');
   let page = firstPart || 'home';
-  const param = rest.join('/');
+  let param = rest.join('/');
+
+  // Existing story bookmarks open the story tool inside the shared studio.
+  if (page === 'story') {
+    page = 'create';
+    param = 'text';
+  }
 
   if (page === 'mall') page = 'gallery';
   if (page === 'ai') page = 'create';

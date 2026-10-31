@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../context/AppContext';
-import { PageTitle } from '../components/PageTitle';
 import { downloadFile, resolveAsset } from '../utils/download';
 
 interface CreateProps {
   id?: string;
+  active?: boolean;
 }
 
-export const Create: React.FC<CreateProps> = ({ id = '' }) => {
+export const Create: React.FC<CreateProps> = ({ id = '', active = true }) => {
   const { patterns, ensurePatternsLoaded } = useApp();
   const [source, setSource] = useState(resolveAsset('assets/ivory/embroidery.webp'));
   const [sourceRecord, setSourceRecord] = useState<any>(null);
@@ -27,16 +27,19 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
   }, [ensurePatternsLoaded]);
 
   useEffect(() => {
-    let active = true;
+    if (!active) return;
+    let current = true;
     if (id === 'story') {
       import('../assets-proxy/story-session.js').then(({ getStorySession }) => {
-        if (!active) return;
+        if (!current) return;
         const session = getStorySession();
         setStorySession(session);
         if (session?.selected) {
           import('../assets-proxy/engine.js').then(({ dataURL }) => {
-            if (active) {
+            if (current) {
               setSource(dataURL(session.selected.svg));
+              setSourceRecord(null);
+              setResult(null);
               setTitle('故事数字工艺参考稿');
             }
           });
@@ -44,9 +47,11 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
       });
     } else if (id) {
       ensurePatternsLoaded().then((pList) => {
-        if (!active) return;
+        if (!current) return;
         const found = pList.find((x) => x.id === id);
         if (found) {
+          setStorySession(null);
+          setResult(null);
           setSourceRecord(found);
           setSource(resolveAsset(found.image));
           setTitle(found.title);
@@ -54,9 +59,9 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
       });
     }
     return () => {
-      active = false;
+      current = false;
     };
-  }, [id, ensurePatternsLoaded]);
+  }, [id, active, ensurePatternsLoaded]);
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -67,6 +72,7 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
       setSource(dataUri);
       setSourceRecord(null);
       setStorySession(null);
+      setResult(null);
       setStatusText('');
     } catch (err: any) {
       setStatusText(err.message || '图片读取失败');
@@ -149,8 +155,8 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
   if (id === 'story' && !storySession?.selected) {
     return (
       <>
-        <PageTitle title="先选一套故事纹样" />
-        <a className="btn primary" href="#story">
+        <h2>先选一套故事纹样</h2>
+        <a className="btn primary" href="#create/text">
           返回故事译绣
         </a>
       </>
@@ -159,10 +165,8 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
 
   return (
     <>
-      <PageTitle
-        title="译绣 · 把灵感绣出来"
-        sub="从一张照片出发，试着安排线色与针路。图像在本机处理，工艺评估仅供小样参考。"
-      />
+      <h2>{id === 'story' ? '把故事纹样转成绣稿' : '照片转化 · 把画面绣出来'}</h2>
+      <p className="sub">从一张图片出发，试着安排线色与针路。图像在本机处理，工艺评估仅供小样参考。</p>
 
       <ol className="step-strip">
         <li>
@@ -175,9 +179,6 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
           <b>03</b> 下载绣稿
         </li>
       </ol>
-      <p className="small">
-        <a href="#story">从一段故事生成纹样</a>
-      </p>
 
       <div className="split create-layout">
         <div className="card">
@@ -315,7 +316,7 @@ export const Create: React.FC<CreateProps> = ({ id = '' }) => {
               <button id="save-story-session" onClick={handleDownloadStorySession}>
                 下载完整创作过程
               </button>
-              <a className="btn" href="#story">
+              <a className="btn" href="#create/text">
                 返回调整纹样
               </a>
             </p>
