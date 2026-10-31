@@ -189,7 +189,7 @@ export const Ar: React.FC<ArProps> = ({ id = '' }) => {
     return (
       <>
         <PageTitle title="先选一套故事纹样" />
-        <a className="btn primary" href="#story">
+        <a className="btn primary" href="#create/text">
           返回故事译绣
         </a>
       </>
