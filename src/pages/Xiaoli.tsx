@@ -68,6 +68,7 @@ export const Xiaoli:React.FC=()=>{
 
   const stop=()=>{
     if(busy){model.current?.dispose();model.current=undefined;setModelState('off');setBusy(false);}
+    if(voiceBusy)setVoiceNotice('声音生成已停止，可以重新试听。');
     abort.current?.abort();audio.current?.pause();voiceEpoch.current++;voice.current?.dispose();voice.current=undefined;setVoiceBusy(false);avatar.current?.setState('idle');setNotice('已停止。你可以换个问题继续。');
   };
   const send=async(value:string)=>{

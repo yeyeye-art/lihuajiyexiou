@@ -65,8 +65,11 @@ export function acceptModelAnswer(text: string, original: Answer): Answer | null
   if((cleaned.match(/\d{2,}/g)||[]).some(n=>!sourceNumbers.has(n)))return null;
   // A citation marker is not proof. In particular, never turn documented uncertainty
   // about origins into a confident origin claim; reject unsupported superlatives too.
-  if(/起源.*(?:不明确|未确定|无法确定)/.test(original.answer)&&/起源|发源|始于/.test(cleaned)&&!/(?:不明确|未确定|无法确定|尚不清楚)/.test(cleaned))return null;
-  for(const claim of ['最早','首次','唯一','第一','发明于','创立于'])if(cleaned.includes(claim)&&!original.answer.includes(claim))return null;
+  if(/起源.*(?:不明确|未确定|无法确定)/.test(original.answer)) {
+    const originClaims=cleaned.split(/[。！？\n]/).filter(sentence=>/起源|发源|始于/.test(sentence));
+    if(originClaims.some(sentence=>!/(?:不明确|未确定|无法确定|尚不清楚)/.test(sentence)))return null;
+  }
+  for(const claim of ['最早','首次','唯一','第一','发明于','创立于','代表性传承人','创始人','大师称号'])if(cleaned.includes(claim)&&!original.answer.includes(claim))return null;
   return {...original,answer:cleaned,kind:'model'};
 }
 

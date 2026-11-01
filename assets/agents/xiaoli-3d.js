@@ -60,6 +60,7 @@ export function createXiaoli3D(container, options = {}) {
     renderer.setSize(cw, ch, false);
     camera.aspect = cw / ch;
     camera.updateProjectionMatrix();
+    if (reducedMotion) renderer.render(scene, camera);
   }
 
   resize();
@@ -113,6 +114,7 @@ export function createXiaoli3D(container, options = {}) {
       const mod = await import('../vendor/three/examples/jsm/loaders/GLTFLoader.js');
       GLTFLoader = mod.GLTFLoader;
     } catch (e) {
+      if (disposed) return;
       console.warn('[xiaoli-3d] GLTFLoader 动态导入失败，回退占位:', e.message);
       addFallbackModel();
       if (reducedMotion) renderer.render(scene, camera);
@@ -148,6 +150,7 @@ export function createXiaoli3D(container, options = {}) {
       },
       undefined,
       (error) => {
+        if (disposed) return;
         console.warn('[xiaoli-3d] GLB 加载失败，已回退到占位几何体:', error.message);
         addFallbackModel();
         if (reducedMotion) renderer.render(scene, camera);

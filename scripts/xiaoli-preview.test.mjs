@@ -27,7 +27,10 @@ test('Model output with invented citation or unsupported date falls back',()=>{
  assert.equal(acceptModelAnswer('没有引用的答案',a),null);
  assert.equal(acceptModelAnswer('https://evil.invalid〔1〕',a),null);
  assert.equal(acceptModelAnswer('苏绣起源于苏州。〔1〕',a),null);
+ assert.equal(acceptModelAnswer('苏绣起源于苏州。〔1〕\n'+a.answer,a),null);
  assert.equal(acceptModelAnswer('苏绣是唯一的刺绣。〔1〕',a),null);
+ const person=prepareAnswer('沈寿是谁？',[],archive,api,'brief');
+ assert.equal(acceptModelAnswer('沈寿是代表性传承人。〔1〕',person),null);
  assert.equal(acceptModelAnswer(a.answer,a)?.kind,'model');
 });
 test('Prompt history is bounded and original reference text remains a data block',()=>{
