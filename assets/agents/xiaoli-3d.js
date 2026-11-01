@@ -1,7 +1,7 @@
 import * as THREE from '../vendor/three/build/three.module.js';
 
 export function createXiaoli3D(container, options = {}) {
-  const { modelPath = new URL('../models/xiaoli.glb', import.meta.url).href, reducedMotion = false } = options;
+  const { modelPath = new URL('../models/xiaoli.glb', import.meta.url).href, reducedMotion = false, modelRotationY = 0, keepFacing = false } = options;
 
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -133,11 +133,13 @@ export function createXiaoli3D(container, options = {}) {
       modelPath,
       (gltf) => {
         const gltfScene = gltf.scene || gltf.scenes?.[0];
+        if (disposed) { if(gltfScene)releaseObjects(gltfScene); return; }
         if (!gltfScene) {
           console.warn('[xiaoli-3d] GLB 场景为空，回退占位');
           addFallbackModel();
         } else {
           applyShadowFlags(gltfScene);
+          gltfScene.rotation.y = modelRotationY;
           centerAndScale(gltfScene);
           modelGroup.add(gltfScene);
           container.dataset.modelLoaded = 'true';
@@ -165,14 +167,14 @@ export function createXiaoli3D(container, options = {}) {
     if (state === 'idle') {
       // 呼吸 + 自转
       modelGroup.position.y = Math.sin(time * 1.5) * 0.05;
-      modelGroup.rotation.y += 0.003;
+      modelGroup.rotation.y = keepFacing ? Math.sin(time * .7) * .025 : modelGroup.rotation.y + .003;
       ring.material.opacity = Math.max(0, ring.material.opacity - 0.04);
     } else if (state === 'speaking') {
       // 说话：整体轻微脉动缩放 + 光圈亮起来 + 快速自转
       const pulse = 1 + Math.sin(time * 8) * 0.04;
       modelGroup.scale.setScalar(pulse);
       modelGroup.position.y = Math.sin(time * 4) * 0.08;
-      modelGroup.rotation.y += 0.008;
+      modelGroup.rotation.y = keepFacing ? Math.sin(time * 1.4) * .04 : modelGroup.rotation.y + .008;
       ring.material.opacity = Math.min(0.55, ring.material.opacity + 0.05);
       ring.scale.setScalar(1 + Math.sin(time * 6) * 0.08);
       ring.rotation.z += 0.04;
@@ -215,19 +217,27 @@ export function createXiaoli3D(container, options = {}) {
     window.removeEventListener('resize', resize);
     if (resizeObserver) resizeObserver.disconnect();
 
-    scene.traverse((node) => {
+    releaseObjects(scene);
+    renderer.dispose();
+    if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+  }
+
+  function releaseObjects(object) {
+    object.traverse((node) => {
       if (node.isMesh) {
         if (node.geometry) node.geometry.dispose();
         if (Array.isArray(node.material)) {
-          node.material.forEach((m) => m.dispose());
+          node.material.forEach(disposeMaterial);
         } else if (node.material) {
-          node.material.dispose();
+          disposeMaterial(node.material);
         }
       }
     });
 
-    renderer.dispose();
-    if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+  }
+  function disposeMaterial(material) {
+    for(const value of Object.values(material))if(value?.isTexture)value.dispose();
+    material.dispose();
   }
 
   return { dispose, setState };

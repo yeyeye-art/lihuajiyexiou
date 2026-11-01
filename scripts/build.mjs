@@ -75,6 +75,10 @@ const isLightDeploy = process.env.DEPLOY_LIGHT === 'true' || /^https?:\/\//.test
 if (isLightDeploy) {
   console.log('Lightweight deployment mode: skipping bulk asset copying (served via external assets repository).');
 } else {
-  for(const f of ['content','assets'])fs.cpSync(f,path.join('_site',f),{recursive:true});
+  const voiceDirectory=path.resolve('assets/xiaoli-voice');
+  for(const f of ['content','assets'])fs.cpSync(f,path.join('_site',f),{
+    recursive:true,
+    filter:source=>process.env.VITE_XIAOLI_VOICE==='true'||path.resolve(source)!==voiceDirectory
+  });
 }
 console.log(`Validated ${patterns.length} patterns, ${products.length} showcase items; assembled static site.`);

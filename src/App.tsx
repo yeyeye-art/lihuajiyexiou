@@ -19,6 +19,7 @@ const Game = lazy(() => import('./pages/Game').then((m) => ({ default: m.Game })
 const Face = lazy(() => import('./pages/Face').then((m) => ({ default: m.Face })));
 const Ar = lazy(() => import('./pages/Ar').then((m) => ({ default: m.Ar })));
 const Guide = lazy(() => import('./pages/Guide').then((m) => ({ default: m.Guide })));
+const Xiaoli = lazy(() => import('./pages/Xiaoli').then((m) => ({ default: m.Xiaoli })));
 const Profile = lazy(() => import('./pages/Profile').then((m) => ({ default: m.Profile })));
 const Collaborate = lazy(() => import('./pages/Collaborate').then((m) => ({ default: m.Collaborate })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
@@ -67,6 +68,8 @@ export const App: React.FC = () => {
         return <Ar id={param} />;
       case 'guide':
         return <Guide initialQuery={param} />;
+      case 'xiaoli':
+        return <Xiaoli />;
       case 'profile':
         return <Profile />;
       case 'collaborate':
