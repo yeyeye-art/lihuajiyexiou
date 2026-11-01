@@ -1,20 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { prepareAnswer, modelMessages, acceptModelAnswer, speechText } from '../features/xiaoli/knowledge';
-import type { Archive, KnowledgeModule, Turn, Answer, Detail } from '../features/xiaoli/knowledge';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { prepareAnswer, modelMessages, acceptModelAnswer, speechText, learningTopics } from '../features/xiaoli/knowledge';
+import type { Archive, KnowledgeModule, Turn, Source, Detail } from '../features/xiaoli/knowledge';
 import type { LocalModel } from '../features/xiaoli/local-model';
 import { LocalVoice } from '../features/xiaoli/local-voice';
+import {readConversation,saveConversation} from '../features/xiaoli/session';
+import type {ConversationMessage} from '../features/xiaoli/session';
+import {XiaoliMetImage} from '../components/XiaoliMetImage';
 import '../styles/xiaoli.css';
 
-type Message = {id:number; role:'user'|'assistant';text:string;reply?:Answer};
+type Message = ConversationMessage;
 type Avatar = {dispose:()=>void;setState:(state:string)=>void};
 interface AvatarModule {createXiaoli3D:(container:HTMLElement,options:{reducedMotion:boolean;modelRotationY:number;keepFacing:boolean})=>Avatar}
 const asset=(path:string)=>new URL(`${import.meta.env.BASE_URL}${path}`,location.origin).href;
 const greeting:Message={id:0,role:'assistant',text:'你好，我是小梨。今天想了解一件绣品，还是一起弄懂一种针法？你也可以告诉我：“说简单一点。”'};
 const sample='你好，我是小梨。我们慢慢来。你想先听一段刺绣故事，还是看看一根丝线怎样变成一幅画？';
+function relatedSources(source:Source,archive?:Archive):Source[]{
+  const row=archive?.records.find(r=>r.id===source.recordId);
+  return (row?.citations.map(id=>archive?.sources.get(id))||[]).filter((s):s is Source=>!!s&&s.url.startsWith('https://')&&s.url!==source.url);
+}
 export const Xiaoli:React.FC=()=>{
   const [archive,setArchive]=useState<Archive>();
   const moduleRef=useRef<KnowledgeModule | undefined>(undefined);
-  const [messages,setMessages]=useState<Message[]>([greeting]);
+  const [messages,setMessages]=useState<Message[]>(()=>readConversation().length?readConversation():[greeting]);
+  const [topicCategory,setTopicCategory]=useState('针法入门');
   const messagesRef=useRef(messages);messagesRef.current=messages;
   const [input,setInput]=useState('');
   const [detail,setDetail]=useState<Detail>('brief');
@@ -31,7 +39,7 @@ export const Xiaoli:React.FC=()=>{
   const avatarEl=useRef<HTMLDivElement>(null),avatar=useRef<Avatar | undefined>(undefined);
   const log=useRef<HTMLDivElement>(null),audio=useRef<HTMLAudioElement>(null);
   const model=useRef<LocalModel | undefined>(undefined),voice=useRef<LocalVoice | undefined>(undefined),abort=useRef<AbortController | undefined>(undefined);
-  const alive=useRef(true),modelEpoch=useRef(0),voiceEpoch=useRef(0),id=useRef(0);
+  const alive=useRef(true),modelEpoch=useRef(0),voiceEpoch=useRef(0),id=useRef(Math.max(0,...messages.map(m=>m.id)));
 
   useEffect(()=>{
     alive.current=true;
@@ -60,7 +68,17 @@ export const Xiaoli:React.FC=()=>{
     }).catch(()=>{if(!disposed)setAvatarFailed(true);});
     return()=>{disposed=true;avatar.current?.dispose();avatar.current=undefined;};
   },[modelState]);
-  useEffect(()=>{log.current?.scrollTo({top:log.current.scrollHeight,behavior:'auto'});},[messages,busy]);
+  useLayoutEffect(()=>{
+    const node=log.current;if(!node)return;
+    let follow=true;
+    const update=()=>{if(follow)node.scrollTop=node.scrollHeight;};
+    const onScroll=()=>{follow=node.scrollHeight-node.scrollTop-node.clientHeight<70;};
+    update();node.addEventListener('scroll',onScroll);
+    const observer=new ResizeObserver(update);
+    if(node.lastElementChild)observer.observe(node.lastElementChild);
+    return()=>{observer.disconnect();node.removeEventListener('scroll',onScroll);};
+  },[messages,busy]);
+  useEffect(()=>{saveConversation(messages);},[messages]);
   useEffect(()=>()=>{if(audioUrl)URL.revokeObjectURL(audioUrl);},[audioUrl]);
   useEffect(()=>{
     try {if(remember)localStorage.setItem('lihuaji.xiaoli.preferences.v1',JSON.stringify({detail}));else localStorage.removeItem('lihuaji.xiaoli.preferences.v1');}catch{/* private browsing */}
@@ -74,12 +92,12 @@ export const Xiaoli:React.FC=()=>{
   const send=async(value:string)=>{
     if(busy||!archive||!moduleRef.current||!value.trim())return;
     stop();const request=new AbortController();abort.current=request;
-    const history:Turn[]=messagesRef.current.filter(m=>m.id!==0).map(m=>({role:m.role,content:m.text,records:m.reply?.records}));
+    const history:Turn[]=messagesRef.current.filter(m=>m.id!==0).map(m=>({role:m.role,content:m.text,records:m.reply?.records,question:m.reply?.question,topicId:m.reply?.topicId}));
     setInput('');setMessages(m=>[...m,{id:++id.current,role:'user',text:value.trim()}]);setBusy(true);setNotice('正在查找相关资料…');
     try {
       let reply=prepareAnswer(value,history,archive,moduleRef.current,detail);
       let fallbackNotice='';
-      if(reply.kind==='evidence'&&modelState==='ready'&&model.current){
+      if(reply.kind==='evidence'&&reply.intent==='ask'&&modelState==='ready'&&model.current){
         setNotice('小梨正在用本机模型整理解释…');
         try {
           const answerDetail=/简单|通俗/.test(value)?'brief':/详细/.test(value)?'detailed':detail;
@@ -122,6 +140,7 @@ export const Xiaoli:React.FC=()=>{
     finally{if(alive.current&&epoch===voiceEpoch.current)setVoiceBusy(false);}
   };
   const latest=[...messages].reverse().find(m=>m.role==='assistant'&&m.reply);
+  const currentTopic=learningTopics.find(t=>t.id===latest?.reply?.topicId);
   return <div className="xiaoli-preview">
     <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 免费体验版</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p></header>
     <div className="xiaoli-layout">
@@ -144,16 +163,25 @@ export const Xiaoli:React.FC=()=>{
       </aside>
       <section className="xiaoli-dialogue" aria-label="与小梨对话">
         <div className="xiaoli-dialogue-title"><h2>问问小梨</h2><button onClick={()=>{stop();setMessages([greeting]);setInput('');}}>重新聊</button></div>
+        <details className="xiaoli-topics" open={messages.length===1}>
+          <summary>从一个专题开始 · {learningTopics.length} 个讲解专题</summary>
+          <div className="xiaoli-topic-categories" aria-label="选择专题分类">{[...new Set(learningTopics.map(t=>t.category))].map(category=><button key={category} aria-pressed={topicCategory===category} onClick={()=>setTopicCategory(category)}>{category}</button>)}</div>
+          <div className="xiaoli-topic-list">{learningTopics.filter(t=>t.category===topicCategory).map(t=><button key={t.id} disabled={busy||!archive} onClick={()=>void send(t.question)}><strong>{t.title}</strong><span>{t.prompt}</span></button>)}</div>
+        </details>
+        {currentTopic&&<p className="xiaoli-current-topic">正在聊：{currentTopic.title}</p>}
         <div className="xiaoli-messages" ref={log} role="log" aria-live="polite" aria-relevant="additions">
           {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span><p>{m.text}</p>
             {m.reply&&<small>{m.reply.kind==='model'?'本机模型解释':m.reply.kind==='evidence'?'文献摘要':m.reply.kind==='missing'?'需要更多资料':'小梨'}</small>}
-            {!!m.reply?.citations.length&&<details><summary>查看出处 · {m.reply.citations.length} 项</summary><ol>{m.reply.citations.map((s,i)=><li key={`${s.url}-${i}`}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title} ↗</a>{s.organization&&<small>{s.organization}</small>}</li>)}</ol></details>}
+            {m.reply?.illustration&&<figure className="xiaoli-lesson-image"><img src={asset(m.reply.illustration.src)} alt="对应针法的数字线条示意" loading="lazy"/><figcaption>{m.reply.illustration.caption}</figcaption></figure>}
+            {m.reply?.museumRecordId&&archive?.records.find(r=>r.id===m.reply?.museumRecordId)&&<XiaoliMetImage record={archive.records.find(r=>r.id===m.reply?.museumRecordId)!}/>}
+            {!!m.reply?.actions?.length&&<nav className="xiaoli-reading-actions" aria-label="继续看与练习">{m.reply.actions.map(action=><a key={action.href} href={action.href} onClick={stop}><strong>{action.label} ↗</strong><span>{action.description}</span></a>)}</nav>}
+            {!!m.reply?.citations.length&&<details><summary>查看出处 · {m.reply.citations.length} 项</summary><ol>{m.reply.citations.map((s,i)=><li key={`${s.url}-${i}`}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title} ↗</a>{s.organization&&<small>{s.organization}</small>}{relatedSources(s,archive).map(extra=><p key={extra.url}><a href={extra.url} target="_blank" rel="noopener noreferrer">相关出处：{extra.title} ↗</a></p>)}</li>)}</ol></details>}
           </article>)}
           {busy&&<p className="xiaoli-thinking">小梨正在读资料…</p>}
         </div>
-        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=>q.includes('课堂')?<a key={q} href="#guide/learn-gun">打开针法课堂 ↗</a>:<button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}</div>
+        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=><button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}</div>
         <form onSubmit={e=>{e.preventDefault();void send(input);}}><label className="sr-only" htmlFor="xiaoli-question">你的问题</label><textarea id="xiaoli-question" value={input} onChange={e=>setInput(e.target.value)} maxLength={500} rows={3} placeholder="比如：这两种绣法有什么区别？"/><div className="xiaoli-compose"><button type="button" onClick={stop}>停止</button><button type="button" disabled={!voiceAvailable||voiceBusy||!latest} onClick={()=>latest&&void speak(latest.text)}>听上一条回答</button><button type="submit" disabled={busy||!archive||!input.trim()}>发送 ↗</button></div></form>
-        <p className="xiaoli-status" role="status">{notice}</p><p className="xiaoli-footnote">当前对话离开页面后清除。文化事实请核对原始来源；本机小模型的表达能力不等同大型云端模型。</p>
+        <p className="xiaoli-status" role="status">{notice}</p><p className="xiaoli-footnote">对话仅留在本次页面内存中，站内阅读后可返回接着聊；刷新或关闭页面即清除。专题讲解沿用已收录出处，数字示意不等同实物教学。</p>
       </section>
     </div>
   </div>;

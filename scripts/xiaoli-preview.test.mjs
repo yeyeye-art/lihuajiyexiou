@@ -28,6 +28,8 @@ test('Model output with invented citation or unsupported date falls back',()=>{
  assert.equal(acceptModelAnswer('https://evil.invalid〔1〕',a),null);
  assert.equal(acceptModelAnswer('苏绣起源于苏州。〔1〕',a),null);
  assert.equal(acceptModelAnswer('苏绣起源于苏州。〔1〕\n'+a.answer,a),null);
+ const history=prepareAnswer('苏绣起源',[],archive,api,'brief');
+ assert.equal(acceptModelAnswer('苏绣起源于宋代。〔1〕',history),null);
  assert.equal(acceptModelAnswer('苏绣是唯一的刺绣。〔1〕',a),null);
  const person=prepareAnswer('沈寿是谁？',[],archive,api,'brief');
  assert.equal(acceptModelAnswer('沈寿是代表性传承人。〔1〕',person),null);
@@ -40,4 +42,53 @@ test('Prompt history is bounded and original reference text remains a data block
 });
 test('Read-aloud omits reference markers and links without sending questions anywhere',()=>{
  assert.equal(speechText('苏绣〔1〕\nhttps://example.com'),'苏绣。');
+});
+
+import {learningTopics,questionIntent} from '../src/features/xiaoli/knowledge.ts';
+import {validateXiaoliTopics} from './validate-xiaoli-topics.mjs';
+import {readConversation,saveConversation,hasConversation} from '../src/features/xiaoli/session.ts';
+const talk=(history,q,detail='brief')=>{const reply=prepareAnswer(q,history,archive,api,detail);history.push({role:'user',content:q},{role:'assistant',content:reply.answer,records:reply.records,question:reply.question,topicId:reply.topicId});return reply;};
+test('Every curated topic has existing verified records, cited explanations and real lesson assets',()=>{
+ assert.equal(validateXiaoliTopics().topics,12);
+ for(const t of learningTopics){
+  const h=[];const brief=talk(h,t.question);const simple=talk(h,'我还是不懂');const detailed=talk(h,'详细一点');
+  for(const a of [brief,simple,detailed]){assert.equal(a.kind,'evidence',t.id);assert.equal(a.topicId,t.id);assert(a.records.every(id=>t.records.includes(id)));assert(a.citations.length>0);}
+  assert(simple.answer.includes(t.simple[0].text));assert(detailed.answer.includes(t.prompt));
+ }
+ const bad=read('content/xiaoli-topics.json');bad.topics[0].records=['invented'];assert.throws(()=>validateXiaoliTopics(bad));
+ const wrong=read('content/xiaoli-topics.json');wrong.topics.find(t=>t.id==='gun').demo='demo-santao-pear-petal';assert.throws(()=>validateXiaoliTopics(wrong));
+});
+test('Rephrase-show-source chain stays on santao and a new gun question switches cleanly',()=>{
+ const h=[];talk(h,'散套针怎么理解？');
+ const simple=talk(h,'我还是不懂');assert.match(simple.answer,/由外向内/);assert.equal(simple.topicId,'santao');
+ const visual=talk(h,'给我看看');assert.equal(visual.kind,'guide');assert(visual.actions.some(a=>a.href==='#guide/practice-demo-santao-pear-petal'));assert(visual.illustration.src.endsWith('demo-santao-pear-petal.svg'));
+ assert.equal(talk(h,'出处在哪里').topicId,'santao');
+ talk(h,'那滚针呢');const gun=talk(h,'给我看看');assert.equal(gun.topicId,'gun');assert(!gun.actions.some(a=>a.href.includes('santao')));
+});
+test('Polite acknowledgements preserve topic; unsupported subjects do not resurrect the previous one',()=>{
+ const h=[];talk(h,'滚针');talk(h,'谢谢');assert.equal(talk(h,'我还是不懂').topicId,'gun');
+ talk(h,'苏绣在2099年获得了什么奖？');assert.equal(talk(h,'给我看看').kind,'missing');
+ assert.equal(prepareAnswer('给我看看',[],archive,api,'brief').kind,'missing');
+});
+test('Four-school overview includes all four cited lineages and never bypasses unknown factual claims',()=>{
+ const a=prepareAnswer('四大名绣有什么区别？',[],archive,api,'brief');assert.equal(a.records.length,4);
+ for(const label of ['苏绣','湘绣','粤绣','蜀绣'])assert(a.answer.includes(label));
+ for(const t of learningTopics)assert.equal(prepareAnswer(t.question+'在2099年获得什么奖',[],archive,api,'brief').kind,'missing');
+});
+test('Guide actions resolve to the exact record, lesson or palette without generated destinations',()=>{
+ for(const t of learningTopics){const h=[];talk(h,t.question);const a=talk(h,'给我看看');
+  assert(a.actions.length>0);for(const action of a.actions){assert(/^#(?:guide\/[a-z0-9-]+|palette)$/.test(action.href));if(action.href.startsWith('#guide/')&&!action.href.includes('/practice-')&&!action.href.includes('/learn-'))assert(archive.records.some(r=>r.id===action.href.slice(7)));}
+ }
+ const h=[];talk(h,'我想看看配色');assert(talk(h,'给我看看').actions.some(a=>a.href==='#palette'));
+ const museum=[];talk(museum,'带我看辽代龙虎纹刺绣残片');assert.equal(talk(museum,'给我看看').museumRecordId,'world-met-liao');
+});
+test('Reading-trip conversation state is bounded, resettable and independent of browser storage',()=>{
+ saveConversation(Array.from({length:55},(_,i)=>({id:i,role:'user',text:'question '+i})));assert.equal(readConversation().length,40);assert(hasConversation());
+ const copy=readConversation();copy.pop();assert.equal(readConversation().length,40);
+ saveConversation([]);assert.equal(hasConversation(),false);
+});
+test('Follow-up intent accepts everyday phrasing without treating a new subject as a generic follow-up',()=>{
+ for(const q of ['我没听懂','说简单一点','换个说法'])assert.equal(questionIntent(q),'simple');
+ for(const q of ['让我看看图片','带我看演示','怎么练'])assert.equal(questionIntent(q),'show');
+ assert.equal(questionIntent('那滚针呢'),'ask');assert.equal(questionIntent('苏绣在2099年获得什么奖'),'ask');
 });

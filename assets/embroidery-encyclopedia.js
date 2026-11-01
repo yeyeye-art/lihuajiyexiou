@@ -84,7 +84,7 @@ function appendMessage(chat,role,text,citations=[],records=[],archive=null){
  </div>`;
  const search=root.querySelector('#knowledge-search'),list=root.querySelector('#knowledge-list'),tabArea=root.querySelector('#encyclopedia-tabs'),chat=root.querySelector('#embroider-conversation');
  let topic='all',q=initialQuery;
- if(q.startsWith('learn-')||q==='mooc-suxiu')q='';
+ if(q.startsWith('learn-')||q.startsWith('practice-')||q==='mooc-suxiu')q='';
  search.value=q;
  const recalc=()=>{
   if(!alive||!isCurrent())return;

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useApp } from '../context/AppContext';
 import type { UserProgress } from '../types';
+import {hasConversation} from '../features/xiaoli/session';
 
 type SectionName = 'palette' | 'guide' | 'game' | 'account';
 interface RestoreOptions {
@@ -51,6 +52,7 @@ export const RestoredSection: React.FC<{ page: SectionName; query?: string }> = 
   }, [page, query, showToast, updateBestScore, addProgressDay]);
 
   return <>
+    {(page==='guide'||page==='palette')&&hasConversation()&&<p className="xiaoli-reading-return"><a href="#xiaoli">← 返回小梨，继续刚才的话题</a></p>}
     {error && <p role="alert">{error}</p>}
     <div ref={rootRef} id={page === 'account' ? 'cloud-account-panel' : undefined}
       className={`restored-section restored-${page}${page === 'account' ? ' card cloud-account-panel' : ''}`} />

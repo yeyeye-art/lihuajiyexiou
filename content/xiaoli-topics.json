@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "notice": "专题整理沿用现有知识记录；简明解释为对应出处的转述，观察提示为阅读建议。",
+  "topics": [
+    {
+      "id": "su-xiang",
+      "category": "绣种区别",
+      "title": "苏绣与湘绣",
+      "question": "苏绣和湘绣有什么区别？",
+      "records": [
+        "world-suxiu",
+        "world-xiang"
+      ],
+      "prompt": "先分别看地域和资料，再比较；不要把不同绣种混成一个分支。",
+      "simple": [
+        {
+          "recordId": "world-suxiu",
+          "text": "先记地域：苏绣以苏州为中心。"
+        },
+        {
+          "recordId": "world-xiang",
+          "text": "湘绣的重要传承区域在湖南长沙及周边，它不是苏绣的分支。"
+        }
+      ]
+    },
+    {
+      "id": "four",
+      "category": "绣种区别",
+      "title": "认识四大名绣",
+      "question": "四大名绣有什么区别？",
+      "records": [
+        "world-suxiu",
+        "world-xiang",
+        "world-yue",
+        "world-shu"
+      ],
+      "prompt": "可以逐项看苏、湘、粤、蜀，先记住各自的地域。",
+      "simple": [
+        {
+          "recordId": "world-suxiu",
+          "text": "苏绣：以苏州为中心。"
+        },
+        {
+          "recordId": "world-xiang",
+          "text": "湘绣：以湖南长沙及周边为重要传承区域。"
+        },
+        {
+          "recordId": "world-yue",
+          "text": "粤绣：了解广东的广绣与潮绣时，要分清各自的技艺和历史。"
+        },
+        {
+          "recordId": "world-shu",
+          "text": "蜀绣：也叫川绣，与四川的桑蚕丝织文化有关。"
+        }
+      ]
+    },
+    {
+      "id": "double",
+      "category": "绣种区别",
+      "title": "认识双面绣",
+      "question": "双面绣是什么？",
+      "records": [
+        "craft-double",
+        "craft-double-three"
+      ],
+      "prompt": "先看“双面绣”，再读“双面三异绣”的区别。",
+      "simple": [
+        {
+          "recordId": "craft-double",
+          "text": "已有官方资料列出了“双面绣”这个类别，但没有解释具体操作。"
+        },
+        {
+          "recordId": "craft-double-three",
+          "text": "同一资料也列出了“双面三异绣”；这份资料不足以讲清它的操作细节。"
+        }
+      ]
+    },
+    {
+      "id": "santao",
+      "category": "针法入门",
+      "title": "散套针：看线条怎样相嵌",
+      "question": "散套针怎么理解？",
+      "records": [
+        "stitch-santao"
+      ],
+      "prompt": "先看线条怎样相嵌，再看绣制方向。",
+      "aliases": [
+        "散套针是什么",
+        "散套针"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-santao",
+          "text": "先记两件事：线条错落地嵌在一起；绣制方向是由外向内。"
+        }
+      ],
+      "demo": "demo-santao-pear-petal"
+    },
+    {
+      "id": "gun",
+      "category": "针法入门",
+      "title": "滚针：看连续的线条",
+      "question": "滚针怎么理解？",
+      "records": [
+        "stitch-gun"
+      ],
+      "prompt": "可以沿着线条观察，再注意转折处。",
+      "aliases": [
+        "滚针是什么",
+        "滚针"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-gun",
+          "text": "把连续相接的针迹连成条纹；到了转弯处，针脚要缩短。"
+        }
+      ],
+      "demo": "demo-gun-basic"
+    },
+    {
+      "id": "plain",
+      "category": "针法入门",
+      "title": "平针：看绣面怎样填满",
+      "question": "平针是什么？",
+      "records": [
+        "stitch-plain"
+      ],
+      "prompt": "先观察线条排列，再看绣面是否平整。",
+      "aliases": [
+        "平针"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-plain",
+          "text": "让绣线排列整齐，把纹样填满；绣面要平整，不露底。"
+        }
+      ],
+      "demo": "demo-straight-basic"
+    },
+    {
+      "id": "liao",
+      "category": "作品欣赏",
+      "title": "辽代龙虎纹刺绣残片",
+      "question": "带我看辽代龙虎纹刺绣残片",
+      "records": [
+        "world-met-liao"
+      ],
+      "prompt": "先核对馆藏编号，再看材料和图案；归属以馆方记录为准。",
+      "simple": [
+        {
+          "recordId": "world-met-liao",
+          "text": "这件刺绣残片使用丝与金属线。看它时要核对馆方记录，不能直接认定为苏绣。"
+        }
+      ]
+    },
+    {
+      "id": "guanyin",
+      "category": "作品欣赏",
+      "title": "明代千手观音丝绣",
+      "question": "带我看明代千手观音丝绣",
+      "records": [
+        "world-met-ming-guanyin"
+      ],
+      "prompt": "先看馆藏记录中的年代与材料，再打开馆方图像观察。",
+      "simple": [
+        {
+          "recordId": "world-met-ming-guanyin",
+          "text": "这件作品是在丝底上用彩色丝线绣制的千手观音图像。"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "category": "历史人物",
+      "title": "苏绣历史怎样考证",
+      "question": "苏绣的历史有哪些可考证据？",
+      "records": [
+        "history-origin",
+        "world-history-suxiu"
+      ],
+      "prompt": "把可考的记录与暂时不知道的部分分开读。",
+      "aliases": [
+        "苏绣起源于什么时候",
+        "苏绣起源"
+      ],
+      "simple": [
+        {
+          "recordId": "history-origin",
+          "text": "苏绣到底从何时开始，目前并不清楚；可以从宋代以来的实物资料了解它的发展。"
+        }
+      ]
+    },
+    {
+      "id": "shenshou",
+      "category": "历史人物",
+      "title": "沈寿与绣谱",
+      "question": "沈寿是谁？",
+      "records": [
+        "history-shenshou",
+        "world-shen-manual"
+      ],
+      "prompt": "先认识人物与著述，再读仿真绣相关资料。",
+      "aliases": [
+        "沈寿"
+      ],
+      "simple": [
+        {
+          "recordId": "history-shenshou",
+          "text": "先记住两件事：沈寿与仿真绣有关；她晚年口述了总结经验的《雪宧绣谱》。"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "category": "材料配色",
+      "title": "线材与底料",
+      "question": "刺绣有哪些线材和底料？",
+      "records": [
+        "material-thread",
+        "material-base",
+        "world-material-classify"
+      ],
+      "prompt": "把线材和底料分开看，避免将不同材料混为一谈。",
+      "simple": [
+        {
+          "recordId": "material-thread",
+          "text": "花线是苏绣的主要原料之一。"
+        },
+        {
+          "recordId": "material-base",
+          "text": "底料也是主要原料。先把线和底料分开认识。"
+        }
+      ]
+    },
+    {
+      "id": "color",
+      "category": "材料配色",
+      "title": "从配线到配色观察",
+      "question": "我想了解刺绣配色",
+      "records": [
+        "process-match"
+      ],
+      "prompt": "可以打开东方色谱观察颜色组合；数字配色不等同实物绣线配方。",
+      "aliases": [
+        "我想看看配色",
+        "配色怎么选",
+        "刺绣配色",
+        "配线是什么"
+      ],
+      "simple": [
+        {
+          "recordId": "process-match",
+          "text": "已有资料列出了“配线”这道工序，但没有公布具体操作参数。我们可以先到色谱里观察颜色组合。"
+        }
+      ]
+    }
+  ]
+}
