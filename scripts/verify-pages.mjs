@@ -13,6 +13,10 @@ let verified = 0;
 function verifyDirectory(relative) {
   for (const entry of fs.readdirSync(path.join(root, relative), { withFileTypes: true })) {
     const item = path.join(relative, entry.name);
+    if(item===path.join('assets','xiaoli-voice')&&process.env.VITE_XIAOLI_VOICE!=='true') {
+      assert(!fs.existsSync(path.join(output,item)), 'Private listening weights must not enter a normal build');
+      continue;
+    }
     if (entry.isDirectory()) {
       verifyDirectory(item);
     } else {

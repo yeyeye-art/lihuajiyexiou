@@ -4,6 +4,9 @@ node_modules/
 # Production build artifacts
 dist/
 _site/
+assets/xiaoli-voice/
+.env.local
+.env.*.local
 lihuaji-assets-export/
 
 # Operating System files
