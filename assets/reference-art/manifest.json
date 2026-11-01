@@ -1,0 +1,507 @@
+{
+  "provenance": "Ten user supplied UI references retrieved from the referenced conversation, 2026-10-22. Permission limited to this requested implementation. Not asserted public-domain. Deterministic crops and masks only; no image generation.",
+  "assets": [
+    {
+      "screen": "match3",
+      "source": "21712173e6e4d0ad51255f4bdbd4de33(1).png",
+      "sha256": "813c44e61580c5e4def2373215c215d3477efa574a1191acff4dfa7d5cc17196",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          36,
+          98,
+          150,
+          47
+        ],
+        [
+          90,
+          195,
+          310,
+          100
+        ],
+        [
+          90,
+          325,
+          320,
+          65
+        ],
+        [
+          582,
+          160,
+          569,
+          484
+        ],
+        [
+          1294,
+          222,
+          260,
+          292
+        ],
+        [
+          70,
+          724,
+          1530,
+          175
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "match3-scene.webp"
+    },
+    {
+      "screen": "link",
+      "source": "b5d230236aac248b1958c0fca8975010(1).png",
+      "sha256": "5d9b7c9590bd4ab610d163eff95e6a5f41b28e999c8935d566c848c2cd5e8e72",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          40,
+          98,
+          130,
+          48
+        ],
+        [
+          75,
+          181,
+          290,
+          169
+        ],
+        [
+          599,
+          161,
+          580,
+          474
+        ],
+        [
+          1333,
+          155,
+          182,
+          431
+        ],
+        [
+          271,
+          791,
+          1360,
+          123
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "link-scene.webp"
+    },
+    {
+      "screen": "jigsaw",
+      "source": "5eec7637ef0528f28ed474923a9761e5(1).png",
+      "sha256": "8dd3278660588f81ba9a2ee1a9b70bb3d41802ee0aaa2a78a2f6a97c6d5b9157",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          35,
+          104,
+          210,
+          40
+        ],
+        [
+          78,
+          151,
+          290,
+          660
+        ],
+        [
+          589,
+          167,
+          496,
+          500
+        ],
+        [
+          1197,
+          246,
+          256,
+          252
+        ],
+        [
+          1198,
+          544,
+          252,
+          211
+        ],
+        [
+          545,
+          782,
+          650,
+          104
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "jigsaw-scene.webp"
+    },
+    {
+      "screen": "color",
+      "source": "631a501fdc92b468d3725d182dba0962(1).png",
+      "sha256": "95c5784aae80f9362e469c81e46bb3a0f8edc411dfa5e2780e8631c9378e97c3",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          33,
+          91,
+          150,
+          42
+        ],
+        [
+          92,
+          154,
+          260,
+          184
+        ],
+        [
+          103,
+          416,
+          280,
+          358
+        ],
+        [
+          1346,
+          270,
+          245,
+          414
+        ]
+      ],
+      "additionalMasks": true,
+      "output": "color-scene.webp"
+    },
+    {
+      "screen": "studio",
+      "source": "f9e739d4130a9aa1f09c648c4ca8df29(1).png",
+      "sha256": "9bba96b0d2e9502593003caaed745338b3213dae1532fe28a675f08504561c80",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          52,
+          107,
+          322,
+          170
+        ],
+        [
+          78,
+          320,
+          399,
+          540
+        ],
+        [
+          1227,
+          128,
+          392,
+          180
+        ],
+        [
+          1194,
+          350,
+          54,
+          274
+        ],
+        [
+          629,
+          817,
+          550,
+          49
+        ]
+      ],
+      "additionalMasks": true,
+      "output": "studio-scene.webp"
+    },
+    {
+      "screen": "memory",
+      "source": "6250707b456e63499a494ded3756c168(1).png",
+      "sha256": "eab647a6d34e2ac45b096a6a8637135214330575477b0b5feaebcf510ef460c4",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          119,
+          124,
+          322,
+          172
+        ],
+        [
+          107,
+          356,
+          305,
+          340
+        ],
+        [
+          598,
+          238,
+          548,
+          446
+        ],
+        [
+          42,
+          787,
+          1394,
+          130
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "memory-scene.webp"
+    },
+    {
+      "screen": "garden",
+      "source": "258dba2f3c29728275b02346b91b891d(1).png",
+      "sha256": "cef69963ec12426949a90ceaa8db8d705141887031aacac3a78ad90cb8b7dddc",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          37,
+          98,
+          201,
+          46
+        ],
+        [
+          90,
+          160,
+          293,
+          237
+        ],
+        [
+          1380,
+          142,
+          252,
+          165
+        ],
+        [
+          1412,
+          367,
+          225,
+          182
+        ],
+        [
+          40,
+          742,
+          575,
+          145
+        ],
+        [
+          1374,
+          805,
+          230,
+          65
+        ],
+        [
+          1210,
+          665,
+          85,
+          30
+        ]
+      ],
+      "additionalMasks": true,
+      "output": "garden-scene.webp"
+    },
+    {
+      "screen": "result",
+      "source": "286da73157a8750d97392d18baaa636f(1).png",
+      "sha256": "49622b08ddd5973924b4d53f771a8a31f6e8224332c802be9f9ee32fb9b784bd",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          35,
+          98,
+          150,
+          46
+        ],
+        [
+          661,
+          167,
+          365,
+          200
+        ],
+        [
+          748,
+          381,
+          285,
+          98
+        ],
+        [
+          554,
+          499,
+          572,
+          109
+        ],
+        [
+          551,
+          635,
+          575,
+          84
+        ],
+        [
+          1246,
+          332,
+          360,
+          346
+        ],
+        [
+          408,
+          800,
+          255,
+          43
+        ],
+        [
+          722,
+          792,
+          246,
+          61
+        ],
+        [
+          1030,
+          804,
+          232,
+          42
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "result-scene.webp"
+    },
+    {
+      "screen": "duel",
+      "source": "2e346c691cb8c796aca696a903a368be(1).png",
+      "sha256": "fa5740a83f99f23b6b8bfd149be0a1a1bab156b5ac6862759c3cf58ccfbf9b19",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          38,
+          101,
+          110,
+          43
+        ],
+        [
+          65,
+          170,
+          255,
+          160
+        ],
+        [
+          374,
+          225,
+          195,
+          390
+        ],
+        [
+          685,
+          153,
+          307,
+          510
+        ],
+        [
+          1105,
+          227,
+          193,
+          389
+        ],
+        [
+          461,
+          741,
+          211,
+          44
+        ],
+        [
+          732,
+          752,
+          204,
+          42
+        ],
+        [
+          1004,
+          739,
+          204,
+          44
+        ],
+        [
+          70,
+          840,
+          1540,
+          56
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "duel-scene.webp"
+    },
+    {
+      "screen": "shop",
+      "source": "521db1bb18e23ffcdee5637c2088c448(1).png",
+      "sha256": "ee0f3ace7aa08d4d8dda3b47db241fe25ed033d350382b80bcca9e024268616e",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "removedRectangles": [
+        [
+          111,
+          190,
+          106,
+          270
+        ],
+        [
+          403,
+          166,
+          1038,
+          144
+        ],
+        [
+          316,
+          399,
+          186,
+          344
+        ],
+        [
+          554,
+          399,
+          186,
+          344
+        ],
+        [
+          792,
+          399,
+          186,
+          344
+        ],
+        [
+          1030,
+          399,
+          186,
+          344
+        ],
+        [
+          1268,
+          399,
+          186,
+          344
+        ]
+      ],
+      "additionalMasks": false,
+      "output": "shop-scene.webp"
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+/* ==========================================================================
+   梨花季 · 3D 角色样式表
+   视觉体系：绢白馆藏（奶油白 #F8F6EF / 苏绣青绿 #738C7A / 浅竹绿 #BDD0C0 / 梨白 #F0E2CD）
+   字体：Noto Serif SC 风格衬线字体
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   第一部分：知识库页面的 3D 小梨顾问
+   .xiaoli-3d-container 由 embroidery-encyclopedia.js 注入到右侧 aside
+   -------------------------------------------------------------------------- */
+
+.xiaoli-3d-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  overflow: hidden;
+}
+
+.embroider-persona .xiaoli-3d-container {
+  /* 完全填充绣娘头像框 */
+  width: 100%;
+  height: 100%;
+}
+
+.xiaoli-3d-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.xiaoli-3d-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8EAF9E;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+
+/* --------------------------------------------------------------------------
+   第二部分：悬浮灵宠梨宝
+   -------------------------------------------------------------------------- */
+
+.libao-pet {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;            /* 默认在 bottom-nav 之上 */
+  width: 140px;
+  height: 140px;
+  z-index: 9998;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.libao-pet-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(189, 208, 192, 0.15) 0%, transparent 70%);
+  pointer-events: none;    /* canvas 不拦截事件，让容器接收 */
+}
+
+/* --------------------------------------------------------------------------
+   第二部分：悬浮灵宠梨宝（聊天面板版）
+   -------------------------------------------------------------------------- */
+
+.libao-pet {
+  position: fixed;
+  right: 24px;
+  bottom: 88px;
+  width: 140px;
+  height: 140px;
+  z-index: 9998;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.libao-pet-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(189, 208, 192, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 聊天面板气泡 */
+.libao-pet-bubble {
+  position: absolute;
+  right: calc(100% + 16px);
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  width: 340px;
+  max-height: 520px;
+  background: #f5f1e3;
+  border: 1px solid #d8f0e0;
+  border-radius: 20px;
+  box-shadow: 0 10px 32px rgba(115, 140, 122, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.libao-pet-bubble.is-expanded {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.libao-pet-bubble::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 8px solid transparent;
+  border-left-color: #d8f0e0;
+}
+
+/* --- Header --- */
+.libao-chat-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #f5f1e3 0%, #d8f0e0 100%);
+  border-bottom: 1px solid #cfe5d5;
+  flex-shrink: 0;
+}
+
+.libao-chat-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #3d4d46;
+  letter-spacing: 0.04em;
+}
+
+.libao-chat-header-actions {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.libao-chat-export,
+.libao-chat-clear,
+.libao-chat-min,
+.libao-chat-close {
+  border: none;
+  background: transparent;
+  color: #94a09a;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  line-height: 1;
+}
+
+.libao-chat-export { font-size: 0.9rem; }
+.libao-chat-clear  { font-size: 0.85rem; }
+.libao-chat-min    { font-size: 1rem;    }
+
+.libao-chat-export:hover,
+.libao-chat-clear:hover,
+.libao-chat-min:hover,
+.libao-chat-close:hover {
+  background: rgba(115, 140, 122, 0.15);
+  color: #3d4d46;
+}
+
+.libao-chat-export:active,
+.libao-chat-clear:active,
+.libao-chat-min:active,
+.libao-chat-close:active {
+  transform: scale(0.92);
+}
+
+/* 导出下拉菜单 */
+.libao-chat-export-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 100;
+  background: #ffffff;
+  border: 1px solid #d8f0e0;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 4px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.libao-chat-export-menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.libao-chat-export-item {
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 7px 10px;
+  font-size: 0.85rem;
+  color: #3d4d46;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.libao-chat-export-item:hover {
+  background: rgba(142, 175, 158, 0.15);
+}
+
+/* 轻量 Toast */
+.libao-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(61, 77, 70, 0.92);
+  color: #f5f1e3;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.libao-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- 消息流 --- */
+.libao-chat-messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.libao-chat-messages::-webkit-scrollbar { width: 6px; }
+.libao-chat-messages::-webkit-scrollbar-track { background: transparent; }
+.libao-chat-messages::-webkit-scrollbar-thumb { background: #c5d8c8; border-radius: 3px; }
+
+.libao-chat-msg {
+  display: flex;
+  max-width: 88%;
+  animation: libao-fade-in 0.25s ease;
+}
+
+@keyframes libao-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.libao-chat-msg-user {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.libao-chat-msg-libao {
+  align-self: flex-start;
+}
+
+.libao-chat-bubble-user {
+  background: #8EAF9E;
+  color: #FAFDF7;
+  padding: 8px 12px;
+  border-radius: 14px 14px 4px 14px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  word-wrap: break-word;
+}
+
+.libao-chat-bubble-libao {
+  background: #fff;
+  color: #3d4d46;
+  padding: 10px 14px;
+  border-radius: 14px 14px 14px 4px;
+  border: 1px solid #d8f0e0;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.libao-chat-bubble-libao b {
+  color: #5E8E77;
+  font-weight: 600;
+}
+
+.libao-chat-bubble-libao a {
+  color: #8EAF9E;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed #cfe5d5;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.libao-chat-bubble-libao a:hover {
+  color: #5E8E77;
+  border-bottom-color: #8EAF9E;
+}
+
+.libao-welcome-suggest {
+  display: inline-block;
+  padding: 1px 8px;
+  margin: 2px 3px 2px 0;
+  background: #f5f1e3;
+  border-radius: 8px;
+  color: #5c6a62;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  border: 1px solid transparent;
+}
+
+.libao-welcome-suggest:hover {
+  background: #cfe5d5;
+  color: #3d4d46;
+  border-color: #c5d8c8;
+}
+
+.libao-welcome-suggest:active {
+  transform: scale(0.96);
+}
+
+/* --- 打字动画（三个跳动圆点） --- */
+.libao-chat-bubble-libao.libao-typing {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.libao-chat-bubble-libao.libao-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8EAF9E;
+  animation: libao-typing-dot 1.2s infinite ease-in-out;
+}
+
+.libao-chat-bubble-libao.libao-typing span:nth-child(1) { animation-delay: 0s; }
+.libao-chat-bubble-libao.libao-typing span:nth-child(2) { animation-delay: 0.15s; }
+.libao-chat-bubble-libao.libao-typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes libao-typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* --- 未读红点 --- */
+.libao-pet-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #b5463a;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px #f5f1e3;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.2s, transform 0.2s ease;
+  pointer-events: none;
+  font-family: inherit;
+  z-index: 9999;
+}
+
+.libao-pet-dot.is-visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: libao-dot-bounce 0.35s ease;
+}
+
+@keyframes libao-dot-bounce {
+  0% { transform: scale(0.3); }
+  55% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* --- 输入区 --- */
+.libao-chat-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 10px 12px;
+  border-top: 1px solid #d8f0e0;
+  background: #f5f2e8;
+  flex-shrink: 0;
+}
+
+.libao-chat-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #c5d8c8;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  background: #fff;
+  color: #3d4d46;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+
+.libao-chat-input:focus {
+  border-color: #8EAF9E;
+  box-shadow: 0 0 0 3px rgba(115, 140, 122, 0.12);
+}
+
+.libao-chat-input::placeholder {
+  color: #a09a88;
+}
+
+.libao-chat-mic,
+.libao-chat-send {
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  padding: 7px 10px;
+  border-radius: 10px;
+  transition: background 0.15s, transform 0.1s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.libao-chat-mic {
+  background: transparent;
+  color: #8EAF9E;
+  font-size: 1rem;
+  padding: 6px 8px;
+}
+
+.libao-chat-mic:hover:not(:disabled) {
+  background: rgba(115, 140, 122, 0.12);
+}
+
+.libao-chat-mic:disabled {
+  color: #c5c0ae;
+  cursor: not-allowed;
+}
+
+.libao-chat-mic.recording {
+  background: #b5463a;
+  color: #fff;
+  animation: libao-mic-pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes libao-mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(181, 70, 58, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(181, 70, 58, 0); }
+}
+
+.libao-chat-send {
+  background: #8EAF9E;
+  color: #FAFDF7;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.libao-chat-send:hover {
+  background: #5E8E77;
+}
+
+.libao-chat-send:active {
+  transform: scale(0.96);
+}
+
+
+/* --------------------------------------------------------------------------
+   第三部分：移动端适配 & prefers-reduced-motion
+   -------------------------------------------------------------------------- */
+
+/* 小屏适配 */
+@media (max-width: 768px) {
+  .libao-pet {
+    width: 90px;
+    height: 90px;
+    right: 12px;
+    bottom: 72px;
+  }
+  .libao-pet-bubble {
+    right: auto;
+    left: calc(100% + 8px);
+    top: 0;
+    transform: scale(0.9);
+    width: min(90vw, 320px);
+    max-height: 70vh;
+  }
+  .libao-pet-bubble.is-expanded {
+    transform: scale(1);
+  }
+  .libao-pet-bubble::after {
+    right: auto;
+    left: -8px;
+    border-left-color: transparent;
+    border-right-color: #d8f0e0;
+  }
+  .xiaoli-3d-container {
+    max-height: 240px;
+  }
+}
+
+/* --- 拖拽停靠 --- */
+.libao-pet {
+  transition: right 0.25s ease, bottom 0.25s ease;
+  cursor: grab !important;
+}
+.libao-pet.is-dragging {
+  cursor: grabbing !important;
+  transition: none !important;
+  z-index: 9999;
+  transform: scale(1.05);
+}
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .libao-pet,
+  .libao-pet-canvas,
+  .libao-pet-bubble {
+    transition: none !important;
+  }
+}
+
+/* Keep hidden panels out of layout and keyboard navigation. */
+.libao-pet [hidden]{display:none!important}
+
+/* The chat stays in the viewport regardless of the draggable pet position. */
+.libao-pet-bubble,.libao-pet-bubble.is-expanded{position:fixed;left:auto;right:20px;top:auto;bottom:100px;transform:none;max-height:calc(100dvh - 120px);width:min(340px,calc(100vw - 24px))}
+@media(max-width:768px){.libao-pet-bubble,.libao-pet-bubble.is-expanded{right:12px;bottom:170px;max-height:calc(100dvh - 190px)}}
+
+/* Keep the knowledge assistant submit control free of the floating pet. */
+body:has(#embroider-submit) .libao-pet{left:12px;right:auto!important}
+

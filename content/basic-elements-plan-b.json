@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "name": "《梨花季》全球基础元素纹样库·方案B",
+  "target": 1000,
+  "baselineRecords": 2121,
+  "afterTarget": 3121,
+  "regions": {
+    "中国传统": 250,
+    "东亚邻邦": 120,
+    "东南亚": 90,
+    "南亚": 100,
+    "中亚": 40,
+    "波斯与西亚": 100,
+    "埃及与地中海": 70,
+    "欧洲": 100,
+    "非洲": 70,
+    "美洲": 60
+  },
+  "motifClasses": {
+    "花卉枝叶果实": 300,
+    "鸟兽鱼虫羽毛": 145,
+    "自然云水天象": 110,
+    "基础几何结构": 180,
+    "连续纹与边饰": 160,
+    "文化符号": 105
+  },
+  "formats": {
+    "single": 800,
+    "repeatable": 150,
+    "cornerConnector": 50
+  },
+  "acceptedDefinition": [
+    "每个记录含可下载的独立矢量元素，不得仅为整件馆藏原图",
+    "每条绑定可核对的馆藏/权威资料及许可政策（原绘制注明本方原创）",
+    "专属形态结构指纹去重；换颜色、大小、背景不计新元素",
+    "来源只是设计参考时标明editorial-redraw，不能声称忠实复原",
+    "分类、文化和寓意无来源时不得断言；宗教及原住民语境标注限制",
+    "未完成独立图像/审查/授权的候选不能计入已上线数"
+  ],
+  "policy": {
+    "noPlaceholderCounting": true,
+    "noOriginalCollectionChange": true,
+    "unchangedFilters": [
+      "搜索题材或名称",
+      "纹样类型",
+      "文化地区"
+    ],
+    "originalPaletteAndLayout": true
+  },
+  "status": "in_progress"
+}

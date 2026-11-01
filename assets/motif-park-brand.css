@@ -1,0 +1,321 @@
+/* 梨花季·译绣 | B. 绢白馆藏 | Pearl-white & moss-green
+ * This stylesheet deliberately reuses the main site's palette and typography.
+ * Scoped to .motif-park, without changing archive, palette, AR or knowledge UI.
+ */
+.motif-park{
+ --park-paper:#F8F6EF;--park-pear:#EDE9DF;--park-white:#F6F3EC;
+ --park-celadon:#C8D6C9;--park-mountain:#7B9480;--park-ink:#3F5A4F;
+ --park-cinnabar:#C95A4A;--park-gold:#D8C8A2;--park-edge:#DDDCD1;
+ --park-serif:var(--serif,"Songti SC","Noto Serif SC","SimSun",serif);
+ color:var(--park-ink);font-family:inherit;letter-spacing:normal
+}
+body[data-page="game"] #main{max-width:1190px}
+.motif-park .park-hero,.motif-park .park-select-hero,.motif-park .park-start-tray,
+.motif-park .park-scoreboard,.motif-park .park-result{
+ background:var(--park-paper);border:1px solid var(--park-edge);
+ border-radius:5px;box-shadow:none
+}
+.motif-park .park-hero{padding:38px 42px;gap:34px}
+.motif-park .park-hero::after{content:"";position:absolute;right:20px;top:24px;
+ width:230px;height:170px;background:url("./basic-elements/basic-cn-lotus-bloom.svg") center/contain no-repeat;
+ opacity:.065;pointer-events:none}
+.motif-park .park-hero-name>span,.motif-park .park-heading>span,.motif-park .park-guide-kicker{
+ color:var(--park-mountain);font:normal 10px/1.7 Georgia,serif;letter-spacing:.17em
+}
+.motif-park .park-hero h1{font-family:var(--park-serif);font-weight:500;
+ font-size:clamp(33px,4.1vw,49px);letter-spacing:.09em;color:var(--park-ink);text-shadow:none}
+.motif-park .park-hero h1 span{color:var(--park-ink)}
+.motif-park .park-hero p,.motif-park .park-section-title p,.motif-park .park-disclosure,
+.motif-park .park-heading p,.motif-park .park-select-hero p,
+.motif-park .park-game-card>span:not(.park-cover):not(.park-game-footer){color:#747F76}
+.motif-park .park-trophy{background:var(--park-white);border:1px solid var(--park-edge);
+ border-radius:3px;box-shadow:none;padding:16px 20px;min-width:160px}
+.motif-park .park-trophy b{color:var(--park-ink);font:normal 25px/1.4 var(--park-serif)}
+.motif-park .park-trophy span{color:var(--park-mountain);letter-spacing:.05em}
+.motif-park .park-section-title{margin:40px 0 20px;padding-bottom:12px;border-bottom:1px solid var(--park-edge)}
+.motif-park .park-section-title h2{font:normal 27px/1.5 var(--park-serif);color:var(--park-ink)}
+.motif-park .park-games{gap:22px}
+.motif-park .park-game-card,.motif-park .park-game-card:nth-child(2n),.motif-park .park-game-card:nth-child(3n){
+ padding:15px;min-height:338px;display:flex;align-items:stretch;
+ border:1px solid var(--park-edge);border-radius:4px;background:var(--park-paper);
+ box-shadow:none;color:var(--park-ink)
+}
+.motif-park .park-game-card:hover{transform:translateY(-2px);
+ border-color:var(--park-mountain)!important;box-shadow:0 7px 18px #3F5A4F12!important}
+.motif-park .park-game-card>strong{font:normal 22px/1.4 var(--park-serif);
+ letter-spacing:.06em;margin-top:17px;color:var(--park-ink)}
+.motif-park .park-game-card>span:not(.park-cover):not(.park-game-footer){
+ margin-top:6px;min-height:38px;font-size:12px;line-height:1.6
+}
+.motif-park .park-game-footer{border-top:1px solid var(--park-edge);
+ margin-top:auto;padding-top:11px;color:var(--park-mountain);font-size:11px}
+.motif-park .park-game-footer b{background:transparent;color:var(--park-ink);
+ border:0;border-radius:0;box-shadow:none;padding:1px 0;font-weight:600}
+.motif-park .park-game-footer b::before{content:"";display:inline-block;width:10px;height:1px;
+ background:var(--park-mountain);vertical-align:middle;margin-right:7px}
+.motif-park .park-cover{display:block;position:relative;flex:none;
+ width:100%;height:185px;padding:0;margin:0;overflow:hidden;
+ border:1px solid #E1E0D6;border-radius:2px;
+ background:#F4F3EB}
+.motif-park .park-cover-ref{position:absolute;z-index:3;left:13px;top:9px;
+ font:normal 10px/1.5 Georgia,serif;letter-spacing:.07em;color:var(--park-mountain)}
+.motif-park .park-cover-art{position:absolute;inset:0;display:block}
+.motif-park .park-cover-underlay{position:absolute;
+ inset:25px 25% 31px 22%;border:1px solid #DBDFD6;background:#FDFCF7}
+.motif-park .park-cover-main,.motif-park .park-cover-secondary{position:absolute;z-index:1;
+ object-fit:contain;background:none;filter:saturate(.55) contrast(.92)}
+.motif-park .park-cover-main{left:20%;top:16%;width:52%;height:67%}
+.motif-park .park-cover-secondary{right:6%;bottom:15%;width:28%;height:35%;opacity:.73}
+.motif-park .park-cover-caption{position:absolute;z-index:3;bottom:8px;left:13px;right:12px;
+ font-size:10px;letter-spacing:.12em;color:var(--park-ink);text-align:left}
+.motif-park .park-game-link .park-cover-main{left:17%;width:46%;transform:rotate(-10deg)}
+.motif-park .park-game-jigsaw .park-cover-main{width:55%;left:18%;height:64%;transform:rotate(-3deg)}
+.motif-park .park-game-jigsaw .park-cover-underlay{
+ background:repeating-linear-gradient(90deg,#FDFCF9 0 25%,#E4E2D8 25% calc(25% + 1px),#FDFCF9 calc(25% + 1px) 50%)}
+.motif-park .park-game-color .park-cover-underlay{border-color:#C8D6C9}
+.motif-park .park-game-studio .park-cover-main{left:10%;transform:rotate(-24deg)}
+.motif-park .park-game-memory .park-cover-secondary{right:14%;bottom:24%;transform:rotate(14deg)}
+.motif-park .park-game-memory .park-cover-underlay{transform:rotate(-5deg)}
+.motif-park .park-back,.motif-park #park-cancel,.motif-park .park-result-actions button:not(.park-main-action),
+.motif-park .park-studio-controls button,.motif-park .park-studio-actions button:not(.park-main-action){
+ background:var(--park-paper);border:1px solid var(--park-edge);border-radius:4px;
+ box-shadow:none;color:var(--park-ink);font-weight:400}
+.motif-park .park-heading h2,.motif-park .park-select-hero strong,
+.motif-park .park-level-heading{font-family:var(--park-serif);font-weight:500;color:var(--park-ink)}
+.motif-park .park-big-icon{width:62px;height:62px;background:var(--park-white);
+ border:1px solid var(--park-edge);border-radius:50%;color:var(--park-mountain)}
+.motif-park .park-level-grid{background:#F5F5EF;border:1px solid var(--park-edge);
+ border-radius:4px;padding:17px}
+.motif-park .park-level-node{background:var(--park-paper);border:1px solid var(--park-edge);
+ box-shadow:none;color:var(--park-ink);border-radius:50%;min-height:64px}
+.motif-park .park-level-node.chosen{background:var(--park-celadon);border-color:var(--park-mountain);
+ transform:scale(1.02);box-shadow:none}
+.motif-park .park-level-node b{font-family:var(--park-serif);font-weight:500}
+.motif-park .park-level-node small{color:var(--park-mountain)}
+.motif-park .park-filters select,.motif-park .park-filters input{
+ background:#FEFDF9;border:1px solid var(--park-edge);border-radius:4px;color:var(--park-ink)}
+.motif-park .park-main-action,.motif-park .park-game-footer b{
+ text-shadow:none
+}
+.motif-park .park-main-action{min-height:56px;border:1px solid var(--park-ink);
+ background:var(--park-ink);border-radius:4px;box-shadow:none;color:#F8F6EF;
+ font-size:15px;font-weight:500;letter-spacing:.06em}
+.motif-park .park-main-action:hover:not(:disabled){
+ background:#31483D;transform:none;box-shadow:none}
+.motif-park .park-start-tray{padding:20px 23px}
+.motif-park .park-select-hero{padding:20px}
+.motif-park .park-scoreboard{background:#F3F4ED;margin-bottom:13px;padding:13px 18px;
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.motif-park .park-scoreboard>div{text-align:center;color:var(--park-mountain);
+ font-size:12px;min-width:0}
+.motif-park .park-scoreboard b{font-family:var(--park-serif);font-weight:500;font-size:22px;
+ color:var(--park-ink);font-variant-numeric:tabular-nums}
+.motif-park .park-instructions{background:var(--park-paper);color:var(--park-ink);
+ font-size:13px;line-height:1.8;text-align:left;border-left:2px solid var(--park-mountain);
+ border-radius:0;padding:10px 16px;margin-bottom:19px}
+.motif-park .park-game-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(230px,.65fr);
+ gap:24px;align-items:start;margin-bottom:14px}
+.motif-park .park-game-center{min-width:0}
+.motif-park .park-board-overline{display:flex;align-items:center;justify-content:space-between;
+ gap:12px;padding:0 4px 12px;border-bottom:1px solid var(--park-edge);font:normal 11px/1.5 Georgia,serif;
+ letter-spacing:.06em;color:var(--park-mountain)}
+.motif-park .park-board-overline span:last-child{font:normal 11px/1.5 inherit;letter-spacing:0}
+.motif-park .park-match-grid,.motif-park .park-link-grid{
+ background:#E8EDE5;border:1px solid var(--park-edge);box-shadow:none;border-radius:4px;
+ padding:12px;gap:7px;width:100%;max-width:none;margin:14px 0}
+.motif-park .park-match-tile,.motif-park .park-link-tile{
+ background:#FAF9F3;border:1px solid #D8DED4;box-shadow:none;border-radius:3px;
+ padding:5px;position:relative;display:flex;align-items:center;justify-content:center;
+ aspect-ratio:1;min-width:0;min-height:0}
+.motif-park .park-match-tile .park-piece-paper,.motif-park .park-link-tile .park-piece-paper{
+ display:grid;place-items:center;width:80%;height:80%;background:#FDFCF7;
+ box-shadow:inset 0 0 0 1px #ECEAE1}
+.motif-park .park-match-tile img,.motif-park .park-link-tile img{
+ display:block;width:88%;height:88%;object-fit:contain;filter:saturate(.65)}
+.motif-park .park-piece-mark{position:absolute;bottom:1px;right:3px;line-height:1;
+ font:normal 9px Georgia,serif;color:#849588;pointer-events:none}
+.motif-park .park-match-tile:hover,.motif-park .park-link-tile:hover{
+ background:#F3F7F0;border-color:var(--park-mountain);transform:none}
+.motif-park .park-match-tile.picked,.motif-park .park-link-tile.picked,
+.motif-park .park-match-tile.park-hint,.motif-park .park-link-tile.park-hint{
+ background:#E7ECE5;border:2px solid var(--park-ink);box-shadow:inset 0 0 0 1px #F8F6EF;
+ transform:none}
+.motif-park .park-match-tile.park-hint,.motif-park .park-link-tile.park-hint{
+ outline:2px dashed var(--park-cinnabar);outline-offset:1px}
+.motif-park .park-link-empty{background:#DFE8DD88;border:1px solid #E1E7DE;border-radius:2px}
+.motif-park .park-link-board{position:relative}
+.motif-park .park-link-route-flash{position:absolute;inset:14px 0;width:100%;
+ height:calc(100% - 28px);pointer-events:none;z-index:5;overflow:visible}
+.motif-park .park-link-route-flash path{fill:none;stroke:var(--park-cinnabar);
+ stroke-width:2.2;stroke-dasharray:3 2;stroke-linecap:round;stroke-linejoin:round;
+ filter:drop-shadow(0 1px 1px #fff)}
+.motif-park .park-board-help{display:flex;justify-content:space-between;align-items:center;
+ gap:14px;margin:8px 0 18px;color:#758277;font-size:11px}
+.motif-park .park-board-help button{min-height:39px;white-space:nowrap;font-size:12px;
+ padding:8px 13px;color:var(--park-ink);border:1px solid var(--park-mountain);
+ border-radius:4px;background:var(--park-paper)}
+.motif-park .park-board-help button:hover{background:var(--park-celadon)}
+.motif-park .park-game-guide{padding:23px 20px;border:1px solid var(--park-edge);
+ border-radius:4px;background:var(--park-paper)}
+.motif-park .park-guide-kicker{display:block;padding-bottom:10px;
+ border-bottom:1px solid var(--park-edge)}
+.motif-park .park-game-guide ol{list-style:none;padding:8px 0 13px;margin:0;
+ border-bottom:1px solid var(--park-edge)}
+.motif-park .park-game-guide li{display:flex;gap:12px;align-items:baseline;margin:13px 0;
+ line-height:1.6;font-size:13px;color:var(--park-ink)}
+.motif-park .park-game-guide li b{font:normal 11px/1.4 Georgia,serif;
+ color:var(--park-cinnabar);letter-spacing:.05em}
+.motif-park .park-guide-reference{margin:17px 0 7px}
+.motif-park .park-guide-reference>strong{font:normal 17px/1.5 var(--park-serif);
+ color:var(--park-ink);display:block;margin-bottom:9px}
+.motif-park .park-guide-swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.motif-park .park-guide-swatches span{position:relative;display:flex;align-items:center;
+ justify-content:center;aspect-ratio:1;border:1px solid #E3E2D8;background:#FDFCF7;
+ padding:5px;min-width:0}
+.motif-park .park-guide-swatches img{width:87%;height:87%;object-fit:contain;filter:saturate(.65)}
+.motif-park .park-guide-swatches small{position:absolute;bottom:1px;right:3px;
+ color:var(--park-mountain);font:normal 9px Georgia,serif}
+.motif-park .park-game-guide>p{margin:15px 0 0;font-size:11px;line-height:1.7;
+ color:#7A8578}
+.motif-park .park-feedback{background:#F3EFE6;border:1px solid #E7D9C8;
+ border-radius:2px;color:var(--park-ink);font-size:12px;line-height:1.7}
+.motif-park .park-jigsaw-grid,.motif-park .park-color-canvas,
+.motif-park .park-studio-stage{border-color:var(--park-edge);background:var(--park-white);
+ border-radius:3px;box-shadow:none}
+.motif-park .park-jigsaw-tile.picked{border-color:var(--park-cinnabar)}
+.motif-park .park-color-work,.motif-park .park-color-layout aside,
+.motif-park .park-studio-tools,.motif-park .park-studio-work,.motif-park .park-jigsaw-reference{
+ border:1px solid var(--park-edge);background:var(--park-paper);border-radius:3px;box-shadow:none}
+.motif-park .park-color-work h3,.motif-park .park-studio-tools h3,
+.motif-park .park-select-hero strong{font-family:var(--park-serif)}
+.motif-park .park-palette button{box-shadow:none;border:1px solid var(--park-edge)}
+.motif-park .park-palette button.selected{outline-color:var(--park-cinnabar);transform:none}
+.motif-park .park-studio-catalog button{border-color:var(--park-edge);background:#FDFCF7;border-radius:2px}
+.motif-park .park-result{padding:43px 20px}
+.motif-park .park-result .park-win-symbol{font-size:55px;color:var(--park-mountain)}
+.motif-park .park-result-stars{color:var(--park-gold)}
+.motif-park .park-memory-nav{background:var(--park-paper);border:1px solid var(--park-edge);
+ border-radius:3px;color:var(--park-mountain)}
+.motif-park .park-memory-nav button{background:var(--park-paper);border:1px solid var(--park-edge);
+ border-radius:4px;color:var(--park-ink)}
+/* Original 40-stage memory route lives inside the same frame: recolor only. */
+.motif-park .motif-game .mg-arcade-hero,.motif-park .motif-game .mg-mission-frame,
+.motif-park .motif-game .mg-map-column,.motif-park .motif-game.mg-arcade-playing,
+.motif-park .motif-game.mg-arcade-result{
+ background:var(--park-paper);border:1px solid var(--park-edge);box-shadow:none;border-radius:4px}
+.motif-park .motif-game .mg-arcade-hero h1,.motif-park .motif-game .mg-arcade-hero h1 span,
+.motif-park .motif-game .mg-map-title h2,.motif-park .motif-game .mg-mission-frame h2{color:var(--park-ink);text-shadow:none}
+.motif-park .motif-game .mg-arcade-tabs button[aria-selected="true"],
+.motif-park .motif-game button.mg-big-play,.motif-park .motif-game button.mg-big-play:hover:not(:disabled),
+.motif-park .motif-game .mg-skip-memory,.motif-park .motif-game.mg-arcade-result .mg-next-level{
+ background:var(--park-ink)!important;border:1px solid var(--park-ink)!important;
+ box-shadow:none!important;text-shadow:none;color:var(--park-paper)!important;border-radius:5px!important}
+.motif-park .motif-game .mg-arcade-tabs button,.motif-park .motif-game .mg-hud-pill,
+.motif-park .motif-game .mg-mission-icons span,.motif-park .motif-game .mg-map-scroll{
+ border-radius:4px;box-shadow:none;background:var(--park-white);border:1px solid var(--park-edge)}
+.motif-park .motif-game .mg-node-arrow{background:var(--park-cinnabar);border:1px solid var(--park-paper);
+ box-shadow:none}
+.motif-park .motif-game .mg-route-node.selected .mg-node-disc{
+ background:var(--park-celadon);border-color:var(--park-paper);
+ box-shadow:0 0 0 3px var(--park-mountain)}
+@media(max-width:900px){
+ .motif-park .park-game-layout{grid-template-columns:minmax(0,1fr)}
+ .motif-park .park-game-guide{padding:16px}
+ .motif-park .park-guide-swatches{grid-template-columns:repeat(8,minmax(0,1fr))}
+ .motif-park .park-game-guide ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+ .motif-park .park-game-guide li{font-size:11px}
+}
+@media(max-width:640px){
+ .motif-park .park-hero{padding:24px 18px}
+ .motif-park .park-games{gap:12px}
+ .motif-park .park-game-card,.motif-park .park-game-card:nth-child(2n),
+ .motif-park .park-game-card:nth-child(3n){min-height:275px;padding:9px}
+ .motif-park .park-cover{height:136px}
+ .motif-park .park-cover-ref{font-size:8px;left:6px;top:6px}
+ .motif-park .park-cover-caption{font-size:9px;left:6px;bottom:6px}
+ .motif-park .park-cover-underlay{inset:24px 18% 20px 15%}
+ .motif-park .park-cover-main{left:14%;width:60%}
+ .motif-park .park-game-card>strong{font-size:17px;margin-top:10px}
+ .motif-park .park-game-footer b{font-size:10px}
+ .motif-park .park-scoreboard{gap:6px;padding:10px}
+ .motif-park .park-scoreboard b{font-size:18px}
+ .motif-park .park-match-grid,.motif-park .park-link-grid{padding:6px;gap:4px;margin:11px 0}
+ .motif-park .park-match-tile,.motif-park .park-link-tile{padding:2px}
+ .motif-park .park-piece-mark{font-size:8px}
+ .motif-park .park-board-help{flex-direction:column;align-items:flex-start;gap:9px}
+ .motif-park .park-guide-swatches{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .motif-park .park-game-guide ol{grid-template-columns:1fr}
+ .motif-park .park-game-guide li{margin:6px 0;font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+ .motif-park *,.motif-park .motif-game *{transition:none!important;animation:none!important}
+}
+
+
+/* Functional embroidery points store — scoped to the game world and real rules. */
+.world-navbar .world-shop-entry{
+ border:1px solid #b9a072;min-height:33px;padding:5px 12px;
+ background:linear-gradient(135deg,#fcf7e9,#e5dec9);
+ color:#5c503d;border-radius:18px;white-space:nowrap;
+ font:normal 12px/1.4 "Songti SC","SimSun",serif;
+}
+.world-navbar .world-shop-entry:hover,.world-navbar .world-shop-entry:focus-visible{
+ box-shadow:0 0 0 2px #b8a17655;
+}
+.park-functional-shop{padding:24px!important;background:linear-gradient(160deg,#f9f6ed,#e8ede3)!important;
+ border:1px solid #d5c9b5!important;border-radius:16px!important;min-height:460px}
+.park-functional-shop .park-play-heading{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.park-functional-shop .park-shop-ledger{padding:16px 20px;margin:17px 0;display:flex;align-items:center;
+ justify-content:space-between;gap:12px;flex-wrap:wrap;border:1px solid #d8c6a4;
+ background:#fffaf0d9;border-radius:10px}
+.park-shop-ledger strong{font:normal 18px/1.5 "Songti SC","SimSun",serif;color:#5b5742}
+.park-shop-ledger b{font:bold 29px Georgia,serif;color:#985b39}
+.park-shop-ledger small,.park-shop-disclosure{color:#797365;line-height:1.6;font-size:12px}
+.park-shop-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.park-shop-product{background:#fbf7ed;box-shadow:0 7px 20px #384b4020;
+ border:1px solid #cbb790;border-radius:11px;padding:22px 19px;
+ display:flex;flex-direction:column;gap:11px}
+.park-shop-product h3{font:normal 23px/1.35 "Songti SC","SimSun",serif;color:#526e5b;margin:0}
+.park-shop-product p{font-size:13px;line-height:1.8;margin:0;color:#5c584e;flex:1}
+.park-shop-product>span{color:#706555;font-size:12px}
+.park-shop-product button{align-self:start;min-height:42px;border:1px solid #a98f6d;
+ background:linear-gradient(#f2e6d1,#e4cfad);color:#574b3c;padding:8px 19px;
+ border-radius:7px;font-size:14px}
+.park-shop-product button:disabled{opacity:.46;cursor:not-allowed}
+.park-shop-status{padding:10px 14px;border-left:3px solid #92a58b;background:#f6f0e3;
+ color:#57604a;font-size:13px;line-height:1.8}
+.park-shop-disclosure{margin:12px 0 0}
+#park-match-extra-moves,#park-link-extra-time{white-space:nowrap}
+@media(max-width:650px){
+ .park-functional-shop{padding:11px!important}
+ .park-shop-catalog{grid-template-columns:1fr}
+ .park-shop-product{padding:15px}
+ .world-navbar .world-shop-entry{font-size:11px}
+}
+
+
+/* The live store adds one true control to the world header. It must wrap
+   inside the viewport instead of causing horizontal page overflow. */
+@media(max-width:700px){
+ .world-shell .world-navbar{min-width:0;max-width:100%;overflow:visible}
+ .world-shell .world-navbar-brand{min-width:0}
+ .world-shell .world-navbar-status{
+  display:flex;flex-wrap:wrap;width:100%;min-width:0;max-width:100%;
+  justify-content:center;gap:4px 6px
+ }
+ .world-shell .world-navbar-status>span{flex:0 0 auto;max-width:100%;white-space:normal}
+ .world-shell .world-navbar-status .world-shop-entry{
+  flex:0 1 auto;white-space:normal;min-width:0;max-width:100%;
+  line-height:1.45;padding:5px 9px
+ }
+ .world-shell .world-navbar-status .world-immersive-toggle{
+  margin-left:0!important;flex:0 1 auto;min-width:0
+ }
+}
+
+
+/* Interactive store access stays above the absolute-positioned panoramic scene.
+   Never use an artificial click in tests to bypass a real obstructed control. */
+.world-shell .world-navbar{position:relative;z-index:30;isolation:isolate}
+.world-shell .world-navbar-status,.world-shell .world-shop-entry{position:relative;z-index:2}
+.world-shell .world-map-frame{position:relative;z-index:1}

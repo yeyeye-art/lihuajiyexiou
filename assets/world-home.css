@@ -1,0 +1,59 @@
+/* Home uses scenery-only crops from the approved references. Every gateway,
+   label, balance and action is independent DOM, never a screenshot hotspot. */
+body[data-page="game"] #main .world-shell{--home-gold:#b39361;--home-ink:#493b2c;--home-paper:#f6eddd;background:#f6eddd;color:var(--home-ink);font-family:"Songti SC","SimSun",serif}
+#main .world-shell .world-navbar{min-height:76px;padding:12px 2.5%;gap:12px;background:url('./reference-art/silk.webp') center/200px;border:0;border-bottom:1px solid #cfb68d;box-shadow:0 3px 16px #50382026}
+#main .world-shell .world-navbar-brand strong{font-size:clamp(22px,2.1vw,35px);color:#30261d;font-weight:600;letter-spacing:.06em}
+#main .world-shell .world-brand-seal{border:0;background:#a74c38;color:#fff1dc;font-size:20px;border-radius:5px;width:26px;height:34px}
+#main .world-shell .world-navbar-brand small{color:#776149;font-size:12px}
+#main .world-shell .world-navbar-status{gap:8px}
+#main .world-shell .world-navbar-status>span{background:#fffaf280;border:1px solid #d8c6ac;color:#786346;font-size:12px;padding:7px 10px}
+#main .world-shell .world-navbar-status>span:first-child{display:none}
+#main .world-shell .world-navbar-status b{color:#493b2c}
+#main .world-shell .world-navbar button{background:#f9f1e4!important;color:#634a2e!important;border:1px solid #c4a170!important;border-radius:22px!important;font-size:13px;min-height:36px;padding:7px 13px}
+#main .world-shell .world-viewport{border:0;background:#e9e5d9;scrollbar-width:thin;scrollbar-color:#bba27d #f3eadb;scroll-behavior:auto}
+#main .world-shell .world-canvas{min-width:1240px;width:100%;height:calc(100svh - 118px);min-height:720px;max-height:1100px;aspect-ratio:auto;overflow:hidden}
+#main .world-shell .world-landscape{object-fit:cover;object-position:center 48%;filter:none;opacity:1}
+#main .world-shell .world-foreground-props{display:none}
+#main .world-shell .world-canvas:after{background:linear-gradient(180deg,#fff8e77a,transparent 27%,#f7f1de16 67%,#f7f1de85),radial-gradient(ellipse at 50% 16%,#fff9ebd9,transparent 38%);z-index:1}
+#main .world-shell .world-intro{left:50%;top:4%;transform:translateX(-50%);text-align:center;max-width:none;width:500px;padding:0;background:none;border:0;backdrop-filter:none}
+#main .world-shell .world-intro span{font:15px "SimSun",serif;letter-spacing:.4em;color:#856a47}
+#main .world-shell .world-intro h1{font-size:55px;line-height:1.35;margin:12px 0 9px;font-weight:600;letter-spacing:.18em;color:#403526;text-shadow:0 2px 15px #fffaf1}
+#main .world-shell .world-intro p{font:15px "SimSun",serif;letter-spacing:.18em;color:#6d5c43}
+#main .world-shell .world-landmark{top:36%;left:calc(8.5% + var(--gate-index)*16.6%);width:14%;max-width:218px;min-width:170px;height:380px;transform:translateX(-50%);padding:0!important;gap:0;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;overflow:visible;transition:transform .2s ease;isolation:isolate}
+#main .world-shell .world-site-match3{--gate-index:0}#main .world-shell .world-site-link{--gate-index:1}#main .world-shell .world-site-jigsaw{--gate-index:2}#main .world-shell .world-site-color{--gate-index:3}#main .world-shell .world-site-studio{--gate-index:4}#main .world-shell .world-site-memory{--gate-index:5}
+#main .world-shell .world-landmark:before{top:-13px;left:50%;width:39px;height:24px;border-radius:50% 50% 3px 3px;background:#ede0c7;border:2px solid #a88c5a;box-shadow:inset 0 0 0 3px #fff5df;z-index:0;transform:translateX(-50%)}
+#main .world-shell .world-landmark:after{width:2px;height:35px;top:100%;background:#ab714c;box-shadow:4px 0 #cfb381,-4px 0 #cfb381}
+#main .world-shell .world-landmark-building{position:absolute;inset:0 0 100px;width:100%;height:auto;margin:0;filter:drop-shadow(0 10px 10px #4f402e45);border:5px double #bca074;border-radius:95px 95px 3px 3px;overflow:hidden;background:#ddd8c4;box-shadow:inset 0 0 0 3px #fff1d3}
+#main .world-shell .world-venue-illustration{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;transform:none;filter:none;opacity:1}
+#main .world-shell .world-landmark-sign{position:absolute;bottom:0;left:-4px;right:-4px;width:auto;min-height:130px;padding:17px 8px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;border:4px double #b49464!important;border-radius:3px 3px 20px 20px;background:url('./reference-art/silk.webp') center/150px!important;box-shadow:0 6px 14px #54432733;transform:none;overflow:visible}
+#main .world-shell .world-landmark-number{position:absolute;left:50%;top:-15px;width:27px;height:27px;border-radius:50%;transform:translateX(-50%);background:#816446;color:#fff3da;border:2px solid #eddbb9;font-size:15px}
+#main .world-shell .world-landmark-motif{display:none}
+#main .world-shell .world-landmark-title{font-size:26px;font-weight:600;color:#443523;letter-spacing:.1em;line-height:1.4}
+#main .world-shell .world-landmark small{color:#806d50;font:13px "SimSun",serif;letter-spacing:.1em}
+#main .world-shell .world-landmark-enter{display:block;background:#8d4931;color:#fff4dd;border:1px solid #c59c67;border-radius:20px;padding:7px 20px;margin:3px 0 0;font-size:13px;letter-spacing:.08em}
+#main .world-shell .world-landmark:hover,#main .world-shell .world-landmark:focus-visible{transform:translate(-50%,-9px);outline:2px solid #9c613d;outline-offset:9px;background:none!important}
+#main .world-shell .world-corner-stamp{left:50%;bottom:7%;transform:translateX(-50%);font-size:23px;text-align:center;color:#624b30;letter-spacing:.3em;text-shadow:0 1px 4px #fff9e8}
+#main .world-shell .world-corner-stamp span{font:12px "SimSun",serif;letter-spacing:.22em;color:#79684e;margin-top:8px}
+#main .world-shell .world-silk-road{opacity:0;pointer-events:none}
+#main .world-shell .world-pan-status{background:#f5eededb;color:#655033;border:1px solid #c8ae86;border-radius:30px;bottom:12px;font-size:12px}
+#main .world-shell .world-bottom-bar{background:#f6eddd;color:#7c694f;border-color:#d7c4a2;padding:10px 24px}
+#main .world-shell .world-screen-note{display:none}
+@media(max-width:1100px){#main .world-shell .world-navbar-brand small{display:none}#main .world-shell .world-navbar-status{margin-left:auto}#main .world-shell .world-navbar-status>span:nth-child(3){display:none}}
+@media(max-width:700px){
+ #main .world-shell .world-navbar{padding:12px 14px;gap:10px;display:flex;flex-direction:column;align-items:stretch}
+ #main .world-shell .world-navbar-brand{justify-content:center}#main .world-shell .world-navbar-brand strong{font-size:24px}
+ #main .world-shell .world-navbar-status{margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+ #main .world-shell .world-navbar-status>span{font-size:11px;padding:5px 9px}#main .world-shell .world-navbar button{font-size:12px;padding:6px 10px;min-height:34px;flex:none}
+ #main .world-shell .world-navbar-status .world-immersive-toggle{display:none}
+ #main .world-shell .world-canvas{min-width:1240px;height:680px;min-height:680px}
+ #main .world-shell .world-intro{left:195px;width:360px;top:4%}#main .world-shell .world-intro h1{font-size:39px}
+ #main .world-shell .world-intro p{font-size:12px}#main .world-shell .world-intro span{font-size:12px}
+ #main .world-shell .world-landmark{top:30%;height:360px}#main .world-shell .world-landmark-title{font-size:23px}
+ #main .world-shell .world-corner-stamp{display:none}#main .world-shell .world-bottom-bar{padding:10px 15px;font-size:10px;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){#main .world-shell .world-landmark{transition:none}#main .world-shell .world-viewport{scroll-behavior:auto}}
+@media(max-width:700px){
+ #main .world-shell .world-navbar{height:auto!important;flex-wrap:nowrap}
+ #main .world-shell .world-viewport{height:auto;max-height:none}
+ #main .world-shell .world-intro{padding:18px 8px;background:radial-gradient(ellipse,#fff8e7ed,#fff8e7aa 55%,transparent 75%)}
+}

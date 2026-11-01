@@ -1,0 +1,2506 @@
+{
+  "version": 1,
+  "updated": "2026-10-20",
+  "notice": "共 70 条跨地域刺绣扩展资料，按项目官方及博物馆公开记录编写短摘要。馆藏资料有具体 Object Number、时代、材料与文化归属，不据此推断苏绣制作地；更多领域持续补充。公开目录或 Public Domain 仅针对具体实物/图片，不代表馆方解说文字版权自由。",
+  "records": [
+    {
+      "id": "world-suxiu",
+      "title": "苏绣",
+      "section": "suxiu",
+      "region": "江苏·苏州",
+      "period": "历史至今",
+      "summary": "苏绣是以苏州为中心发展的传统刺绣体系，国家级非遗项目Ⅶ-18。苏绣具体起源年代并不明确，现有历史资料可据实物和文献追索其发展。",
+      "facts": [
+        {
+          "text": "2006年首批国家级非物质文化遗产代表性项目，项目编号Ⅶ-18。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "不能把技艺起源不详简化成确定的创始朝代。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "苏绣",
+        "起源",
+        "历史",
+        "国家级非遗",
+        "苏州"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-history-suxiu",
+      "title": "从宋元到清末：苏绣发展的主要证据",
+      "section": "suxiu",
+      "region": "江苏·苏州",
+      "period": "宋—清",
+      "summary": "苏绣历史线索包括宋代以来绣品、元代针法运用、明代文人画稿与清代商品绣的发展。应把可考实物、史籍记述和后世传说区别陈述。",
+      "facts": [
+        {
+          "text": "官方项目记录元代刺绣残片已使用多种针法。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "明代绣品多采用文人画稿；清代刺绣商品化发展，苏州被称作绣市。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "历史",
+        "宋代",
+        "元代",
+        "明代",
+        "清代",
+        "绣市",
+        "实物"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-suxiu-shen",
+      "title": "沈寿与仿真绣",
+      "section": "suxiu",
+      "region": "江苏·南通",
+      "period": "清末民初",
+      "summary": "沈寿吸收写实绘画观察与传统刺绣技艺，探索仿真绣；南通仿真绣是苏绣国家级非遗扩展项目。",
+      "facts": [
+        {
+          "text": "国家非遗记录将南通仿真绣又称沈绣，作为苏绣分支。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13980"
+        },
+        {
+          "text": "相关资料强调借鉴西洋美术并运用针法表现肌理。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13980"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13980"
+      },
+      "keywords": [
+        "沈寿",
+        "仿真绣",
+        "南通",
+        "沈绣",
+        "写实"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-suxiu-modern",
+      "title": "乱针绣与现代苏绣创新",
+      "section": "suxiu",
+      "region": "江苏·常州",
+      "period": "20世纪",
+      "summary": "常州乱针绣以交错针迹与混合色彩表现光影。创制年代在国家非遗苏绣主项目及常州扩展项目之间存在记述差异，需保留各自出处而不强行统一。",
+      "facts": [
+        {
+          "text": "常州乱针绣扩展项目将杨守玉创制时间记为1912年，采用纵横交错与长短并用的针迹组织。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/23716.html"
+        },
+        {
+          "text": "苏绣国家级非遗主项目将杨守玉创乱针绣概述为20世纪30年代；这两份国家非遗项目文字存在创制时间差异。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/23716.html"
+      },
+      "keywords": [
+        "乱针绣",
+        "杨守玉",
+        "常州",
+        "现代",
+        "针法"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "additionalSources": [
+        {
+          "title": "国家级非遗主项目：苏绣",
+          "url": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ]
+    },
+    {
+      "id": "world-suxiu-wuxi",
+      "title": "无锡精微绣",
+      "section": "suxiu",
+      "region": "江苏·无锡",
+      "period": "近现代",
+      "summary": "精微绣以小幅面、精细人物与景物表现见长，是苏绣Ⅶ-18下独立记录的扩展项目。",
+      "facts": [
+        {
+          "text": "2008年作为国家级非遗苏绣扩展项目公布。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13979.html"
+        },
+        {
+          "text": "重点在卷幅微小、造型精巧和细密的细节处理。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13979.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13979.html"
+      },
+      "keywords": [
+        "无锡",
+        "精微绣",
+        "苏绣",
+        "分支"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-suxiu-yangzhou",
+      "title": "扬州刺绣与写意绣",
+      "section": "suxiu",
+      "region": "江苏·扬州",
+      "period": "传统与当代",
+      "summary": "扬州刺绣讲究融画理于绣理，擅长体现中国画的水墨写意效果，是苏绣项目关联的扩展流派。",
+      "facts": [
+        {
+          "text": "国家级非遗苏绣（扬州刺绣）为Ⅶ-18扩展项目。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13981.html"
+        },
+        {
+          "text": "官方说明其常以书画为底本，运用针法表达笔墨意境。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13981.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13981.html"
+      },
+      "keywords": [
+        "扬州刺绣",
+        "写意绣",
+        "国画",
+        "苏绣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-xiang",
+      "title": "湘绣：湖南传统刺绣",
+      "section": "four",
+      "region": "湖南·长沙",
+      "period": "传统与当代",
+      "summary": "湘绣是中国四大名绣之一，以湖南长沙及周边为重要传承区域。应独立研究其工艺和艺术语言，不笼统称为苏绣分支。",
+      "facts": [
+        {
+          "text": "国家级非遗传统美术项目Ⅶ-19，2006年第一批公布。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13982.html"
+        },
+        {
+          "text": "传统产区主要在长沙及周边，近现代经历绣庄、绣厂、研究所和博物馆等多种组织形态。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13982.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13982.html"
+      },
+      "keywords": [
+        "湘绣",
+        "四大名绣",
+        "湖南",
+        "长沙"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-yue",
+      "title": "粤绣：广绣与潮绣的关联",
+      "section": "four",
+      "region": "广东",
+      "period": "传统与当代",
+      "summary": "粤绣是四大名绣之一，广东地区的广绣和潮绣具有各自技艺和历史背景，不能直接将两者混称。",
+      "facts": [
+        {
+          "text": "国家级非遗编号Ⅶ-20。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13983/"
+        },
+        {
+          "text": "官方广绣项目记录丝绒、金银线、线绣、珠绣等类型；潮绣有独立的代表性传承人及相关技艺资料。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13983/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13983/"
+      },
+      "keywords": [
+        "粤绣",
+        "广绣",
+        "潮绣",
+        "四大名绣",
+        "广东"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-yue-chao",
+      "title": "潮绣：金绒与立体艺术",
+      "section": "four",
+      "region": "广东·潮州",
+      "period": "近现代",
+      "summary": "潮绣常见金绒绣等工艺，并发展出垫、拼、贴、折等手段形成富有立体层次的表达。",
+      "facts": [
+        {
+          "text": "国家非遗代表性传承人林智成的资料记录潮绣工艺创新。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/2630"
+        },
+        {
+          "text": "应区分具体传承人的个人做法与整个地区所有潮绣工艺。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/2630"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/2630"
+      },
+      "keywords": [
+        "潮绣",
+        "金绒绣",
+        "林智成",
+        "立体"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-shu",
+      "title": "蜀绣：四川传统刺绣",
+      "section": "four",
+      "region": "四川·成都",
+      "period": "历史至今",
+      "summary": "蜀绣又称川绣，与四川地区的桑蚕丝织文化密切相关，是四大名绣之一。",
+      "facts": [
+        {
+          "text": "国家级非遗传统美术项目Ⅶ-21，2006年第一批公布。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13985.html"
+        },
+        {
+          "text": "官方项目介绍其与川西丝织业发展之间的关系。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13985.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13985.html"
+      },
+      "keywords": [
+        "蜀绣",
+        "川绣",
+        "四川",
+        "成都",
+        "四大名绣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-four-compare",
+      "title": "四大名绣应怎样比较？",
+      "section": "four",
+      "region": "中国",
+      "period": "近现代分类",
+      "summary": "苏绣、湘绣、粤绣、蜀绣是四个重要的中国刺绣区域传统；“四大名绣”是艺术与行业概括，不表示其他刺绣传承不重要。",
+      "facts": [
+        {
+          "text": "官方非遗名录中四者分别对应Ⅶ-18、Ⅶ-19、Ⅶ-20、Ⅶ-21。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "比较时宜观察各自地域、流派、工艺、组织和具体馆藏，而非以一句固定口诀抹平内部差异。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "四大名绣",
+        "苏绣",
+        "湘绣",
+        "粤绣",
+        "蜀绣",
+        "区别",
+        "对比"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-miao",
+      "title": "苗绣：地方生活与多样针法",
+      "section": "china",
+      "region": "贵州及周边苗族地区",
+      "period": "传统与当代",
+      "summary": "苗绣并非单一技法，各支系和地区在刺绣对象、用色、图案与工序上都有差异，应逐项核对。",
+      "facts": [
+        {
+          "text": "国家级非遗苗绣项目编号Ⅶ-22，涉及不同地区与扩展项目。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13991"
+        },
+        {
+          "text": "官方台江苗绣条目介绍了多种绣法与服饰、嫁妆之间的社会联系。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13991"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13991"
+      },
+      "keywords": [
+        "苗绣",
+        "贵州",
+        "苗族",
+        "非遗"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-global-palestine",
+      "title": "巴勒斯坦刺绣：服饰、图案与社会记忆",
+      "section": "world",
+      "region": "巴勒斯坦",
+      "period": "2021年列名",
+      "summary": "巴勒斯坦传统刺绣不仅是装饰工艺，也通过衣物纹样表达社区身份与世代传承。",
+      "facts": [
+        {
+          "text": "2021年列入联合国教科文组织人类非物质文化遗产代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/the-art-of-embroidery-in-palestine-practices-skills-knowledge-and-rituals-01722"
+        },
+        {
+          "text": "传统服饰上的图案与刺绣实践和地域、家庭、日常生活存在联系。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/the-art-of-embroidery-in-palestine-practices-skills-knowledge-and-rituals-01722"
+        }
+      ],
+      "source": {
+        "title": "UNESCO ICH",
+        "url": "https://ich.unesco.org/en/RL/the-art-of-embroidery-in-palestine-practices-skills-knowledge-and-rituals-01722"
+      },
+      "keywords": [
+        "巴勒斯坦刺绣",
+        "世界刺绣",
+        "UNESCO",
+        "embroidery"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-global-zmijanje",
+      "title": "兹米扬涅刺绣（Zmijanje embroidery）",
+      "section": "world",
+      "region": "波黑",
+      "period": "2014年列名",
+      "summary": "兹米扬涅刺绣以蓝色线与几何形式见长，社区的刺绣学习与服饰身份表达彼此联系。",
+      "facts": [
+        {
+          "text": "2014年联合国教科文组织相关决定文件说明以蓝线绣制几何纹样的实践。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/zmijanje-embroidery-00990"
+        },
+        {
+          "text": "其传承涉及实践教学、社群参与与口述经验。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/zmijanje-embroidery-00990"
+        }
+      ],
+      "source": {
+        "title": "UNESCO ICH",
+        "url": "https://ich.unesco.org/en/RL/zmijanje-embroidery-00990"
+      },
+      "keywords": [
+        "波黑",
+        "兹米扬涅",
+        "Zmijanje",
+        "传统刺绣",
+        "世界"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-global-europe",
+      "title": "欧洲刺绣：1600—1800年",
+      "section": "world",
+      "region": "欧洲",
+      "period": "1600—1800",
+      "summary": "欧洲刺绣可在服饰、礼仪织物和室内装饰等不同语境中研究，刺绣以针线在已有底料上构成图案，不应与织机织造概念混为一谈。",
+      "facts": [
+        {
+          "text": "大都会博物馆艺术史专题讨论17至18世纪的欧洲刺绣生产、工坊和用途。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        },
+        {
+          "text": "宗教服饰及其他织物的装饰是研究其社会角色的重要材料。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+      },
+      "keywords": [
+        "欧洲刺绣",
+        "宗教服饰",
+        "织物",
+        "工坊"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-world-media",
+      "title": "刺绣、织造与印染：技艺分类边界",
+      "section": "world",
+      "region": "世界",
+      "period": "跨时期",
+      "summary": "刺绣一般是在底料上使用针和线增加纹样；织造靠经纬结构形成布料，印染则以染料等改变织物颜色。跨文化比较时要保留三者的不同工艺体系。",
+      "facts": [
+        {
+          "text": "大都会博物馆艺术史用针与线对已有底料进行装饰来概括刺绣。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        },
+        {
+          "text": "不同文化的织物工艺可能综合多种技术，但不能把所有纺织非遗一律标为刺绣。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+      },
+      "keywords": [
+        "刺绣",
+        "织造",
+        "纺织",
+        "印染",
+        "区别"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-material-classify",
+      "title": "常见刺绣线材与底料",
+      "section": "craft",
+      "region": "跨文化",
+      "period": "传统与现代",
+      "summary": "线材、底布和绣针需要根据针法、纹样密度与作品用途选择。现代数字配色不是实体丝线色号，不应据此直接宣称材料规格。",
+      "facts": [
+        {
+          "text": "不同刺绣作品会使用丝、毛、棉与金属等不同材料，具体以馆藏的实物工艺描述为准。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        },
+        {
+          "text": "历史材料与今天的商品线材在纤维、染色与处理方式上可能不同。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+      },
+      "keywords": [
+        "材料",
+        "底布",
+        "丝线",
+        "绣针",
+        "绣绷",
+        "蚕丝"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-museum-method",
+      "title": "怎样辨认博物馆中的刺绣实物？",
+      "section": "museum",
+      "region": "跨文化",
+      "period": "各时期",
+      "summary": "阅读馆藏时先核对原始名称、藏品编号、所用材质、产地归属、年代判断与馆方版权声明，再进行二次文化阐释。",
+      "facts": [
+        {
+          "text": "大都会博物馆艺术史举例列出馆藏名称、材质与针法等信息。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        },
+        {
+          "text": "根据图片看见的针迹并不等于已经核定的工艺名称；缺失信息应留空。",
+          "sourceUrl": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/ja/essays/textile-production-in-europe-embroidery-1600-1800"
+      },
+      "keywords": [
+        "馆藏",
+        "名作",
+        "文物",
+        "博物馆",
+        "材质",
+        "年代"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-heritage-diff",
+      "title": "国家级非遗与世界非遗是同一个称号吗？",
+      "section": "heritage",
+      "region": "中国与世界",
+      "period": "现代保护制度",
+      "summary": "中国国家级非物质文化遗产代表性项目名录与联合国教科文组织非遗名录由不同程序管理，不能把国家级项目写作自动入选世界非遗。",
+      "facts": [
+        {
+          "text": "苏绣是中国国家级非遗项目Ⅶ-18。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "巴勒斯坦传统刺绣则被列入联合国教科文组织人类非物质文化遗产代表作名录；两者是不同层级的列名事实。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "国家非遗",
+        "UNESCO",
+        "世界非遗",
+        "名录",
+        "区别"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-source-ethics",
+      "title": "AI 为什么必须标明刺绣知识的来源？",
+      "section": "modern",
+      "region": "现代数字化",
+      "period": "当代",
+      "summary": "刺绣术语、起源与针法类型经常存在地方差异，专业知识系统应展示原始来源、证据边界和更新时间，避免把模型生成文本当作官方解释。",
+      "facts": [
+        {
+          "text": "国家非遗项目描述强调具体地域和不同项目的保护背景。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "本条关于知识库建设的原则是梨花季编辑规范，而不是国家政策的官方条款。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "知识库",
+        "数据",
+        "溯源",
+        "人工智能",
+        "问答",
+        "审核"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-dingpei-book",
+      "title": "丁佩《绣谱》：苏绣理论著述",
+      "section": "suxiu",
+      "region": "江苏·苏州",
+      "period": "清代道光年间",
+      "summary": "官方苏绣项目史述记载，苏州女子丁佩在清代道光年间总结刺绣技艺，著有《绣谱》，是理解清代技艺语言的重要文献线索。",
+      "facts": [
+        {
+          "text": "非遗官方项目将《绣谱》列为中国第一部刺绣专业著作。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "应区分史籍对该书的称誉与今天可以实际核对的版本文本，不能自行杜撰其中条文。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "丁佩",
+        "绣谱",
+        "清代",
+        "史料"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-shen-manual",
+      "title": "沈寿《雪宧绣谱》与经验记录",
+      "section": "suxiu",
+      "region": "江苏·南通及苏州体系",
+      "period": "清末民初",
+      "summary": "沈寿晚年口述总结刺绣经验的《雪宧绣谱》，是苏绣仿真绣与近代绣艺研究的重要著述。",
+      "facts": [
+        {
+          "text": "中国非遗网苏绣项目史述提到沈寿在晚年口述《雪宧绣谱》。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "名称存在异体字和流通版本差异；本站只确认官网页已有的书名及形成背景，不宣称已阅读全文。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "沈寿",
+        "雪宧绣谱",
+        "雪宦",
+        "绣书",
+        "口述"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-suxiu-three-schools",
+      "title": "苏绣三大谱系",
+      "section": "suxiu",
+      "region": "江苏·苏州",
+      "period": "明代以来至现代",
+      "summary": "国家非遗苏绣项目将尚有明确传承谱系的影响较大流派概括为传统细绣、仿真绣和乱针绣三类。",
+      "facts": [
+        {
+          "text": "传统细绣、沈寿仿真绣与杨守玉乱针绣在官方苏绣项目描述中被并列为三大谱系。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "三大谱系是该官方项目的历史分类，不表示苏绣只有三种针法，也不代表其他苏绣分支不存在。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "传统细绣",
+        "仿真绣",
+        "乱针绣",
+        "三大流派"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-yuan-nine-techniques",
+      "title": "元代苏绣残片中的多种针法",
+      "section": "history",
+      "region": "江苏·苏州关联",
+      "period": "元代",
+      "summary": "苏绣历史研究可以依据实际遗存讨论技术成熟程度；官方项目资料举出一件元代残片运用九种刺绣针法的例子。",
+      "facts": [
+        {
+          "text": "国家非遗苏绣项目记录元代苏绣残片在单件作品中使用九种针法。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "网页没有提供该残片完整馆藏编号，因此本站不构造虚假的作品名、馆藏图片或展厅位置。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "元代",
+        "九种针法",
+        "残片",
+        "实物"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "lineage": "suxiu"
+    },
+    {
+      "id": "world-ming-literati-styles",
+      "title": "明代画稿与苏绣审美",
+      "section": "history",
+      "region": "江南·苏州",
+      "period": "明代",
+      "summary": "明代苏绣吸收文人画稿，官方项目资料将精细雅洁视为其逐渐形成的重要艺术特征。",
+      "facts": [
+        {
+          "text": "明代绣品多采用文人画稿这一描述来自国家非遗苏绣项目页。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "文人绘画影响不能用来断定任何一件未核实出处的明代绣品必然制作于苏州。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "文人画",
+        "明代",
+        "绣稿",
+        "书画审美"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "lineage": "suxiu"
+    },
+    {
+      "id": "world-qing-embroidery-market",
+      "title": "清代苏州绣市与商品绣",
+      "section": "history",
+      "region": "江苏·苏州",
+      "period": "清代",
+      "summary": "清代苏绣形成产业，商品绣兴盛，官方项目资料记载苏州因而有“绣市”之称。",
+      "facts": [
+        {
+          "text": "国家非遗苏绣史料明确提及清代商品绣发达及苏州的绣市称呼。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "绣市反映工艺商品化环境，与宫廷收藏、文人画绣等不同消费语境需分别研究。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "清代",
+        "绣市",
+        "商品绣",
+        "商业"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "lineage": "suxiu"
+    },
+    {
+      "id": "world-suxiu-institute",
+      "title": "苏州刺绣研究所的现代作用",
+      "section": "suxiu",
+      "region": "江苏·苏州",
+      "period": "20世纪50年代起",
+      "summary": "20世纪50年代苏州刺绣研究所建立，聚集并培养苏绣人才，对针法整理、传承和创新具有重要作用。",
+      "facts": [
+        {
+          "text": "国家非遗苏绣项目历史部分记载20世纪50年代建立苏州刺绣研究所。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "机构名称和法人形式可能随时期变化；本站不将当代机构资料直接套用于历史各阶段。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "苏州刺绣研究所",
+        "保护",
+        "1950年代",
+        "教育"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-zhenhu-place",
+      "title": "镇湖与当代苏绣传承地理",
+      "section": "suxiu",
+      "region": "江苏·苏州高新区",
+      "period": "当代",
+      "summary": "国家非遗苏绣项目页记载，苏绣行业现主要集中于苏州市区及高新区东渚镇、镇湖街道一带；这不等于苏绣历史仅发生在镇湖。",
+      "facts": [
+        {
+          "text": "官方国家级项目将苏州市区、东渚镇和镇湖街道列为主要集聚区。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "苏州历史上的城乡绣艺分布比当代行业集聚区广得多。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "镇湖",
+        "苏绣村",
+        "东渚",
+        "传承地理"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-yangshouyu-date-difference",
+      "title": "乱针绣创制年代：两份官方叙述",
+      "section": "history",
+      "region": "江苏·苏州与常州关联",
+      "period": "20世纪早期",
+      "summary": "官方不同项目文本对乱针绣创制年代记述不完全一致：苏绣主项目概括为20世纪30年代，而常州乱针绣扩展项目明确表述1912年。这里应保留差异、继续考证。",
+      "facts": [
+        {
+          "text": "常州乱针绣扩展项目将杨守玉创制时间记为1912年，采用纵横交错与长短并用的针迹组织。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/23716.html"
+        },
+        {
+          "text": "苏绣国家级非遗主项目将杨守玉创乱针绣概述为20世纪30年代；这两份国家非遗项目文字存在创制时间差异。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/23716.html"
+      },
+      "keywords": [
+        "杨守玉",
+        "乱针绣",
+        "1912",
+        "1930",
+        "创制",
+        "争议"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "additionalSources": [
+        {
+          "title": "国家级非遗主项目：苏绣",
+          "url": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "lineage": "suxiu"
+    },
+    {
+      "id": "world-changzhou-light",
+      "title": "常州乱针绣的混色与光影",
+      "section": "craft",
+      "region": "江苏·常州",
+      "period": "20世纪至今",
+      "summary": "常州乱针绣并非随机落针，而通过不同方向和长度的针迹叠绣，协调底层、表现层及平衡层来组织色彩和明暗。",
+      "facts": [
+        {
+          "text": "常州乱针绣项目官方资料将图层描述为基础层、表现层、平衡层。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/23716.html"
+        },
+        {
+          "text": "所述三层是常州乱针绣工艺表达，不是梨花季 AR 演示图层数量的官方依据。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/23716.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/23716.html"
+      },
+      "keywords": [
+        "乱针绣",
+        "层次",
+        "光影",
+        "基础层",
+        "表现层",
+        "平衡层"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "lineage": "suxiu"
+    },
+    {
+      "id": "world-wuxi-double",
+      "title": "无锡双面精微绣与小幅细节",
+      "section": "suxiu",
+      "region": "江苏·无锡",
+      "period": "20世纪80年代起",
+      "summary": "精微绣突出小画面精细人物、书写和复杂场景。官方资料还记载20世纪80年代初发展出双面精微绣。",
+      "facts": [
+        {
+          "text": "无锡精微绣是国家非遗项目Ⅶ-18下2008年扩展项目。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13979.html"
+        },
+        {
+          "text": "其双面精微绣的年代和起源应与一般苏绣双面绣概念区别开。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13979.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13979.html"
+      },
+      "keywords": [
+        "无锡",
+        "双面",
+        "精微绣",
+        "80年代"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-suxiu-heirs",
+      "title": "苏绣代表性传承人名单如何查证",
+      "section": "heritage",
+      "region": "江苏·苏州",
+      "period": "当代保护制度",
+      "summary": "非遗名录中代表性传承人有具体编号与项目对应；不宜凭媒体称呼推断国家级身份，也不宜把个人作品无证据归为集体传统。",
+      "facts": [
+        {
+          "text": "苏绣国家级项目页列有顾文霞、李娥瑛、姚建萍、姚惠芬等相关代表性传承人。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        },
+        {
+          "text": "具体职称、授权肖像、作品归属与现状须逐一核对，不由名单自动推断。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13978/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13978/"
+      },
+      "keywords": [
+        "顾文霞",
+        "李娥瑛",
+        "姚建萍",
+        "姚惠芬",
+        "名录"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-gu-school",
+      "title": "顾绣：晚明松江家族画绣",
+      "section": "china",
+      "region": "上海·松江",
+      "period": "明代至现代",
+      "summary": "顾绣为上海松江地区以家族命名的刺绣传统，晚明韩希孟将绘画素养融入绣品制作，推进了半绣半绘的艺术语言。",
+      "facts": [
+        {
+          "text": "2006年国家级非遗项目Ⅶ-17，独立于苏绣项目Ⅶ-18。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13977/"
+        },
+        {
+          "text": "官方顾绣史料介绍缪氏、韩希孟、顾兰玉等家族女性与顾绣发展之间的联系。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13977/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13977/"
+      },
+      "keywords": [
+        "顾绣",
+        "韩希孟",
+        "上海",
+        "松江",
+        "画绣",
+        "家族"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-gu-color",
+      "title": "顾绣的半绣半绘与补色",
+      "section": "craft",
+      "region": "上海·松江",
+      "period": "明代",
+      "summary": "顾绣在书画语境中融合刺绣与绘画；针线之外配合补色、借色和中间色化晕，被官方项目列为重要特点。",
+      "facts": [
+        {
+          "text": "国家非遗顾绣项目列出半绣半绘、用料奇特、中间色化晕等特点。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13977/"
+        },
+        {
+          "text": "不能把所有有颜料痕迹的绣品都判断为顾绣，需依具体馆藏判断。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13977/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13977/"
+      },
+      "keywords": [
+        "顾绣",
+        "补色",
+        "借色",
+        "中间色",
+        "绣画"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-beijing-embroidery",
+      "title": "京绣：燕京宫绣与金活绒活",
+      "section": "china",
+      "region": "北京·房山",
+      "period": "元明清至现代",
+      "summary": "京绣以宫廷服务传统为重要背景，官方项目将其技法概括为金活与绒活两个部分，作品常见装饰性较强的金银线和传统纹样。",
+      "facts": [
+        {
+          "text": "京绣为国家级非遗项目Ⅶ-110（2014年）。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14244/"
+        },
+        {
+          "text": "北京房山京绣官方资料提及圈金、平金、打籽等针法。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14244/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/14244/"
+      },
+      "keywords": [
+        "京绣",
+        "宫绣",
+        "金活",
+        "绒活",
+        "房山"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-beijing-dingxing",
+      "title": "河北定兴京绣传承",
+      "section": "china",
+      "region": "河北·定兴",
+      "period": "清末至现代",
+      "summary": "京绣不仅存在于北京，国家级非遗项目资料还记录河北定兴地区的传承支系，具有不同的用色和装饰倾向。",
+      "facts": [
+        {
+          "text": "河北定兴京绣国家非遗项目页介绍梁枝学习宫廷艺人技法并传予家族和弟子。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14245/"
+        },
+        {
+          "text": "定兴京绣不应与房山支系的具体工艺材料和视觉风格完全等同。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14245/"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/14245/"
+      },
+      "keywords": [
+        "京绣",
+        "河北",
+        "定兴",
+        "宫廷",
+        "家传"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-bian-embroidery",
+      "title": "汴绣：开封宋绣与名画摹绣",
+      "section": "china",
+      "region": "河南·开封",
+      "period": "宋代渊源至现代",
+      "summary": "汴绣又称宋绣，发源于河南开封的城市刺绣传统；其现代传承者整理针法、擅长花鸟与传统书画题材。",
+      "facts": [
+        {
+          "text": "2008年列国家级非遗Ⅶ-74，由河南开封申报。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14179.html"
+        },
+        {
+          "text": "国家非遗项目资料记载现代汴绣艺人总结了36种针法。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14179.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/14179.html"
+      },
+      "keywords": [
+        "汴绣",
+        "宋绣",
+        "开封",
+        "名画",
+        "36种针法"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-qiang-embroidery",
+      "title": "羌族刺绣：挑花与生活穿戴",
+      "section": "china",
+      "region": "四川·汶川及周边",
+      "period": "明清以来至现代",
+      "summary": "羌族刺绣常见架花挑花、纳花和勾花等技术，结合传统图案装饰围腰、云云鞋等生活用品。",
+      "facts": [
+        {
+          "text": "国家级非遗羌族刺绣项目Ⅶ-76，2008年公布，汶川申报。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14181.html"
+        },
+        {
+          "text": "官方资料指出密集针脚既有装饰作用，也可帮助服饰易磨损部位更加耐用。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/14181.html"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/14181.html"
+      },
+      "keywords": [
+        "羌绣",
+        "羌族刺绣",
+        "挑花",
+        "云云鞋",
+        "汶川"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-shui-hair",
+      "title": "水族马尾绣：马尾作芯的技艺",
+      "section": "china",
+      "region": "贵州·三都水族自治县",
+      "period": "传统与当代",
+      "summary": "水族马尾绣以马尾作为重要结构材料，先用丝线缠绕马尾形成可盘绣的绣线，再结合轮廓与填绣，带来浅浮雕般的纹样。",
+      "facts": [
+        {
+          "text": "国家级非遗Ⅶ-23，2006年第一批公布。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13992"
+        },
+        {
+          "text": "项目描述部分步骤采用三至四根马尾作芯，以白色丝线包缠。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13992"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13992"
+      },
+      "keywords": [
+        "马尾绣",
+        "水族",
+        "贵州",
+        "三都",
+        "盘绣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-taijiang-miao",
+      "title": "台江苗绣：针法与服饰记忆",
+      "section": "china",
+      "region": "贵州·台江",
+      "period": "传统与当代",
+      "summary": "台江苗绣在不同支系中体现服饰纹样、地方记忆与生活礼仪，包含平绣、锁绣、打籽等多种针法。",
+      "facts": [
+        {
+          "text": "台江苗绣为苗绣Ⅶ-22的国家级扩展项目（2011年）。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13991"
+        },
+        {
+          "text": "官方项目列出多种服饰类型及蝴蝶、鱼、龙等纹样题材，不能概括全体苗绣。",
+          "sourceUrl": "https://www.ihchina.cn/project_details/13991"
+        }
+      ],
+      "source": {
+        "title": "中国非物质文化遗产网",
+        "url": "https://www.ihchina.cn/project_details/13991"
+      },
+      "keywords": [
+        "苗绣",
+        "台江",
+        "苗族",
+        "服饰",
+        "纹样"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-chakan",
+      "title": "塔吉克斯坦 Chakan 刺绣",
+      "section": "world",
+      "region": "塔吉克斯坦",
+      "period": "2018年列名",
+      "summary": "Chakan 为以棉或丝底料、彩色线绣制花卉与象征性图案的传统，广泛用于衣饰、头巾、家用织品与节庆场景。",
+      "facts": [
+        {
+          "text": "2018年列入联合国教科文组织人类非物质文化遗产代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/chakan-embroidery-art-in-the-republic-of-tajikistan-01397"
+        },
+        {
+          "text": "教科文组织资料提及女性家庭传承和 ustod-shogird 师徒制。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/chakan-embroidery-art-in-the-republic-of-tajikistan-01397"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/chakan-embroidery-art-in-the-republic-of-tajikistan-01397"
+      },
+      "keywords": [
+        "Chakan",
+        "Tajikistan",
+        "塔吉克",
+        "刺绣",
+        "花卉"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-antep",
+      "title": "土耳其加济安泰普 Antep İşi 抽纱刺绣",
+      "section": "world",
+      "region": "土耳其·加济安泰普",
+      "period": "2025年列名",
+      "summary": "Antep İşi 是传统抽纱针艺，通过抽取或剪断底布部分纱线形成图案。传统样式多用白底白线，也有后期多色变化。",
+      "facts": [
+        {
+          "text": "2025年列入联合国教科文组织人类非物质文化遗产代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/antep-i-drawn-thread-embroidery-of-gaziantep-02294"
+        },
+        {
+          "text": "官方说明该手工艺常用于衣物、台布、床品及配饰，需细密操作，不宜等同机器刺绣。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/antep-i-drawn-thread-embroidery-of-gaziantep-02294"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/antep-i-drawn-thread-embroidery-of-gaziantep-02294"
+      },
+      "keywords": [
+        "Antep",
+        "İşi",
+        "土耳其",
+        "抽纱",
+        "刺绣",
+        "Gaziantep"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-altita",
+      "title": "罗马尼亚与摩尔多瓦 Altiță 肩绣衬衣",
+      "section": "world",
+      "region": "罗马尼亚、摩尔多瓦",
+      "period": "2022年列名",
+      "summary": "Altiță 指传统衬衣肩部的刺绣装饰方式，具有复杂针线组织和地域变化，承载服饰认同与代际传承。",
+      "facts": [
+        {
+          "text": "2022年以罗马尼亚、摩尔多瓦共同项目列入 UNESCO 人类非遗代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/the-art-of-the-traditional-blouse-with-embroidery-on-the-shoulder-alti-an-element-of-cultural-identity-in-romania-and-the-republic-of-moldova-01861"
+        },
+        {
+          "text": "布料可以为亚麻、棉、麻或丝等天然纤维，地区与穿着年龄影响图样变化。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/the-art-of-the-traditional-blouse-with-embroidery-on-the-shoulder-alti-an-element-of-cultural-identity-in-romania-and-the-republic-of-moldova-01861"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/the-art-of-the-traditional-blouse-with-embroidery-on-the-shoulder-alti-an-element-of-cultural-identity-in-romania-and-the-republic-of-moldova-01861"
+      },
+      "keywords": [
+        "Altiță",
+        "罗马尼亚",
+        "摩尔多瓦",
+        "肩绣",
+        "衬衣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-kebaya",
+      "title": "东南亚 Kebaya 上衣与刺绣工艺",
+      "section": "world",
+      "region": "印度尼西亚、马来西亚、文莱、新加坡、泰国",
+      "period": "2024年列名",
+      "summary": "Kebaya 是跨东南亚地区的一种传统女性服装，上衣常配有刺绣与别针；其遗产项目涵盖服装的制作与穿着知识，并非单独把某一针法列为非遗。",
+      "facts": [
+        {
+          "text": "2024年 Kebaya 传统列入联合国教科文组织人类非物质文化遗产代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/kebaya-knowledge-skills-traditions-and-practices-02090"
+        },
+        {
+          "text": "相关制作涉及选择与裁剪面料，以及不同刺绣和缝制技术。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/kebaya-knowledge-skills-traditions-and-practices-02090"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/kebaya-knowledge-skills-traditions-and-practices-02090"
+      },
+      "keywords": [
+        "Kebaya",
+        "可巴雅",
+        "东南亚",
+        "服装",
+        "刺绣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-altalli",
+      "title": "阿联酋 Al Talli 编带与绣饰边界",
+      "section": "world",
+      "region": "阿联酋",
+      "period": "2022年列名",
+      "summary": "Al Talli 常译作传统绣饰技艺，但它实际以多股棉线与金属色线交织编带为核心，属于需和针刺绣区分的相关服饰工艺。",
+      "facts": [
+        {
+          "text": "UNESCO 将 Al Talli 收录为2022年人类非遗代表作项目。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/al-talli-traditional-embroidery-skills-in-the-united-arab-emirates-01712"
+        },
+        {
+          "text": "官方说明其常以六股棉线及中间一股银色线编织图形，因此本站不将其误称为在既有底布上落针。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/al-talli-traditional-embroidery-skills-in-the-united-arab-emirates-01712"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/al-talli-traditional-embroidery-skills-in-the-united-arab-emirates-01712"
+      },
+      "keywords": [
+        "Al",
+        "Talli",
+        "阿联酋",
+        "编带",
+        "绣饰",
+        "非针绣"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-li-textile",
+      "title": "黎族传统纺染织绣技艺：绣与织的区分",
+      "section": "heritage",
+      "region": "中国·海南",
+      "period": "2024年转入代表作名录",
+      "summary": "黎族纺染织绣技艺包含纺纱、染色、织造与刺绣，不能只称为刺绣技艺。图案保存了与群体历史、礼仪及生活有关的文化信息。",
+      "facts": [
+        {
+          "text": "UNESCO 项目2009年列入急需保护名录，2024年列入人类非遗代表作名录。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/traditional-li-textile-techniques-spinning-dyeing-weaving-and-embroidering-02153"
+        },
+        {
+          "text": "项目描述提到双面绣与单面提花织造并存，技术要各自区分。",
+          "sourceUrl": "https://ich.unesco.org/en/RL/traditional-li-textile-techniques-spinning-dyeing-weaving-and-embroidering-02153"
+        }
+      ],
+      "source": {
+        "title": "UNESCO Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/RL/traditional-li-textile-techniques-spinning-dyeing-weaving-and-embroidering-02153"
+      },
+      "keywords": [
+        "黎族",
+        "纺染织绣",
+        "海南",
+        "双面绣",
+        "UNESCO"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-liao",
+      "title": "大都会馆藏：辽代龙虎纹刺绣残片",
+      "section": "museum",
+      "region": "中国·辽代",
+      "period": "907—1125年",
+      "summary": "馆藏原名 Embroidery with Tiger-Dragon，使用丝与金属线，馆藏分类为刺绣类纺织品。图案名与博物馆文化归属应以馆藏记录为准，不应额外标为苏绣。",
+      "facts": [
+        {
+          "text": "The Met 馆藏号 1997.216a, b，分类 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/70812"
+        },
+        {
+          "text": "页面标示 Public Domain；不能据此推断制作地或刺绣作者。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/70812"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/70812"
+      },
+      "keywords": [
+        "辽代",
+        "龙虎纹",
+        "馆藏",
+        "The",
+        "Met",
+        "1997.216"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "1997.216a, b",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Regional embroidery school not stated by museum; do not label Su embroidery."
+      }
+    },
+    {
+      "id": "world-met-ming-guanyin",
+      "title": "大都会馆藏：明代千手观音丝绣",
+      "section": "museum",
+      "region": "中国·明代",
+      "period": "16世纪",
+      "summary": "大都会博物馆所藏《千手观音坐莲》使用彩色丝线在丝底上绣制，是可以从实物材料观察中国宗教图像刺绣的案例。",
+      "facts": [
+        {
+          "text": "藏品名 Thousand-armed Guanyin seated on lotus，编号 27.176.1。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/60529"
+        },
+        {
+          "text": "馆方标明16世纪、明代与中国文化归属；本条不推断其产自苏州。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/60529"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/60529"
+      },
+      "keywords": [
+        "明代",
+        "千手观音",
+        "文物",
+        "27.176.1"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "27.176.1",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Regional embroidery school not stated by museum; do not label Su embroidery."
+      }
+    },
+    {
+      "id": "world-met-shou",
+      "title": "大都会馆藏：寿字纹献礼绣方",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "18世纪",
+      "summary": "一件以寿字中心圆纹为装饰的绣方，采用金属线及丝线在丝缎上施绣，有助于观察清代吉祥纹样与材质的结合。",
+      "facts": [
+        {
+          "text": "藏品号 36.75.2，馆方名称为 Presentation square with medallion of character of longevity (shou)。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69098"
+        },
+        {
+          "text": "官方年代为18世纪，分类 Textiles-Embroidered；不是已证实的苏绣归属。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69098"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/69098"
+      },
+      "keywords": [
+        "清代",
+        "寿字纹",
+        "献礼",
+        "绣方",
+        "36.75.2"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "36.75.2",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Regional embroidery school not stated by museum; do not label Su embroidery."
+      }
+    },
+    {
+      "id": "world-met-chinoiserie",
+      "title": "大都会馆藏：华风人物园景绣片",
+      "section": "museum",
+      "region": "中国文化归属；刺绣地点不确定",
+      "period": "17—18世纪",
+      "summary": "这件花园人物纹样丝绣片被馆方归为中国文化，明确注记可能在澳门或欧洲绣制，是跨文化制作与传播的好例子。",
+      "facts": [
+        {
+          "text": "作品名 Fragment with Chinoiserie figures in a garden，馆藏号 42.99。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69449"
+        },
+        {
+          "text": "The Met 日期注明 17th to 18th century (embroidered in Macau or Europe)，因此不能只凭图像称其在中国本土绣制。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69449"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/69449"
+      },
+      "keywords": [
+        "澳门",
+        "欧洲",
+        "外销",
+        "中西交流",
+        "Chinoiserie",
+        "42.99"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "42.99",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Culture China; site of embroidery noted as Macau or Europe."
+      }
+    },
+    {
+      "id": "world-met-coverlet",
+      "title": "大都会馆藏：中国为欧洲市场制作的丝绣床罩",
+      "section": "museum",
+      "region": "中国制作／欧洲市场",
+      "period": "17世纪",
+      "summary": "大都会馆藏一件17世纪丝缎床罩，材料包括丝线与包金纸线，标注为中国制作、面向欧洲市场，有助于理解刺绣与海外贸易。",
+      "facts": [
+        {
+          "text": "馆藏号 1975.208d，分类 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/229483"
+        },
+        {
+          "text": "馆方文化字段为 Chinese, for European market，须同时保留制作文化与目标市场的区别。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/229483"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/229483"
+      },
+      "keywords": [
+        "外销绣品",
+        "欧洲",
+        "市场",
+        "丝绣",
+        "床罩",
+        "1975.208d"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "1975.208d",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Made in China for European market; not a named regional Chinese embroidery school."
+      }
+    },
+    {
+      "id": "world-met-textile",
+      "title": "大都会馆藏：16世纪中国刺绣小片",
+      "section": "museum",
+      "region": "中国",
+      "period": "16世纪",
+      "summary": "大都会博物馆的一件16世纪中国织绣小片，在馆藏分类中明确标为刺绣类纺织品，可为博物馆对象检索提供具体编号示例。",
+      "facts": [
+        {
+          "text": "馆藏名 Textile，编号 20.148.131，尺寸约 3.5×7.9厘米。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/53668"
+        },
+        {
+          "text": "网页没有证明作品是苏绣、湘绣等某地方流派，应保持未知。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/53668"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/53668"
+      },
+      "keywords": [
+        "16世纪",
+        "中国",
+        "刺绣残片",
+        "20.148.131"
+      ],
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true,
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "20.148.131",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "Regional embroidery school not stated by museum; do not label Su embroidery."
+      }
+    },
+    {
+      "id": "world-met-69494",
+      "title": "清代绣片：17世纪末至18世纪初",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "17世纪末—18世纪初",
+      "summary": "中国清代绣片，馆方年代判断为17世纪末至18世纪初，材质为丝线及丝质底料。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 42.115.39；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69494"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：17世纪末—18世纪初。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69494"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/69494"
+      },
+      "keywords": [
+        "清代绣片",
+        "17世纪末至18世纪初",
+        "丝线绣于丝底",
+        "42.115.39",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "42.115.39",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 69494,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-69857",
+      "title": "清代大型绣片：17—18世纪",
+      "section": "museum",
+      "region": "中国",
+      "period": "17—18世纪",
+      "summary": "17至18世纪中国绣片，作品尺寸相对较大，官方只给中国文化归属，不可自行指定苏州产地。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 46.189；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69857"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：17—18世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69857"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/69857"
+      },
+      "keywords": [
+        "清代大型绣片",
+        "17—18世纪",
+        "丝线绣于丝底",
+        "46.189",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "46.189",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 69857,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-37629",
+      "title": "印度19世纪多色丝绣披肩",
+      "section": "museum",
+      "region": "印度",
+      "period": "19世纪中叶",
+      "summary": "印度19世纪中叶刺绣披肩，馆方记录为 Shahtoosh 底料与多色丝线刺绣，是材料与服饰流通历史的实物依据。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 1994.508；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/37629"
+        },
+        {
+          "text": "馆方登记材质：Shahtoosh，彩色丝绣；登记年代：19世纪中叶。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/37629"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/37629"
+      },
+      "keywords": [
+        "印度19世纪多色丝绣披肩",
+        "Shahtoosh，彩色丝绣",
+        "1994.508",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "1994.508",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "Shahtoosh，彩色丝绣",
+        "apiObjectId": 37629,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-65766",
+      "title": "日本桃山或江户时代刺绣四片",
+      "section": "museum",
+      "region": "日本·桃山或江户时代",
+      "period": "17世纪",
+      "summary": "日本17世纪刺绣四片，馆方将其分期标为桃山或江户，不应强行改写为某一个已确认朝代。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 91.1.72a–d；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65766"
+        },
+        {
+          "text": "馆方登记材质：刺绣织物；馆方未列具体纤维；登记年代：17世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65766"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/65766"
+      },
+      "keywords": [
+        "日本桃山或江户时代刺绣四片",
+        "刺绣织物；馆方未列具体纤维",
+        "91.1.72a–d",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "91.1.72a–d",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "刺绣织物；馆方未列具体纤维",
+        "apiObjectId": 65766,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68788",
+      "title": "清代丝线与金属线绣饰片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "清代",
+      "summary": "清代绣饰片使用丝线及金属线，适合观察金属线与丝质底料在刺绣类实物中的并用。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.667；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68788"
+        },
+        {
+          "text": "馆方登记材质：丝、丝底、金属线；登记年代：清代。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68788"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68788"
+      },
+      "keywords": [
+        "清代丝线与金属线绣饰片",
+        "丝、丝底、金属线",
+        "30.75.667",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.667",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝、丝底、金属线",
+        "apiObjectId": 68788,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68580",
+      "title": "清代18世纪丝绣小片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "18世纪",
+      "summary": "中国清代18世纪丝绣残片，以博物馆记录的实物时代与材质为核心，不补造针法归属。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.101；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68580"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：18世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68580"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68580"
+      },
+      "keywords": [
+        "清代18世纪丝绣小片",
+        "丝线绣于丝底",
+        "30.75.101",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.101",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 68580,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68783",
+      "title": "清代丝绣片：材料记录",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "清代",
+      "summary": "清代刺绣类纺织品，馆方仅给出丝质材料，可用于说明单张图片未必足以确认复杂针法。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.656；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68783"
+        },
+        {
+          "text": "馆方登记材质：丝；登记年代：清代。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68783"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68783"
+      },
+      "keywords": [
+        "清代丝绣片",
+        "材料记录",
+        "丝",
+        "30.75.656",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.656",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝",
+        "apiObjectId": 68783,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68498",
+      "title": "清代19世纪刺绣残片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "19世纪",
+      "summary": "19世纪中国刺绣小片，文物记录提供文化、日期与材质，不提供足以认定苏、湘等地方绣种的依据。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.10.42；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68498"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：19世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68498"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68498"
+      },
+      "keywords": [
+        "清代19世纪刺绣残片",
+        "丝线绣于丝底",
+        "30.10.42",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.10.42",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 68498,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-64391",
+      "title": "清康熙时期丝绣大幅织片",
+      "section": "museum",
+      "region": "中国·清康熙时期",
+      "period": "1662—1722年",
+      "summary": "博物馆将此件丝质刺绣织片定为清代康熙时期，是清代宫廷及社会刺绣研究可进一步核对的实物线索；其用途未据此推定。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 1972.75；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/64391"
+        },
+        {
+          "text": "馆方登记材质：丝；登记年代：1662—1722年。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/64391"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/64391"
+      },
+      "keywords": [
+        "清康熙时期丝绣大幅织片",
+        "丝",
+        "1972.75",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "1972.75",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝",
+        "apiObjectId": 64391,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68558",
+      "title": "17世纪中国丝绣面板",
+      "section": "museum",
+      "region": "中国",
+      "period": "17世纪",
+      "summary": "馆藏17世纪中国丝绣面板；年代和作品尺寸为公开资料，不得通过展厅照片直接推断作者或技术流派。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.70；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68558"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：17世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68558"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68558"
+      },
+      "keywords": [
+        "17世纪中国丝绣面板",
+        "丝线绣于丝底",
+        "30.75.70",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.70",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 68558,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-65770",
+      "title": "日本明治时期刺绣带饰三段",
+      "section": "museum",
+      "region": "日本·明治时代",
+      "period": "19世纪末",
+      "summary": "日本明治时期晚19世纪刺绣腰带片三段，馆方名称 Three Sections of Sash (Hirao)，展现服饰构件的绣饰用途。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 91.1.75a–c；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65770"
+        },
+        {
+          "text": "馆方登记材质：丝、刺绣；登记年代：19世纪末。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65770"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/65770"
+      },
+      "keywords": [
+        "日本明治时期刺绣带饰三段",
+        "丝、刺绣",
+        "91.1.75a–c",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "91.1.75a–c",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝、刺绣",
+        "apiObjectId": 65770,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68790",
+      "title": "清代金属线包边刺绣片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "清代",
+      "summary": "清代绣饰片，馆藏材料明确提到丝底及金属线包边，可比较金属材料在不同绣饰构造里的角色。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.669；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68790"
+        },
+        {
+          "text": "馆方登记材质：丝、丝底、金属线包边；登记年代：清代。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68790"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68790"
+      },
+      "keywords": [
+        "清代金属线包边刺绣片",
+        "丝、丝底、金属线包边",
+        "30.75.669",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.669",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝、丝底、金属线包边",
+        "apiObjectId": 68790,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-70252",
+      "title": "清代19世纪圆形纹章绣片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "19世纪",
+      "summary": "清代19世纪刺绣类圆形纹章实物，馆方称 Medallion，当前资料并不足以指定象征图案的全部意义。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 60.3.3a, b；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/70252"
+        },
+        {
+          "text": "馆方登记材质：丝；登记年代：19世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/70252"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/70252"
+      },
+      "keywords": [
+        "清代19世纪圆形纹章绣片",
+        "丝",
+        "60.3.3a, b",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "60.3.3a, b",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝",
+        "apiObjectId": 70252,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-68895",
+      "title": "清代18—19世纪丝绣团纹",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "18世纪末—19世纪初",
+      "summary": "中国清代绣制团纹，年代横跨18世纪末至19世纪初，展示了博物馆对年代范围的审慎判定。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 30.75.917；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68895"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于丝底；登记年代：18世纪末—19世纪初。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/68895"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/68895"
+      },
+      "keywords": [
+        "清代18—19世纪丝绣团纹",
+        "丝线绣于丝底",
+        "30.75.917",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "30.75.917",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于丝底",
+        "apiObjectId": 68895,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-69497",
+      "title": "清代康熙前后丝质绣片",
+      "section": "museum",
+      "region": "中国·清代",
+      "period": "17世纪末—18世纪初",
+      "summary": "这件中国丝绣片被馆方定为17世纪末至18世纪初，不可将其具体制作工坊、地理流派与作者推定为已知。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 42.115.42；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69497"
+        },
+        {
+          "text": "馆方登记材质：丝；登记年代：17世纪末—18世纪初。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/69497"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/69497"
+      },
+      "keywords": [
+        "清代康熙前后丝质绣片",
+        "丝",
+        "42.115.42",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "42.115.42",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝",
+        "apiObjectId": 69497,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-854572",
+      "title": "印度孟加拉外销刺绣床罩 Colcha",
+      "section": "museum",
+      "region": "印度·西孟加拉；欧洲市场",
+      "period": "约1675—1700年",
+      "summary": "17世纪晚期在印度西孟加拉制作、面向欧洲市场的 Colcha 床罩，馆方说明其图案与南亚、波斯、欧洲文化往来有关。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 2022.147.9；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/854572"
+        },
+        {
+          "text": "馆方登记材质：棉底丝线刺绣；登记年代：约1675—1700年。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/854572"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/854572"
+      },
+      "keywords": [
+        "印度孟加拉外销刺绣床罩",
+        "Colcha",
+        "棉底丝线刺绣",
+        "2022.147.9",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "2022.147.9",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "棉底丝线刺绣",
+        "apiObjectId": 854572,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-65953",
+      "title": "日本江户时期18世纪刺绣残片",
+      "section": "museum",
+      "region": "日本·江户时代",
+      "period": "18世纪",
+      "summary": "日本江户时代18世纪绣片，以丝线绣在棉质底料上，是比较丝底和棉底材料的一个实物例证。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 96.14.228；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65953"
+        },
+        {
+          "text": "馆方登记材质：丝线绣于棉底；登记年代：18世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/65953"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/65953"
+      },
+      "keywords": [
+        "日本江户时期18世纪刺绣残片",
+        "丝线绣于棉底",
+        "96.14.228",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "96.14.228",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "丝线绣于棉底",
+        "apiObjectId": 65953,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    },
+    {
+      "id": "world-met-446662",
+      "title": "印度18世纪丝线绣亚麻罩布",
+      "section": "museum",
+      "region": "印度",
+      "period": "18世纪",
+      "summary": "18世纪印度制作的罩布，馆方记录为亚麻底、丝线刺绣；所在伊斯兰艺术馆藏部门不能直接等同制作宗教归属。",
+      "facts": [
+        {
+          "text": "The Met 官方馆藏名称与索引编号可在原始页面核对：Object Number 14.102.484；Classification 为 Textiles-Embroidered。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/446662"
+        },
+        {
+          "text": "馆方登记材质：亚麻底、丝绣；登记年代：18世纪。这些字段不自动证明某个中国地方刺绣流派。",
+          "sourceUrl": "https://www.metmuseum.org/art/collection/search/446662"
+        }
+      ],
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/446662"
+      },
+      "keywords": [
+        "印度18世纪丝线绣亚麻罩布",
+        "亚麻底、丝绣",
+        "14.102.484",
+        "刺绣实物",
+        "Met",
+        "馆藏"
+      ],
+      "museum": {
+        "institution": "The Metropolitan Museum of Art",
+        "objectNumber": "14.102.484",
+        "classification": "Textiles-Embroidered",
+        "rights": "Public Domain on the linked Met collection page",
+        "attributionNote": "根据馆方文化或地域字段记录；未获得地方绣种的独立证据，尤其不可仅凭中国文化归属推断为苏绣。",
+        "medium": "亚麻底、丝绣",
+        "apiObjectId": 446662,
+        "usage": "Original museum catalog metadata, linked; no images copied locally."
+      },
+      "reviewStatus": "source-paraphrased-not-expert-reviewed",
+      "copyright": "original-short-summary-no-rehosted-media",
+      "verified": true
+    }
+  ]
+}

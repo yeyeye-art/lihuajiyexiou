@@ -1,0 +1,766 @@
+/* Reference faithfully follows the ten user-provided 梨花季·绣境奇遇
+   screenshots. Functional DOM overlays stay independent of all image artwork.
+   Ref widths: 1648 × 928 (16:9). Not a flattened screenshot interface. */
+body[data-page="game"]{
+ --ref-ivory:#f8f1e5;--ref-paper:#fffaf0;--ref-ink:#31271d;
+ --ref-stone:#ded0ba;--ref-gold:#bc915b;--ref-bronze:#795b3f;
+ --ref-verdigris:#496b65;--ref-rust:#a44934;--ref-mist:#dce3d9;
+}
+body[data-page="game"] #site-header,
+body[data-page="game"] footer,
+body[data-page="game"] #bottom-nav{display:none!important}
+body[data-page="game"] .workspace{min-width:0;max-width:none;width:100%}
+body[data-page="game"] #main{
+ width:100%;max-width:none!important;padding:0!important;margin:0!important;
+ min-height:100svh;display:block;background:#e5e8db;
+ overflow-x:clip
+}
+body[data-page="game"] :is(#main,.restored-game)>.ref-global-header,
+body[data-page="game"] :is(#main,.restored-game)>.motif-park{box-sizing:border-box;width:100%!important;max-width:none!important;margin:0!important}
+.ref-global-header{
+ height:73px;width:100%;display:flex;align-items:center;gap:18px;
+ padding:8px clamp(14px,2.6vw,44px);
+ background:linear-gradient(105deg,#fffcf6f5,#f9f0e6f5);
+ box-shadow:0 2px 9px #60472c23;border-bottom:1px solid #cdb696;
+ color:var(--ref-ink);position:relative;z-index:40;isolation:isolate;
+}
+.ref-global-header *{box-sizing:border-box}
+.ref-home,.ref-settings{
+ width:43px;height:43px;min-width:43px;display:grid;place-items:center;
+ border:1px solid #d8c3a5;border-radius:50%;font:normal 26px/1 Georgia,serif;
+ color:#4b382c;text-decoration:none;background:#fff9ed99
+}
+.ref-separator{height:42px;width:1px;background:#dcc8ab;flex:none}
+.ref-brand{min-width:0;display:flex;align-items:center;gap:13px;white-space:nowrap}
+.ref-brand strong{font:600 clamp(21px,2.2vw,37px)/1.2 "Songti SC","Noto Serif CJK SC",serif;
+ letter-spacing:.045em;color:#30251b}
+.ref-red-seal{writing-mode:vertical-rl;font:600 11px/1.2 "Songti SC",serif;
+ color:#fff;border-radius:3px;padding:3px 1px;background:#b8503e}
+.ref-brand small{margin-left:16px;border-left:1px solid #dccbbb;padding-left:18px;
+ font:normal 12px/1.5 "Songti SC","SimSun",serif;color:#645549;letter-spacing:.15em}
+.ref-wallet{margin-left:auto;display:flex;align-items:center;gap:9px;min-width:0}
+.ref-pill{
+ display:flex;gap:8px;align-items:center;justify-content:center;min-height:36px;
+ padding:5px 11px;border:1px solid #dcc9af;border-radius:25px;
+ background:linear-gradient(155deg,#fffdfa,#f5e9d8);box-shadow:0 1px 2px #70583a14;
+ color:#584536;font:normal 15px/1.3 Georgia,"Songti SC",serif;white-space:nowrap
+}
+button.ref-pill{cursor:pointer}
+.ref-pill>span{font:normal 15px/1.3 Georgia,serif}
+.ref-pill b{font-size:20px;line-height:1;font-weight:normal}
+.ref-duel{color:#8d4b37}
+.ref-avatar{display:flex;align-items:center;gap:8px;color:#47352b;text-decoration:none;min-width:0}
+.ref-avatar>span{height:45px;width:45px;min-width:45px;display:grid;place-items:center;border-radius:50%;
+ border:2px solid #e0bca0;box-shadow:inset 0 0 0 2px #fff9ed;
+ background:radial-gradient(circle at 35% 25%,#fffdf6,#d6d7c1 63%,#7f9990);
+ color:#775642;font:normal 25px "Songti SC",serif}
+.ref-avatar small{font:normal 12px/1.5 "Songti SC",serif;white-space:nowrap}
+.ref-avatar em{display:block;font-style:normal;font:normal 11px Georgia,serif;color:#867b6e}
+.ref-settings{width:36px;height:36px;min-width:36px;font-size:22px}
+.ref-home:hover,.ref-settings:hover,.ref-pill:hover{background:#fffdf7;box-shadow:0 0 0 2px #cfae7255}
+.ref-home:focus-visible,.ref-settings:focus-visible,.ref-pill:focus-visible{outline:3px solid #b35b3f;outline-offset:3px}
+
+/* Unified full-scene silk world instead of inset website cards. */
+body[data-page="game"] .motif-park{--park-serif:"Songti SC","Noto Serif CJK SC","SimSun",serif;
+ color:var(--ref-ink);font-family:var(--park-serif)}
+body[data-page="game"] :is(#main,.restored-game)>.motif-park:not(.world-shell){
+ min-height:calc(100svh - 73px);
+ background:linear-gradient(90deg,#fdf9edeb 0%,#fffaef88 27%,#fffaef35 55%,#fcf7ea9c 100%),
+ url("./pear-garden-scene.svg") center/cover no-repeat;
+}
+body[data-page="game"] .motif-park h1,body[data-page="game"] .motif-park h2,
+body[data-page="game"] .motif-park h3{
+ font-family:var(--park-serif);letter-spacing:.055em;color:#34291d
+}
+body[data-page="game"] .motif-park button{
+ font-family:var(--park-serif);cursor:pointer
+}
+body[data-page="game"] .motif-park button:disabled{cursor:not-allowed}
+body[data-page="game"] .motif-park .park-back,
+body[data-page="game"] .motif-park .world-return{
+ padding:9px 18px!important;min-height:39px;border:1px solid #c7aa83!important;
+ border-radius:24px!important;background:#fff9f0ee!important;
+ box-shadow:0 3px 8px #4a3a2720!important;
+ color:#483729!important;font:normal 16px var(--park-serif)!important
+}
+body[data-page="game"] .motif-park .park-main-action,
+body[data-page="game"] .motif-park .world-mission-play{
+ background:linear-gradient(#c66f50,#a54331 57%,#983c2d)!important;
+ border:2px solid #d8ae73!important;border-radius:25px!important;
+ box-shadow:0 0 0 3px #fcead0 inset,0 4px 0 #783c27,0 7px 17px #53392177!important;
+ color:#fffdf4!important;font:normal clamp(17px,1.4vw,24px)/1.4 var(--park-serif)!important;
+ letter-spacing:.11em;text-shadow:0 1px 1px #603929aa;min-height:54px;padding:11px 26px!important
+}
+body[data-page="game"] .motif-park .park-main-action:hover:not(:disabled),
+body[data-page="game"] .motif-park .world-mission-play:hover:not(:disabled){
+ filter:brightness(1.08);transform:translateY(-2px)}
+body[data-page="game"] .park-playing,
+body[data-page="game"] .park-result,
+body[data-page="game"] .park-functional-shop,
+body[data-page="game"] .park-selection:not(.world-garden-screen){
+ position:relative;padding:26px clamp(18px,3.1vw,55px) 35px!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important
+}
+
+/* Playing screens: left scene title / center actual board / right state panel,
+   bottom independent instructions as on the submitted reference captures. */
+body[data-page="game"] .motif-park.park-playing:not(.world-match-battle){
+ display:grid;grid-template-columns:minmax(210px,22%) minmax(360px,1fr) minmax(210px,22%);
+ gap:12px 22px;align-content:start;align-items:start
+}
+.park-playing:not(.world-match-battle) .park-play-heading{
+ grid-area:1/1/2/2;display:block;padding:8px 2px;border:0;background:none;box-shadow:none;
+}
+.park-playing:not(.world-match-battle) .park-play-heading .park-heading{margin:28px 0 0}
+.park-playing:not(.world-match-battle) .park-play-heading .park-heading h2{
+ font-size:clamp(29px,2.7vw,46px);line-height:1.3;color:#33271e!important;
+}
+.park-playing:not(.world-match-battle) .park-play-heading .park-heading p{
+ font-size:18px;color:#594536;line-height:1.7}
+.park-playing:not(.world-match-battle) .park-scoreboard{
+ grid-area:1/3/3/4;display:grid;gap:15px;padding:20px!important;
+ border:3px double #bfa17a!important;border-radius:8px!important;
+ min-height:280px;background:linear-gradient(130deg,#fffbf1f0,#f5ebd9ed)!important;
+ box-shadow:0 10px 25px #5a432d38,0 0 0 5px #fffcf2 inset!important;
+ color:#61472c
+}
+.park-playing:not(.world-match-battle) .park-scoreboard>div{
+ display:flex;align-items:center;justify-content:space-between;gap:7px;
+ padding:7px 0;border-bottom:1px solid #dbccba;font:normal 17px var(--park-serif)
+}
+.park-playing:not(.world-match-battle) .park-scoreboard b{font-size:24px;color:#9f4c37}
+.park-playing:not(.world-match-battle) .park-instructions{
+ grid-area:2/1/3/2;line-height:2!important;font-size:15px!important;
+ padding:10px 4px!important;background:transparent!important;color:#615342!important
+}
+.park-playing:not(.world-match-battle) .park-game-layout,
+.park-playing:not(.world-match-battle) .park-jigsaw-layout,
+.park-playing:not(.world-match-battle) .park-color-layout,
+.park-playing:not(.world-match-battle) .park-studio-layout{grid-area:1/2/4/3;min-width:0}
+.park-playing:not(.world-match-battle)>.park-feedback{
+ grid-area:4/1/5/4;background:#fff8e5ed;border:1px solid #c4a26f;
+ color:#794b34;border-radius:8px;padding:10px 15px
+}
+.park-playing:not(.world-match-battle) .park-game-center,
+.park-playing:not(.world-match-battle) .park-color-work,
+.park-playing:not(.world-match-battle) .park-studio-work{
+ position:relative;min-width:0;padding:24px!important;
+ background:linear-gradient(145deg,#fffbf0ee,#e8dac5e8)!important;
+ border:9px ridge #806044!important;border-radius:8px!important;
+ box-shadow:0 0 0 4px #d9bd88 inset,0 14px 28px #40352342!important;
+}
+.park-playing:not(.world-match-battle) .park-game-center::before,
+.park-playing:not(.world-match-battle) .park-color-work::before,
+.park-playing:not(.world-match-battle) .park-studio-work::before{
+ content:"❀";position:absolute;top:-23px;left:50%;transform:translateX(-50%);
+ color:#edce91;font-size:26px;text-shadow:0 2px 3px #55391a;pointer-events:none
+}
+.park-playing:not(.world-match-battle) .park-board-overline{
+ font:normal 12px var(--park-serif);color:#6c563e;letter-spacing:.09em
+}
+.park-playing:not(.world-match-battle) .park-match-tile,
+.park-playing:not(.world-match-battle) .park-link-tile{
+ background:linear-gradient(145deg,#fdfaf1,#eddec9)!important;
+ border:1px solid #c5a784!important;border-radius:5px!important;
+ box-shadow:inset 0 1px 0 #fffdf3,0 2px 2px #70573b50!important;
+}
+.park-playing:not(.world-match-battle) .park-link-board{
+ background:#f4efe2;border:1px solid #d0b38a;padding:10px;border-radius:8px}
+.park-playing:not(.world-match-battle) .park-game-guide{
+ background:linear-gradient(#fffaf0ee,#f1e8daed)!important;
+ border:2px double #c5a47d!important;color:#524335!important;
+ box-shadow:0 8px 21px #4634222a;border-radius:7px!important
+}
+.park-playing[data-park-mode="link"] .park-game-layout{
+ grid-template-columns:1fr!important;display:flex;flex-direction:column;gap:16px;
+}
+.park-playing[data-park-mode="link"] .park-game-guide{width:100%;min-width:0}
+.park-playing[data-park-mode="link"] .park-game-center{width:100%}
+.park-playing[data-park-mode="jigsaw"] .park-jigsaw-layout{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(165px,.4fr);gap:16px
+}
+.park-playing[data-park-mode="jigsaw"] #park-jigsaw-grid{
+ border:10px ridge #755138;border-radius:6px;overflow:hidden;
+ box-shadow:0 8px 18px #59402e7a,0 0 0 5px #d2b58e inset
+}
+.park-playing[data-park-mode="jigsaw"] .park-jigsaw-reference{
+ background:#fff9edee;border:4px double #c2a47e;border-radius:8px;padding:10px;
+ box-shadow:0 7px 13px #5c473344;display:flex;flex-direction:column
+}
+.park-playing[data-park-mode="color"] .park-color-layout{
+ display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.34fr);gap:12px
+}
+.park-playing[data-park-mode="color"] #park-color-canvas{
+ background:repeating-linear-gradient(25deg,#f9f5e899 0 2px,#efe8db99 3px 4px),
+ #f9f1df!important;border:12px ridge #936f4c;
+ box-shadow:0 8px 21px #40312277,0 0 0 4px #e7d4b2 inset
+}
+.park-playing[data-park-mode="color"] .park-palette{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+ background:#fff8ecee;padding:12px;border:2px double #c3a17f;border-radius:9px
+}
+.park-playing[data-park-mode="studio"] .park-studio-layout{
+ display:grid;grid-template-columns:minmax(205px,.53fr) minmax(340px,1fr);gap:20px
+}
+.park-playing[data-park-mode="studio"] .park-studio-tools{
+ background:linear-gradient(135deg,#fff9edf0,#f4e8d7ec)!important;
+ padding:15px!important;border:4px double #be9a71!important;border-radius:8px!important;
+ box-shadow:0 12px 25px #49351e34
+}
+.park-playing[data-park-mode="studio"] .park-studio-stage{
+ aspect-ratio:1;min-height:0!important;width:100%;border:16px ridge #a47a52!important;
+ border-radius:50%!important;box-shadow:0 0 0 3px #754a2c,0 18px 28px #4a33214b!important;
+ background:radial-gradient(ellipse,#faf3e5,#ebe0ce)!important
+}
+.park-playing[data-park-mode="studio"] .park-studio-work{padding:18px!important}
+
+/* Screenshot 4: single-view chapter garden with separate information tiers. */
+.motif-park.world-garden-screen{
+ display:grid!important;grid-template-columns:minmax(0,1fr) clamp(255px,21vw,335px)!important;
+ grid-template-rows:auto minmax(410px,1fr) auto auto;column-gap:14px!important;
+ row-gap:11px!important;min-height:calc(100svh - 73px)!important;align-items:stretch!important;
+ padding:18px clamp(15px,2.6vw,45px) 16px!important;
+ background:url("./pear-garden-scene.svg") center / cover no-repeat!important;
+}
+.world-garden-screen .world-garden-top{grid-area:1/1/2/3;display:flex!important;
+ justify-content:space-between;align-items:center;background:none!important}
+.world-garden-screen .world-garden-viewport{
+ grid-area:2/1/4/2!important;min-height:550px;max-height:none!important;
+ border:0!important;overflow:hidden!important;background:transparent;
+ box-shadow:none!important
+}
+.world-garden-screen .world-garden-canvas{
+ width:100%;height:100%;min-height:570px!important;overflow:hidden;
+ border-radius:5px;background:transparent!important
+}
+.world-garden-screen .world-garden-art{
+ background-size:cover!important;
+ background-position:center!important;opacity:.97;
+}
+.world-garden-screen .world-garden-intro{
+ top:22px!important;left:24px!important;max-width:30%;min-width:190px;
+ padding:16px 20px!important;background:#fff8ecda!important;
+ border:0!important;border-left:3px solid #c19c6d!important;
+ box-shadow:0 5px 19px #513d252b!important
+}
+.world-garden-screen .world-garden-intro h2{
+ font-size:clamp(29px,3vw,50px)!important;color:#2d241c!important}
+.world-garden-screen .world-stage-node{
+ filter:drop-shadow(0 5px 5px #533a2177)
+}
+.world-garden-screen .world-stage-marker{
+ width:64px!important;height:64px!important;
+ background:linear-gradient(160deg,#ead5b7,#947558)!important;
+ border:3px double #f7e6ca!important;color:#fff8eb!important;
+ box-shadow:0 0 0 4px #765237,0 7px 12px #4c392875!important;
+ font:normal 27px/1 Georgia,serif!important
+}
+.world-garden-screen .world-stage-node.chosen .world-stage-marker{
+ background:linear-gradient(150deg,#f4c785,#a55c39)!important;
+ box-shadow:0 0 0 4px #e4b56e,0 0 20px #ffdf8d!important;
+ transform:scale(1.08)
+}
+.world-garden-screen .world-stage-stars{
+ font:normal 17px Georgia,serif!important;color:#d7a05a!important;
+ text-shadow:1px 1px #513b22,0 1px 3px #3a2d1f
+}
+.world-garden-screen .world-mission{
+ grid-area:3/2/4/3!important;position:static!important;min-height:0!important;
+ display:flex;flex-direction:column;background:linear-gradient(#fff8eaeF,#f5e7d5f0)!important;
+ border:3px double #bb976b!important;border-radius:6px!important;
+ padding:14px!important;box-shadow:0 10px 18px #382d223a!important
+}
+.world-garden-screen .world-mission-heading{padding:0!important}
+.world-garden-screen .world-mission-heading small{color:#a15d44!important}
+.world-garden-screen .world-mission-label{color:#472c1b!important}
+.world-garden-screen .world-mission-goals span{color:#604b36!important}
+.world-garden-screen .world-mission-play{margin-top:auto!important;min-height:50px!important}
+.world-garden-screen .ref-chapter-progress{
+ grid-area:2/2/3/3;
+ align-self:start;padding:15px;background:linear-gradient(#fffaf1f3,#f1e4d2f3);
+ border:3px double #bd986e;border-radius:8px;box-shadow:0 8px 21px #41332846
+}
+.ref-chapter-progress h3{font:normal 25px var(--park-serif);margin:0 0 10px;text-align:center}
+.ref-chapter-progress .ref-progress-track{height:11px;border:1px solid #d7bc98;background:#e5d6bf;
+ border-radius:10px;overflow:hidden}
+.ref-chapter-progress .ref-progress-track>span{display:block;height:100%;
+ background:linear-gradient(90deg,#b78349,#e5ba74);transition:width .25s}
+.ref-chapter-progress .ref-progress-numbers{text-align:right;font:normal 15px Georgia,serif;color:#76523d}
+.ref-chapter-progress .ref-progress-rewards{display:flex;justify-content:space-around;gap:9px;margin-top:12px}
+.ref-chapter-progress .ref-progress-rewards>span{display:grid;place-items:center;gap:4px;
+ background:#fff9ef;border-radius:7px;padding:7px 9px;min-width:57px;color:#865b3c;
+ font:normal 12px var(--park-serif)}
+.ref-chapter-progress img,.ref-chapter-rewards img{width:41px;height:41px;object-fit:contain}
+.ref-chapter-rewards{
+ grid-area:4/1/5/2;align-self:end;display:flex;align-items:center;gap:15px;
+ padding:12px 21px;background:linear-gradient(#fff9eced,#f3e4d1ed);
+ border:3px double #be996d;border-radius:10px;box-shadow:0 8px 18px #33251b3c
+}
+.ref-chapter-rewards strong{font:normal 21px var(--park-serif);white-space:nowrap}
+.ref-chapter-rewards .ref-reward-track{display:flex;align-items:center;justify-content:space-around;gap:12px;width:100%}
+.ref-chapter-rewards .ref-reward-track span{display:grid;justify-items:center;gap:3px;font:normal 13px Georgia,serif}
+.world-garden-screen>.park-feedback{grid-area:4/2/5/3;align-self:end}
+
+/* Screenshot 1: store's five restrained ornamental slots; only supported items
+   are enabled. The remaining cards explicitly mark unavailable items. */
+.motif-park.park-functional-shop{padding:25px clamp(15px,2.7vw,46px) 35px!important}
+.park-functional-shop::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;
+ background:url("./world-foreground-decor.svg") center/cover no-repeat}
+.park-functional-shop .park-play-heading{position:relative;z-index:1;align-items:flex-start}
+.park-functional-shop .park-heading h2{font-size:44px!important;color:#38291d!important}
+.park-functional-shop .park-shop-ledger{
+ position:relative;z-index:1;display:grid!important;grid-template-columns:25% 1fr!important;
+ padding:21px 30px!important;min-height:147px;
+ margin:15px 0 24px!important;background:linear-gradient(100deg,#fff9f0ee,#f3e6d4ef)!important;
+ border:3px double #b99263!important;border-radius:9px!important;
+ box-shadow:0 9px 16px #44341e38!important
+}
+.park-functional-shop .park-shop-ledger strong{font-size:24px!important;color:#4a3523}
+.park-functional-shop .park-shop-ledger b{font:normal 48px Georgia,serif!important;color:#9c4935}
+.park-functional-shop .park-shop-ledger small{font:normal 15px var(--park-serif)!important;color:#69513c!important}
+.park-functional-shop .park-shop-catalog{
+ position:relative;z-index:1;display:grid!important;
+ grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:13px!important
+}
+.park-functional-shop .park-shop-product{
+ min-height:385px;align-items:center;justify-content:flex-start;text-align:center;
+ padding:20px 10px 17px!important;gap:12px!important;
+ background:linear-gradient(145deg,#fffcf2f2,#f2e6d5ef)!important;
+ border:6px ridge #b59468!important;border-radius:10px!important;
+ box-shadow:inset 0 0 0 3px #fffaf0,0 12px 20px #523b2566!important
+}
+.park-functional-shop .park-shop-product::before{content:"✿";font-size:28px;color:#a17a51;line-height:1}
+.park-functional-shop .park-shop-product h3{font-size:clamp(17px,1.65vw,25px)!important;color:#33251b!important}
+.park-functional-shop .park-shop-product p{font:normal 14px/1.8 var(--park-serif)!important;color:#6c5841!important}
+.park-functional-shop .park-shop-product .ref-shop-art{width:108px;height:98px;display:grid;place-items:center;
+ background:radial-gradient(ellipse,#fdf8ed,#eedac1);border:2px solid #d1b289;border-radius:50%;
+ box-shadow:0 2px 7px #6246283d}
+.park-functional-shop .ref-shop-art img{width:82px;height:82px;object-fit:contain}
+.park-functional-shop .park-shop-product>span{font:normal 13px var(--park-serif);color:#92553e}
+.park-functional-shop .park-shop-product button{
+ width:95%;align-self:center;min-height:44px;border:2px solid #b88256!important;
+ border-radius:24px!important;background:linear-gradient(#c66d50,#9e4335)!important;
+ color:#fff9ea!important;font:normal 19px var(--park-serif)!important}
+.park-functional-shop .park-shop-product button:disabled{background:#a29a89!important;
+ border-color:#978771!important;opacity:.75}
+.park-functional-shop .park-shop-status,.park-functional-shop .park-shop-disclosure{
+ position:relative;z-index:1}
+
+/* Screenshot 3: victory settlement has independent live score/reward panels. */
+.motif-park.park-result{min-height:calc(100svh - 73px)!important;text-align:center;
+ display:grid;grid-template-columns:minmax(130px,20%) minmax(0,1fr) minmax(180px,24%);
+ gap:12px 20px;align-items:center;align-content:center;
+ background:linear-gradient(#fff7e88e,#f8ecdc8e),url("./pear-garden-scene.svg") center/cover no-repeat!important
+}
+.park-result>.park-heading{grid-column:2;grid-row:1;margin:0!important}
+.park-result .park-heading h2{font-size:clamp(36px,3.7vw,57px)!important;color:#31231a!important}
+.park-result .park-result-stars{grid-column:2;grid-row:2;letter-spacing:.11em;color:#d8a458;font-size:50px}
+.park-result .park-win-symbol{grid-area:2/1/4/2;font-size:70px;
+ background:radial-gradient(ellipse,#fff4d9,#d5b487);
+ border:8px ridge #a58053;border-radius:18px;
+ width:min(100%,190px);margin:auto;aspect-ratio:1;display:grid;place-items:center;
+ box-shadow:0 0 0 5px #e7d0a6 inset,0 12px 18px #4a362457}
+.park-result .world-result-score{grid-column:2;grid-row:3;padding:8px 18px;
+ background:#fff9edda;border:3px double #c5a075;border-radius:8px}
+.park-result .world-result-score strong{font-size:66px!important;color:#a24734!important}
+.park-result .world-earned-reward{grid-column:2;grid-row:4;min-height:60px;
+ background:#fff9e9df!important;border:3px double #c4a477!important;border-radius:6px!important}
+.park-result .world-result-ledger{grid-column:3;grid-row:2/5;min-height:250px;
+ padding:18px!important;border:4px double #c6a27b!important;
+ background:#fff9ebed!important;box-shadow:0 9px 22px #44352147!important}
+.park-result .world-result-side-art{grid-column:1;grid-row:3/5}
+.park-result .park-result-actions{grid-column:1/-1;grid-row:5;display:flex;justify-content:center;gap:16px}
+.park-result .park-disclosure{grid-column:1/-1;grid-row:6;font-size:12px;color:#745f4b}
+
+/* Snapshot 5: the original memory deck remains interactive. */
+#park-memory-inner,.motif-park:has(#park-memory-inner){min-height:calc(100svh - 73px)}
+#park-memory-inner{background:linear-gradient(90deg,#fffaf1b3,transparent 75%),
+ url("./pear-garden-scene.svg") center/cover no-repeat;padding:15px}
+#park-memory-inner .motif-game{background:transparent!important;box-shadow:none!important}
+#park-memory-inner .game-card{background:#f9eddb!important;border:3px double #c7a77f!important;
+ border-radius:8px!important;box-shadow:0 3px 6px #523b286b,0 0 0 2px #fff7eb inset!important}
+#park-memory-inner .game-card.open,#park-memory-inner .game-card.matched{
+ border-color:#cfad70!important;background:#fffaf1!important
+}
+.park-memory-nav{background:#fff8eaec!important;border:2px double #c9aa81!important;
+ border-radius:6px!important;color:#513b28!important}
+
+/* Mobile: preserve game actions and real hit targets; reference's three columns
+   stack instead of shrinking interactive tiles below accessibility size. */
+@media(max-width:1120px){
+ .ref-brand small{display:none}
+ .ref-brand strong{font-size:clamp(19px,2.5vw,28px)}
+ .park-functional-shop .park-shop-catalog{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .park-playing:not(.world-match-battle) .park-play-heading .park-heading h2{font-size:30px}
+}
+@media(max-width:900px){
+ body[data-page="game"] :is(#main,.restored-game)>.motif-park{min-height:calc(100svh - 66px)}
+ .ref-global-header{height:auto;min-height:66px;flex-wrap:wrap;gap:9px;padding:7px 12px}
+ .ref-wallet{margin-left:auto}
+ .ref-pill{padding:5px 8px;font-size:13px}
+ .ref-wallet .ref-pill:nth-child(2),.ref-wallet .ref-pill:nth-child(3),.ref-avatar small{display:none}
+ .ref-avatar>span{width:35px;height:35px;min-width:35px}
+ .motif-park.world-garden-screen{grid-template-columns:1fr!important;grid-template-rows:auto minmax(380px,1fr) auto auto auto!important}
+ .world-garden-screen .world-garden-top{grid-area:1/1!important}
+ .world-garden-screen .world-garden-viewport{grid-area:2/1!important;min-height:420px}
+ .world-garden-screen .ref-chapter-progress{grid-area:3/1!important}
+ .world-garden-screen .world-mission{grid-area:4/1!important}
+ .world-garden-screen .ref-chapter-rewards{grid-area:5/1!important}
+ .world-garden-screen>.park-feedback{grid-area:6/1!important}
+ .park-playing:not(.world-match-battle){
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px!important}
+ .park-playing:not(.world-match-battle) .park-play-heading{grid-area:1/1/2/2}
+ .park-playing:not(.world-match-battle) .park-scoreboard{grid-area:1/2/2/3;min-height:0}
+ .park-playing:not(.world-match-battle) .park-instructions{grid-area:2/1/3/3}
+ .park-playing:not(.world-match-battle) .park-game-layout,
+ .park-playing:not(.world-match-battle) .park-jigsaw-layout,
+ .park-playing:not(.world-match-battle) .park-color-layout,
+ .park-playing:not(.world-match-battle) .park-studio-layout{grid-area:3/1/4/3}
+ .park-playing:not(.world-match-battle)>.park-feedback{grid-area:4/1/5/3}
+}
+@media(max-width:620px){
+ .ref-global-header{min-height:61px}
+ .ref-home,.ref-settings{width:33px;height:33px;min-width:33px;font-size:20px}
+ .ref-separator{display:none}
+ .ref-brand{gap:4px}
+ .ref-brand strong{font-size:18px}
+ .ref-red-seal{font-size:9px}
+ .ref-wallet{gap:4px}
+ .ref-wallet .ref-duel,.ref-settings{display:none}
+ .ref-pill{min-height:30px;padding:3px 7px}
+ .ref-avatar>span{width:31px;height:31px;min-width:31px;font-size:17px}
+ .motif-park.world-garden-screen{padding:10px!important}
+ .world-garden-screen .world-garden-intro{left:7px!important;top:4px!important;
+  min-width:0;width:40%;padding:8px!important}
+ .world-garden-screen .world-garden-intro h2{font-size:22px!important}
+ .world-garden-screen .world-stage-marker{width:40px!important;height:40px!important;font-size:16px!important}
+ .world-garden-screen .world-stage-stars{font-size:11px!important}
+ .world-garden-screen .ref-chapter-progress,.world-garden-screen .ref-chapter-rewards{padding:10px}
+ .ref-chapter-rewards strong{font-size:14px}
+ .ref-chapter-rewards .ref-reward-track{gap:5px}
+ .ref-chapter-rewards img{width:28px;height:28px}
+ .ref-chapter-rewards .ref-reward-track span{font-size:10px}
+ .park-functional-shop .park-shop-catalog{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .park-functional-shop .park-shop-product{min-height:300px;padding:13px 8px!important}
+ .park-functional-shop .park-shop-product h3{font-size:18px!important}
+ .park-functional-shop .park-shop-ledger{grid-template-columns:1fr!important}
+ .park-playing:not(.world-match-battle){grid-template-columns:1fr!important;gap:10px!important}
+ .park-playing:not(.world-match-battle) .park-play-heading{grid-area:1/1!important}
+ .park-playing:not(.world-match-battle) .park-scoreboard{grid-area:2/1!important}
+ .park-playing:not(.world-match-battle) .park-instructions{grid-area:3/1!important}
+ .park-playing:not(.world-match-battle) .park-game-layout,
+ .park-playing:not(.world-match-battle) .park-jigsaw-layout,
+ .park-playing:not(.world-match-battle) .park-color-layout,
+ .park-playing:not(.world-match-battle) .park-studio-layout{grid-area:4/1!important}
+ .park-playing:not(.world-match-battle)>.park-feedback{grid-area:5/1!important}
+ .park-playing[data-park-mode="color"] .park-color-layout,
+ .park-playing[data-park-mode="studio"] .park-studio-layout,
+ .park-playing[data-park-mode="jigsaw"] .park-jigsaw-layout{grid-template-columns:1fr!important}
+ .park-playing:not(.world-match-battle) .park-game-center,
+ .park-playing:not(.world-match-battle) .park-color-work,
+ .park-playing:not(.world-match-battle) .park-studio-work{padding:9px!important;border-width:4px!important}
+ .park-result{display:flex!important;flex-direction:column!important;gap:7px!important}
+ .park-result>*{grid-area:auto!important}
+ .park-result .world-result-ledger{width:100%;max-width:470px;min-height:0}
+ .park-result .park-win-symbol{width:90px;font-size:43px}
+}
+@media(max-width:360px){
+ .ref-brand strong{font-size:16px}
+ .ref-wallet .ref-avatar{display:none}
+ .park-functional-shop .park-shop-catalog{grid-template-columns:1fr!important}
+}
+@media(prefers-reduced-motion:reduce){.ref-global-header *,body[data-page="game"] .motif-park *{animation:none!important;transition:none!important}}
+
+
+/* Screenshot 2: playable, real-account two-player duel lobby and grid. */
+body[data-page="game"] .motif-park.ref-duel-screen{
+ min-height:calc(100svh - 73px);display:grid;grid-template-columns:minmax(170px,.85fr) minmax(205px,1fr) minmax(350px,1.45fr) minmax(205px,1fr);
+ grid-template-rows:50px minmax(390px,1fr) 65px auto auto;
+ gap:15px 18px;align-items:stretch;
+ padding:20px clamp(18px,3vw,55px) 24px!important;
+ background:linear-gradient(90deg,#fffaf0d0,transparent 40%,#fff9ef3b),
+ url("./pear-garden-scene.svg") center/cover no-repeat!important
+}
+.ref-duel-screen .ref-duel-back{
+ grid-area:1/1/2/3;justify-self:start;align-self:start;
+ border:1px solid #cbae86;background:#fff8ecee;
+ padding:8px 18px;border-radius:22px;color:#49372b;font-size:16px
+}
+.ref-duel-screen .ref-duel-story{grid-area:2/1/3/2;padding:15px 3px;align-self:start}
+.ref-duel-screen .ref-duel-story>span{font-size:15px;color:#956547}
+.ref-duel-screen .ref-duel-story h1{font:normal 41px/1.3 var(--park-serif)!important;
+ margin:8px 0 4px;color:#35281c!important}
+.ref-duel-screen .ref-duel-story h2{font:normal 22px/1.4 var(--park-serif)!important;margin:0 0 24px}
+.ref-duel-screen .ref-duel-story p{font:normal 15px/1.9 var(--park-serif);color:#625340}
+.ref-duel-screen .ref-duel-card{
+ position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+ padding:22px 14px 19px;border:9px ridge #98724c;
+ background:linear-gradient(150deg,#fffaf0f7,#f1e4d0f8);
+ border-radius:12px;box-shadow:inset 0 0 0 4px #f6e9d0,0 11px 25px #4b382860;
+ min-width:0
+}
+.ref-duel-screen .ref-duel-card h3{font:normal 20px/1.4 var(--park-serif)!important;
+ text-align:center;word-break:break-word;margin:12px 0 5px}
+.ref-duel-screen .ref-duel-card p{color:#74644f;font:normal 13px/1.7 var(--park-serif);text-align:center}
+.ref-duel-screen .ref-duel-card strong{display:block;color:#ae563d;font:normal 16px/1.4 var(--park-serif)}
+.ref-duel-screen .ref-duel-ribbon{min-width:103px;text-align:center;
+ background:linear-gradient(#778e83,#47665d);color:#fff9e9;
+ padding:5px 18px;border:3px double #d8bb80;border-radius:30px;
+ box-shadow:0 2px 6px #42351f65;font-size:17px}
+.ref-duel-screen .ref-duel-self{grid-area:2/2/3/3}
+.ref-duel-screen .ref-duel-center{grid-area:2/3/3/4}
+.ref-duel-screen .ref-duel-friend{grid-area:2/4/3/5}
+.ref-duel-screen .ref-duel-portrait{width:min(170px,90%);aspect-ratio:1;border-radius:50%;
+ display:grid;place-items:center;border:5px double #d4af80;
+ background:radial-gradient(circle at 34% 20%,#fffdf4,#d0e1d8 62%,#79988b);
+ color:#614536;font:normal 70px var(--park-serif);margin-top:20px;
+ box-shadow:inset 0 3px 10px #fdf7f4,0 5px 11px #583f3460}
+.ref-duel-screen .ref-duel-unknown{background:#eadfce;color:#a58a71}
+.ref-duel-screen .ref-duel-board{display:grid;grid-template-columns:repeat(6,1fr);
+ gap:3px;padding:8px;margin:13px auto 4px;border:5px ridge #a17d56;background:#e6d7c3;
+ box-shadow:0 3px 13px #57452f50;width:min(100%,302px)}
+.ref-duel-screen .ref-duel-board button{aspect-ratio:1;min-width:0;padding:2px;
+ border:1px solid #c6a883;border-radius:5px;
+ background:linear-gradient(135deg,#fdfbf2,#e9dac6)}
+.ref-duel-screen .ref-duel-board button img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.ref-duel-screen .ref-duel-board button:disabled{opacity:1}
+.ref-duel-screen .ref-duel-board button.ref-duel-selected{outline:3px solid #b66d46;
+ box-shadow:0 0 12px #eab66a}
+.ref-duel-screen .ref-duel-details{display:flex;justify-content:space-between;gap:15px;
+ font:normal 13px var(--park-serif);color:#6b513f;width:100%;
+ padding:8px 5px;border-top:1px solid #d3bfa4}
+.ref-duel-screen .ref-duel-live{color:#995c45!important;min-height:30px}
+.ref-duel-screen .ref-duel-vs{grid-area:3/3/4/4;align-self:center;justify-self:center;
+ font:bold italic 35px Georgia,serif;color:#c89a62;
+ text-shadow:1px 2px #fff8df,0 2px 6px #6d462a}
+.ref-duel-screen .ref-duel-actions{grid-area:4/2/5/5;display:flex;justify-content:center;
+ gap:12px;flex-wrap:wrap}
+.ref-duel-screen .ref-duel-actions button,.ref-duel-screen .ref-duel-join button{
+ border:2px solid #c3a077;border-radius:26px;padding:9px 20px;min-height:43px;
+ color:#554130;background:linear-gradient(#fff9ed,#f0e0c6);
+ box-shadow:inset 0 0 0 2px #fff9ee,0 4px 7px #63452d50;font-size:17px
+}
+.ref-duel-screen .ref-duel-actions button:first-child,.ref-duel-screen .ref-duel-join button{
+ color:#fff8e8;background:linear-gradient(#c76b4c,#9a3d31)}
+.ref-duel-screen .ref-duel-actions button:disabled{opacity:.5}
+.ref-duel-screen .ref-duel-join{grid-area:5/1/6/5;display:flex;justify-content:center;
+ align-items:center;gap:12px;flex-wrap:wrap;background:#fff7e6df;
+ border:2px double #c09d6f;border-radius:7px;padding:12px}
+.ref-duel-screen .ref-duel-join label{font:normal 17px var(--park-serif)}
+.ref-duel-screen .ref-duel-join input{min-width:0;flex:1 1 180px;max-width:430px;
+ padding:10px;border:1px solid #bc9b72;border-radius:7px;
+ font:normal 14px Georgia,serif;background:#fffaf1;color:#47352a}
+.ref-duel-screen .ref-duel-feedback{grid-area:6/1/7/5;text-align:center;
+ padding:11px;background:#fff9ebed;border:2px double #c8a67e;
+ color:#78543b;font:normal 13px/1.7 var(--park-serif)}
+.ref-duel-screen .ref-duel-feedback a{color:#92533d}
+@media(max-width:1090px){
+ body[data-page="game"] .motif-park.ref-duel-screen{
+ grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto auto auto auto}
+ .ref-duel-screen .ref-duel-back{grid-area:1/1/2/4}
+ .ref-duel-screen .ref-duel-story{grid-area:2/1/3/4}
+ .ref-duel-screen .ref-duel-self{grid-area:3/1/4/2}
+ .ref-duel-screen .ref-duel-center{grid-area:3/2/4/3}
+ .ref-duel-screen .ref-duel-friend{grid-area:3/3/4/4}
+ .ref-duel-screen .ref-duel-vs{display:none}
+ .ref-duel-screen .ref-duel-actions{grid-area:4/1/5/4}
+ .ref-duel-screen .ref-duel-join{grid-area:5/1/6/4}
+ .ref-duel-screen .ref-duel-feedback{grid-area:6/1/7/4}
+}
+@media(max-width:690px){
+ body[data-page="game"] .motif-park.ref-duel-screen{display:flex;flex-direction:column;padding:13px!important;gap:9px}
+ .ref-duel-screen .ref-duel-story{padding:5px}
+ .ref-duel-screen .ref-duel-story h1{font-size:29px!important}
+ .ref-duel-screen .ref-duel-story h2{font-size:18px!important;margin-bottom:7px}
+ .ref-duel-screen .ref-duel-card{padding:13px;border-width:5px}
+ .ref-duel-screen .ref-duel-self,.ref-duel-screen .ref-duel-friend{min-height:115px}
+ .ref-duel-screen .ref-duel-portrait{width:88px;height:88px;font-size:40px;margin-top:6px}
+ .ref-duel-screen .ref-duel-center{order:1}
+ .ref-duel-screen .ref-duel-actions{order:2}
+ .ref-duel-screen .ref-duel-join{order:3}
+ .ref-duel-screen .ref-duel-friend{order:4}
+ .ref-duel-screen .ref-duel-feedback{order:5}
+}
+
+
+/* Preserve true 20-stage navigation while the visible frame matches chapter
+   reference 4. The two ten-stage chapters remain accessible by touch/scroll. */
+body[data-page="game"] .motif-park.world-garden-screen .world-garden-viewport{
+ height:min(680px,calc(100svh - 185px));max-height:695px!important;
+ min-height:410px!important;overflow-y:auto!important;overflow-x:hidden!important;
+ scrollbar-width:thin;scrollbar-color:#b3916b #f6e9d4;
+}
+body[data-page="game"] .motif-park.world-garden-screen .world-garden-canvas{
+ height:1530px!important;min-height:1530px!important;overflow:hidden!important;
+}
+@media(max-width:620px){
+ body[data-page="game"] .motif-park.world-garden-screen .world-garden-viewport{
+  height:500px;min-height:450px!important;max-height:510px!important
+ }
+ body[data-page="game"] .motif-park.world-garden-screen .world-garden-canvas{
+  height:1290px!important;min-height:1290px!important
+ }
+}
+
+
+/* Desktop fidelity: chapter/game boards fit the 1672x941 photographic
+   compositions. No clipping of a complete playable board by the footer. */
+@media(min-width:901px){
+ .park-playing[data-park-mode="link"] .park-game-center{
+  width:100%;max-width:850px;justify-self:center;
+  padding:12px 18px!important;
+ }
+ .park-playing[data-park-mode="link"] #park-link-grid{
+  width:min(100%,560px)!important;max-width:560px!important;
+  margin:7px auto!important;padding:9px!important;
+  gap:6px!important;border:3px double #ae8b60!important;border-radius:6px!important
+ }
+ .park-playing[data-park-mode="link"] .park-link-tile{
+  aspect-ratio:1;min-height:0!important;padding:4px!important
+ }
+ .park-playing[data-park-mode="link"] .park-game-guide{
+  padding:9px 15px!important
+ }
+ .park-playing[data-park-mode="link"] .park-game-guide ol{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px
+ }
+ .park-playing[data-park-mode="link"] .park-game-guide p:last-child{display:none}
+ .park-playing[data-park-mode="link"] .park-guide-reference{margin-top:5px}
+ .park-playing[data-park-mode="link"] .park-guide-swatches{gap:7px!important}
+ .park-playing:not(.world-match-battle) .park-scoreboard{
+  padding:25px 15px!important;display:flex!important;
+  flex-direction:column!important;align-items:stretch!important;
+  justify-content:flex-start!important;gap:13px!important
+ }
+ .park-playing:not(.world-match-battle) .park-scoreboard>div{
+  display:block!important;width:100%;text-align:center!important;
+  white-space:normal!important;line-height:1.8!important;
+  padding:10px 6px!important;border-bottom:1px solid #dec6a5!important;
+  color:#654b32!important
+ }
+ .park-playing:not(.world-match-battle) .park-scoreboard b{font-size:27px!important}
+ .park-playing[data-park-mode="link"] .park-scoreboard:before{
+  content:"第　" attr(data-no) "　关";
+  display:block;font:normal 20px var(--park-serif);text-align:center;color:#71523c
+ }
+ .park-playing:not(.world-match-battle) .park-instructions{
+  padding:17px 7px!important;max-width:260px!important
+ }
+ .park-playing:not(.world-match-battle) .park-play-heading .park-heading{
+  margin-top:24px;max-width:300px
+ }
+ .park-playing:not(.world-match-battle) .park-play-heading .park-heading h2{
+  font-size:39px
+ }
+ .park-playing:not(.world-match-battle) .park-play-heading .park-heading>span{
+  display:block;margin-bottom:15px;color:#b18052!important
+ }
+ .park-playing:not(.world-match-battle) .park-jigsaw-layout{
+  align-self:start
+ }
+ .park-playing[data-park-mode="studio"] .park-studio-stage{
+  max-width:580px;margin-inline:auto
+ }
+}
+
+
+/* The uploaded memory reference depicts the REAL 40-level board, not its
+   selection map. Preserve that map separately and reskin active card gameplay. */
+@media(min-width:901px){
+ #park-memory-inner .motif-game.mg-arcade-playing{
+  width:100%;max-width:none;min-height:680px;
+  padding:28px 22px!important;margin:0!important;
+  display:grid;grid-template-columns:minmax(220px,27%) minmax(450px,1fr);
+  grid-template-rows:auto auto auto auto;
+  gap:14px 24px;align-items:start;
+  border:0!important;border-radius:0!important;box-shadow:none!important;
+  background:linear-gradient(100deg,#fffcf0c0,transparent 40%),
+   url("./pear-garden-scene.svg") center/cover no-repeat!important;
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-top{
+  grid-area:1/1/2/2;display:block!important;padding:14px 18px!important;
+  border:2px double #ccac7c;background:#fff9e8db;
+  border-radius:9px;box-shadow:0 9px 18px #62463035
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-top h2{
+  font:normal 36px/1.4 var(--park-serif)!important;color:#33271f!important
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-stats{
+  display:flex;flex-direction:column;gap:8px;margin:10px 0 0!important
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-stats>div{
+  display:flex;justify-content:space-between;gap:9px;
+  border:1px solid #d7bb94;background:#fdf7eae8;border-radius:7px!important;
+  box-shadow:0 3px 6px #563a2441
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-stats strong{
+  color:#a35c3c!important;font:normal 23px Georgia,serif!important
+ }
+ #park-memory-inner .mg-arcade-playing .mg-arcade-instructions{
+  grid-area:2/1/3/2;text-align:left;padding:15px 18px!important;
+  background:#fff9e8eb!important;border:2px double #cda978!important;
+  color:#684b34!important;font:normal 15px/1.8 var(--park-serif)!important
+ }
+ #park-memory-inner .mg-arcade-playing .mg-arcade-board{
+  grid-area:1/2/4/3;width:min(100%,580px);max-width:580px!important;
+  min-height:0;place-self:center!important;padding:17px!important;
+  background:linear-gradient(#f6ecdaed,#e4d2bbec)!important;
+  border:14px ridge #8b6544!important;border-radius:12px!important;
+  box-shadow:inset 0 0 0 4px #e9d9be,0 10px 24px #37281b8a!important
+ }
+ #park-memory-inner .mg-arcade-playing button.mg-card{
+  background:linear-gradient(135deg,#fef9ee,#ead9c4)!important;
+  border:3px double #d0ad79!important;border-radius:6px!important;
+  box-shadow:0 3px 5px #5d463e5b!important
+ }
+ #park-memory-inner .mg-arcade-playing button.mg-card.face-up{
+  background:linear-gradient(#fffaf0,#f0e3d0)!important;border-color:#c3a26e!important
+ }
+ #park-memory-inner .mg-arcade-playing .mg-play-actions{grid-area:3/1/4/2}
+ #park-memory-inner .mg-arcade-playing .mg-note{grid-area:4/1/5/3}
+}
+
+
+/* User reference #1: vertical embroidered shop hanging sign at left, overview
+   panel at upper right, five cards occupying the same five columns below. */
+@media(min-width:1121px){
+ body[data-page="game"] .motif-park.park-functional-shop{
+  display:grid!important;grid-template-columns:clamp(165px,13vw,230px) minmax(0,1fr);
+  grid-template-rows:auto minmax(380px,1fr) auto auto;
+  column-gap:19px;row-gap:13px;
+  padding:34px clamp(12px,2.5vw,42px) 22px!important;
+ }
+ .park-functional-shop .park-play-heading{
+  grid-area:1/1/3/2;align-self:start;min-height:560px;
+  display:flex!important;flex-direction:column!important;justify-content:flex-start;
+  align-items:center!important;padding:22px 12px!important;
+  border:9px ridge #b3936c!important;border-radius:29px 29px 12px 12px!important;
+  background:linear-gradient(95deg,#fdf7ebef,#fff9f2ed)!important;
+  box-shadow:inset 0 0 0 4px #fffaf0,0 13px 19px #41331d50!important;
+ }
+ .park-functional-shop .park-play-heading::before{
+  content:"❀";font-size:37px;color:#ad8650
+ }
+ .park-functional-shop .park-play-heading .park-back{
+  position:absolute;top:14px;left:14px;z-index:3;white-space:nowrap;
+  font-size:12px!important;padding:6px 10px!important;
+ }
+ .park-functional-shop .park-play-heading .park-heading{
+  margin:34px 0 0!important;width:100%;display:flex;
+  flex-direction:column;align-items:center;gap:16px
+ }
+ .park-functional-shop .park-play-heading .park-heading>span{display:none}
+ .park-functional-shop .park-play-heading .park-heading h2{
+  writing-mode:vertical-rl;letter-spacing:.24em;font-size:clamp(29px,3vw,43px)!important;
+  line-height:1.2;text-orientation:upright;margin:0!important
+ }
+ .park-functional-shop .park-play-heading .park-heading p{
+  text-align:center;font:normal 14px/1.9 var(--park-serif);
+  max-width:145px;color:#67513d!important
+ }
+ .park-functional-shop .park-shop-ledger{grid-area:1/2/2/3;margin:0!important}
+ .park-functional-shop .park-shop-catalog{grid-area:2/2/3/3;min-width:0}
+ .park-functional-shop .park-shop-product{min-width:0}
+ .park-functional-shop .park-shop-status{grid-area:3/2/4/3}
+ .park-functional-shop .park-shop-disclosure{grid-area:4/2/5/3}
+}

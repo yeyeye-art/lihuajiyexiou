@@ -6,6 +6,7 @@ import { Sidebar } from './components/Sidebar';
 import { BottomNav } from './components/BottomNav';
 import { Footer } from './components/Footer';
 import { Modal } from './components/Modal';
+import { loadRestoredSections } from './components/RestoredSection';
 import { PageSkeleton } from './components/PageSkeleton';
 
 // Route-level code splitting with lazy loading
@@ -28,6 +29,10 @@ const Exhibit = lazy(() => import('./pages/Exhibit').then((m) => ({ default: m.E
 export const App: React.FC = () => {
   const { page, param } = useHashRoute();
   const { isMenuOpen } = useApp();
+
+  useEffect(() => {
+    loadRestoredSections().then((module) => module.cloudReady()).catch(console.warn);
+  }, []);
 
   useEffect(() => {
     document.body.dataset.page = page;

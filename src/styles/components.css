@@ -319,3 +319,5 @@ nav a:hover {
   .studio-modes { gap: 8px; }
   .studio-modes a { padding: 14px 12px; }
 }
+
+.restored-section { min-width: 0; max-width: 100%; }

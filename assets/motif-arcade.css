@@ -1,0 +1,204 @@
+/* V2.1 GAME MAP — original silk-paper casual-game artwork, no third-party game assets.
+   Wrapped within #game only. Existing embroidery, archive and palette styles untouched. */
+body[data-page="game"] #main{max-width:1200px}
+.motif-game.mg-arcade-home{max-width:1090px}
+.motif-game .mg-arcade-hero{position:relative;min-height:205px;padding:24px 30px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;border:3px solid #f0e5bf;border-radius:24px;background:radial-gradient(ellipse at 89% -20%,#fffae3 3%,transparent 40%),radial-gradient(circle at 10% 100%,#d5e8d0 1%,transparent 44%),linear-gradient(135deg,#fbf7e9,#e2ede0 75%,#f1f7ec);box-shadow:0 9px 0 #d4e1ce,0 20px 40px #44694a1b}
+.motif-game .mg-arcade-hero::before{content:"";position:absolute;width:320px;height:320px;border:2px solid #fff9;border-radius:50%;right:-105px;top:-175px;box-shadow:0 0 0 24px #fff3,0 0 0 55px #fff2}
+.motif-game .mg-arcade-hero::after{content:"❀";position:absolute;color:#a3bb9c4d;font:normal 130px/1 "SimSun",serif;right:42%;top:-30px;transform:rotate(-20deg);pointer-events:none}
+.motif-game .mg-arcade-titlebox{z-index:1;position:relative;flex:1}
+.motif-game .mg-arcade-topline{display:flex;align-items:center;gap:9px;color:#8e936b;font-weight:700;font-size:10px;letter-spacing:.19em}
+.motif-game .mg-arcade-kite{display:grid;place-items:center;width:30px;height:30px;font-size:20px;color:#c88a56;background:#fff6d9;border:2px solid #e3ce9e;border-radius:50%}
+.motif-game .mg-arcade-hero h1{position:relative;margin:2px 0 4px;font:normal clamp(37px,5vw,56px)/1.3 "Songti SC","Noto Serif SC","SimSun",serif;color:#355e48;letter-spacing:.12em;text-shadow:0 2px 0 #fff,1px 4px 0 #d0dfce}
+.motif-game .mg-arcade-hero h1 span{color:#a57443}
+.motif-game .mg-arcade-subtitle{font-size:13px;color:#647e69;letter-spacing:.07em;margin:0}
+.motif-game .mg-arcade-hud{z-index:1;display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end;max-width:390px}
+.motif-game .mg-hud-pill{display:flex;align-items:center;gap:8px;padding:9px 10px;background:#fffdf3dc;border:2px solid #dfdfbf;border-radius:17px;box-shadow:0 4px 0 #cad6b7;min-width:99px}
+.motif-game .mg-hud-pill>span{display:grid;place-items:center;flex:0 0 32px;height:32px;border-radius:50%;background:#f2d79c;color:#986a3e;font-size:19px}
+.motif-game .mg-hud-pill>div{display:flex;flex-direction:column}
+.motif-game .mg-hud-pill strong{font-size:21px;line-height:1.15;color:#3c6551;font-variant-numeric:tabular-nums}
+.motif-game .mg-hud-pill strong small{font-size:11px;color:#9dad96}
+.motif-game .mg-hud-pill em{font-style:normal;color:#829481;font-size:9px;white-space:nowrap}
+.motif-game .mg-arcade-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0 21px}
+.motif-game .mg-arcade-tabs button{min-height:72px;display:flex;align-items:center;justify-content:center;gap:12px;border:2px solid #cbdcc8;background:linear-gradient(#fffdf6,#e9eee1);box-shadow:0 5px 0 #cbdac9;border-radius:17px;color:#60806b}
+.motif-game .mg-arcade-tabs button>span{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border:2px solid #dae7d2;border-radius:50%;background:#fdfbf3;font-size:23px;color:#78a180}
+.motif-game .mg-arcade-tabs button b{font-size:18px}
+.motif-game .mg-arcade-tabs button small{font-size:10px;color:#8da395;display:block}
+.motif-game .mg-arcade-tabs button[aria-selected="true"]{background:linear-gradient(155deg,#52866c,#2f654b);border-color:#447356;box-shadow:0 5px 0 #234e3d,0 10px 18px #416c5826;color:white;transform:translateY(-2px)}
+.motif-game .mg-arcade-tabs button[aria-selected="true"] small{color:#e7f0df}
+.motif-game .mg-arcade-tabs button[aria-selected="true"]>span{background:#fff4d5;border-color:#e9d9b2;color:#bd8b4a}
+.motif-game .mg-arcade-arena{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.95fr);grid-template-areas:"map mission";gap:20px;align-items:start}
+.motif-game .mg-map-column{grid-area:map;min-width:0;padding:15px 14px 10px;border:2px solid #e6e9d4;background:#faf9ed;border-radius:22px;box-shadow:0 8px 0 #dbe3d1,0 12px 32px #627d5020}
+.motif-game .mg-map-title{padding:4px 9px 14px;display:flex;justify-content:space-between;gap:8px;align-items:end}
+.motif-game .mg-map-title span{font-size:10px;color:#ac9568;letter-spacing:.11em}
+.motif-game .mg-map-title h2{font:normal 22px/1.4 "Songti SC","SimSun",serif;color:#42715a;margin:4px 0 0}
+.motif-game .mg-map-direction{color:#a57638;font-size:12px;background:#fff4d3;border:1px solid #ecd9a9;border-radius:18px;padding:7px 11px;white-space:nowrap}
+.motif-game .mg-map-scroll{max-height:630px;overflow-y:auto;overflow-x:hidden;scroll-behavior:smooth;overscroll-behavior:contain;border:3px solid #d2e0ce;border-radius:20px;background:linear-gradient(#e6f1e5,#cee2cd);scrollbar-color:#a4baa2 #e8f0df;scrollbar-width:thin}
+.motif-game .mg-map-scroll:focus-visible{outline:3px solid #7d9d8a;outline-offset:2px}
+.motif-game .mg-vertical-journey{display:flex;flex-direction:column;gap:0}
+.motif-game .mg-landscape{height:555px;min-height:555px;display:block;position:relative;overflow:hidden;border:0;border-radius:0;padding:0;isolation:isolate;background:radial-gradient(circle at 20% 20%,#fafae384,transparent 35%),linear-gradient(160deg,#dbeede,#c7e2d5)}
+.motif-game .mg-landscape:nth-child(2){background:linear-gradient(158deg,#d2eae1,#e0eee1)}
+.motif-game .mg-landscape:nth-child(3){background:linear-gradient(158deg,#dfead5,#cae1d0)}
+.motif-game .mg-landscape:nth-child(4){background:linear-gradient(158deg,#e0eee1,#bcd9cf)}
+.motif-game .mg-landscape:nth-child(5){background:linear-gradient(158deg,#e6efdd,#d2e8d0)}
+.motif-game .mg-landscape::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(120deg,transparent 0 43px,#fff5 44px,#fff1 46px,transparent 47px 90px);opacity:.18;pointer-events:none}
+.motif-game .mg-map-mountains{position:absolute;inset:0;width:100%;height:100%;opacity:.65;z-index:0}
+.motif-game .mg-chapter-banner{position:absolute;z-index:4;left:50%;top:5px;transform:translateX(-50%);width:56%;min-width:200px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 12px 9px;border:2px solid #eee6c0;background:linear-gradient(#fffef1e8,#f0f4e9ec);border-radius:0 0 24px 24px;box-shadow:0 4px 0 #cbd8ba7a}
+.motif-game .mg-chapter-banner-number{font-size:9px;color:#ae8b5c;letter-spacing:.13em}
+.motif-game .mg-chapter-banner strong{font:normal 20px/1.45 "Songti SC","SimSun",serif;color:#40674f}
+.motif-game .mg-chapter-banner>span:last-child{font-size:10px;color:#8a9d8d}
+.motif-game .mg-route-field{position:absolute;inset:0}
+.motif-game .mg-route-ink{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:1}
+.motif-game .mg-route-ink .mg-route-outline{stroke:#fdf4d2;stroke-width:4.2;stroke-linecap:round;fill:none;opacity:.93;filter:drop-shadow(0 1px 1px #7b9e8c99)}
+.motif-game .mg-route-ink .mg-route-highlight{stroke:#ccac71;stroke-width:1.8;stroke-dasharray:1.5 2;stroke-linecap:round;fill:none}
+.motif-game .mg-landscape-cloud{position:absolute;z-index:1;font-size:56px;color:#fff9;transform:rotate(-5deg);pointer-events:none}
+.motif-game .mg-cloud-a{top:26%;left:9%}.motif-game .mg-cloud-b{top:52%;right:10%}
+.motif-game .mg-landscape-petals{position:absolute;top:16%;right:9%;z-index:1;color:#f8f7e0a6;font-size:25px;transform:rotate(24deg)}
+.motif-game .mg-scenery{position:absolute;pointer-events:none;z-index:1;font-size:52px;opacity:.4}
+.motif-game .mg-scenery-lotus{bottom:13%;right:8%;color:#f8ecd8}
+.motif-game .mg-scenery-bird{top:31%;left:9%;color:#678f83;transform:rotate(-17deg)}
+.motif-game button.mg-route-node{position:absolute;z-index:3;left:var(--node-x);top:var(--node-y);transform:translate(-50%,-50%);width:69px;height:77px;min-height:0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;border:0!important;outline:0;background:transparent!important;box-shadow:none!important;color:inherit;padding:0!important;overflow:visible}
+.motif-game .mg-node-glow{position:absolute;z-index:-1;top:0;left:3px;width:64px;height:64px;background:#f2f4b9a8;border-radius:50%;transform:scale(.9);opacity:0}
+.motif-game .mg-node-disc{display:grid;place-items:center;width:62px;height:62px;flex:none;border-radius:50%;background:radial-gradient(circle at 35% 18%,#fbfff1,#c6e3d2 60%,#8db69d);border:4px solid #fef7de;box-shadow:0 6px 0 #679682,0 9px 8px #486d544a,inset 0 -3px 0 #9aba9c;transition:transform .16s ease}
+.motif-game .mg-node-number{font-weight:800;font-size:20px;color:#456c55;text-shadow:0 1px 0 #fff}
+.motif-game .mg-route-stars{font-size:11px;line-height:1;letter-spacing:.04em;color:#d89f3b;text-shadow:0 1px 0 #fff}
+.motif-game button.mg-route-node:hover:not(:disabled) .mg-node-disc{transform:translateY(-4px) scale(1.08)}
+.motif-game button.mg-route-node:focus-visible .mg-node-disc{outline:3px solid #426d54;outline-offset:4px}
+.motif-game button.mg-route-node:disabled{opacity:.58;cursor:not-allowed;filter:grayscale(.45)}
+.motif-game button.mg-route-node:disabled .mg-node-disc{background:radial-gradient(circle at 35% 12%,#f4f5e9,#b1c8b8 68%,#8ba693)}
+.motif-game .mg-route-node.completed .mg-node-disc{background:radial-gradient(circle at 33% 22%,#fffded,#ffdd88 57%,#c89a56);border-color:#fff6d4;box-shadow:0 5px 0 #aa8c53,0 9px 8px #80633738}
+.motif-game .mg-route-node.completed .mg-node-number{color:#986b36}
+.motif-game .mg-route-node.available .mg-node-disc{background:radial-gradient(circle at 32% 18%,#faffea,#bdeed5 58%,#569972)}
+.motif-game button.mg-route-node.selected{z-index:9}
+.motif-game .mg-route-node.selected .mg-node-disc{width:78px;height:78px;background:radial-gradient(circle at 35% 14%,#fff9d3,#ffdf8d 54%,#e4ad54);border:5px solid #fff9da;box-shadow:0 6px 0 #ba8644,0 11px 18px #b68c4090,0 0 0 7px #fff6c285}
+.motif-game .mg-route-node.selected .mg-node-number{font-size:25px;color:#976027}
+.motif-game .mg-route-node.selected .mg-node-glow{opacity:1;animation:mg-node-pulse 2s ease-in-out infinite}
+.motif-game .mg-route-node.selected .mg-route-stars{padding-top:10px;font-size:12px;font-weight:800;color:#b77726}
+.motif-game .mg-node-arrow{position:absolute;top:-37px;left:40px;min-width:103px;white-space:nowrap;background:#e7775c;border:2px solid #fff5cf;border-radius:22px;padding:5px 8px;box-shadow:0 4px 0 #b35d49;color:#fff;font-size:11px;font-weight:700;animation:mg-bob 2.2s ease-in-out infinite}
+.motif-game .mg-node-arrow b{font-size:14px}
+.motif-game .mg-map-caption{margin:12px 5px 0;text-align:center;font-size:11px;color:#889a83}
+.motif-game .mg-mission-card{grid-area:mission;position:sticky;top:18px;min-width:0}
+.motif-game .mg-mission-frame{position:relative;padding:17px 20px 20px;border:4px solid #f0dca2;border-radius:24px;background:radial-gradient(circle at 50% 11%,#fffef4,#f9f4df 54%,#edf2e4 100%);box-shadow:0 8px 0 #cfbd8a,0 17px 24px #677a522a;text-align:center;overflow:hidden}
+.motif-game .mg-mission-frame::before{content:"";position:absolute;inset:8px;border:1px dashed #d7bf86;border-radius:17px;pointer-events:none}
+.motif-game .mg-mission-tag{font-size:10px;letter-spacing:.07em;color:#a37b40;font-weight:700}
+.motif-game .mg-mission-medallion{display:flex;flex-direction:column;align-items:center;justify-content:center;width:142px;height:145px;margin:17px auto 9px;border:5px solid #fff6d9;border-radius:50%;background:radial-gradient(circle at 50% 27%,#fdfbd9 10%,#f7d38b 52%,#d6a458 90%);box-shadow:0 7px 0 #b78949,0 10px 20px #ac865050,inset 0 0 0 6px #e9bb6c;color:#885e2e}
+.motif-game .mg-mission-laurel{font-size:20px;line-height:1}
+.motif-game .mg-mission-no{font-size:10px;letter-spacing:.08em}
+.motif-game .mg-mission-no b{display:block;font-size:44px;line-height:1.12;font-weight:800;color:#85602e;text-shadow:0 2px 0 #fff5ce}
+.motif-game .mg-mission-ribbon{background:#47785b;color:white;font-size:11px;padding:4px 11px;border-radius:14px;box-shadow:0 3px 0 #2a5543}
+.motif-game .mg-mission-frame h2{font:normal 25px/1.35 "Songti SC","SimSun",serif;color:#47644c;margin:12px auto 5px}
+.motif-game .mg-mission-lead{font-size:12px;color:#8b927d;margin:0 0 13px}
+.motif-game .mg-mission-icons{display:grid;grid-template-columns:1fr;gap:6px;text-align:left;margin:0 0 13px}
+.motif-game .mg-mission-icons span{font-size:12px;background:#fffdf1c9;border:1px solid #e6d9b5;border-radius:10px;padding:6px 11px;color:#61765e}
+.motif-game .mg-mission-icons b{color:#bb8954;margin-right:6px}
+.motif-game .mg-mission-achievement{font-size:12px;color:#7b8a77;margin-bottom:16px}
+.motif-game .mg-mission-achievement strong{color:#c49347}
+.motif-game button.mg-big-play{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:100%;min-height:84px;border:3px solid #fff3b8!important;border-radius:18px!important;background:linear-gradient(180deg,#ffa974,#ed7859 78%,#da634a)!important;box-shadow:0 7px 0 #ab5341,0 10px 15px #ab685645,inset 0 2px 1px #ffdda3;color:#fff!important;text-shadow:0 2px 0 #bd604d;cursor:pointer;transform:translateY(0)}
+.motif-game button.mg-big-play>span:nth-child(2){font-size:23px;font-weight:800;letter-spacing:.075em}
+.motif-game button.mg-big-play>small{font-size:10px;letter-spacing:.19em;color:#fff4d5}
+.motif-game button.mg-big-play:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 10px 0 #ab5341,0 14px 18px #ab685645}
+.motif-game button.mg-big-play:active:not(:disabled){transform:translateY(5px);box-shadow:0 2px 0 #ab5341}
+.motif-game button.mg-big-play:disabled{opacity:.55;box-shadow:none!important;cursor:not-allowed}
+.motif-game .mg-play-sparkle{position:absolute;top:9px;left:13px;font-size:17px;color:#ffefb4}
+.motif-game .mg-mission-tips{margin:13px auto 0;font-size:10px;line-height:1.6;color:#8e967c}
+.motif-game .mg-arcade-footnote{font-size:11px;color:#94a096;line-height:1.7;margin:19px 10px}
+.motif-game .mg-free-adventure{position:relative;padding:24px 28px 27px;border-radius:22px;border:3px solid #d9e6ca;background:linear-gradient(140deg,#f7f9ec,#e6f0dd);box-shadow:0 8px 0 #cddfc7}
+.motif-game .mg-free-heading{margin-bottom:17px}.motif-game .mg-free-heading h2{font:normal 28px "Songti SC","SimSun",serif;color:#426750;margin:7px 0}.motif-game .mg-free-heading p{font-size:13px;color:#7d9783;margin:0}
+.motif-game .mg-free-action{display:grid;grid-template-columns:1fr minmax(220px,.7fr);gap:18px;align-items:center;padding:14px 12px 0}
+.motif-game .mg-free-action>div{display:flex;flex-direction:column;gap:5px}
+.motif-game .mg-free-action strong{font:normal 27px "Songti SC","SimSun",serif;color:#477653}
+.motif-game .mg-free-action small{color:#8c9a86;font-size:12px}
+/* In-level screen is no longer a generic article with plain buttons. */
+.motif-game.mg-arcade-playing{padding:22px 26px 27px;background:radial-gradient(circle at 50% -10%,#fffdf3 3%,transparent 48%),linear-gradient(#edf4e5,#d8e9dd);border:4px solid #e9dbad;border-radius:24px;box-shadow:0 9px 0 #c5d4bd,0 15px 26px #6b80511c}
+.motif-game.mg-arcade-playing .mg-play-top h2{font-size:30px;color:#446b51}
+.motif-game.mg-arcade-playing .mg-play-stats>div{background:#fffae5;border:2px solid #e1d8af;border-radius:15px;box-shadow:0 3px 0 #d5dbba;padding:12px 13px}
+.motif-game.mg-arcade-playing .mg-play-stats strong{font-size:25px;color:#497b61}
+.motif-game.mg-arcade-playing .mg-arcade-instructions{background:#fff8de;padding:11px 16px;border-radius:15px;border:2px solid #e3d6aa;text-align:center;font-weight:700;color:#917844;margin:17px 0}
+.motif-game.mg-arcade-playing .mg-arcade-board{padding:14px;max-width:810px;border:3px solid #e5d9ad;background:#faf4df8c;border-radius:20px;box-shadow:inset 0 0 0 5px #fefbf099}
+.motif-game.mg-arcade-playing button.mg-card{border:3px solid #b5cba8;background:#d0e2c5;border-radius:15px;box-shadow:0 5px 0 #8ba88d,inset 0 0 0 4px #f1f6e4;transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
+.motif-game.mg-arcade-playing button.mg-card:hover:not(:disabled){transform:translateY(-3px)}
+.motif-game.mg-arcade-playing button.mg-card.face-up{border-color:#e1c481;background:#fff7d9;box-shadow:0 4px 0 #bea56d,inset 0 0 0 3px #fff5d2}
+.motif-game.mg-arcade-playing button.mg-card.matched{border-color:#64ad85;background:#d6f0cd;box-shadow:0 3px 0 #5e9671,0 0 0 3px #a8dfb059}
+.motif-game.mg-arcade-playing .mg-back-symbol{width:55%;font-size:clamp(23px,3.6vw,44px);border:2px solid #89b393;background:#edf8e9b3;color:#689877;border-radius:50%;transform:rotate(-4deg)}
+.motif-game .mg-skip-memory{font-size:17px!important;padding:14px 22px!important;border-radius:14px!important;background:#e9815f!important;color:white!important;box-shadow:0 5px 0 #ad604c!important;border:2px solid #fff4da!important}
+.motif-game .mg-result-crown{font-size:40px;letter-spacing:.2em;color:#be9a53;margin:13px auto}
+.motif-game.mg-arcade-result{border:4px solid #e8cf8f;border-radius:26px;background:radial-gradient(circle at 50% 0%,#fffae6,#e7f1dd 75%);box-shadow:0 9px 0 #cbca9b}
+.motif-game.mg-arcade-result h1{font:normal clamp(28px,4vw,40px)/1.4 "Songti SC","SimSun",serif;color:#46765d}
+.motif-game.mg-arcade-result .mg-result-stars{font-size:55px;text-shadow:0 3px 0 #fff1b4;animation:mg-result-sparkle 1.1s ease-out}
+.motif-game.mg-arcade-result .mg-result-numbers div{border:2px solid #e4debb;background:#fffef3;border-radius:16px;box-shadow:0 4px 0 #e1dfca}
+.motif-game.mg-arcade-result .mg-next-level{padding:12px 19px;border-radius:13px;background:#e9805b;border-color:#e7be79;box-shadow:0 4px 0 #b76947}
+@keyframes mg-node-pulse{0%,100%{transform:scale(.9);box-shadow:0 0 0 4px #ffe9a145}50%{transform:scale(1.4);box-shadow:0 0 0 14px #ffe9a118}}
+@keyframes mg-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes mg-result-sparkle{0%{transform:scale(.6);opacity:.2}65%{transform:scale(1.15);opacity:1}100%{transform:scale(1);opacity:1}}
+@media(min-width:1050px){.motif-game .mg-map-scroll{max-height:675px}}
+@media(max-width:900px){
+ .motif-game .mg-arcade-hero{flex-direction:column;align-items:flex-start}
+ .motif-game .mg-arcade-hud{max-width:none;width:100%;justify-content:flex-start}
+ .motif-game .mg-arcade-arena{grid-template-columns:minmax(0,1.3fr) minmax(250px,.8fr);gap:12px}
+ .motif-game .mg-mission-frame{padding:16px 13px}
+ .motif-game .mg-mission-frame h2{font-size:21px}
+ .motif-game .mg-big-play>span:nth-child(2){font-size:20px}
+ .motif-game .mg-route-node.selected .mg-node-arrow{left:20px;top:-35px}
+}
+@media(max-width:720px){
+ .motif-game.mg-arcade-home{margin-bottom:28px}
+ .motif-game .mg-arcade-hero{min-height:0;padding:20px 16px 17px;gap:18px;border-radius:17px}
+ .motif-game .mg-arcade-hero h1{font-size:39px}
+ .motif-game .mg-arcade-hud{gap:7px;justify-content:space-between}
+ .motif-game .mg-hud-pill{min-width:0;flex:1;padding:7px;gap:5px;border-radius:12px}
+ .motif-game .mg-hud-pill>span{flex:0 0 23px;height:23px;font-size:16px}
+ .motif-game .mg-hud-pill strong{font-size:17px}
+ .motif-game .mg-hud-pill em{font-size:8px}
+ .motif-game .mg-arcade-tabs{gap:9px;margin:22px 0 18px}
+ .motif-game .mg-arcade-tabs button{min-height:69px;gap:7px;border-radius:13px;padding:8px 7px}
+ .motif-game .mg-arcade-tabs button>span{flex:0 0 28px;width:28px;height:28px;font-size:17px}
+ .motif-game .mg-arcade-tabs button b{font-size:14px}
+ .motif-game .mg-arcade-tabs button small{font-size:9px}
+ .motif-game .mg-arcade-arena{grid-template-columns:1fr;grid-template-areas:"mission" "map";gap:19px}
+ .motif-game .mg-mission-card{position:relative;top:0}
+ .motif-game .mg-mission-frame{padding:16px 16px 17px}
+ .motif-game .mg-mission-medallion{width:112px;height:112px;margin:10px auto 7px}
+ .motif-game .mg-mission-no b{font-size:34px}
+ .motif-game .mg-mission-frame h2{font-size:24px}
+ .motif-game .mg-mission-icons{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+ .motif-game .mg-mission-icons span{font-size:10px;padding:7px 4px;text-align:center}
+ .motif-game .mg-mission-icons b{margin:0}
+ .motif-game .mg-mission-achievement{margin-bottom:11px}
+ .motif-game button.mg-big-play{min-height:74px}
+ .motif-game .mg-map-column{padding:11px 9px}
+ .motif-game .mg-map-title h2{font-size:19px}
+ .motif-game .mg-map-scroll{max-height:515px}
+ .motif-game .mg-landscape{height:510px;min-height:510px}
+ .motif-game button.mg-route-node{width:59px;height:68px}
+ .motif-game .mg-node-disc{width:53px;height:53px}
+ .motif-game .mg-node-number{font-size:17px}
+ .motif-game .mg-route-node.selected .mg-node-disc{width:65px;height:65px}
+ .motif-game .mg-route-node.selected .mg-node-number{font-size:20px}
+ .motif-game .mg-route-node.selected .mg-route-stars{padding-top:5px}
+ .motif-game .mg-node-arrow{min-width:83px;left:16px;top:-31px;font-size:10px;padding:4px 6px}
+ .motif-game .mg-chapter-banner strong{font-size:18px}
+ .motif-game .mg-free-adventure{padding:18px 13px;border-radius:15px}
+ .motif-game .mg-free-action{grid-template-columns:1fr;padding:12px 0 0}
+ .motif-game.mg-arcade-playing{padding:16px 9px 17px;border-radius:17px}
+ .motif-game.mg-arcade-playing .mg-play-stats>div{padding:7px 4px;border-radius:11px}
+ .motif-game.mg-arcade-playing .mg-play-stats strong{font-size:17px}
+ .motif-game.mg-arcade-playing .mg-arcade-board{padding:8px;border-radius:13px}
+ .motif-game.mg-arcade-playing button.mg-card{border-width:2px;border-radius:10px;box-shadow:0 3px 0 #8ba88d}
+ .motif-game .mg-skip-memory{font-size:14px!important}
+}
+@media(max-width:380px){
+ .motif-game .mg-arcade-hero h1{font-size:33px}
+ .motif-game .mg-arcade-subtitle{font-size:11px}
+ .motif-game .mg-hud-pill{padding:5px 4px}
+ .motif-game .mg-hud-pill>span{display:none}
+ .motif-game .mg-arcade-tabs button small{display:none}
+ .motif-game .mg-map-title h2{font-size:17px}
+ .motif-game .mg-map-direction{font-size:10px;padding:4px 6px}
+ .motif-game .mg-route-node.selected .mg-node-arrow{left:0;top:-33px;min-width:75px}
+ .motif-game .mg-mission-icons span{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.motif-game .mg-node-glow,.motif-game .mg-node-arrow,.motif-game .mg-result-stars{animation:none!important}.motif-game .mg-map-scroll{scroll-behavior:auto}}
+
+/* Accessibility hit target: current-challenge arrow is decorative and must
+   never cover a neighboring stage button (e.g. levels 5 → 6). */
+.motif-game .mg-node-arrow{pointer-events:none!important}
+.motif-game .mg-node-glow{pointer-events:none}

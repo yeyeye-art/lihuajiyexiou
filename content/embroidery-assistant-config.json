@@ -1,0 +1,5 @@
+{
+  "endpoint": "",
+  "mode": "verified-source-lookup",
+  "notice": "尚未配置云端大模型服务；当前提供有来源的资料检索和文字归纳，绝不宣称已连接豆包或 DeepSeek。部署可选 Cloudflare Workers 后再设置 endpoint。"
+}

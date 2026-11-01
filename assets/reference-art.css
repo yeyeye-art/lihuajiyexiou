@@ -1,0 +1,254 @@
+/* Original reference coordinates: 1672 x 941, header 75. Scenic raster has
+   its example boards, scores and controls removed; all interaction is DOM. */
+.ref-avatar>span{overflow:hidden}.ref-avatar img{width:100%;height:100%;object-fit:cover}
+.ref-global-header{background-image:url('./reference-art/silk.webp');height:75px}
+#main .reference-art-screen{--material:url('./reference-art/silk.webp');background-image:var(--scene)!important;background-size:100% 100%!important;background-repeat:no-repeat!important}
+#main [data-reference-scene=match3]{--scene:url('./reference-art/match3-scene.webp')}
+#main [data-reference-scene=link]{--scene:url('./reference-art/link-scene.webp')}
+#main [data-reference-scene=jigsaw]{--scene:url('./reference-art/jigsaw-scene.webp')}
+#main [data-reference-scene=color]{--scene:url('./reference-art/color-scene.webp')}
+#main [data-reference-scene=studio]{--scene:url('./reference-art/studio-scene.webp')}
+#main [data-reference-scene=memory]{--scene:url('./reference-art/memory-scene.webp')}
+#main [data-reference-scene=garden]{--scene:url('./reference-art/garden-scene.webp')}
+#main [data-reference-scene=result]{--scene:url('./reference-art/result-scene.webp')}
+#main [data-reference-scene=duel]{--scene:url('./reference-art/duel-scene.webp')}
+#main [data-reference-scene=shop]{--scene:url('./reference-art/shop-scene.webp')}
+#main .reference-art-screen button:focus-visible{outline:3px solid #90672f!important;outline-offset:3px!important}
+#main .reference-art-screen button[hidden]{display:none!important}
+.reference-chapter-pages{display:flex;gap:8px;justify-content:center}
+.reference-chapter-pages button{background:#faf0de;border:1px solid #b08b57;border-radius:20px;padding:7px 15px}
+.reference-chapter-pages [aria-pressed=true]{background:#8a6d47;color:white}
+.reference-memory-title{display:none}
+.reference-result-facts{display:flex;justify-content:center;gap:20px;padding:12px;background:#fff8eceb}.reference-result-facts>div{text-align:center;flex:1}.reference-result-facts strong{display:block;font-size:24px;margin:10px}
+@media(min-width:901px){
+ #main .reference-art-screen h2,#main .reference-art-screen h3,#main .ref-brand strong{font-weight:700!important}
+ #main .reference-art-screen::before,#main .reference-art-screen::after,#main .reference-art-screen .park-play-heading::before,#main .reference-art-screen .park-color-work::before,#main .reference-art-screen .park-studio-work::before,#main .reference-art-screen .park-shop-product::before,#main .reference-art-screen .park-shop-product::after,#main .reference-art-screen .world-garden-canvas::before,#main .reference-art-screen .world-garden-canvas::after{display:none!important}
+ :is(#main,.restored-game)>.motif-park.reference-art-screen{display:block!important;position:relative!important;container-type:inline-size;width:100%!important;height:calc(100vw * 866 / 1672)!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;overflow:visible!important;isolation:isolate;font-size:1.1cqw}
+ #main .reference-art-screen *{box-sizing:border-box}
+ #main .reference-art-screen .park-play-heading,#main .reference-art-screen .world-match-experience,#main .reference-art-screen .park-game-layout,#main .reference-art-screen .park-jigsaw-layout,#main .reference-art-screen .park-color-layout,#main .reference-art-screen .park-studio-layout,#main .reference-art-screen .park-studio-work,#main .reference-art-screen .park-color-work{display:contents!important}
+ #main .reference-art-screen .park-heading>span,#main .reference-art-screen .world-match-garden-depth,#main .reference-art-screen .world-match-garden-foreground,#main .reference-art-screen .world-match-wood-frame,#main .reference-art-screen .world-match-story-art,#main .reference-art-screen .world-match-chapter,#main .reference-art-screen .world-match-seal,#main .reference-art-screen .world-match-goal-foot,#main .reference-art-screen .park-board-overline,#main .reference-art-screen .park-piece-mark,#main .reference-art-screen .park-win-symbol,#main .reference-art-screen .world-result-side-art{display:none!important}
+ #main .reference-art-screen .park-back,#main .reference-art-screen .world-return,#main .reference-art-screen .ref-duel-back{position:absolute!important;left:2.2%!important;top:2.8%!important;z-index:5;font-size:1.1cqw!important;min-height:0!important;padding:.5cqw 1cqw!important}
+ #main .reference-art-screen .park-heading{position:absolute;left:5.6%;top:9%;width:21%;margin:0!important;padding:0!important;background:none!important;text-align:left!important}
+ #main .reference-art-screen .park-heading h2{font-size:2.6cqw!important;line-height:1.4!important;margin:0!important;color:#302619!important}
+ #main .reference-art-screen .park-heading p{font-size:1.6cqw!important;margin:.35cqw 0!important;color:#4c3b29!important}
+ #main .reference-art-screen .park-instructions{position:absolute!important;left:5.6%;top:23%;width:20%;max-width:none!important;font-size:1.05cqw!important;line-height:1.7!important;margin:0!important;padding:0!important;background:none!important}
+ #main .reference-art-screen .park-scoreboard{position:absolute!important;left:80.3%;top:22%;width:14.6%;height:44%;min-height:0!important;padding:1cqw!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;gap:1cqw!important;color:#453726!important;flex-wrap:nowrap!important;flex-direction:column!important;justify-content:flex-start!important}
+ #main .reference-art-screen .park-scoreboard>div{font-size:1.2cqw!important;padding:.5cqw 0!important;border-bottom:1px solid #c9b99d!important}
+ #main .reference-art-screen .park-scoreboard b{font-size:1.65cqw!important}
+ #main .reference-art-screen .park-scoreboard::before{display:none}
+ #main .reference-art-screen .park-game-center{position:absolute!important;left:34.5%;top:9.7%;width:34.6%!important;height:56.2%;max-width:none!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important;display:flex!important;align-items:center;justify-content:center}
+ #main .reference-art-screen .park-game-center::before{display:none!important}
+ #main .reference-art-screen .park-match-grid,#main .reference-art-screen #park-link-grid{position:relative!important;width:100%!important;max-width:none!important;height:100%!important;padding:.25cqw!important;margin:0!important;gap:.35cqw!important;background:var(--material)!important;border:0!important;border-radius:0!important;box-shadow:none!important;aspect-ratio:auto!important}
+ #main .reference-art-screen .park-match-tile,#main .reference-art-screen .park-link-tile{padding:.4cqw!important;min-height:0!important;aspect-ratio:auto!important;background:var(--material)!important;border:1px solid #d6c4a6!important;border-radius:.8cqw!important;box-shadow:inset 0 0 .3cqw #fffef4,0 .15cqw .2cqw #816b504f!important}
+ #main .reference-art-screen .park-piece-paper{background:none!important;box-shadow:none!important;padding:0!important;border:0!important;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+ #main .reference-art-screen .park-piece-paper img{width:87%!important;height:87%!important;object-fit:contain!important;filter:drop-shadow(0 2px 1px #62472644)}
+ #main .reference-art-screen .park-match-tile.picked,#main .reference-art-screen .park-link-tile.picked,#main .reference-art-screen .park-hint{outline:2px solid #e2a13c!important;box-shadow:0 0 .7cqw #ffdc8d,inset 0 0 .4cqw #efc46a!important}
+ #main .reference-art-screen .park-board-help{position:absolute!important;top:104%;left:0;width:100%;display:flex;flex-wrap:wrap;gap:.4cqw;background:#fbf4e8e8!important;border:1px solid #c6a576;padding:.3cqw!important;font-size:.85cqw!important;border-radius:.5cqw;z-index:2}
+ #main .reference-art-screen .park-board-help button{font-size:.9cqw!important;padding:.3cqw .7cqw!important;min-height:0!important}
+ #main .reference-art-screen .park-board-help>span{font-size:.8cqw!important}
+ #main .reference-art-screen .park-feedback:not([hidden]){position:absolute!important;left:30%;bottom:1%;width:45%;z-index:12;background:#fff8e9f2!important;padding:.4cqw .8cqw!important;border:1px solid #c3a371!important;font-size:.9cqw!important;min-height:0!important;margin:0!important}
+ #main .reference-art-screen .park-game-guide{position:absolute!important;left:4%;top:75%;width:92%!important;height:20%;min-height:0!important;display:flex!important;align-items:center;gap:2cqw;padding:1cqw!important;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important}
+ #main .reference-art-screen .park-guide-kicker,#main .reference-art-screen .park-game-guide>p,#main .reference-art-screen .world-match-mobile-how{display:none!important}
+ #main .reference-art-screen .park-guide-reference{order:-1;width:44%;flex:none;border:0!important;margin:0!important;padding:0!important}
+ #main .reference-art-screen .park-guide-reference strong{font-size:1.1cqw!important}
+ #main .reference-art-screen .park-guide-swatches{display:flex!important;gap:.6cqw!important;margin:.5cqw 0!important}
+ #main .reference-art-screen .park-guide-swatches>span{flex:1;min-width:0}
+ #main .reference-art-screen .park-guide-swatches img{width:4cqw!important;height:4cqw!important;object-fit:contain;background:var(--material);border:1px solid #d9c8ad;border-radius:.4cqw}
+ #main .reference-art-screen .park-guide-swatches small{font-size:.8cqw!important}
+ #main .reference-art-screen .park-game-guide ol{display:flex!important;gap:1cqw!important;padding:0!important;margin:0!important;list-style:none;width:50%;font-size:1.05cqw!important}
+ #main .reference-art-screen .park-game-guide li{flex:1;display:block!important;line-height:1.8!important}
+ #main .reference-art-screen .park-game-guide li b{display:block;color:#a47845;font-size:1.7cqw!important}
+ /* Match: original title plaque, central carving and right mission scroll. */
+ #main [data-reference-scene=match3]>.park-play-heading .park-heading,#main [data-reference-scene=match3]>.park-scoreboard,#main [data-reference-scene=match3]>.park-instructions{display:none!important}
+ #main [data-reference-scene=match3] .world-match-story{position:absolute!important;left:5.7%;top:13%;width:19.5%;padding:0!important;margin:0!important;border:0!important;background:none!important;box-shadow:none!important;text-align:center}
+ #main [data-reference-scene=match3] .world-match-story h3{font-size:2.7cqw!important;line-height:1.3!important;margin:0!important}
+ #main [data-reference-scene=match3] .world-match-story h4{font-size:1.55cqw!important;margin:.4cqw 0 2cqw!important}
+ #main [data-reference-scene=match3] .world-match-story p{font-size:1.05cqw!important;line-height:1.7!important;margin:0!important}
+ #main [data-reference-scene=match3] .world-match-task{position:absolute!important;left:77.5%;top:17.1%;width:15.6%;height:35%;padding:1cqw .5cqw!important;background:none!important;border:0!important;box-shadow:none!important}
+ #main [data-reference-scene=match3] .world-match-task-chapter{font-size:1.35cqw!important}
+ #main [data-reference-scene=match3] .world-match-task h3{display:none}
+ #main [data-reference-scene=match3] .world-match-head{display:block!important;line-height:2.1!important;font-size:1.3cqw!important}
+ #main [data-reference-scene=match3] .world-match-head span:first-child{display:none}
+ #main [data-reference-scene=match3] .world-match-scoring{display:flex;flex-direction:column;gap:1cqw;font-size:1.3cqw!important}
+ #main [data-reference-scene=match3] .world-match-scoring b{font-size:2cqw!important;color:#a1442d}
+ #main [data-reference-scene=match3] .world-match-track{height:.7cqw!important;margin:1cqw 0!important}
+ #main [data-reference-scene=match3] .world-match-star-decor{font-size:2.1cqw!important;margin:1cqw 0!important;color:#b88c52}
+ /* Link scene keeps its teal frame and real six by six board. */
+ #main [data-reference-scene=link] .park-game-center{left:35.8%;top:9.9%;width:34.7%!important;height:54.7%}
+ #main [data-reference-scene=link] .park-link-board{width:100%!important;height:100%!important;padding:0!important;margin:0!important;background:none!important;border:0!important}
+ #main [data-reference-scene=link] #park-link-grid{grid-template-rows:repeat(6,minmax(0,1fr))!important;grid-auto-rows:minmax(0,1fr)!important}
+ #main [data-reference-scene=link] .park-link-empty{min-height:0!important;aspect-ratio:auto!important}
+ #main [data-reference-scene=link] .park-game-guide{left:16%;top:82.5%;width:82%!important;height:14%}
+ #main [data-reference-scene=link] .park-scoreboard{left:79.6%;top:13%;width:11.2%;height:46%}
+ #main [data-reference-scene=link] .park-guide-swatches img{width:3.4cqw!important;height:3.4cqw!important}
+ /* Puzzle has an independent live tile board and a separate source preview. */
+ #main [data-reference-scene=jigsaw] #park-jigsaw-grid{position:absolute!important;left:35.2%;top:10.6%;width:29.7%!important;height:57.7%!important;aspect-ratio:auto!important;border:0!important;padding:0!important;gap:2px!important;border-radius:0!important;box-shadow:none!important;background:var(--material)!important}
+ #main [data-reference-scene=jigsaw] .park-jigsaw-tile{border:1px solid #bda681!important;border-radius:.15cqw!important}
+ #main [data-reference-scene=jigsaw] .park-jigsaw-reference{position:absolute!important;left:71.6%;top:19.8%;width:15.4%;height:29%;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+ #main [data-reference-scene=jigsaw] .park-jigsaw-reference img{width:100%!important;height:100%!important;object-fit:contain!important;background:var(--material)}
+ #main [data-reference-scene=jigsaw] .park-jigsaw-reference>span,#main [data-reference-scene=jigsaw] .park-jigsaw-reference>small{display:none}
+ #main [data-reference-scene=jigsaw] .park-scoreboard{left:71.8%;top:54.6%;width:15%;height:24%}
+ /* Color: left real palette, live SVG cloth, right score. */
+ #main [data-reference-scene=color] .park-color-work h3,#main [data-reference-scene=color] .park-color-preview{display:none!important}
+ #main [data-reference-scene=color] #park-color-canvas{position:absolute!important;left:29.5%;top:28%;width:44.5%!important;height:53%!important;min-height:0!important;aspect-ratio:auto!important;background:var(--material)!important;border:0!important;box-shadow:none!important;transform:perspective(1100px) rotateX(7deg);padding:1cqw!important}
+ #main [data-reference-scene=color] #park-color-canvas svg{width:100%!important;height:100%!important;max-height:none!important}
+ #main [data-reference-scene=color] .park-palette{position:absolute!important;left:7%;top:49%;width:15%;height:25%;padding:1cqw!important;border:0!important;background:none!important;gap:.8cqw!important}
+ #main [data-reference-scene=color] .park-palette button{width:4cqw!important;height:4cqw!important;min-height:0!important;border:3px double #c29c68!important;border-radius:50%!important;box-shadow:inset 0 0 0 3px #f9ead7}
+ #main [data-reference-scene=color] .park-color-hint{position:absolute;left:7%;top:77%;width:15%;font-size:.9cqw;line-height:1.7}
+ /* Studio: only actual selected objects appear in the hoop. */
+ #main [data-reference-scene=studio] .park-heading{top:3.6%;left:6.4%}
+ #main [data-reference-scene=studio] .park-back{top:94%!important;left:3%!important}
+ #main [data-reference-scene=studio] .park-instructions{top:15%;left:4%;width:20%}
+ #main [data-reference-scene=studio] .park-studio-tools{position:absolute!important;left:4.5%;top:28%;width:24%;height:62%;padding:.6cqw!important;border:0!important;background:none!important;box-shadow:none!important;overflow:auto}
+ #main [data-reference-scene=studio] .park-studio-tools h3{font-size:1.3cqw!important;margin:0 0 .5cqw!important;text-align:center}
+ #main [data-reference-scene=studio] .park-studio-tools p{font-size:.9cqw!important;margin:.5cqw 0!important}
+ #main [data-reference-scene=studio] .park-studio-catalog{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:.5cqw!important;max-height:none!important}
+ #main [data-reference-scene=studio] .park-studio-catalog button{padding:.5cqw!important;background:var(--material)!important;border:1px solid #d1b996!important;border-radius:.3cqw!important;font-size:.8cqw!important}
+ #main [data-reference-scene=studio] .park-studio-catalog img{height:4.5cqw!important;width:100%!important;object-fit:contain}
+ #main [data-reference-scene=studio] #park-studio-stage{position:absolute!important;left:35.2%;top:10.5%;width:34.4%!important;height:63.6%!important;min-height:0!important;max-width:none!important;margin:0!important;aspect-ratio:auto!important;border:0!important;background:var(--material)!important;border-radius:50%!important;box-shadow:none!important;overflow:hidden}
+ #main [data-reference-scene=studio] .park-studio-controls{position:absolute!important;left:71.4%;top:32%;width:3.4%;height:30%;display:flex!important;flex-direction:column;justify-content:space-around;gap:.4cqw!important;padding:0!important;background:none!important;border:0!important}
+ #main [data-reference-scene=studio] .park-studio-controls button{padding:.25cqw!important;font-size:.8cqw!important;background:transparent!important;border:0!important;min-height:0!important}
+ #main [data-reference-scene=studio] .park-studio-actions{position:absolute!important;left:38%;top:85.5%;width:32.5%;display:flex;gap:1cqw;background:none!important;padding:0!important}
+ #main [data-reference-scene=studio] .park-studio-actions button{min-height:0!important;font-size:1.1cqw!important;padding:.5cqw .9cqw!important}
+ #main [data-reference-scene=studio] .park-scoreboard{left:74%;top:6%;width:21%;height:21%}
+ #main [data-reference-scene=studio] .park-scoreboard{gap:0!important;padding:.4cqw!important}
+ #main [data-reference-scene=studio] .park-scoreboard>div{padding:.2cqw!important;line-height:1.5!important}
+ /* Shop: vertical sign + actual ledger + five individually interactive cards. */
+ #main [data-reference-scene=shop] .park-play-heading{display:contents!important}
+ #main [data-reference-scene=shop] .park-heading{left:6.5%;top:14%;width:7%;height:32%;display:flex!important;align-items:center!important;flex-direction:column!important;gap:1cqw!important}
+ #main [data-reference-scene=shop] .park-heading h2{writing-mode:vertical-rl;font-size:2.6cqw!important;letter-spacing:.15em!important;white-space:nowrap;height:12cqw;flex:none}
+ #main [data-reference-scene=shop] .park-heading p{font-size:.9cqw!important;line-height:1.8!important;text-align:center}
+ #main [data-reference-scene=shop] .park-shop-ledger{position:absolute!important;left:24%;top:10.8%;width:60%;height:16.2%;margin:0!important;padding:1cqw!important;background:none!important;border:0!important;box-shadow:none!important;display:flex!important;align-items:center;gap:5cqw}
+ #main [data-reference-scene=shop] .park-shop-ledger strong{font-size:1.4cqw!important}
+ #main [data-reference-scene=shop] .park-shop-ledger b{font-size:3.4cqw!important;color:#a6442d;display:block}
+ #main [data-reference-scene=shop] .park-shop-ledger small{font-size:1.1cqw!important;max-width:32cqw;line-height:2}
+ #main [data-reference-scene=shop] .park-shop-catalog{position:absolute!important;left:18.9%;top:37.2%;width:68%;height:39.8%;display:grid!important;grid-template-columns:repeat(5,1fr)!important;gap:3.05cqw!important;margin:0!important;padding:0!important}
+ #main [data-reference-scene=shop] .park-shop-product{display:flex!important;flex-direction:column!important;align-items:stretch!important;padding:.1cqw!important;border:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;min-height:0!important;height:100%;gap:.2cqw!important;text-align:center}
+ #main [data-reference-scene=shop] .park-shop-product h3{font-size:1.35cqw!important;white-space:nowrap;margin:.2cqw 0!important}
+ #main [data-reference-scene=shop] .ref-shop-art{width:100%!important;height:9.3cqw!important;margin:0!important;background:none!important;border:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important}
+ #main [data-reference-scene=shop] .ref-shop-art img{width:100%!important;height:100%!important;object-fit:contain}
+ #main [data-reference-scene=shop] .park-shop-product p{font-size:.93cqw!important;line-height:1.55!important;margin:0!important;min-height:3cqw!important}
+ #main [data-reference-scene=shop] .park-shop-product>span:not(.ref-shop-art){font-size:.8cqw!important;line-height:1.5}
+ #main [data-reference-scene=shop] .park-shop-product button{margin-top:auto!important;min-height:0!important;padding:.4cqw!important;font-size:1cqw!important;color:#fff8ec;background:#a94e38!important;border:3px double #ddb582!important;border-radius:2cqw!important}
+ #main [data-reference-scene=shop] .park-shop-product button:disabled{opacity:.66!important}
+ #main [data-reference-scene=shop] .park-shop-status,#main [data-reference-scene=shop] .park-shop-disclosure{position:absolute!important;left:24%;top:81%;width:63%;margin:0!important;background:#faf3e5ed!important;border:0!important;padding:.4cqw 1cqw!important;font-size:.9cqw!important}
+ #main [data-reference-scene=shop] .park-shop-disclosure{top:86%}
+ /* Chapter: all twenty real buttons, ten per page; progress remains saved data. */
+ #main [data-reference-scene=garden] .world-garden-top,#main [data-reference-scene=garden] .world-garden-viewport,#main [data-reference-scene=garden] .world-garden-canvas{display:contents!important}
+ #main [data-reference-scene=garden] .world-garden-art,#main [data-reference-scene=garden] .world-garden-route,#main [data-reference-scene=garden] .world-garden-prop,#main [data-reference-scene=garden] .world-garden-chapter-label,#main [data-reference-scene=garden] .world-garden-upper-label,#main [data-reference-scene=garden] .world-garden-water-mark,#main [data-reference-scene=garden] .world-garden-heading{display:none!important}
+ #main [data-reference-scene=garden] .world-garden-intro{position:absolute!important;left:6.5%!important;top:10%!important;width:17%!important;background:none!important;padding:0!important}
+ #main [data-reference-scene=garden] .world-garden-intro h2{font-size:2.8cqw!important;margin:1cqw 0!important}
+ #main [data-reference-scene=garden] .world-garden-intro p{font-size:1.15cqw!important;line-height:1.8!important}
+ #main [data-reference-scene=garden] .world-garden-intro>span{font-size:.9cqw!important}
+ #main [data-reference-scene=garden] .world-stage-node{position:absolute!important;left:var(--art-x)!important;top:var(--art-y)!important;width:5.8%!important;height:11.6%!important;min-width:0!important;min-height:0!important;transform:translate(-50%,-50%)!important;border-radius:45% 45% 15% 15%!important;background:transparent!important;border:0!important;box-shadow:none!important;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0!important}
+ #main [data-reference-scene=garden] .world-stage-marker{width:3.3cqw!important;height:3.3cqw!important;font-size:2cqw!important;line-height:1.4!important;background:#917959!important;border:2px double #ffe4b3!important;border-radius:50%!important;box-shadow:none!important;color:white!important}
+ #main [data-reference-scene=garden] .world-stage-stars{background:#eee4d2;border-radius:8px;padding:.15cqw .3cqw;white-space:nowrap}
+ #main [data-reference-scene=garden] .world-stage-stars{font-size:.8cqw!important;margin:.2cqw!important;line-height:1.2!important;color:#8e6035!important}
+ #main [data-reference-scene=garden] .world-stage-node.locked{filter:saturate(.2);opacity:.85}
+ #main [data-reference-scene=garden] .world-stage-node.chosen{box-shadow:0 0 1.3cqw #ffd47a!important}
+ #main [data-reference-scene=garden] .ref-chapter-progress{position:absolute!important;left:82.3%;top:7.3%;width:15.6%;height:19%;padding:.5cqw!important;background:none!important;border:0!important;box-shadow:none!important}
+ #main [data-reference-scene=garden] .ref-chapter-progress h3{font-size:1.6cqw!important;margin:0 0 .5cqw!important}
+ #main [data-reference-scene=garden] .ref-progress-numbers{font-size:1cqw!important}
+ #main [data-reference-scene=garden] .ref-progress-rewards img{width:3cqw!important;height:3cqw!important}
+ #main [data-reference-scene=garden] .ref-progress-rewards span{font-size:.7cqw!important}
+ #main [data-reference-scene=garden] .world-garden-progress{position:absolute;left:7%;top:34%;font-size:1cqw;background:#fff6e7d9;padding:.4cqw}
+ #main [data-reference-scene=garden] .world-mission{position:absolute!important;left:84.3%;top:33.5%;width:13.7%;height:23.5%;padding:.5cqw!important;background:none!important;border:0!important;box-shadow:none!important;display:block!important}
+ #main [data-reference-scene=garden] .world-mission-heading{display:block;font-size:.9cqw!important}
+ #main [data-reference-scene=garden] .world-mission-heading small{display:none}
+ #main [data-reference-scene=garden] .world-mission-content h3{font-size:1.3cqw!important;margin:.4cqw 0!important}
+ #main [data-reference-scene=garden] .world-mission-content p{font-size:.85cqw!important;line-height:1.5!important}
+ #main [data-reference-scene=garden] .world-mission-stars{display:none}
+ #main [data-reference-scene=garden] .world-mission-goals{display:flex;gap:.5cqw;padding:0!important;font-size:.8cqw!important}
+ #main [data-reference-scene=garden] .world-mission-goals span{padding:0!important;background:none!important}
+ #main [data-reference-scene=garden] #park-start{position:absolute!important;top:219%;left:-7%;width:109%;font-size:1.5cqw!important;min-height:0!important;padding:.6cqw!important}
+ #main [data-reference-scene=garden] .world-ready{font-size:.7cqw!important;margin:.3cqw 0!important}
+ #main [data-reference-scene=garden] .world-motif-filters{position:absolute;top:145%;right:0;width:90%;background:#fff5e7ed;padding:.5cqw;z-index:10;font-size:.8cqw}
+ #main [data-reference-scene=garden] .ref-chapter-rewards{position:absolute!important;left:2.3%;top:78%;width:34.6%;height:17%;padding:.5cqw!important;border:0!important;background:none!important;box-shadow:none!important}
+ #main [data-reference-scene=garden] .ref-chapter-rewards strong{font-size:1.1cqw!important}
+ #main [data-reference-scene=garden] .ref-reward-track{margin:.6cqw 0!important}
+ #main [data-reference-scene=garden] .ref-reward-track img{width:3.5cqw!important;height:3.5cqw!important}
+ #main [data-reference-scene=garden] .ref-reward-track span{font-size:1cqw!important}
+ #main [data-reference-scene=garden] .reference-chapter-pages{position:absolute;left:40%;bottom:2%;width:37%;font-size:1cqw}
+ /* Result: remove screenshot's fictitious statistics; use existing saved totals. */
+ #main [data-reference-scene=result] .park-heading{left:39.5%;top:10.6%;width:23%;text-align:center!important}
+ #main [data-reference-scene=result] .park-heading h2{font-size:3.5cqw!important}
+ #main [data-reference-scene=result] .park-heading p{font-size:1cqw!important;line-height:1.6!important}
+ #main [data-reference-scene=result] .park-result-stars{position:absolute!important;left:40.9%;top:25.5%;width:18.5%;font-size:4cqw!important;color:#d5a258!important;margin:0!important}
+ #main [data-reference-scene=result] .world-result-star-set{gap:1.6cqw!important}.world-result-star{font-size:inherit!important}
+ #main [data-reference-scene=result] .world-result-score{position:absolute!important;left:44%;top:36%;width:18%;padding:0!important;margin:0!important;background:none!important;border:0!important;box-shadow:none!important;display:flex!important;flex-direction:column}
+ #main [data-reference-scene=result] .world-result-score strong{font-size:3.5cqw!important;line-height:1.2!important;color:#a64630!important}
+ #main [data-reference-scene=result] .world-result-score span{font-size:1.1cqw!important}
+ #main [data-reference-scene=result] .world-earned-reward{position:absolute!important;left:33%;top:64.7%;width:34%;height:10%;padding:.5cqw!important;margin:0!important;background:none!important;box-shadow:none!important;border:0!important;display:flex!important;flex-direction:row!important;align-items:center;justify-content:center;gap:1cqw}
+ #main [data-reference-scene=result] .reference-result-facts{position:absolute;left:33%;top:49%;width:34.5%;height:12.5%;padding:1cqw;background:none;font-size:1.1cqw}
+ #main [data-reference-scene=result] .reference-result-facts strong{font-size:1.8cqw;margin:.5cqw}
+ #main [data-reference-scene=result] #park-map{position:absolute;left:2.2%;top:2.8%;font-size:1.1cqw!important;background:#fff5e6!important;border:1px solid #bd9c70;border-radius:24px;padding:.5cqw 1cqw}
+ #main [data-reference-scene=result] .world-earned-reward strong{font-size:2cqw!important}
+ #main [data-reference-scene=result] .world-earned-reward small{font-size:1.05cqw!important}
+ #main [data-reference-scene=result] .world-result-ledger{position:absolute!important;left:74.6%;top:29.7%;width:21.3%;height:39%;padding:1cqw!important;background:none!important;border:0!important;box-shadow:none!important}
+ #main [data-reference-scene=result] .world-result-ledger h3{font-size:1.4cqw!important;margin:.3cqw 0!important}
+ #main [data-reference-scene=result] .world-result-ledger dl{font-size:1.15cqw!important}
+ #main [data-reference-scene=result] .world-result-ledger dd{font-size:1.4cqw!important}
+ #main [data-reference-scene=result] .park-result-actions{position:absolute!important;left:24%;top:81%;width:53%;display:flex!important;gap:1.7cqw!important;justify-content:center;align-items:center;margin:0!important;flex-wrap:wrap!important}
+ #main [data-reference-scene=result] .park-result-actions button{min-height:0!important;font-size:1.3cqw!important;padding:.6cqw 1.5cqw!important}
+ #main [data-reference-scene=result] .park-disclosure{position:absolute!important;bottom:1%;left:30%;width:45%;font-size:.8cqw;background:#fff9edcf;margin:0!important}
+ /* Network lobby. Decorative faces never stand in for authenticated identity. */
+ #main [data-reference-scene=duel] .ref-duel-story{position:absolute!important;left:4%;top:10.9%;width:15%;padding:0!important;background:none!important}
+ #main [data-reference-scene=duel] .ref-duel-story>span{display:none}
+ #main [data-reference-scene=duel] .ref-duel-story h1{font-size:2.5cqw!important;margin:0!important}
+ #main [data-reference-scene=duel] .ref-duel-story h2{font-size:1.4cqw!important;margin:1cqw 0!important}
+ #main [data-reference-scene=duel] .ref-duel-story p{font-size:1cqw!important;line-height:1.7!important}
+ #main [data-reference-scene=duel] .ref-duel-card{position:absolute!important;border:0!important;box-shadow:none!important;background:none!important;padding:.6cqw!important;min-height:0!important;border-radius:0!important;font-size:1.1cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-card h3{font-size:1.3cqw!important;overflow-wrap:anywhere}
+ #main [data-reference-scene=duel] .ref-duel-self{left:22.4%;top:17.3%;width:11.7%;height:44.8%}
+ #main [data-reference-scene=duel] .ref-duel-friend{left:66%;top:17.3%;width:11.8%;height:44.8%}
+ #main [data-reference-scene=duel] .ref-duel-center{left:40.8%;top:9%;width:17.7%;height:58.7%}
+ #main [data-reference-scene=duel] .ref-duel-ribbon{font-size:1.3cqw!important;padding:.2cqw!important;margin:0!important;background:#6b8175!important;color:#fff8e9!important}
+ #main [data-reference-scene=duel] .ref-duel-portrait{width:7.5cqw!important;height:7.5cqw!important;margin:2cqw auto 1cqw!important;font-size:3cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-self .ref-duel-portrait{background:url('./reference-art/avatar.webp') center/cover;color:transparent}
+ #main [data-reference-scene=duel] .ref-duel-board{width:100%!important;padding:.5cqw!important;gap:.2cqw!important;background:var(--material)!important;margin:.7cqw 0!important;border:2px double #b79560!important}
+ #main [data-reference-scene=duel] .ref-duel-board button{min-height:0!important;padding:.1cqw!important;aspect-ratio:1;background:var(--material)!important;border:1px solid #c9b594!important;border-radius:.3cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-board img{width:100%;height:100%}
+ #main [data-reference-scene=duel] .ref-duel-vs{display:none!important}
+ #main [data-reference-scene=duel] .ref-duel-details,#main [data-reference-scene=duel] .ref-duel-live{font-size:.95cqw!important;line-height:1.5!important}
+ #main [data-reference-scene=duel] .ref-duel-actions{position:absolute!important;left:26.5%;top:75.8%;width:47%;height:6.8%;display:flex!important;gap:1.5cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-actions button{font-size:1.25cqw!important;min-height:0!important;padding:.5cqw!important;flex:1}
+ #main [data-reference-scene=duel] #ref-duel-copy{position:absolute;top:160%;right:0;font-size:.9cqw!important;padding:.3cqw .6cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-join{position:absolute!important;left:4.5%;top:88.3%;width:68%;height:5.3%;display:flex!important;align-items:center;gap:1cqw;background:none!important;padding:0!important;border:0!important;font-size:1cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-join input{min-width:0;width:35%;font-size:1cqw!important;padding:.4cqw!important}
+ #main [data-reference-scene=duel] .ref-duel-join button{font-size:1cqw!important;padding:.4cqw!important;min-height:0!important}
+ #main [data-reference-scene=duel] .ref-duel-feedback{position:absolute!important;left:32%;top:65%;width:33%;font-size:.85cqw!important;background:#fff7e6f0!important;border:0!important;padding:.5cqw!important;margin:0!important}
+ /* Memory module continues to own its original 40 levels and timers. */
+ #main [data-reference-scene=memory]:has(.mg-arcade-playing) #park-memory-inner,#main [data-reference-scene=memory] .mg-arcade-playing{display:contents!important}
+ #main [data-reference-scene=memory]:has(.mg-arcade-playing) .park-memory-nav{position:absolute!important;left:2.5%;top:87%;z-index:5;font-size:1cqw;background:#fff6e7;padding:.4cqw}
+ #main [data-reference-scene=memory]:has(.mg-arcade-playing) .park-memory-nav span{display:none}
+ #main [data-reference-scene=memory]:has(.mg-arcade-playing) .reference-memory-title{display:block;position:absolute;left:7.1%;top:5.6%;width:20%}
+ #main [data-reference-scene=memory] .reference-memory-title h2{font-size:2.8cqw;margin:0}
+ #main [data-reference-scene=memory] .reference-memory-title h3{font-size:1.9cqw;margin:.5cqw 0}
+ #main [data-reference-scene=memory] .reference-memory-title p{font-size:1cqw;line-height:1.8}
+ #main [data-reference-scene=memory] .mg-play-top{position:absolute!important;left:7%;top:32.5%;width:17%;padding:0!important;border:0!important;background:none!important;box-shadow:none!important}
+ #main [data-reference-scene=memory] .mg-play-top h2{font-size:1.5cqw!important;margin:0!important}
+ #main [data-reference-scene=memory] .mg-play-top .mg-eyebrow,#main [data-reference-scene=memory] .mg-play-top p{display:none}
+ #main [data-reference-scene=memory] .mg-play-top p,#main [data-reference-scene=memory] .mg-eyebrow{font-size:1cqw!important}
+ #main [data-reference-scene=memory] .mg-play-top button{font-size:1cqw!important;padding:.3cqw .8cqw!important}
+ #main [data-reference-scene=memory] .mg-play-stats{position:absolute!important;left:7%;top:43%;width:17%;display:flex!important;flex-direction:column;gap:.2cqw!important;margin:0!important;background:none!important;flex-wrap:nowrap!important}
+ #main [data-reference-scene=memory] .mg-play-stats>div{display:flex!important;flex-direction:row!important;align-items:center;justify-content:space-between;padding:.3cqw!important;background:none!important;border:0!important;border-bottom:1px solid #d2ba97!important;box-shadow:none!important;font-size:1.1cqw!important}
+ #main [data-reference-scene=memory] .mg-play-stats strong{font-size:1.5cqw!important}
+ #main [data-reference-scene=memory] .mg-arcade-instructions{position:absolute!important;left:7%;top:63%;width:17%;padding:.5cqw!important;margin:0!important;background:none!important;border:0!important;font-size:1cqw!important;line-height:1.6!important}
+ #main [data-reference-scene=memory] .mg-arcade-board{position:absolute!important;left:35.8%;top:18.8%;width:32.7%!important;height:51.4%!important;min-height:0!important;max-width:none!important;margin:0!important;padding:.3cqw!important;background:var(--material)!important;border:0!important;box-shadow:none!important;gap:.5cqw!important}
+ #main [data-reference-scene=memory] .mg-card{min-height:0!important;aspect-ratio:auto!important;padding:.3cqw!important;background:var(--material)!important;border:3px double #cdb38b!important;border-radius:.7cqw!important}
+ #main [data-reference-scene=memory] .mg-card-back{background:var(--material)!important;color:#c0a06c!important}
+ #main [data-reference-scene=memory] .mg-card-front img{max-height:85%!important;object-fit:contain}
+ #main [data-reference-scene=memory] .mg-card-front>span{font-size:.75cqw!important}
+ #main [data-reference-scene=memory] .mg-play-actions{position:absolute!important;left:37%;top:85%;width:43%;display:flex;gap:2cqw}
+ #main [data-reference-scene=memory] .mg-play-actions button{font-size:1.2cqw!important;min-height:0!important;padding:.7cqw 1.2cqw!important}
+ #main [data-reference-scene=memory] .mg-note{position:absolute;bottom:2%;left:31%;width:49%;font-size:.8cqw;background:#fff6e7d9;padding:.3cqw}
+}
+@media(max-width:900px){
+ #main .reference-art-screen{background-size:auto 100%!important;background-position:center!important;background-attachment:fixed;padding:16px!important}
+ #main .reference-art-screen .park-heading,#main .reference-art-screen .park-instructions,#main .reference-art-screen .world-match-story,#main .reference-art-screen .park-scoreboard,#main .reference-art-screen .park-shop-ledger,#main .reference-art-screen .ref-duel-story,#main .reference-art-screen .mg-play-top{background:#fff7e8eb!important;border-radius:8px;padding:12px!important;color:#3d3023}
+ #main .reference-art-screen .park-match-tile,#main .reference-art-screen .park-link-tile,#main .reference-art-screen .mg-card,#main .reference-art-screen .park-shop-product{background-image:var(--material)!important}
+ #main [data-reference-scene=garden] .world-stage-node[hidden]{display:block!important}
+ #main [data-reference-scene=garden] .reference-chapter-pages{display:none}
+ #main [data-reference-scene=shop] .ref-shop-art img{object-fit:contain}
+ #main [data-reference-scene=memory]{min-height:100svh}
+}

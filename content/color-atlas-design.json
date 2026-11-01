@@ -1,0 +1,6992 @@
+{
+  "version": "2026-10-20",
+  "notice": "传统色名为第三方社区整理与屏幕HEX参考；Radix为开源设计系统的标准屏幕颜色。所有成套搭配是梨花季二次编排，均非文物实物测色或博物馆官方色卡。实际刺绣请试绣。",
+  "sources": [
+    {
+      "id": "brand",
+      "name": "梨花季原有品牌色",
+      "url": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Project"
+    },
+    {
+      "id": "chinese-colors",
+      "name": "Chinese Traditional Colors (zerosoul)",
+      "url": "https://github.com/zerosoul/chinese-colors",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-colors",
+      "name": "Radix Colors",
+      "url": "https://github.com/radix-ui/colors",
+      "license": "MIT"
+    }
+  ],
+  "stats": {
+    "colorEntries": 539,
+    "uniqueHex": 536,
+    "schemes": 124
+  },
+  "colors": [
+    {
+      "id": "lh-1",
+      "name": "绢白",
+      "hex": "#F8F6EF",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "lh-2",
+      "name": "梨花白",
+      "hex": "#EDE9DF",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "lh-3",
+      "name": "青瓷绿",
+      "hex": "#C8D6C9",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "lh-4",
+      "name": "远山绿",
+      "hex": "#7B9480",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "lh-5",
+      "name": "墨竹绿",
+      "hex": "#3F5A4F",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "lh-6",
+      "name": "朱砂红",
+      "hex": "#C95A4A",
+      "group": "梨花季品牌",
+      "source": "brand",
+      "sourceUrl": "https://github.com/yzou6525-ai/lihuaji/blob/main/assets/exhibition.js",
+      "license": "Original site palette"
+    },
+    {
+      "id": "ctc-0-0",
+      "name": "粉红",
+      "hex": "#FFB3A7",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-1",
+      "name": "妃色",
+      "hex": "#ED5736",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-2",
+      "name": "品红",
+      "hex": "#F00056",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-3",
+      "name": "桃红",
+      "hex": "#F47983",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-4",
+      "name": "海棠红",
+      "hex": "#DB5A6B",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-5",
+      "name": "石榴红",
+      "hex": "#F20C00",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-6",
+      "name": "樱桃色",
+      "hex": "#C93756",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-7",
+      "name": "银红",
+      "hex": "#F05654",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-8",
+      "name": "大红",
+      "hex": "#FF2121",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-9",
+      "name": "绛紫",
+      "hex": "#8C4356",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-10",
+      "name": "绯红",
+      "hex": "#C83C23",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-11",
+      "name": "胭脂",
+      "hex": "#9D2933",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-12",
+      "name": "朱红",
+      "hex": "#FF4C00",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-13",
+      "name": "丹",
+      "hex": "#FF4E20",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-14",
+      "name": "彤",
+      "hex": "#F35336",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-15",
+      "name": "茜色",
+      "hex": "#CB3A56",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-16",
+      "name": "火红",
+      "hex": "#FF2D51",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-17",
+      "name": "赫赤",
+      "hex": "#C91F37",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-18",
+      "name": "嫣红",
+      "hex": "#EF7A82",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-19",
+      "name": "洋红",
+      "hex": "#FF0097",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-20",
+      "name": "炎",
+      "hex": "#FF3300",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-21",
+      "name": "赤",
+      "hex": "#C3272B",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-22",
+      "name": "绾",
+      "hex": "#A98175",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-23",
+      "name": "枣红",
+      "hex": "#C32136",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-24",
+      "name": "檀",
+      "hex": "#B36D61",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-25",
+      "name": "殷红",
+      "hex": "#BE002F",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-26",
+      "name": "酡红",
+      "hex": "#DC3023",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-0-27",
+      "name": "酡颜",
+      "hex": "#F9906F",
+      "group": "红",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-0",
+      "name": "鹅黄",
+      "hex": "#FFF143",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-1",
+      "name": "鸭黄",
+      "hex": "#FAFF72",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-2",
+      "name": "樱草色",
+      "hex": "#EAFF56",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-3",
+      "name": "杏黄",
+      "hex": "#FFA631",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-4",
+      "name": "杏红",
+      "hex": "#FF8C31",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-5",
+      "name": "橘黄",
+      "hex": "#FF8936",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-6",
+      "name": "橙黄",
+      "hex": "#FFA400",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-7",
+      "name": "橘红",
+      "hex": "#FF7500",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-8",
+      "name": "姜黄",
+      "hex": "#FFC773",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-9",
+      "name": "缃色",
+      "hex": "#F0C239",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-10",
+      "name": "橙色",
+      "hex": "#FA8C35",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-11",
+      "name": "茶色",
+      "hex": "#B35C44",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-12",
+      "name": "驼色",
+      "hex": "#A88462",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-13",
+      "name": "昏黄",
+      "hex": "#C89B40",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-14",
+      "name": "栗色",
+      "hex": "#60281E",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-15",
+      "name": "棕色",
+      "hex": "#B25D25",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-16",
+      "name": "棕绿",
+      "hex": "#827100",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-17",
+      "name": "棕黑",
+      "hex": "#7C4B00",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-18",
+      "name": "棕红",
+      "hex": "#9B4400",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-19",
+      "name": "棕黄",
+      "hex": "#AE7000",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-20",
+      "name": "赭",
+      "hex": "#9C5333",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-21",
+      "name": "赭色",
+      "hex": "#955539",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-22",
+      "name": "琥珀",
+      "hex": "#CA6924",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-23",
+      "name": "褐色",
+      "hex": "#6E511E",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-24",
+      "name": "枯黄",
+      "hex": "#D3B17D",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-25",
+      "name": "黄栌",
+      "hex": "#E29C45",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-26",
+      "name": "秋色",
+      "hex": "#896C39",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-1-27",
+      "name": "秋香色",
+      "hex": "#D9B611",
+      "group": "黄",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-0",
+      "name": "嫩绿",
+      "hex": "#BDDD22",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-1",
+      "name": "柳黄",
+      "hex": "#C9DD22",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-2",
+      "name": "柳绿",
+      "hex": "#AFDD22",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-3",
+      "name": "竹青",
+      "hex": "#789262",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-4",
+      "name": "葱黄",
+      "hex": "#A3D900",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-5",
+      "name": "葱绿",
+      "hex": "#9ED900",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-6",
+      "name": "葱青",
+      "hex": "#0EB83A",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-7",
+      "name": "葱倩",
+      "hex": "#0EB840",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-8",
+      "name": "青葱",
+      "hex": "#0AA344",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-9",
+      "name": "油绿",
+      "hex": "#00BC12",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-10",
+      "name": "绿沈",
+      "hex": "#0C8918",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-11",
+      "name": "碧色",
+      "hex": "#1BD1A5",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-12",
+      "name": "碧绿",
+      "hex": "#2ADD9C",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-13",
+      "name": "青碧",
+      "hex": "#48C0A3",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-14",
+      "name": "翡翠色",
+      "hex": "#3DE1AD",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-15",
+      "name": "草绿",
+      "hex": "#40DE5A",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-16",
+      "name": "青色",
+      "hex": "#00E09E",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-17",
+      "name": "青翠",
+      "hex": "#00E079",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-18",
+      "name": "青白",
+      "hex": "#C0EBD7",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-19",
+      "name": "鸭卵青",
+      "hex": "#E0EEE8",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-20",
+      "name": "蟹壳青",
+      "hex": "#BBCDC5",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-21",
+      "name": "鸦青",
+      "hex": "#424C50",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-22",
+      "name": "绿色",
+      "hex": "#00E500",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-23",
+      "name": "豆绿",
+      "hex": "#9ED048",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-24",
+      "name": "豆青",
+      "hex": "#96CE54",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-25",
+      "name": "石青",
+      "hex": "#7BCFA6",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-26",
+      "name": "玉色",
+      "hex": "#2EDFA3",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-27",
+      "name": "缥",
+      "hex": "#7FECAD",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-28",
+      "name": "艾绿",
+      "hex": "#A4E2C6",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-29",
+      "name": "松柏绿",
+      "hex": "#21A675",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-30",
+      "name": "松花绿",
+      "hex": "#057748",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-2-31",
+      "name": "松花色",
+      "hex": "#BCE672",
+      "group": "绿",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-0",
+      "name": "蓝",
+      "hex": "#44CEF6",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-1",
+      "name": "靛青",
+      "hex": "#177CB0",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-2",
+      "name": "靛蓝",
+      "hex": "#065279",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-3",
+      "name": "碧蓝",
+      "hex": "#3EEDE7",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-4",
+      "name": "蔚蓝",
+      "hex": "#70F3FF",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-5",
+      "name": "宝蓝",
+      "hex": "#4B5CC4",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-6",
+      "name": "蓝灰色",
+      "hex": "#A1AFC9",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-7",
+      "name": "藏青",
+      "hex": "#2E4E7E",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-8",
+      "name": "藏蓝",
+      "hex": "#3B2E7E",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-9",
+      "name": "黛",
+      "hex": "#4A4266",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-10",
+      "name": "黛绿",
+      "hex": "#426666",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-11",
+      "name": "黛蓝",
+      "hex": "#425066",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-12",
+      "name": "黛紫",
+      "hex": "#574266",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-13",
+      "name": "紫色",
+      "hex": "#8D4BBB",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-14",
+      "name": "紫酱",
+      "hex": "#815463",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-15",
+      "name": "酱紫",
+      "hex": "#815476",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-16",
+      "name": "紫檀",
+      "hex": "#4C221B",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-17",
+      "name": "绀青绀紫",
+      "hex": "#003371",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-18",
+      "name": "紫棠",
+      "hex": "#56004F",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-19",
+      "name": "青莲",
+      "hex": "#801DAE",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-20",
+      "name": "群青",
+      "hex": "#4C8DAE",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-21",
+      "name": "雪青",
+      "hex": "#B0A4E3",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-22",
+      "name": "丁香色",
+      "hex": "#CCA4E3",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-23",
+      "name": "藕色",
+      "hex": "#EDD1D8",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-3-24",
+      "name": "藕荷色",
+      "hex": "#E4C6D0",
+      "group": "蓝",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-0",
+      "name": "苍色",
+      "hex": "#75878A",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-1",
+      "name": "苍翠",
+      "hex": "#519A73",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-2",
+      "name": "苍黄",
+      "hex": "#A29B7C",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-3",
+      "name": "苍青",
+      "hex": "#7397AB",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-4",
+      "name": "苍黑",
+      "hex": "#395260",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-4-5",
+      "name": "苍白",
+      "hex": "#D1D9E0",
+      "group": "苍",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-0",
+      "name": "水色",
+      "hex": "#88ADA6",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-1",
+      "name": "水红",
+      "hex": "#F3D3E7",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-2",
+      "name": "水绿",
+      "hex": "#D4F2E7",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-3",
+      "name": "水蓝",
+      "hex": "#D2F0F4",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-4",
+      "name": "淡青",
+      "hex": "#D3E0F3",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-5",
+      "name": "湖蓝",
+      "hex": "#30DFF3",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-5-6",
+      "name": "湖绿",
+      "hex": "#25F8CB",
+      "group": "水",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-0",
+      "name": "精白",
+      "hex": "#FFFFFF",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-1",
+      "name": "象牙白",
+      "hex": "#FFFBF0",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-2",
+      "name": "雪白",
+      "hex": "#F2FDFF",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-3",
+      "name": "月白",
+      "hex": "#D6ECF0",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-4",
+      "name": "缟",
+      "hex": "#F2ECDE",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-5",
+      "name": "素",
+      "hex": "#E0F0E9",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-6",
+      "name": "荼白",
+      "hex": "#F3F9F1",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-7",
+      "name": "霜色",
+      "hex": "#E9F1F6",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-8",
+      "name": "花白",
+      "hex": "#C2CCD0",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-9",
+      "name": "鱼肚白",
+      "hex": "#FCEFE8",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-10",
+      "name": "莹白",
+      "hex": "#E3F9FD",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-11",
+      "name": "灰色",
+      "hex": "#808080",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-12",
+      "name": "牙色",
+      "hex": "#EEDEB0",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-6-13",
+      "name": "铅白",
+      "hex": "#F0F0F4",
+      "group": "灰白",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-0",
+      "name": "玄色",
+      "hex": "#622A1D",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-1",
+      "name": "玄青",
+      "hex": "#3D3B4F",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-2",
+      "name": "乌色",
+      "hex": "#725E82",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-3",
+      "name": "乌黑",
+      "hex": "#392F41",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-4",
+      "name": "漆黑",
+      "hex": "#161823",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-5",
+      "name": "墨色",
+      "hex": "#50616D",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-6",
+      "name": "墨灰",
+      "hex": "#758A99",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-7",
+      "name": "黑色",
+      "hex": "#000000",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-8",
+      "name": "缁色",
+      "hex": "#493131",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-9",
+      "name": "煤黑",
+      "hex": "#312520",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-10",
+      "name": "黧",
+      "hex": "#5D513C",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-11",
+      "name": "黎",
+      "hex": "#75664D",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-12",
+      "name": "黝",
+      "hex": "#6B6882",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-13",
+      "name": "黝黑",
+      "hex": "#665757",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-7-14",
+      "name": "黯",
+      "hex": "#41555D",
+      "group": "黑",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-0",
+      "name": "赤金",
+      "hex": "#F2BE45",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-1",
+      "name": "金色",
+      "hex": "#EACD76",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-2",
+      "name": "银白",
+      "hex": "#E9E7EF",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-3",
+      "name": "老银",
+      "hex": "#BACAC6",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-4",
+      "name": "乌金",
+      "hex": "#A78E44",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "ctc-8-5",
+      "name": "铜绿",
+      "hex": "#549688",
+      "group": "金银",
+      "source": "chinese-colors",
+      "sourceUrl": "https://github.com/zerosoul/chinese-colors/blob/master/src/assets/colors.json",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-1",
+      "name": "灰 01",
+      "hex": "#FCFCFC",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-2",
+      "name": "灰 02",
+      "hex": "#F9F9F9",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-3",
+      "name": "灰 03",
+      "hex": "#F0F0F0",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-4",
+      "name": "灰 04",
+      "hex": "#E8E8E8",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-5",
+      "name": "灰 05",
+      "hex": "#E0E0E0",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-6",
+      "name": "灰 06",
+      "hex": "#D9D9D9",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-7",
+      "name": "灰 07",
+      "hex": "#CECECE",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-8",
+      "name": "灰 08",
+      "hex": "#BBBBBB",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-9",
+      "name": "灰 09",
+      "hex": "#8D8D8D",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-10",
+      "name": "灰 10",
+      "hex": "#838383",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-11",
+      "name": "灰 11",
+      "hex": "#646464",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gray-12",
+      "name": "灰 12",
+      "hex": "#202020",
+      "group": "灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-1",
+      "name": "烟紫灰 01",
+      "hex": "#FDFCFD",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-2",
+      "name": "烟紫灰 02",
+      "hex": "#FAF9FB",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-3",
+      "name": "烟紫灰 03",
+      "hex": "#F2EFF3",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-4",
+      "name": "烟紫灰 04",
+      "hex": "#EAE7EC",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-5",
+      "name": "烟紫灰 05",
+      "hex": "#E3DFE6",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-6",
+      "name": "烟紫灰 06",
+      "hex": "#DBD8E0",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-7",
+      "name": "烟紫灰 07",
+      "hex": "#D0CDD7",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-8",
+      "name": "烟紫灰 08",
+      "hex": "#BCBAC7",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-9",
+      "name": "烟紫灰 09",
+      "hex": "#8E8C99",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-10",
+      "name": "烟紫灰 10",
+      "hex": "#84828E",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-11",
+      "name": "烟紫灰 11",
+      "hex": "#65636D",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mauve-12",
+      "name": "烟紫灰 12",
+      "hex": "#211F26",
+      "group": "烟紫灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-1",
+      "name": "岩灰 01",
+      "hex": "#FCFCFD",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-2",
+      "name": "岩灰 02",
+      "hex": "#F9F9FB",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-3",
+      "name": "岩灰 03",
+      "hex": "#F0F0F3",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-4",
+      "name": "岩灰 04",
+      "hex": "#E8E8EC",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-5",
+      "name": "岩灰 05",
+      "hex": "#E0E1E6",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-6",
+      "name": "岩灰 06",
+      "hex": "#D9D9E0",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-7",
+      "name": "岩灰 07",
+      "hex": "#CDCED6",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-8",
+      "name": "岩灰 08",
+      "hex": "#B9BBC6",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-9",
+      "name": "岩灰 09",
+      "hex": "#8B8D98",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-10",
+      "name": "岩灰 10",
+      "hex": "#80838D",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-11",
+      "name": "岩灰 11",
+      "hex": "#60646C",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-slate-12",
+      "name": "岩灰 12",
+      "hex": "#1C2024",
+      "group": "岩灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-1",
+      "name": "鼠尾草灰 01",
+      "hex": "#FBFDFC",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-2",
+      "name": "鼠尾草灰 02",
+      "hex": "#F7F9F8",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-3",
+      "name": "鼠尾草灰 03",
+      "hex": "#EEF1F0",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-4",
+      "name": "鼠尾草灰 04",
+      "hex": "#E6E9E8",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-5",
+      "name": "鼠尾草灰 05",
+      "hex": "#DFE2E0",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-6",
+      "name": "鼠尾草灰 06",
+      "hex": "#D7DAD9",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-7",
+      "name": "鼠尾草灰 07",
+      "hex": "#CBCFCD",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-8",
+      "name": "鼠尾草灰 08",
+      "hex": "#B8BCBA",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-9",
+      "name": "鼠尾草灰 09",
+      "hex": "#868E8B",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-10",
+      "name": "鼠尾草灰 10",
+      "hex": "#7C8481",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-11",
+      "name": "鼠尾草灰 11",
+      "hex": "#5F6563",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sage-12",
+      "name": "鼠尾草灰 12",
+      "hex": "#1A211E",
+      "group": "鼠尾草灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-1",
+      "name": "橄榄灰 01",
+      "hex": "#FCFDFC",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-2",
+      "name": "橄榄灰 02",
+      "hex": "#F8FAF8",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-3",
+      "name": "橄榄灰 03",
+      "hex": "#EFF1EF",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-4",
+      "name": "橄榄灰 04",
+      "hex": "#E7E9E7",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-5",
+      "name": "橄榄灰 05",
+      "hex": "#DFE2DF",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-6",
+      "name": "橄榄灰 06",
+      "hex": "#D7DAD7",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-7",
+      "name": "橄榄灰 07",
+      "hex": "#CCCFCC",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-8",
+      "name": "橄榄灰 08",
+      "hex": "#B9BCB8",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-9",
+      "name": "橄榄灰 09",
+      "hex": "#898E87",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-10",
+      "name": "橄榄灰 10",
+      "hex": "#7F847D",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-11",
+      "name": "橄榄灰 11",
+      "hex": "#60655F",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-olive-12",
+      "name": "橄榄灰 12",
+      "hex": "#1D211C",
+      "group": "橄榄灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-1",
+      "name": "沙灰 01",
+      "hex": "#FDFDFC",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-2",
+      "name": "沙灰 02",
+      "hex": "#F9F9F8",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-3",
+      "name": "沙灰 03",
+      "hex": "#F1F0EF",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-4",
+      "name": "沙灰 04",
+      "hex": "#E9E8E6",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-5",
+      "name": "沙灰 05",
+      "hex": "#E2E1DE",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-6",
+      "name": "沙灰 06",
+      "hex": "#DAD9D6",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-7",
+      "name": "沙灰 07",
+      "hex": "#CFCECA",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-8",
+      "name": "沙灰 08",
+      "hex": "#BCBBB5",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-9",
+      "name": "沙灰 09",
+      "hex": "#8D8D86",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-10",
+      "name": "沙灰 10",
+      "hex": "#82827C",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-11",
+      "name": "沙灰 11",
+      "hex": "#63635E",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sand-12",
+      "name": "沙灰 12",
+      "hex": "#21201C",
+      "group": "沙灰",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-1",
+      "name": "番茄红 01",
+      "hex": "#FFFCFC",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-2",
+      "name": "番茄红 02",
+      "hex": "#FFF8F7",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-3",
+      "name": "番茄红 03",
+      "hex": "#FEEBE7",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-4",
+      "name": "番茄红 04",
+      "hex": "#FFDCD3",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-5",
+      "name": "番茄红 05",
+      "hex": "#FFCDC2",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-6",
+      "name": "番茄红 06",
+      "hex": "#FDBDAF",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-7",
+      "name": "番茄红 07",
+      "hex": "#F5A898",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-8",
+      "name": "番茄红 08",
+      "hex": "#EC8E7B",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-9",
+      "name": "番茄红 09",
+      "hex": "#E54D2E",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-10",
+      "name": "番茄红 10",
+      "hex": "#DD4425",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-11",
+      "name": "番茄红 11",
+      "hex": "#D13415",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-tomato-12",
+      "name": "番茄红 12",
+      "hex": "#5C271F",
+      "group": "番茄红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-1",
+      "name": "赤红 01",
+      "hex": "#FFFCFC",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-2",
+      "name": "赤红 02",
+      "hex": "#FFF7F7",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-3",
+      "name": "赤红 03",
+      "hex": "#FEEBEC",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-4",
+      "name": "赤红 04",
+      "hex": "#FFDBDC",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-5",
+      "name": "赤红 05",
+      "hex": "#FFCDCE",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-6",
+      "name": "赤红 06",
+      "hex": "#FDBDBE",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-7",
+      "name": "赤红 07",
+      "hex": "#F4A9AA",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-8",
+      "name": "赤红 08",
+      "hex": "#EB8E90",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-9",
+      "name": "赤红 09",
+      "hex": "#E5484D",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-10",
+      "name": "赤红 10",
+      "hex": "#DC3E42",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-11",
+      "name": "赤红 11",
+      "hex": "#CE2C31",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-red-12",
+      "name": "赤红 12",
+      "hex": "#641723",
+      "group": "赤红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-1",
+      "name": "宝石红 01",
+      "hex": "#FFFCFD",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-2",
+      "name": "宝石红 02",
+      "hex": "#FFF7F8",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-3",
+      "name": "宝石红 03",
+      "hex": "#FEEAED",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-4",
+      "name": "宝石红 04",
+      "hex": "#FFDCE1",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-5",
+      "name": "宝石红 05",
+      "hex": "#FFCED6",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-6",
+      "name": "宝石红 06",
+      "hex": "#F8BFC8",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-7",
+      "name": "宝石红 07",
+      "hex": "#EFACB8",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-8",
+      "name": "宝石红 08",
+      "hex": "#E592A3",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-9",
+      "name": "宝石红 09",
+      "hex": "#E54666",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-10",
+      "name": "宝石红 10",
+      "hex": "#DC3B5D",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-11",
+      "name": "宝石红 11",
+      "hex": "#CA244D",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-ruby-12",
+      "name": "宝石红 12",
+      "hex": "#64172B",
+      "group": "宝石红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-1",
+      "name": "绯红 01",
+      "hex": "#FFFCFD",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-2",
+      "name": "绯红 02",
+      "hex": "#FEF7F9",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-3",
+      "name": "绯红 03",
+      "hex": "#FFE9F0",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-4",
+      "name": "绯红 04",
+      "hex": "#FEDCE7",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-5",
+      "name": "绯红 05",
+      "hex": "#FACEDD",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-6",
+      "name": "绯红 06",
+      "hex": "#F3BED1",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-7",
+      "name": "绯红 07",
+      "hex": "#EAACC3",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-8",
+      "name": "绯红 08",
+      "hex": "#E093B2",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-9",
+      "name": "绯红 09",
+      "hex": "#E93D82",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-10",
+      "name": "绯红 10",
+      "hex": "#DF3478",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-11",
+      "name": "绯红 11",
+      "hex": "#CB1D63",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-crimson-12",
+      "name": "绯红 12",
+      "hex": "#621639",
+      "group": "绯红",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-1",
+      "name": "桃粉 01",
+      "hex": "#FFFCFE",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-2",
+      "name": "桃粉 02",
+      "hex": "#FEF7FB",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-3",
+      "name": "桃粉 03",
+      "hex": "#FEE9F5",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-4",
+      "name": "桃粉 04",
+      "hex": "#FBDCEF",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-5",
+      "name": "桃粉 05",
+      "hex": "#F6CEE7",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-6",
+      "name": "桃粉 06",
+      "hex": "#EFBFDD",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-7",
+      "name": "桃粉 07",
+      "hex": "#E7ACD0",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-8",
+      "name": "桃粉 08",
+      "hex": "#DD93C2",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-9",
+      "name": "桃粉 09",
+      "hex": "#D6409F",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-10",
+      "name": "桃粉 10",
+      "hex": "#CF3897",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-11",
+      "name": "桃粉 11",
+      "hex": "#C2298A",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-pink-12",
+      "name": "桃粉 12",
+      "hex": "#651249",
+      "group": "桃粉",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-1",
+      "name": "梅紫 01",
+      "hex": "#FEFCFF",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-2",
+      "name": "梅紫 02",
+      "hex": "#FDF7FD",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-3",
+      "name": "梅紫 03",
+      "hex": "#FBEBFB",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-4",
+      "name": "梅紫 04",
+      "hex": "#F7DEF8",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-5",
+      "name": "梅紫 05",
+      "hex": "#F2D1F3",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-6",
+      "name": "梅紫 06",
+      "hex": "#E9C2EC",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-7",
+      "name": "梅紫 07",
+      "hex": "#DEADE3",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-8",
+      "name": "梅紫 08",
+      "hex": "#CF91D8",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-9",
+      "name": "梅紫 09",
+      "hex": "#AB4ABA",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-10",
+      "name": "梅紫 10",
+      "hex": "#A144AF",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-11",
+      "name": "梅紫 11",
+      "hex": "#953EA3",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-plum-12",
+      "name": "梅紫 12",
+      "hex": "#53195D",
+      "group": "梅紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-1",
+      "name": "紫 01",
+      "hex": "#FEFCFE",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-2",
+      "name": "紫 02",
+      "hex": "#FBF7FE",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-3",
+      "name": "紫 03",
+      "hex": "#F7EDFE",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-4",
+      "name": "紫 04",
+      "hex": "#F2E2FC",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-5",
+      "name": "紫 05",
+      "hex": "#EAD5F9",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-6",
+      "name": "紫 06",
+      "hex": "#E0C4F4",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-7",
+      "name": "紫 07",
+      "hex": "#D1AFEC",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-8",
+      "name": "紫 08",
+      "hex": "#BE93E4",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-9",
+      "name": "紫 09",
+      "hex": "#8E4EC6",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-10",
+      "name": "紫 10",
+      "hex": "#8347B9",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-11",
+      "name": "紫 11",
+      "hex": "#8145B5",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-purple-12",
+      "name": "紫 12",
+      "hex": "#402060",
+      "group": "紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-1",
+      "name": "堇紫 01",
+      "hex": "#FDFCFE",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-2",
+      "name": "堇紫 02",
+      "hex": "#FAF8FF",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-3",
+      "name": "堇紫 03",
+      "hex": "#F4F0FE",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-4",
+      "name": "堇紫 04",
+      "hex": "#EBE4FF",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-5",
+      "name": "堇紫 05",
+      "hex": "#E1D9FF",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-6",
+      "name": "堇紫 06",
+      "hex": "#D4CAFE",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-7",
+      "name": "堇紫 07",
+      "hex": "#C2B5F5",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-8",
+      "name": "堇紫 08",
+      "hex": "#AA99EC",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-9",
+      "name": "堇紫 09",
+      "hex": "#6E56CF",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-10",
+      "name": "堇紫 10",
+      "hex": "#654DC4",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-11",
+      "name": "堇紫 11",
+      "hex": "#6550B9",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-violet-12",
+      "name": "堇紫 12",
+      "hex": "#2F265F",
+      "group": "堇紫",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-1",
+      "name": "鸢尾 01",
+      "hex": "#FDFDFF",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-2",
+      "name": "鸢尾 02",
+      "hex": "#F8F8FF",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-3",
+      "name": "鸢尾 03",
+      "hex": "#F0F1FE",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-4",
+      "name": "鸢尾 04",
+      "hex": "#E6E7FF",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-5",
+      "name": "鸢尾 05",
+      "hex": "#DADCFF",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-6",
+      "name": "鸢尾 06",
+      "hex": "#CBCDFF",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-7",
+      "name": "鸢尾 07",
+      "hex": "#B8BAF8",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-8",
+      "name": "鸢尾 08",
+      "hex": "#9B9EF0",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-9",
+      "name": "鸢尾 09",
+      "hex": "#5B5BD6",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-10",
+      "name": "鸢尾 10",
+      "hex": "#5151CD",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-11",
+      "name": "鸢尾 11",
+      "hex": "#5753C6",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-iris-12",
+      "name": "鸢尾 12",
+      "hex": "#272962",
+      "group": "鸢尾",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-1",
+      "name": "靛蓝 01",
+      "hex": "#FDFDFE",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-2",
+      "name": "靛蓝 02",
+      "hex": "#F7F9FF",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-3",
+      "name": "靛蓝 03",
+      "hex": "#EDF2FE",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-4",
+      "name": "靛蓝 04",
+      "hex": "#E1E9FF",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-5",
+      "name": "靛蓝 05",
+      "hex": "#D2DEFF",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-6",
+      "name": "靛蓝 06",
+      "hex": "#C1D0FF",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-7",
+      "name": "靛蓝 07",
+      "hex": "#ABBDF9",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-8",
+      "name": "靛蓝 08",
+      "hex": "#8DA4EF",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-9",
+      "name": "靛蓝 09",
+      "hex": "#3E63DD",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-10",
+      "name": "靛蓝 10",
+      "hex": "#3358D4",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-11",
+      "name": "靛蓝 11",
+      "hex": "#3A5BC7",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-indigo-12",
+      "name": "靛蓝 12",
+      "hex": "#1F2D5C",
+      "group": "靛蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-1",
+      "name": "蓝 01",
+      "hex": "#FBFDFF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-2",
+      "name": "蓝 02",
+      "hex": "#F4FAFF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-3",
+      "name": "蓝 03",
+      "hex": "#E6F4FE",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-4",
+      "name": "蓝 04",
+      "hex": "#D5EFFF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-5",
+      "name": "蓝 05",
+      "hex": "#C2E5FF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-6",
+      "name": "蓝 06",
+      "hex": "#ACD8FC",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-7",
+      "name": "蓝 07",
+      "hex": "#8EC8F6",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-8",
+      "name": "蓝 08",
+      "hex": "#5EB1EF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-9",
+      "name": "蓝 09",
+      "hex": "#0090FF",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-10",
+      "name": "蓝 10",
+      "hex": "#0588F0",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-11",
+      "name": "蓝 11",
+      "hex": "#0D74CE",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-blue-12",
+      "name": "蓝 12",
+      "hex": "#113264",
+      "group": "蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-1",
+      "name": "青 01",
+      "hex": "#FAFDFE",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-2",
+      "name": "青 02",
+      "hex": "#F2FAFB",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-3",
+      "name": "青 03",
+      "hex": "#DEF7F9",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-4",
+      "name": "青 04",
+      "hex": "#CAF1F6",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-5",
+      "name": "青 05",
+      "hex": "#B5E9F0",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-6",
+      "name": "青 06",
+      "hex": "#9DDDE7",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-7",
+      "name": "青 07",
+      "hex": "#7DCEDC",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-8",
+      "name": "青 08",
+      "hex": "#3DB9CF",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-9",
+      "name": "青 09",
+      "hex": "#00A2C7",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-10",
+      "name": "青 10",
+      "hex": "#0797B9",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-11",
+      "name": "青 11",
+      "hex": "#107D98",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-cyan-12",
+      "name": "青 12",
+      "hex": "#0D3C48",
+      "group": "青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-1",
+      "name": "水鸭青 01",
+      "hex": "#FAFEFD",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-2",
+      "name": "水鸭青 02",
+      "hex": "#F3FBF9",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-3",
+      "name": "水鸭青 03",
+      "hex": "#E0F8F3",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-4",
+      "name": "水鸭青 04",
+      "hex": "#CCF3EA",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-5",
+      "name": "水鸭青 05",
+      "hex": "#B8EAE0",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-6",
+      "name": "水鸭青 06",
+      "hex": "#A1DED2",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-7",
+      "name": "水鸭青 07",
+      "hex": "#83CDC1",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-8",
+      "name": "水鸭青 08",
+      "hex": "#53B9AB",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-9",
+      "name": "水鸭青 09",
+      "hex": "#12A594",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-10",
+      "name": "水鸭青 10",
+      "hex": "#0D9B8A",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-11",
+      "name": "水鸭青 11",
+      "hex": "#008573",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-teal-12",
+      "name": "水鸭青 12",
+      "hex": "#0D3D38",
+      "group": "水鸭青",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-1",
+      "name": "玉绿 01",
+      "hex": "#FBFEFD",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-2",
+      "name": "玉绿 02",
+      "hex": "#F4FBF7",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-3",
+      "name": "玉绿 03",
+      "hex": "#E6F7ED",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-4",
+      "name": "玉绿 04",
+      "hex": "#D6F1E3",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-5",
+      "name": "玉绿 05",
+      "hex": "#C3E9D7",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-6",
+      "name": "玉绿 06",
+      "hex": "#ACDEC8",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-7",
+      "name": "玉绿 07",
+      "hex": "#8BCEB6",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-8",
+      "name": "玉绿 08",
+      "hex": "#56BA9F",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-9",
+      "name": "玉绿 09",
+      "hex": "#29A383",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-10",
+      "name": "玉绿 10",
+      "hex": "#26997B",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-11",
+      "name": "玉绿 11",
+      "hex": "#208368",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-jade-12",
+      "name": "玉绿 12",
+      "hex": "#1D3B31",
+      "group": "玉绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-1",
+      "name": "草绿 01",
+      "hex": "#FBFEFC",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-2",
+      "name": "草绿 02",
+      "hex": "#F4FBF6",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-3",
+      "name": "草绿 03",
+      "hex": "#E6F6EB",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-4",
+      "name": "草绿 04",
+      "hex": "#D6F1DF",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-5",
+      "name": "草绿 05",
+      "hex": "#C4E8D1",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-6",
+      "name": "草绿 06",
+      "hex": "#ADDDC0",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-7",
+      "name": "草绿 07",
+      "hex": "#8ECEAA",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-8",
+      "name": "草绿 08",
+      "hex": "#5BB98B",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-9",
+      "name": "草绿 09",
+      "hex": "#30A46C",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-10",
+      "name": "草绿 10",
+      "hex": "#2B9A66",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-11",
+      "name": "草绿 11",
+      "hex": "#218358",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-green-12",
+      "name": "草绿 12",
+      "hex": "#193B2D",
+      "group": "草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-1",
+      "name": "青草绿 01",
+      "hex": "#FBFEFB",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-2",
+      "name": "青草绿 02",
+      "hex": "#F5FBF5",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-3",
+      "name": "青草绿 03",
+      "hex": "#E9F6E9",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-4",
+      "name": "青草绿 04",
+      "hex": "#DAF1DB",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-5",
+      "name": "青草绿 05",
+      "hex": "#C9E8CA",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-6",
+      "name": "青草绿 06",
+      "hex": "#B2DDB5",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-7",
+      "name": "青草绿 07",
+      "hex": "#94CE9A",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-8",
+      "name": "青草绿 08",
+      "hex": "#65BA74",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-9",
+      "name": "青草绿 09",
+      "hex": "#46A758",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-10",
+      "name": "青草绿 10",
+      "hex": "#3E9B4F",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-11",
+      "name": "青草绿 11",
+      "hex": "#2A7E3B",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-grass-12",
+      "name": "青草绿 12",
+      "hex": "#203C25",
+      "group": "青草绿",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-1",
+      "name": "棕 01",
+      "hex": "#FEFDFC",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-2",
+      "name": "棕 02",
+      "hex": "#FCF9F6",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-3",
+      "name": "棕 03",
+      "hex": "#F6EEE7",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-4",
+      "name": "棕 04",
+      "hex": "#F0E4D9",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-5",
+      "name": "棕 05",
+      "hex": "#EBDACA",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-6",
+      "name": "棕 06",
+      "hex": "#E4CDB7",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-7",
+      "name": "棕 07",
+      "hex": "#DCBC9F",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-8",
+      "name": "棕 08",
+      "hex": "#CEA37E",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-9",
+      "name": "棕 09",
+      "hex": "#AD7F58",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-10",
+      "name": "棕 10",
+      "hex": "#A07553",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-11",
+      "name": "棕 11",
+      "hex": "#815E46",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-brown-12",
+      "name": "棕 12",
+      "hex": "#3E332E",
+      "group": "棕",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-1",
+      "name": "古铜 01",
+      "hex": "#FDFCFC",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-2",
+      "name": "古铜 02",
+      "hex": "#FDF7F5",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-3",
+      "name": "古铜 03",
+      "hex": "#F6EDEA",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-4",
+      "name": "古铜 04",
+      "hex": "#EFE4DF",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-5",
+      "name": "古铜 05",
+      "hex": "#E7D9D3",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-6",
+      "name": "古铜 06",
+      "hex": "#DFCDC5",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-7",
+      "name": "古铜 07",
+      "hex": "#D3BCB3",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-8",
+      "name": "古铜 08",
+      "hex": "#C2A499",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-9",
+      "name": "古铜 09",
+      "hex": "#A18072",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-10",
+      "name": "古铜 10",
+      "hex": "#957468",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-11",
+      "name": "古铜 11",
+      "hex": "#7D5E54",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-bronze-12",
+      "name": "古铜 12",
+      "hex": "#43302B",
+      "group": "古铜",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-1",
+      "name": "金 01",
+      "hex": "#FDFDFC",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-2",
+      "name": "金 02",
+      "hex": "#FAF9F2",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-3",
+      "name": "金 03",
+      "hex": "#F2F0E7",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-4",
+      "name": "金 04",
+      "hex": "#EAE6DB",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-5",
+      "name": "金 05",
+      "hex": "#E1DCCF",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-6",
+      "name": "金 06",
+      "hex": "#D8D0BF",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-7",
+      "name": "金 07",
+      "hex": "#CBC0AA",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-8",
+      "name": "金 08",
+      "hex": "#B9A88D",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-9",
+      "name": "金 09",
+      "hex": "#978365",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-10",
+      "name": "金 10",
+      "hex": "#8C7A5E",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-11",
+      "name": "金 11",
+      "hex": "#71624B",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-gold-12",
+      "name": "金 12",
+      "hex": "#3B352B",
+      "group": "金",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-1",
+      "name": "天蓝 01",
+      "hex": "#F9FEFF",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-2",
+      "name": "天蓝 02",
+      "hex": "#F1FAFD",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-3",
+      "name": "天蓝 03",
+      "hex": "#E1F6FD",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-4",
+      "name": "天蓝 04",
+      "hex": "#D1F0FA",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-5",
+      "name": "天蓝 05",
+      "hex": "#BEE7F5",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-6",
+      "name": "天蓝 06",
+      "hex": "#A9DAED",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-7",
+      "name": "天蓝 07",
+      "hex": "#8DCAE3",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-8",
+      "name": "天蓝 08",
+      "hex": "#60B3D7",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-9",
+      "name": "天蓝 09",
+      "hex": "#7CE2FE",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-10",
+      "name": "天蓝 10",
+      "hex": "#74DAF8",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-11",
+      "name": "天蓝 11",
+      "hex": "#00749E",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-sky-12",
+      "name": "天蓝 12",
+      "hex": "#1D3E56",
+      "group": "天蓝",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-1",
+      "name": "薄荷 01",
+      "hex": "#F9FEFD",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-2",
+      "name": "薄荷 02",
+      "hex": "#F2FBF9",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-3",
+      "name": "薄荷 03",
+      "hex": "#DDF9F2",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-4",
+      "name": "薄荷 04",
+      "hex": "#C8F4E9",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-5",
+      "name": "薄荷 05",
+      "hex": "#B3ECDE",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-6",
+      "name": "薄荷 06",
+      "hex": "#9CE0D0",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-7",
+      "name": "薄荷 07",
+      "hex": "#7ECFBD",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-8",
+      "name": "薄荷 08",
+      "hex": "#4CBBA5",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-9",
+      "name": "薄荷 09",
+      "hex": "#86EAD4",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-10",
+      "name": "薄荷 10",
+      "hex": "#7DE0CB",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-11",
+      "name": "薄荷 11",
+      "hex": "#027864",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-mint-12",
+      "name": "薄荷 12",
+      "hex": "#16433C",
+      "group": "薄荷",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-1",
+      "name": "青柠 01",
+      "hex": "#FCFDFA",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-2",
+      "name": "青柠 02",
+      "hex": "#F8FAF3",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-3",
+      "name": "青柠 03",
+      "hex": "#EEF6D6",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-4",
+      "name": "青柠 04",
+      "hex": "#E2F0BD",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-5",
+      "name": "青柠 05",
+      "hex": "#D3E7A6",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-6",
+      "name": "青柠 06",
+      "hex": "#C2DA91",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-7",
+      "name": "青柠 07",
+      "hex": "#ABC978",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-8",
+      "name": "青柠 08",
+      "hex": "#8DB654",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-9",
+      "name": "青柠 09",
+      "hex": "#BDEE63",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-10",
+      "name": "青柠 10",
+      "hex": "#B0E64C",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-11",
+      "name": "青柠 11",
+      "hex": "#5C7C2F",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-lime-12",
+      "name": "青柠 12",
+      "hex": "#37401C",
+      "group": "青柠",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-1",
+      "name": "黄 01",
+      "hex": "#FDFDF9",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-2",
+      "name": "黄 02",
+      "hex": "#FEFCE9",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-3",
+      "name": "黄 03",
+      "hex": "#FFFAB8",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-4",
+      "name": "黄 04",
+      "hex": "#FFF394",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-5",
+      "name": "黄 05",
+      "hex": "#FFE770",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-6",
+      "name": "黄 06",
+      "hex": "#F3D768",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-7",
+      "name": "黄 07",
+      "hex": "#E4C767",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-8",
+      "name": "黄 08",
+      "hex": "#D5AE39",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-9",
+      "name": "黄 09",
+      "hex": "#FFE629",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-10",
+      "name": "黄 10",
+      "hex": "#FFDC00",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-11",
+      "name": "黄 11",
+      "hex": "#9E6C00",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-yellow-12",
+      "name": "黄 12",
+      "hex": "#473B1F",
+      "group": "黄",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-1",
+      "name": "琥珀 01",
+      "hex": "#FEFDFB",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-2",
+      "name": "琥珀 02",
+      "hex": "#FEFBE9",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-3",
+      "name": "琥珀 03",
+      "hex": "#FFF7C2",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-4",
+      "name": "琥珀 04",
+      "hex": "#FFEE9C",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-5",
+      "name": "琥珀 05",
+      "hex": "#FBE577",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-6",
+      "name": "琥珀 06",
+      "hex": "#F3D673",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-7",
+      "name": "琥珀 07",
+      "hex": "#E9C162",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-8",
+      "name": "琥珀 08",
+      "hex": "#E2A336",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-9",
+      "name": "琥珀 09",
+      "hex": "#FFC53D",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-10",
+      "name": "琥珀 10",
+      "hex": "#FFBA18",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-11",
+      "name": "琥珀 11",
+      "hex": "#AB6400",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-amber-12",
+      "name": "琥珀 12",
+      "hex": "#4F3422",
+      "group": "琥珀",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-1",
+      "name": "橙 01",
+      "hex": "#FEFCFB",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-2",
+      "name": "橙 02",
+      "hex": "#FFF7ED",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-3",
+      "name": "橙 03",
+      "hex": "#FFEFD6",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-4",
+      "name": "橙 04",
+      "hex": "#FFDFB5",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-5",
+      "name": "橙 05",
+      "hex": "#FFD19A",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-6",
+      "name": "橙 06",
+      "hex": "#FFC182",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-7",
+      "name": "橙 07",
+      "hex": "#F5AE73",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-8",
+      "name": "橙 08",
+      "hex": "#EC9455",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-9",
+      "name": "橙 09",
+      "hex": "#F76B15",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-10",
+      "name": "橙 10",
+      "hex": "#EF5F00",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-11",
+      "name": "橙 11",
+      "hex": "#CC4E00",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    },
+    {
+      "id": "radix-orange-12",
+      "name": "橙 12",
+      "hex": "#582D1D",
+      "group": "橙",
+      "source": "radix-colors",
+      "sourceUrl": "https://github.com/radix-ui/colors/blob/main/src/light.ts",
+      "license": "MIT"
+    }
+  ],
+  "schemes": [
+    {
+      "id": "radix-gray-0",
+      "name": "灰 · 晨光",
+      "colors": [
+        "#FCFCFC",
+        "#F0F0F0",
+        "#E0E0E0",
+        "#BBBBBB",
+        "#646464",
+        "#0090FF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gray",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gray-1",
+      "name": "灰 · 雅韵",
+      "colors": [
+        "#F9F9F9",
+        "#E8E8E8",
+        "#CECECE",
+        "#8D8D8D",
+        "#202020",
+        "#0588F0"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gray",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gray-2",
+      "name": "灰 · 层染",
+      "colors": [
+        "#FCFCFC",
+        "#E8E8E8",
+        "#D9D9D9",
+        "#838383",
+        "#202020",
+        "#5EB1EF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gray",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gray-3",
+      "name": "灰 · 点睛",
+      "colors": [
+        "#F9F9F9",
+        "#E0E0E0",
+        "#BBBBBB",
+        "#838383",
+        "#202020",
+        "#0D74CE"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gray",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mauve-0",
+      "name": "烟紫灰 · 晨光",
+      "colors": [
+        "#FDFCFD",
+        "#F2EFF3",
+        "#E3DFE6",
+        "#BCBAC7",
+        "#65636D",
+        "#AB4ABA"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mauve",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mauve-1",
+      "name": "烟紫灰 · 雅韵",
+      "colors": [
+        "#FAF9FB",
+        "#EAE7EC",
+        "#D0CDD7",
+        "#8E8C99",
+        "#211F26",
+        "#A144AF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mauve",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mauve-2",
+      "name": "烟紫灰 · 层染",
+      "colors": [
+        "#FDFCFD",
+        "#EAE7EC",
+        "#DBD8E0",
+        "#84828E",
+        "#211F26",
+        "#CF91D8"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mauve",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mauve-3",
+      "name": "烟紫灰 · 点睛",
+      "colors": [
+        "#FAF9FB",
+        "#E3DFE6",
+        "#BCBAC7",
+        "#84828E",
+        "#211F26",
+        "#953EA3"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mauve",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-slate-0",
+      "name": "岩灰 · 晨光",
+      "colors": [
+        "#FCFCFD",
+        "#F0F0F3",
+        "#E0E1E6",
+        "#B9BBC6",
+        "#60646C",
+        "#7CE2FE"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "slate",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-slate-1",
+      "name": "岩灰 · 雅韵",
+      "colors": [
+        "#F9F9FB",
+        "#E8E8EC",
+        "#CDCED6",
+        "#8B8D98",
+        "#1C2024",
+        "#74DAF8"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "slate",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-slate-2",
+      "name": "岩灰 · 层染",
+      "colors": [
+        "#FCFCFD",
+        "#E8E8EC",
+        "#D9D9E0",
+        "#80838D",
+        "#1C2024",
+        "#60B3D7"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "slate",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-slate-3",
+      "name": "岩灰 · 点睛",
+      "colors": [
+        "#F9F9FB",
+        "#E0E1E6",
+        "#B9BBC6",
+        "#80838D",
+        "#1C2024",
+        "#00749E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "slate",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sage-0",
+      "name": "鼠尾草灰 · 晨光",
+      "colors": [
+        "#FBFDFC",
+        "#EEF1F0",
+        "#DFE2E0",
+        "#B8BCBA",
+        "#5F6563",
+        "#29A383"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sage",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sage-1",
+      "name": "鼠尾草灰 · 雅韵",
+      "colors": [
+        "#F7F9F8",
+        "#E6E9E8",
+        "#CBCFCD",
+        "#868E8B",
+        "#1A211E",
+        "#26997B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sage",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sage-2",
+      "name": "鼠尾草灰 · 层染",
+      "colors": [
+        "#FBFDFC",
+        "#E6E9E8",
+        "#D7DAD9",
+        "#7C8481",
+        "#1A211E",
+        "#56BA9F"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sage",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sage-3",
+      "name": "鼠尾草灰 · 点睛",
+      "colors": [
+        "#F7F9F8",
+        "#DFE2E0",
+        "#B8BCBA",
+        "#7C8481",
+        "#1A211E",
+        "#208368"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sage",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-olive-0",
+      "name": "橄榄灰 · 晨光",
+      "colors": [
+        "#FCFDFC",
+        "#EFF1EF",
+        "#DFE2DF",
+        "#B9BCB8",
+        "#60655F",
+        "#FFC53D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "olive",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-olive-1",
+      "name": "橄榄灰 · 雅韵",
+      "colors": [
+        "#F8FAF8",
+        "#E7E9E7",
+        "#CCCFCC",
+        "#898E87",
+        "#1D211C",
+        "#FFBA18"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "olive",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-olive-2",
+      "name": "橄榄灰 · 层染",
+      "colors": [
+        "#FCFDFC",
+        "#E7E9E7",
+        "#D7DAD7",
+        "#7F847D",
+        "#1D211C",
+        "#E2A336"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "olive",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-olive-3",
+      "name": "橄榄灰 · 点睛",
+      "colors": [
+        "#F8FAF8",
+        "#DFE2DF",
+        "#B9BCB8",
+        "#7F847D",
+        "#1D211C",
+        "#AB6400"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "olive",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sand-0",
+      "name": "沙灰 · 晨光",
+      "colors": [
+        "#FDFDFC",
+        "#F1F0EF",
+        "#E2E1DE",
+        "#BCBBB5",
+        "#63635E",
+        "#978365"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sand",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sand-1",
+      "name": "沙灰 · 雅韵",
+      "colors": [
+        "#F9F9F8",
+        "#E9E8E6",
+        "#CFCECA",
+        "#8D8D86",
+        "#21201C",
+        "#8C7A5E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sand",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sand-2",
+      "name": "沙灰 · 层染",
+      "colors": [
+        "#FDFDFC",
+        "#E9E8E6",
+        "#DAD9D6",
+        "#82827C",
+        "#21201C",
+        "#B9A88D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sand",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sand-3",
+      "name": "沙灰 · 点睛",
+      "colors": [
+        "#F9F9F8",
+        "#E2E1DE",
+        "#BCBBB5",
+        "#82827C",
+        "#21201C",
+        "#71624B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sand",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-tomato-0",
+      "name": "番茄红 · 晨光",
+      "colors": [
+        "#FFFCFC",
+        "#FEEBE7",
+        "#FFCDC2",
+        "#EC8E7B",
+        "#D13415",
+        "#46A758"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "tomato",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-tomato-1",
+      "name": "番茄红 · 雅韵",
+      "colors": [
+        "#FFF8F7",
+        "#FFDCD3",
+        "#F5A898",
+        "#E54D2E",
+        "#5C271F",
+        "#3E9B4F"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "tomato",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-tomato-2",
+      "name": "番茄红 · 层染",
+      "colors": [
+        "#FFFCFC",
+        "#FFDCD3",
+        "#FDBDAF",
+        "#DD4425",
+        "#5C271F",
+        "#65BA74"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "tomato",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-tomato-3",
+      "name": "番茄红 · 点睛",
+      "colors": [
+        "#FFF8F7",
+        "#FFCDC2",
+        "#EC8E7B",
+        "#DD4425",
+        "#5C271F",
+        "#2A7E3B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "tomato",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-red-0",
+      "name": "赤红 · 晨光",
+      "colors": [
+        "#FFFCFC",
+        "#FEEBEC",
+        "#FFCDCE",
+        "#EB8E90",
+        "#CE2C31",
+        "#86EAD4"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "red",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-red-1",
+      "name": "赤红 · 雅韵",
+      "colors": [
+        "#FFF7F7",
+        "#FFDBDC",
+        "#F4A9AA",
+        "#E5484D",
+        "#641723",
+        "#7DE0CB"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "red",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-red-2",
+      "name": "赤红 · 层染",
+      "colors": [
+        "#FFFCFC",
+        "#FFDBDC",
+        "#FDBDBE",
+        "#DC3E42",
+        "#641723",
+        "#4CBBA5"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "red",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-red-3",
+      "name": "赤红 · 点睛",
+      "colors": [
+        "#FFF7F7",
+        "#FFCDCE",
+        "#EB8E90",
+        "#DC3E42",
+        "#641723",
+        "#027864"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "red",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-ruby-0",
+      "name": "宝石红 · 晨光",
+      "colors": [
+        "#FFFCFD",
+        "#FEEAED",
+        "#FFCED6",
+        "#E592A3",
+        "#CA244D",
+        "#12A594"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "ruby",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-ruby-1",
+      "name": "宝石红 · 雅韵",
+      "colors": [
+        "#FFF7F8",
+        "#FFDCE1",
+        "#EFACB8",
+        "#E54666",
+        "#64172B",
+        "#0D9B8A"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "ruby",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-ruby-2",
+      "name": "宝石红 · 层染",
+      "colors": [
+        "#FFFCFD",
+        "#FFDCE1",
+        "#F8BFC8",
+        "#DC3B5D",
+        "#64172B",
+        "#53B9AB"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "ruby",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-ruby-3",
+      "name": "宝石红 · 点睛",
+      "colors": [
+        "#FFF7F8",
+        "#FFCED6",
+        "#E592A3",
+        "#DC3B5D",
+        "#64172B",
+        "#008573"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "ruby",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-crimson-0",
+      "name": "绯红 · 晨光",
+      "colors": [
+        "#FFFCFD",
+        "#FFE9F0",
+        "#FACEDD",
+        "#E093B2",
+        "#CB1D63",
+        "#868E8B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "crimson",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-crimson-1",
+      "name": "绯红 · 雅韵",
+      "colors": [
+        "#FEF7F9",
+        "#FEDCE7",
+        "#EAACC3",
+        "#E93D82",
+        "#621639",
+        "#7C8481"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "crimson",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-crimson-2",
+      "name": "绯红 · 层染",
+      "colors": [
+        "#FFFCFD",
+        "#FEDCE7",
+        "#F3BED1",
+        "#DF3478",
+        "#621639",
+        "#B8BCBA"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "crimson",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-crimson-3",
+      "name": "绯红 · 点睛",
+      "colors": [
+        "#FEF7F9",
+        "#FACEDD",
+        "#E093B2",
+        "#DF3478",
+        "#621639",
+        "#5F6563"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "crimson",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-pink-0",
+      "name": "桃粉 · 晨光",
+      "colors": [
+        "#FFFCFE",
+        "#FEE9F5",
+        "#F6CEE7",
+        "#DD93C2",
+        "#C2298A",
+        "#29A383"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "pink",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-pink-1",
+      "name": "桃粉 · 雅韵",
+      "colors": [
+        "#FEF7FB",
+        "#FBDCEF",
+        "#E7ACD0",
+        "#D6409F",
+        "#651249",
+        "#26997B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "pink",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-pink-2",
+      "name": "桃粉 · 层染",
+      "colors": [
+        "#FFFCFE",
+        "#FBDCEF",
+        "#EFBFDD",
+        "#CF3897",
+        "#651249",
+        "#56BA9F"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "pink",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-pink-3",
+      "name": "桃粉 · 点睛",
+      "colors": [
+        "#FEF7FB",
+        "#F6CEE7",
+        "#DD93C2",
+        "#CF3897",
+        "#651249",
+        "#208368"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "pink",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-plum-0",
+      "name": "梅紫 · 晨光",
+      "colors": [
+        "#FEFCFF",
+        "#FBEBFB",
+        "#F2D1F3",
+        "#CF91D8",
+        "#953EA3",
+        "#978365"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "plum",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-plum-1",
+      "name": "梅紫 · 雅韵",
+      "colors": [
+        "#FDF7FD",
+        "#F7DEF8",
+        "#DEADE3",
+        "#AB4ABA",
+        "#53195D",
+        "#8C7A5E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "plum",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-plum-2",
+      "name": "梅紫 · 层染",
+      "colors": [
+        "#FEFCFF",
+        "#F7DEF8",
+        "#E9C2EC",
+        "#A144AF",
+        "#53195D",
+        "#B9A88D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "plum",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-plum-3",
+      "name": "梅紫 · 点睛",
+      "colors": [
+        "#FDF7FD",
+        "#F2D1F3",
+        "#CF91D8",
+        "#A144AF",
+        "#53195D",
+        "#71624B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "plum",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-purple-0",
+      "name": "紫 · 晨光",
+      "colors": [
+        "#FEFCFE",
+        "#F7EDFE",
+        "#EAD5F9",
+        "#BE93E4",
+        "#8145B5",
+        "#46A758"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "purple",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-purple-1",
+      "name": "紫 · 雅韵",
+      "colors": [
+        "#FBF7FE",
+        "#F2E2FC",
+        "#D1AFEC",
+        "#8E4EC6",
+        "#402060",
+        "#3E9B4F"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "purple",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-purple-2",
+      "name": "紫 · 层染",
+      "colors": [
+        "#FEFCFE",
+        "#F2E2FC",
+        "#E0C4F4",
+        "#8347B9",
+        "#402060",
+        "#65BA74"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "purple",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-purple-3",
+      "name": "紫 · 点睛",
+      "colors": [
+        "#FBF7FE",
+        "#EAD5F9",
+        "#BE93E4",
+        "#8347B9",
+        "#402060",
+        "#2A7E3B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "purple",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-violet-0",
+      "name": "堇紫 · 晨光",
+      "colors": [
+        "#FDFCFE",
+        "#F4F0FE",
+        "#E1D9FF",
+        "#AA99EC",
+        "#6550B9",
+        "#FFC53D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "violet",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-violet-1",
+      "name": "堇紫 · 雅韵",
+      "colors": [
+        "#FAF8FF",
+        "#EBE4FF",
+        "#C2B5F5",
+        "#6E56CF",
+        "#2F265F",
+        "#FFBA18"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "violet",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-violet-2",
+      "name": "堇紫 · 层染",
+      "colors": [
+        "#FDFCFE",
+        "#EBE4FF",
+        "#D4CAFE",
+        "#654DC4",
+        "#2F265F",
+        "#E2A336"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "violet",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-violet-3",
+      "name": "堇紫 · 点睛",
+      "colors": [
+        "#FAF8FF",
+        "#E1D9FF",
+        "#AA99EC",
+        "#654DC4",
+        "#2F265F",
+        "#AB6400"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "violet",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-iris-0",
+      "name": "鸢尾 · 晨光",
+      "colors": [
+        "#FDFDFF",
+        "#F0F1FE",
+        "#DADCFF",
+        "#9B9EF0",
+        "#5753C6",
+        "#FFE629"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "iris",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-iris-1",
+      "name": "鸢尾 · 雅韵",
+      "colors": [
+        "#F8F8FF",
+        "#E6E7FF",
+        "#B8BAF8",
+        "#5B5BD6",
+        "#272962",
+        "#FFDC00"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "iris",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-iris-2",
+      "name": "鸢尾 · 层染",
+      "colors": [
+        "#FDFDFF",
+        "#E6E7FF",
+        "#CBCDFF",
+        "#5151CD",
+        "#272962",
+        "#D5AE39"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "iris",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-iris-3",
+      "name": "鸢尾 · 点睛",
+      "colors": [
+        "#F8F8FF",
+        "#DADCFF",
+        "#9B9EF0",
+        "#5151CD",
+        "#272962",
+        "#9E6C00"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "iris",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-indigo-0",
+      "name": "靛蓝 · 晨光",
+      "colors": [
+        "#FDFDFE",
+        "#EDF2FE",
+        "#D2DEFF",
+        "#8DA4EF",
+        "#3A5BC7",
+        "#F76B15"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "indigo",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-indigo-1",
+      "name": "靛蓝 · 雅韵",
+      "colors": [
+        "#F7F9FF",
+        "#E1E9FF",
+        "#ABBDF9",
+        "#3E63DD",
+        "#1F2D5C",
+        "#EF5F00"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "indigo",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-indigo-2",
+      "name": "靛蓝 · 层染",
+      "colors": [
+        "#FDFDFE",
+        "#E1E9FF",
+        "#C1D0FF",
+        "#3358D4",
+        "#1F2D5C",
+        "#EC9455"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "indigo",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-indigo-3",
+      "name": "靛蓝 · 点睛",
+      "colors": [
+        "#F7F9FF",
+        "#D2DEFF",
+        "#8DA4EF",
+        "#3358D4",
+        "#1F2D5C",
+        "#CC4E00"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "indigo",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-blue-0",
+      "name": "蓝 · 晨光",
+      "colors": [
+        "#FBFDFF",
+        "#E6F4FE",
+        "#C2E5FF",
+        "#5EB1EF",
+        "#0D74CE",
+        "#FFC53D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "blue",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-blue-1",
+      "name": "蓝 · 雅韵",
+      "colors": [
+        "#F4FAFF",
+        "#D5EFFF",
+        "#8EC8F6",
+        "#0090FF",
+        "#113264",
+        "#FFBA18"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "blue",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-blue-2",
+      "name": "蓝 · 层染",
+      "colors": [
+        "#FBFDFF",
+        "#D5EFFF",
+        "#ACD8FC",
+        "#0588F0",
+        "#113264",
+        "#E2A336"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "blue",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-blue-3",
+      "name": "蓝 · 点睛",
+      "colors": [
+        "#F4FAFF",
+        "#C2E5FF",
+        "#5EB1EF",
+        "#0588F0",
+        "#113264",
+        "#AB6400"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "blue",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-cyan-0",
+      "name": "青 · 晨光",
+      "colors": [
+        "#FAFDFE",
+        "#DEF7F9",
+        "#B5E9F0",
+        "#3DB9CF",
+        "#107D98",
+        "#E93D82"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "cyan",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-cyan-1",
+      "name": "青 · 雅韵",
+      "colors": [
+        "#F2FAFB",
+        "#CAF1F6",
+        "#7DCEDC",
+        "#00A2C7",
+        "#0D3C48",
+        "#DF3478"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "cyan",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-cyan-2",
+      "name": "青 · 层染",
+      "colors": [
+        "#FAFDFE",
+        "#CAF1F6",
+        "#9DDDE7",
+        "#0797B9",
+        "#0D3C48",
+        "#E093B2"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "cyan",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-cyan-3",
+      "name": "青 · 点睛",
+      "colors": [
+        "#F2FAFB",
+        "#B5E9F0",
+        "#3DB9CF",
+        "#0797B9",
+        "#0D3C48",
+        "#CB1D63"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "cyan",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-teal-0",
+      "name": "水鸭青 · 晨光",
+      "colors": [
+        "#FAFEFD",
+        "#E0F8F3",
+        "#B8EAE0",
+        "#53B9AB",
+        "#008573",
+        "#D6409F"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "teal",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-teal-1",
+      "name": "水鸭青 · 雅韵",
+      "colors": [
+        "#F3FBF9",
+        "#CCF3EA",
+        "#83CDC1",
+        "#12A594",
+        "#0D3D38",
+        "#CF3897"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "teal",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-teal-2",
+      "name": "水鸭青 · 层染",
+      "colors": [
+        "#FAFEFD",
+        "#CCF3EA",
+        "#A1DED2",
+        "#0D9B8A",
+        "#0D3D38",
+        "#DD93C2"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "teal",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-teal-3",
+      "name": "水鸭青 · 点睛",
+      "colors": [
+        "#F3FBF9",
+        "#B8EAE0",
+        "#53B9AB",
+        "#0D9B8A",
+        "#0D3D38",
+        "#C2298A"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "teal",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-jade-0",
+      "name": "玉绿 · 晨光",
+      "colors": [
+        "#FBFEFD",
+        "#E6F7ED",
+        "#C3E9D7",
+        "#56BA9F",
+        "#208368",
+        "#E54666"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "jade",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-jade-1",
+      "name": "玉绿 · 雅韵",
+      "colors": [
+        "#F4FBF7",
+        "#D6F1E3",
+        "#8BCEB6",
+        "#29A383",
+        "#1D3B31",
+        "#DC3B5D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "jade",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-jade-2",
+      "name": "玉绿 · 层染",
+      "colors": [
+        "#FBFEFD",
+        "#D6F1E3",
+        "#ACDEC8",
+        "#26997B",
+        "#1D3B31",
+        "#E592A3"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "jade",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-jade-3",
+      "name": "玉绿 · 点睛",
+      "colors": [
+        "#F4FBF7",
+        "#C3E9D7",
+        "#56BA9F",
+        "#26997B",
+        "#1D3B31",
+        "#CA244D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "jade",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-green-0",
+      "name": "草绿 · 晨光",
+      "colors": [
+        "#FBFEFC",
+        "#E6F6EB",
+        "#C4E8D1",
+        "#5BB98B",
+        "#218358",
+        "#E54D2E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "green",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-green-1",
+      "name": "草绿 · 雅韵",
+      "colors": [
+        "#F4FBF6",
+        "#D6F1DF",
+        "#8ECEAA",
+        "#30A46C",
+        "#193B2D",
+        "#DD4425"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "green",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-green-2",
+      "name": "草绿 · 层染",
+      "colors": [
+        "#FBFEFC",
+        "#D6F1DF",
+        "#ADDDC0",
+        "#2B9A66",
+        "#193B2D",
+        "#EC8E7B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "green",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-green-3",
+      "name": "草绿 · 点睛",
+      "colors": [
+        "#F4FBF6",
+        "#C4E8D1",
+        "#5BB98B",
+        "#2B9A66",
+        "#193B2D",
+        "#D13415"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "green",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-grass-0",
+      "name": "青草绿 · 晨光",
+      "colors": [
+        "#FBFEFB",
+        "#E9F6E9",
+        "#C9E8CA",
+        "#65BA74",
+        "#2A7E3B",
+        "#6E56CF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "grass",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-grass-1",
+      "name": "青草绿 · 雅韵",
+      "colors": [
+        "#F5FBF5",
+        "#DAF1DB",
+        "#94CE9A",
+        "#46A758",
+        "#203C25",
+        "#654DC4"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "grass",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-grass-2",
+      "name": "青草绿 · 层染",
+      "colors": [
+        "#FBFEFB",
+        "#DAF1DB",
+        "#B2DDB5",
+        "#3E9B4F",
+        "#203C25",
+        "#AA99EC"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "grass",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-grass-3",
+      "name": "青草绿 · 点睛",
+      "colors": [
+        "#F5FBF5",
+        "#C9E8CA",
+        "#65BA74",
+        "#3E9B4F",
+        "#203C25",
+        "#6550B9"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "grass",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-brown-0",
+      "name": "棕 · 晨光",
+      "colors": [
+        "#FEFDFC",
+        "#F6EEE7",
+        "#EBDACA",
+        "#CEA37E",
+        "#815E46",
+        "#7CE2FE"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "brown",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-brown-1",
+      "name": "棕 · 雅韵",
+      "colors": [
+        "#FCF9F6",
+        "#F0E4D9",
+        "#DCBC9F",
+        "#AD7F58",
+        "#3E332E",
+        "#74DAF8"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "brown",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-brown-2",
+      "name": "棕 · 层染",
+      "colors": [
+        "#FEFDFC",
+        "#F0E4D9",
+        "#E4CDB7",
+        "#A07553",
+        "#3E332E",
+        "#60B3D7"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "brown",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-brown-3",
+      "name": "棕 · 点睛",
+      "colors": [
+        "#FCF9F6",
+        "#EBDACA",
+        "#CEA37E",
+        "#A07553",
+        "#3E332E",
+        "#00749E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "brown",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-bronze-0",
+      "name": "古铜 · 晨光",
+      "colors": [
+        "#FDFCFC",
+        "#F6EDEA",
+        "#E7D9D3",
+        "#C2A499",
+        "#7D5E54",
+        "#12A594"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "bronze",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-bronze-1",
+      "name": "古铜 · 雅韵",
+      "colors": [
+        "#FDF7F5",
+        "#EFE4DF",
+        "#D3BCB3",
+        "#A18072",
+        "#43302B",
+        "#0D9B8A"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "bronze",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-bronze-2",
+      "name": "古铜 · 层染",
+      "colors": [
+        "#FDFCFC",
+        "#EFE4DF",
+        "#DFCDC5",
+        "#957468",
+        "#43302B",
+        "#53B9AB"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "bronze",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-bronze-3",
+      "name": "古铜 · 点睛",
+      "colors": [
+        "#FDF7F5",
+        "#E7D9D3",
+        "#C2A499",
+        "#957468",
+        "#43302B",
+        "#008573"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "bronze",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gold-0",
+      "name": "金 · 晨光",
+      "colors": [
+        "#FDFDFC",
+        "#F2F0E7",
+        "#E1DCCF",
+        "#B9A88D",
+        "#71624B",
+        "#3E63DD"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gold",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gold-1",
+      "name": "金 · 雅韵",
+      "colors": [
+        "#FAF9F2",
+        "#EAE6DB",
+        "#CBC0AA",
+        "#978365",
+        "#3B352B",
+        "#3358D4"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gold",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gold-2",
+      "name": "金 · 层染",
+      "colors": [
+        "#FDFDFC",
+        "#EAE6DB",
+        "#D8D0BF",
+        "#8C7A5E",
+        "#3B352B",
+        "#8DA4EF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gold",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-gold-3",
+      "name": "金 · 点睛",
+      "colors": [
+        "#FAF9F2",
+        "#E1DCCF",
+        "#B9A88D",
+        "#8C7A5E",
+        "#3B352B",
+        "#3A5BC7"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "gold",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sky-0",
+      "name": "天蓝 · 晨光",
+      "colors": [
+        "#F9FEFF",
+        "#E1F6FD",
+        "#BEE7F5",
+        "#60B3D7",
+        "#00749E",
+        "#E54D2E"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sky",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sky-1",
+      "name": "天蓝 · 雅韵",
+      "colors": [
+        "#F1FAFD",
+        "#D1F0FA",
+        "#8DCAE3",
+        "#7CE2FE",
+        "#1D3E56",
+        "#DD4425"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sky",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sky-2",
+      "name": "天蓝 · 层染",
+      "colors": [
+        "#F9FEFF",
+        "#D1F0FA",
+        "#A9DAED",
+        "#74DAF8",
+        "#1D3E56",
+        "#EC8E7B"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sky",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-sky-3",
+      "name": "天蓝 · 点睛",
+      "colors": [
+        "#F1FAFD",
+        "#BEE7F5",
+        "#60B3D7",
+        "#74DAF8",
+        "#1D3E56",
+        "#D13415"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "sky",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mint-0",
+      "name": "薄荷 · 晨光",
+      "colors": [
+        "#F9FEFD",
+        "#DDF9F2",
+        "#B3ECDE",
+        "#4CBBA5",
+        "#027864",
+        "#E54666"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mint",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mint-1",
+      "name": "薄荷 · 雅韵",
+      "colors": [
+        "#F2FBF9",
+        "#C8F4E9",
+        "#7ECFBD",
+        "#86EAD4",
+        "#16433C",
+        "#DC3B5D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mint",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mint-2",
+      "name": "薄荷 · 层染",
+      "colors": [
+        "#F9FEFD",
+        "#C8F4E9",
+        "#9CE0D0",
+        "#7DE0CB",
+        "#16433C",
+        "#E592A3"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mint",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-mint-3",
+      "name": "薄荷 · 点睛",
+      "colors": [
+        "#F2FBF9",
+        "#B3ECDE",
+        "#4CBBA5",
+        "#7DE0CB",
+        "#16433C",
+        "#CA244D"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "mint",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-lime-0",
+      "name": "青柠 · 晨光",
+      "colors": [
+        "#FCFDFA",
+        "#EEF6D6",
+        "#D3E7A6",
+        "#8DB654",
+        "#5C7C2F",
+        "#8E4EC6"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "lime",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-lime-1",
+      "name": "青柠 · 雅韵",
+      "colors": [
+        "#F8FAF3",
+        "#E2F0BD",
+        "#ABC978",
+        "#BDEE63",
+        "#37401C",
+        "#8347B9"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "lime",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-lime-2",
+      "name": "青柠 · 层染",
+      "colors": [
+        "#FCFDFA",
+        "#E2F0BD",
+        "#C2DA91",
+        "#B0E64C",
+        "#37401C",
+        "#BE93E4"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "lime",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-lime-3",
+      "name": "青柠 · 点睛",
+      "colors": [
+        "#F8FAF3",
+        "#D3E7A6",
+        "#8DB654",
+        "#B0E64C",
+        "#37401C",
+        "#8145B5"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "lime",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-yellow-0",
+      "name": "黄 · 晨光",
+      "colors": [
+        "#FDFDF9",
+        "#FFFAB8",
+        "#FFE770",
+        "#D5AE39",
+        "#9E6C00",
+        "#3E63DD"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "yellow",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-yellow-1",
+      "name": "黄 · 雅韵",
+      "colors": [
+        "#FEFCE9",
+        "#FFF394",
+        "#E4C767",
+        "#FFE629",
+        "#473B1F",
+        "#3358D4"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "yellow",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-yellow-2",
+      "name": "黄 · 层染",
+      "colors": [
+        "#FDFDF9",
+        "#FFF394",
+        "#F3D768",
+        "#FFDC00",
+        "#473B1F",
+        "#8DA4EF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "yellow",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-yellow-3",
+      "name": "黄 · 点睛",
+      "colors": [
+        "#FEFCE9",
+        "#FFE770",
+        "#D5AE39",
+        "#FFDC00",
+        "#473B1F",
+        "#3A5BC7"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "yellow",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-amber-0",
+      "name": "琥珀 · 晨光",
+      "colors": [
+        "#FEFDFB",
+        "#FFF7C2",
+        "#FBE577",
+        "#E2A336",
+        "#AB6400",
+        "#0090FF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "amber",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-amber-1",
+      "name": "琥珀 · 雅韵",
+      "colors": [
+        "#FEFBE9",
+        "#FFEE9C",
+        "#E9C162",
+        "#FFC53D",
+        "#4F3422",
+        "#0588F0"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "amber",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-amber-2",
+      "name": "琥珀 · 层染",
+      "colors": [
+        "#FEFDFB",
+        "#FFEE9C",
+        "#F3D673",
+        "#FFBA18",
+        "#4F3422",
+        "#5EB1EF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "amber",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-amber-3",
+      "name": "琥珀 · 点睛",
+      "colors": [
+        "#FEFBE9",
+        "#FBE577",
+        "#E2A336",
+        "#FFBA18",
+        "#4F3422",
+        "#0D74CE"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "amber",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-orange-0",
+      "name": "橙 · 晨光",
+      "colors": [
+        "#FEFCFB",
+        "#FFEFD6",
+        "#FFD19A",
+        "#EC9455",
+        "#CC4E00",
+        "#0090FF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "orange",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-orange-1",
+      "name": "橙 · 雅韵",
+      "colors": [
+        "#FFF7ED",
+        "#FFDFB5",
+        "#F5AE73",
+        "#F76B15",
+        "#582D1D",
+        "#0588F0"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "orange",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-orange-2",
+      "name": "橙 · 层染",
+      "colors": [
+        "#FEFCFB",
+        "#FFDFB5",
+        "#FFC182",
+        "#EF5F00",
+        "#582D1D",
+        "#5EB1EF"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "orange",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    },
+    {
+      "id": "radix-orange-3",
+      "name": "橙 · 点睛",
+      "colors": [
+        "#FFF7ED",
+        "#FFD19A",
+        "#EC9455",
+        "#EF5F00",
+        "#582D1D",
+        "#0D74CE"
+      ],
+      "source": "radix-derived",
+      "sourceUrl": "https://github.com/radix-ui/colors",
+      "license": "MIT (base colors), combination by Lihuaji",
+      "family": "orange",
+      "description": "由 Radix Colors 标准色阶与互补色系组合的当代设计参考，不是历史原物配色或馆方认证。"
+    }
+  ]
+}
