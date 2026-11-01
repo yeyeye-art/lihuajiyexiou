@@ -1,0 +1,781 @@
+/* 梨花季·绣境奇遇 / Match-three Act I
+   Scoped, interactive Suzhou embroidery game scene — not a static screenshot.
+   The carved frame is a standalone SVG and NEVER captures tile input. */
+.motif-park.world-match-battle{--match-wood:#74533c;--match-linen:#f7f0e2;--match-gold:#c6aa78;--match-ink:#3f5a4f;
+ width:min(97vw,1480px);max-width:none;margin:0 auto 24px;position:relative;left:50%;transform:translateX(-50%);isolation:isolate;
+ padding:18px 24px 30px!important;background:
+ linear-gradient(95deg,#f8f6ef7a,#f8f6ef20 44%,#f8f6ef99),
+ url('./pear-garden-scene.svg') center 37%/cover no-repeat!important;
+ box-shadow:0 19px 45px #30493622;overflow:hidden;border:1px solid #d6c6aa!important}
+.world-match-battle::before{position:absolute;inset:0;content:'';z-index:-1;pointer-events:none;
+ background:linear-gradient(0deg,#f8f6ef9c,transparent 22%,transparent 75%,#f8f6efc4)!important}
+.world-match-battle .park-play-heading{display:flex;align-items:center;gap:14px;margin:0 0 8px;position:relative;z-index:3}
+.world-match-battle .park-play-heading .park-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px}
+.world-match-battle .park-play-heading .park-heading h2{font:normal 26px/1.4 var(--serif);letter-spacing:.06em;color:#453c2f}
+.world-match-battle .park-play-heading .park-heading p{font-size:11px;max-width:570px}
+.world-match-battle .park-back{background:#faf4e9eb!important;color:#534434!important;
+ border:1px solid #c5ad86!important;border-radius:18px!important;box-shadow:0 3px 9px #3f503c25!important;font:normal 12px var(--serif)}
+.world-match-battle .park-scoreboard{margin:6px 0 15px!important;display:flex;justify-content:flex-end;gap:13px;
+ border:0!important;background:none!important;box-shadow:none!important;padding:0!important}
+.world-match-battle .park-scoreboard>div{background:#fdf8eddf;border:1px solid #d7bea0;border-radius:22px;
+ padding:7px 15px;color:#675c4e;font-size:12px;box-shadow:0 3px 9px #48584221}
+.world-match-battle .park-scoreboard b{color:#a55340!important;font-size:18px}
+.world-match-battle .park-instructions{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+ clip-path:inset(50%);overflow:hidden;border:0}
+.world-match-experience{display:grid;grid-template-columns:minmax(178px,.78fr) minmax(370px,1.65fr) minmax(199px,.81fr);
+ grid-template-areas:'story board mission' 'guide guide guide';gap:17px;align-items:start;position:relative;z-index:2}
+.world-match-story{grid-area:story;position:relative;min-width:0;padding:22px 17px 16px;
+ border-left:2px solid #b9a17e;background:linear-gradient(100deg,#f9f5e7f2,#f8f6e5c9 73%,transparent);
+ color:#564c3a}
+.world-match-story .world-match-chapter{font-size:11px;letter-spacing:.14em;color:#8a7253}
+.world-match-story h3{font:normal clamp(27px,2.6vw,40px)/1.3 var(--serif);letter-spacing:.06em;color:#443929;margin:9px 0 3px}
+.world-match-story h4{font:normal 19px/1.5 var(--serif);color:#526e5b;margin:0 0 14px}
+.world-match-story p{font-size:13px;line-height:1.9;color:#675e50;max-width:255px;margin:0}
+.world-match-story .world-match-story-art{width:100%;max-width:225px;display:block;object-fit:contain;
+ filter:drop-shadow(0 9px 6px #485f4540);margin:11px auto -5px}
+.world-match-story .world-match-seal{display:inline-block;margin-top:4px;letter-spacing:.15em;
+ font:normal 11px var(--serif);color:#a86a55;border-top:1px solid #cbb797;padding-top:7px}
+.world-match-stage{grid-area:board;position:relative;min-width:0;margin:0!important;padding:38px 33px 41px!important;
+ background:linear-gradient(130deg,#fff9ecc9,#e1d3bdc6)!important;
+ border:0!important;border-radius:5px!important;box-shadow:0 12px 30px #354b3f3d!important;isolation:isolate}
+.world-match-wood-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;
+ pointer-events:none;z-index:0;filter:drop-shadow(0 6px 7px #4b392c55);user-select:none}
+.world-match-stage .park-board-overline{position:relative;z-index:2;margin:0 12px 3px;
+ font:normal 11px/1.5 var(--serif);letter-spacing:.05em;color:#61533c;display:flex;justify-content:space-between;gap:7px}
+.world-match-stage #park-match-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(var(--garden-grid-size,6),minmax(0,1fr));
+ aspect-ratio:1;max-width:none;width:100%;height:auto;margin:6px auto!important;padding:8px!important;
+ border:2px solid #e6d2a8!important;outline:1px solid #94785d;outline-offset:2px;border-radius:3px!important;
+ gap:5px!important;background:linear-gradient(135deg,#e6decb,#f8f2e6 45%,#ded3be)!important;
+ box-shadow:inset 0 2px 10px #6a4a3d44,0 0 0 2px #a88c68!important}
+.world-match-stage .park-match-tile{position:relative;border:1px solid #d8c8ad!important;border-radius:7px!important;
+ padding:3px!important;min-width:0;min-height:0;overflow:hidden;touch-action:none;
+ background:linear-gradient(138deg,#fffef8 0%,#f7f0e6 58%,#e4d8c4)!important;
+ box-shadow:0 2px 4px #55493832,inset 0 0 0 1px #fffdfa!important;
+ transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.world-match-stage .park-match-tile:before{content:'';position:absolute;inset:3px;pointer-events:none;
+ border:1px solid #bdad8c55;border-radius:5px}
+.world-match-stage .park-match-tile img{width:100%;height:100%;object-fit:contain;
+ filter:drop-shadow(0 1px 1px #594f4255) saturate(.96)}
+.world-match-stage .park-match-tile .park-piece-paper{width:100%;height:100%;display:grid;place-items:center;min-width:0;min-height:0}
+.world-match-stage .park-match-tile .park-piece-mark{position:absolute;right:4px;bottom:3px;font-size:9px;
+ color:#7b7969;line-height:1;background:#fbf8eacf;border-radius:2px;padding:1px 2px}
+.world-match-stage .park-match-tile.picked{transform:translateY(-2px) scale(1.03)!important;
+ box-shadow:0 0 0 2px #d7a760,0 0 12px #fff3c1!important;background:#fff9ec!important;z-index:3}
+.world-match-stage .park-match-tile.park-hint{outline:2px solid #c08e52;outline-offset:-2px;
+ animation:worldMatchHint 1s ease-in-out infinite}
+.world-match-stage .park-match-tile:focus-visible{outline:3px solid #c95a4a;outline-offset:1px;z-index:4}
+.world-match-stage .park-match-grid.world-resolved .park-match-tile{animation:worldMatchStitch .35s both}
+.world-match-stage .park-match-grid.world-no-match{animation:worldMatchNope .22s ease-out}
+.world-match-stage .park-board-help{position:relative;z-index:2;display:flex;gap:10px;align-items:center;
+ margin:8px 14px 0;flex-wrap:wrap}
+.world-match-stage .park-board-help button{padding:6px 13px!important;border:1px solid #af926a!important;
+ background:#f6ecd9!important;color:#5a5447!important;font:normal 12px var(--serif);
+ border-radius:4px!important;box-shadow:none!important;white-space:nowrap}
+.world-match-stage .park-board-help span{font:normal 11px/1.55 var(--serif);color:#665f4e}
+.world-match-effect{position:absolute;top:46%;left:50%;transform:translate(-50%,-50%);
+ z-index:8;pointer-events:none;white-space:nowrap;font:normal 25px/1.5 var(--serif);
+ color:#9d5440;text-shadow:0 2px 5px #fffcf6,0 0 12px #fffcf6;animation:worldMatchPraise .8s ease-out both}
+.world-match-effect:empty{display:none}
+.world-match-task{grid-area:mission;position:relative;padding:26px 19px 20px;min-width:0;color:#564a3d;
+ border:2px solid #bb9f76;border-radius:18px 18px 7px 7px;
+ background:linear-gradient(160deg,#fffaf0fa,#f7efdfed 72%,#e7dbc7f1);
+ box-shadow:0 7px 24px #344b3d30,inset 0 0 0 3px #fffaf0,inset 0 0 0 5px #caba9d}
+.world-match-task:before{content:'✿';position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+ display:grid;place-items:center;background:#e9ddc5;color:#af8956;border:2px solid #ab8a62;
+ width:38px;height:34px;border-radius:50%;font-size:19px}
+.world-match-task .world-match-task-chapter{display:block;text-align:center;font:normal 14px var(--serif);
+ color:#5d5a48;margin:7px 0 6px}
+.world-match-task h3{text-align:center;font:normal 21px/1.5 var(--serif);margin:0 0 13px;color:#4e4135}
+.world-match-task #world-match-mission{border-top:1px solid #d3c0a7;border-bottom:1px solid #d3c0a7;padding:11px 0}
+.world-match-task .world-match-head,.world-match-task .world-match-scoring{display:grid;grid-template-columns:1fr;
+ gap:5px;text-align:center;font-size:12px;color:#6f6252}
+.world-match-task .world-match-scoring b{font-size:22px;color:#a95640}
+.world-match-task .world-match-track{margin:12px 0;height:14px;border-radius:10px}
+.world-match-task .world-match-track>span{background:linear-gradient(90deg,#c5a575,#5b8770);border-radius:10px}
+.world-match-task .world-match-goal-foot{margin-top:13px;display:block;text-align:center;font:normal 12px/1.8 var(--serif);color:#84755f}
+.world-match-task .world-match-star-decor{text-align:center;letter-spacing:.18em;color:#bc9561;font-size:22px;margin-top:12px}
+.world-match-experience .park-game-guide{grid-area:guide;display:grid;grid-template-columns:1fr 1.4fr;
+ gap:12px 22px;align-items:start;background:linear-gradient(120deg,#faf7eeef,#f5eddfed)!important;
+ border:1px solid #d1bb96!important;border-radius:9px!important;box-shadow:0 5px 12px #37543d22!important;padding:14px 23px!important}
+.world-match-experience .park-game-guide>ol{grid-column:1;grid-row:2;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0;padding:0}
+.world-match-experience .park-game-guide>ol li{list-style:none;font-size:12px;max-width:180px}
+.world-match-experience .park-game-guide .park-guide-reference{grid-column:2;grid-row:1/3;border-left:1px solid #d7c4a9;padding-left:20px}
+.world-match-experience .park-game-guide>p{grid-column:1/-1;margin:0;color:#847866;font-size:10px}
+.world-match-experience .park-game-guide .park-guide-swatches{display:flex;gap:8px;flex-wrap:wrap}
+@keyframes worldMatchStitch{from{transform:translateY(-7px) scale(.92);opacity:.55}to{transform:translateY(0) scale(1);opacity:1}}
+@keyframes worldMatchNope{0%,100%{transform:translateX(0)}33%{transform:translateX(-4px)}67%{transform:translateX(4px)}}
+@keyframes worldMatchHint{50%{box-shadow:0 0 0 3px #ebc38b,0 0 18px #f9d79a!important}}
+@keyframes worldMatchPraise{0%{opacity:0;transform:translate(-50%,-18%) scale(.7)}
+ 20%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-135%) scale(1.1)}}
+@media(max-width:1120px){
+ .world-match-experience{grid-template-columns:minmax(0,1fr) minmax(350px,1.65fr);
+ grid-template-areas:'story board' 'mission board' 'guide guide'}
+ .world-match-story .world-match-story-art{display:none}
+ .world-match-story{padding:15px}
+ .world-match-story h3{font-size:28px}
+ .world-match-task{padding:18px 15px}
+}
+@media(max-width:780px){
+ .motif-park.world-match-battle{width:100%;padding:10px 9px 23px!important}
+ .world-match-experience{grid-template-columns:minmax(0,1fr);grid-template-areas:'story' 'mission' 'board' 'guide';gap:12px}
+ .world-match-story{padding:10px 15px;background:#faf6ebea}
+ .world-match-story h3{font-size:24px;margin:3px 0}
+ .world-match-story h4{font-size:14px;margin:0 0 3px}
+ .world-match-story p,.world-match-story .world-match-seal{display:none}
+ .world-match-task{padding:11px 16px 9px;border-radius:9px}
+ .world-match-task:before{display:none}
+ .world-match-task .world-match-task-chapter,.world-match-task h3{text-align:left;display:inline;margin:0 11px 0 0;font-size:13px}
+ .world-match-task #world-match-mission{padding:5px 0;border-bottom:0}
+ .world-match-task .world-match-head,.world-match-task .world-match-scoring{display:flex;justify-content:space-between;font-size:11px}
+ .world-match-task .world-match-track{margin:6px 0;height:10px}
+ .world-match-task .world-match-goal-foot,.world-match-task .world-match-star-decor{display:none}
+ .world-match-stage{padding:30px 25px 32px!important}
+ .world-match-experience .park-game-guide{display:block;padding:12px 15px!important}
+ .world-match-experience .park-game-guide .park-guide-reference{border-left:0;padding-left:0}
+ .world-match-experience .park-game-guide>ol{display:flex;margin:7px 0}
+ .world-match-battle .park-play-heading .park-heading{display:none}
+ .world-match-battle .park-scoreboard{justify-content:center;gap:7px;margin:3px 0 10px!important}
+ .world-match-battle .park-scoreboard>div{padding:5px 8px;font-size:11px}
+}
+@media(max-width:420px){
+ .world-match-stage{padding:24px 21px 27px!important}
+ .world-match-stage #park-match-grid{padding:4px!important;gap:3px!important}
+ .world-match-stage .park-match-tile{padding:2px!important;border-radius:4px!important}
+ .world-match-stage .park-match-tile:before{inset:1px}
+ .world-match-stage .park-match-tile .park-piece-mark{font-size:7px;right:1px;bottom:1px}
+ .world-match-stage .park-board-overline{font-size:9px;margin:0 2px}
+ .world-match-stage .park-board-help{margin:7px 1px 0}
+ .world-match-task .world-match-scoring b{font-size:15px}
+ .world-match-story h3{font-size:21px}
+}
+@media(prefers-reduced-motion:reduce){
+ .world-match-stage .park-match-grid.world-resolved .park-match-tile,
+ .world-match-stage .park-match-grid.world-no-match,
+ .world-match-effect,.world-match-stage .park-match-tile.park-hint{animation:none!important}
+}
+
+/* Real-result epilogue. All values are emitted from actual saved scores and star grades. */
+.motif-park.world-result{position:relative;left:50%;transform:translateX(-50%);width:min(97vw,1350px);
+ max-width:none;min-height:660px;overflow:hidden;isolation:isolate;padding:46px 24px 42px!important;
+ background:linear-gradient(100deg,#f8f5ed50,#fff9eb7b 50%,#f8f3e8c5),
+ url('./pear-garden-scene.svg') center 60%/cover no-repeat!important;
+ border:1px solid #ceb995!important;border-radius:0!important;box-shadow:0 17px 35px #4d534333!important}
+.motif-park.world-result:before{position:absolute;left:26%;right:26%;top:5%;bottom:22%;height:auto!important;width:auto!important;
+ content:'';z-index:-1;background:linear-gradient(130deg,#fffdf4f9,#f8f0dfed)!important;
+ border:7px double #c2a682!important;box-shadow:0 10px 22px #6d584547!important;
+ border-radius:19px 19px 6px 6px}
+.world-result .park-heading{position:relative;z-index:3;max-width:440px;margin:0 auto 5px!important;
+ text-align:center}
+.world-result .park-heading h2{font:normal clamp(28px,3.4vw,51px)/1.3 var(--serif)!important;color:#49372c!important;
+ letter-spacing:.13em}
+.world-result .park-heading p{font-size:12px!important;color:#7f6955!important;line-height:1.8}
+.world-result .park-win-symbol{position:relative;z-index:3;font-size:31px!important;margin:7px auto!important;
+ width:54px;height:54px;display:grid;place-items:center;color:#c69d61!important;
+ background:#faf3df;border:2px solid #d6b780;border-radius:50%;box-shadow:0 3px 8px #554c3633}
+.world-result .park-result-stars{position:relative;z-index:3;font-size:clamp(35px,4.2vw,61px)!important;
+ letter-spacing:.08em;text-shadow:0 3px 2px #fff6df,0 0 8px #ffd99754}
+.world-result .world-result-score,.world-result .world-earned-reward{position:relative;z-index:3}
+.world-result .world-result-score strong{color:#a95642!important;font-size:clamp(44px,5vw,71px)!important}
+.world-result .world-earned-reward{border-radius:8px!important;min-width:210px;box-shadow:0 2px 10px #74694d22}
+.world-result .world-result-side-art{position:absolute;left:1%;bottom:14%;width:27%;z-index:1;pointer-events:none}
+.world-result .world-result-side-art img{display:block;width:100%;filter:drop-shadow(0 10px 8px #40504155)}
+.world-result .world-result-ledger{position:absolute;right:2%;top:25%;width:22%;z-index:2;min-width:215px;
+ border:2px solid #b59b74;border-radius:9px;padding:20px 13px;background:linear-gradient(#fdf8ebf9,#eee1cdf7);
+ box-shadow:0 7px 19px #3f4b393f,inset 0 0 0 3px #fff8e9}
+.world-result .world-result-ledger h3{font:normal 23px/1.4 var(--serif);color:#554632;text-align:center;
+ letter-spacing:.09em;margin:0 0 12px}
+.world-result .world-result-ledger dl{margin:0;padding:0;display:grid;gap:8px}
+.world-result .world-result-ledger dl>div{display:flex;align-items:center;justify-content:space-between;
+ gap:9px;padding:8px 2px;border-bottom:1px solid #d5c3aa}
+.world-result .world-result-ledger dt{font-size:12px;color:#706758}
+.world-result .world-result-ledger dd{margin:0;font:normal 17px Georgia,serif;color:#a95741;white-space:nowrap}
+.world-result .world-result-record{display:block;text-align:center;font:normal 13px/1.7 var(--serif);
+ padding:10px;color:#a05442}
+.world-result .park-result-actions{position:relative;z-index:4;gap:12px;
+ padding:0 18px;justify-content:center;margin-top:23px!important}
+.world-result .park-result-actions button{border:1px solid #a58b68!important;background:#f8efdeed!important;
+ border-radius:9px!important;color:#5b4d3f!important;box-shadow:0 3px 7px #3b544130!important;
+ font:normal 15px var(--serif)!important;min-height:51px}
+.world-result .park-result-actions button#park-next{background:linear-gradient(#c87d5d,#a64b3d)!important;
+ color:#fffaf3!important;border:2px solid #e7c59d!important;min-width:170px;font-size:20px!important}
+.world-result .park-disclosure{position:relative;z-index:4;font-size:11px;color:#7e7467}
+@media(max-width:980px){
+ .world-result .world-result-side-art{width:20%;bottom:19%}
+ .world-result .world-result-ledger{right:2%;min-width:190px;width:25%;top:31%}
+ .motif-park.world-result:before{left:19%;right:22%}
+}
+@media(max-width:720px){
+ .motif-park.world-result{width:100%;left:auto;transform:none;padding:20px 11px 30px!important}
+ .motif-park.world-result:before{left:3%;right:3%;top:2%;bottom:8%}
+ .world-result .world-result-side-art{display:none}
+ .world-result .world-result-ledger{position:relative;right:auto;top:auto;min-width:0;
+ width:min(100%,340px);margin:16px auto 0;padding:10px 15px}
+ .world-result .world-result-ledger dl{grid-template-columns:1fr 1fr;gap:5px 12px}
+ .world-result .world-result-ledger dl>div{padding:6px 1px}
+ .world-result .world-result-ledger h3{font-size:19px}
+ .world-result .world-result-ledger dd{font-size:13px}
+ .world-result .park-result-actions{padding:0 5px}
+ .world-result .park-result-actions button{font-size:13px!important;min-height:44px}
+}
+
+/* Visual acceptance correction: six archival patterns are small game icons, never poster-size cards. */
+.world-match-experience .park-game-guide .park-guide-swatches{
+ display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;
+ gap:8px!important;width:100%;max-width:600px;align-items:start;
+}
+.world-match-experience .park-game-guide .park-guide-swatches>span{
+ display:grid!important;place-items:center!important;width:100%!important;max-width:100%!important;
+ height:auto!important;max-height:75px!important;min-height:0!important;aspect-ratio:1/1!important;
+ overflow:hidden;flex:none!important;padding:3px!important;box-sizing:border-box!important;
+ background:linear-gradient(#fffdf7,#f3eee4)!important;border:1px solid #d8c5a7!important;
+}
+.world-match-experience .park-game-guide .park-guide-swatches img{
+ width:80%!important;height:80%!important;max-width:58px!important;max-height:58px!important;
+ object-fit:contain!important;min-width:0!important;min-height:0!important;
+}
+.world-match-experience .park-game-guide .park-guide-swatches small{font-size:8px!important}
+@media(max-width:480px){
+ .world-match-experience .park-game-guide .park-guide-swatches{gap:4px!important}
+ .world-match-experience .park-game-guide .park-guide-swatches>span{max-height:56px!important}
+ .world-match-experience .park-game-guide .park-guide-swatches img{max-height:44px!important;max-width:44px!important}
+}
+
+
+/* Art pass 03: wide-screen GAME SURFACE. Keep the real DOM board and gameplay states,
+   but use a near-16:9 scene composition, rather than a tall informational webpage. */
+@media (min-width:1140px){
+ .motif-park.world-match-battle{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-rows:auto auto auto;
+  gap:6px 14px;
+  align-items:start;
+  padding:10px 20px 15px!important;
+  min-height:0!important;
+  overflow:visible;
+ }
+ .world-match-battle .park-play-heading{
+  grid-column:1;grid-row:1;display:flex;
+  align-items:center;gap:13px;margin:0!important;min-height:49px
+ }
+ .world-match-battle .park-play-heading .park-heading{
+  display:flex;align-items:center;gap:10px;margin:0!important
+ }
+ .world-match-battle .park-play-heading .park-heading>span{display:none}
+ .world-match-battle .park-play-heading .park-heading h2{
+  font-size:23px!important;white-space:nowrap;margin:0
+ }
+ .world-match-battle .park-play-heading .park-heading p{
+  margin:0;max-width:365px;font-size:10px;line-height:1.35
+ }
+ .world-match-battle .park-scoreboard{
+  grid-column:2;grid-row:1;display:flex;justify-content:end;
+  margin:0!important;padding:0!important;gap:8px;
+  align-self:center;flex-wrap:nowrap!important
+ }
+ .world-match-battle .park-scoreboard>div{
+  white-space:nowrap;padding:6px 11px;font-size:11px;
+  box-shadow:0 3px 6px #53624724
+ }
+ .world-match-battle .park-scoreboard b{font-size:15px}
+ .world-match-battle .world-match-experience{
+  grid-column:1/-1;grid-row:2;display:grid;
+  grid-template-columns:minmax(190px,250px) minmax(440px,530px) minmax(195px,250px);
+  grid-template-areas:'story board mission' 'guide guide guide';
+  justify-content:space-between;
+  align-items:start;
+  gap:10px 12px;
+ }
+ .world-match-battle .world-match-stage{
+  padding:31px 26px 29px!important;
+  width:100%;max-width:530px;min-width:0
+ }
+ .world-match-battle .world-match-stage #park-match-grid{
+  margin:4px auto!important;padding:6px!important;gap:4px!important
+ }
+ .world-match-battle .world-match-stage .park-board-overline{
+  margin:0 7px 2px;font-size:10px
+ }
+ .world-match-battle .world-match-stage .park-board-help{
+  margin:6px 4px 0;flex-wrap:nowrap;gap:8px
+ }
+ .world-match-battle .world-match-stage .park-board-help button{
+  padding:5px 9px!important;font-size:11px
+ }
+ .world-match-battle .world-match-stage .park-board-help span{
+  font-size:10px;line-height:1.4
+ }
+ .world-match-battle .world-match-story{
+  border-left:none;padding:17px 15px 12px;align-self:start;
+  background:linear-gradient(90deg,#fbf7e8ee,#fbf7e8b1 78%,transparent);
+ }
+ .world-match-battle .world-match-story h3{font-size:31px;margin:3px 0}
+ .world-match-battle .world-match-story h4{font-size:17px;margin-bottom:7px}
+ .world-match-battle .world-match-story p{font-size:12px;line-height:1.65}
+ .world-match-battle .world-match-story .world-match-story-art{
+  width:83%;max-width:182px;max-height:170px;margin:3px auto -3px
+ }
+ .world-match-battle .world-match-story .world-match-seal{
+  margin-top:2px;font-size:10px
+ }
+ .world-match-battle .world-match-task{
+  width:100%;padding:20px 11px 13px;
+  border-radius:12px 12px 6px 6px
+ }
+ .world-match-battle .world-match-task .world-match-task-chapter{font-size:11px}
+ .world-match-battle .world-match-task h3{font-size:18px;margin:0 0 7px}
+ .world-match-battle .world-match-task #world-match-mission{padding:8px 0}
+ .world-match-battle .world-match-task .world-match-scoring{margin:4px 0}
+ .world-match-battle .world-match-task .world-match-scoring b{font-size:17px}
+ .world-match-battle .world-match-task .world-match-star-decor{
+  margin-top:7px;font-size:17px
+ }
+ .world-match-battle .world-match-task .world-match-goal-foot{
+  margin-top:5px;font-size:10px;line-height:1.4
+ }
+ /* One integrated instrument strip: instructions and motif legend, not two giant page panels. */
+ .world-match-battle .world-match-experience .park-game-guide{
+  grid-area:guide;display:grid!important;
+  grid-template-columns:115px minmax(0,1fr) minmax(350px,460px);
+  grid-template-rows:auto;
+  align-items:center;gap:8px 12px;
+  min-height:85px;max-height:104px;
+  margin:0!important;padding:8px 13px!important;
+  border:1px solid #d2b995!important;
+  background:linear-gradient(100deg,#fbf7ecef,#f4ebdbef)!important;
+  overflow:hidden;
+ }
+ .world-match-battle .world-match-experience .park-guide-kicker{
+  grid-column:1;grid-row:1;border:0;padding:0;
+  font-size:10px;line-height:1.5;letter-spacing:.035em
+ }
+ .world-match-battle .world-match-experience .park-game-guide>ol{
+  grid-column:2;grid-row:1;display:flex!important;
+  justify-content:space-around;gap:5px;
+  padding:0;margin:0;border:0;flex-wrap:nowrap!important
+ }
+ .world-match-battle .world-match-experience .park-game-guide>ol li{
+  display:flex;align-items:center;gap:4px;white-space:nowrap;
+  margin:0;font-size:10px;line-height:1.3
+ }
+ .world-match-battle .world-match-experience .park-game-guide>ol li b{
+  font-size:11px;margin-right:0
+ }
+ .world-match-battle .world-match-experience .park-guide-reference{
+  grid-column:3;grid-row:1;display:flex;align-items:center;gap:9px;
+  border:0;border-left:1px solid #d6c4a6;padding:0 0 0 12px;
+  margin:0!important;min-width:0
+ }
+ .world-match-battle .world-match-experience .park-guide-reference>strong{
+  font-size:11px!important;line-height:1.4;
+  white-space:nowrap;margin:0
+ }
+ .world-match-battle .world-match-experience .park-guide-swatches{
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  flex:1;min-width:0;gap:5px!important
+ }
+ .world-match-battle .world-match-experience .park-guide-swatches>span{
+  height:54px!important;max-height:54px!important;width:54px!important;
+  max-width:100%!important;
+ }
+ .world-match-battle .world-match-experience .park-guide-swatches img{
+  max-width:40px!important;max-height:40px!important
+ }
+ .world-match-battle .world-match-experience .park-game-guide>p{
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip-path:inset(50%);white-space:nowrap
+ }
+ .world-match-battle #park-feedback{
+  grid-column:1/-1;grid-row:3;margin:1px 0 0;
+  padding:5px 12px;font-size:11px;max-height:44px
+ }
+}
+/* Tablets get a more compact two-column scene without reducing the playable tokens. */
+@media (min-width:781px) and (max-width:1139px){
+ .world-match-battle .world-match-experience{
+  grid-template-columns:minmax(200px,1fr) minmax(430px,1.7fr);
+  grid-template-areas:'story board' 'mission board' 'guide guide';
+  gap:12px;
+ }
+ .world-match-battle .world-match-stage{max-width:610px;justify-self:center}
+ .world-match-battle .world-match-story{padding:10px 14px}
+ .world-match-battle .world-match-story .world-match-story-art{display:none}
+ .world-match-battle .world-match-task{padding:14px 12px}
+ .world-match-battle .world-match-experience .park-game-guide{padding:9px 13px!important}
+}
+/* On phones, the board is still the principal interaction surface.
+   Keep the guide compact, and do not turn the game into an unplayable scaled panorama. */
+@media (max-width:780px){
+ .world-match-battle .world-match-story{padding:7px 12px}
+ .world-match-battle .world-match-story h3{font-size:22px;line-height:1.1}
+ .world-match-battle .world-match-story .world-match-chapter{font-size:10px}
+ .world-match-battle .world-match-story h4{margin:0;font-size:13px}
+ .world-match-battle .world-match-stage{padding:27px 24px 30px!important}
+ .world-match-battle .world-match-experience .park-game-guide{padding:10px 12px!important}
+ .world-match-battle .world-match-experience .park-game-guide>ol li{font-size:11px}
+ .world-match-battle .world-match-experience .park-game-guide>p{font-size:10px;margin:5px 0 0}
+}
+
+
+/* Game-only mobile navigation: the website's fixed dock otherwise sits on top
+   of rows 5–8 of the real 8×8 board. The in-game Back control stays available. */
+@media (max-width:760px){
+ body:has(#park-playing[data-park-mode="match3"]) #bottom-nav{
+  display:none!important;
+ }
+ /* No fixed dock means the board may use the whole viewport without obscured tiles. */
+ body:has(#park-playing[data-park-mode="match3"]) .world-match-stage .park-match-tile{
+  scroll-margin-bottom:18px;
+ }
+}
+
+/* Art pass 04: silk applique / thread relief. Original line-drawing shapes are
+   unchanged in the source library; only the Match3 art derivatives get these details. */
+.world-match-stage .park-match-tile .park-piece-paper{position:relative;isolation:isolate}
+.world-match-stage .park-match-tile .park-piece-paper:before{
+ content:'';position:absolute;inset:3px;z-index:-1;pointer-events:none;
+ background:repeating-linear-gradient(98deg,#eee0c634 0 1px,#fffdf828 1px 3px,#d9c6a21e 3px 4px);
+ border-radius:3px;opacity:.8
+}
+.world-match-stage .park-match-tile img{
+ position:relative;z-index:1;
+ filter:drop-shadow(0 1px .7px #644c415d) contrast(1.07);
+}
+.world-match-stage .park-match-tile.picked img{
+ filter:drop-shadow(0 1px 2px #7a5237a0) brightness(1.04) contrast(1.1)
+}
+.world-match-experience .park-guide-reference img{
+ filter:drop-shadow(0 .5px .7px #816c4f66)!important
+}
+
+/* Art pass 05 — separate workshop, silk canopy, landscape and interactive UI layers.
+   Decorations are independently replaceable assets, never the source of interaction. */
+.world-match-battle .world-match-garden-depth,
+.world-match-battle .world-match-garden-foreground{
+ position:absolute;inset:0;display:block;overflow:hidden;pointer-events:none;user-select:none
+}
+.world-match-battle .world-match-garden-depth{z-index:0;opacity:.86}
+.world-match-battle .world-match-garden-foreground{z-index:4;opacity:.82}
+.world-match-battle .world-match-garden-depth img,
+.world-match-battle .world-match-garden-foreground img{
+ display:block;width:100%;height:100%;object-fit:fill;pointer-events:none;user-select:none
+}
+.world-match-battle .park-scoreboard,
+.world-match-battle .park-play-heading,
+.world-match-battle .world-match-experience,
+.world-match-battle .park-feedback{position:relative;z-index:5}
+.world-match-battle .world-match-garden-depth img{filter:saturate(.9) contrast(.98)}
+.world-match-battle .world-match-garden-foreground img{filter:saturate(.83)}
+/* Keep all operation targets above decorative layers, including keyboard focus. */
+.world-match-battle .park-match-tile,
+.world-match-battle #park-match-hint{position:relative;z-index:6}
+@media(max-width:1139px){
+ .world-match-battle .world-match-garden-depth{opacity:.44}
+ .world-match-battle .world-match-garden-foreground{opacity:.39}
+}
+@media(max-width:780px){
+ .world-match-battle .world-match-garden-depth{opacity:.16}
+ .world-match-battle .world-match-garden-foreground{display:none}
+}
+
+/* Act I gameplay animation: each stage comes from pure match-three resolver frames.
+   No animation renders a fake outcome. Pointer events lock only while real gravity resolves. */
+.world-match-stage #park-match-grid[data-match-phase="swap"] .world-match-swapping{
+ z-index:7;
+ animation:worldMatchExchange .125s ease-in-out both;
+}
+.world-match-stage #park-match-grid[data-match-phase="match"] .world-match-vanish{
+ z-index:7;box-shadow:0 0 0 2px #caa361,0 0 14px #e6ca82!important;
+ animation:worldMatchFlare .14s ease-in both;
+}
+.world-match-stage #park-match-grid[data-match-phase="clear"] .park-match-gap{
+ display:block;min-width:0;min-height:0;border-radius:6px;
+ background:radial-gradient(circle,#faf3d97a 4%,#e9d8bf3b 62%,transparent 85%);
+ outline:1px dotted #dbc9a86c;
+ animation:worldMatchEmpty .105s ease-out both
+}
+.world-match-stage #park-match-grid[data-match-phase="fall"] .park-match-tile{
+ animation:worldMatchGravity .17s cubic-bezier(.19,.91,.39,1.1) both;
+ animation-delay:calc(var(--fall-row,0) * 6ms);
+}
+.world-match-stage #park-match-grid[data-match-phase="reshuffle"] .park-match-tile{
+ animation:worldMatchShuffle .2s ease-out both;
+}
+.world-match-stage #park-match-grid[aria-busy="true"]{
+ cursor:progress;
+}
+.world-match-stage #park-match-grid[aria-busy="true"] .park-match-tile{
+ cursor:progress;
+}
+.world-match-stage .park-match-tile:disabled{opacity:1}
+.world-match-stage .park-board-help button:disabled{opacity:.62;cursor:wait}
+@keyframes worldMatchExchange{
+ from{transform:translate(var(--start-x,0%),var(--start-y,0%)) scale(.93);filter:brightness(1.15)}
+ to{transform:translate(0,0) scale(1);filter:brightness(1)}
+}
+@keyframes worldMatchFlare{
+ 0%{opacity:1;transform:scale(1);filter:brightness(1)}
+ 45%{opacity:1;transform:scale(1.14);filter:brightness(1.35)}
+ 100%{opacity:.16;transform:scale(.42);filter:brightness(1.35)}
+}
+@keyframes worldMatchEmpty{
+ from{opacity:.25;transform:scale(.3)}to{opacity:1;transform:scale(1)}
+}
+@keyframes worldMatchGravity{
+ from{opacity:.6;transform:translateY(-38%) scale(.95)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes worldMatchShuffle{
+ from{opacity:.4;transform:scale(.82) rotate(-4deg)}
+ to{opacity:1;transform:scale(1) rotate(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .world-match-stage #park-match-grid .park-match-tile,
+ .world-match-stage #park-match-grid .park-match-gap{
+  animation:none!important;transition:none!important;
+ }
+}
+
+
+/* Silk-floss game feedback — physically follows real matched motif centers.
+   Overlay is separate, decorative, pointer-transparent and never alters the rules. */
+.world-match-stage #park-match-grid .world-match-thread-trails{
+ position:absolute;inset:0;width:100%;height:100%;z-index:8;
+ display:block;overflow:visible;pointer-events:none;user-select:none;
+ filter:drop-shadow(0 0 2px #f5e6ad);
+}
+.world-match-stage .world-match-thread-stitch path{
+ fill:none;stroke:#eac991;stroke-width:3.6;stroke-linecap:round;
+ stroke-dasharray:5 6;stroke-dashoffset:24;
+ paint-order:stroke;animation:worldMatchSilkThread .25s ease-out forwards;
+}
+.world-match-stage .world-match-thread-stitch path:nth-child(2n){
+ stroke:#8eb09b;stroke-width:3.2;animation-delay:45ms;
+}
+.world-match-stage .world-match-thread-petals{
+ fill:#faf0ce;stroke:#d7af7b;stroke-width:1.8;
+}
+.world-match-stage .world-match-thread-petals g{
+ transform-box:fill-box;transform-origin:center;
+ animation:worldMatchPetalGlint .23s ease-out both;
+}
+.world-match-stage .world-match-thread-petals g:nth-child(2n){
+ animation-delay:35ms;
+}
+.world-match-stage .world-match-combo{
+ display:inline-flex;align-items:center;justify-content:center;
+ border-radius:15px;padding:3px 8px!important;
+ border:1px solid #c3aa79;background:#fff1d8ed;
+ color:#915d42;font:normal 12px/1.35 var(--serif);
+ white-space:nowrap;box-shadow:0 1px 5px #856f4c44;
+ animation:worldMatchComboReveal .18s ease-out both;
+}
+.world-match-stage .world-match-combo[hidden]{display:none!important}
+@keyframes worldMatchSilkThread{
+ 0%{stroke-dashoffset:24;opacity:.3}100%{stroke-dashoffset:0;opacity:1}
+}
+@keyframes worldMatchPetalGlint{
+ from{opacity:0;transform:scale(.45) rotate(-18deg)}
+ to{opacity:.97;transform:scale(1) rotate(0)}
+}
+@keyframes worldMatchComboReveal{
+ from{opacity:.3;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}
+}
+/* Stars are earned from the existing real 1–3-star verdict, never simulated awards. */
+.world-result .world-result-star-set{
+ display:inline-flex;gap:clamp(2px,1vw,12px);justify-content:center;
+ align-items:center;white-space:nowrap;
+}
+.world-result .world-result-star{
+ display:inline-block;color:#c29a61;transform-origin:50% 65%;
+}
+.world-result .world-result-star.is-earned{
+ color:#d3a45e;text-shadow:0 1px 1px #fff8e1,0 0 12px #ffdf9b80;
+ animation:worldEarnedStarStitch .46s cubic-bezier(.19,1.3,.45,1) backwards;
+ animation-delay:calc(var(--star-index,0) * 170ms);
+}
+.world-result .world-result-star.is-unearned{
+ color:#a99c84;opacity:.64;
+}
+.world-result .world-earned-reward{
+ animation:worldRewardEnter .44s ease-out .46s both;
+}
+@keyframes worldEarnedStarStitch{
+ from{opacity:.22;transform:scale(.43) rotate(-18deg);filter:brightness(1.25)}
+ 70%{opacity:1;transform:scale(1.19) rotate(6deg)}
+ to{opacity:1;transform:scale(1) rotate(0);filter:brightness(1)}
+}
+@keyframes worldRewardEnter{
+ from{opacity:.42;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .world-match-stage .world-match-thread-stitch path,
+ .world-match-stage .world-match-thread-petals g,
+ .world-match-stage .world-match-combo,
+ .world-result .world-result-star.is-earned,
+ .world-result .world-earned-reward{animation:none!important;transition:none!important}
+}
+
+
+/* Act I mobile play surface: the real Match3 board must be encountered first.
+   This is scoped to an active match only; map, other five games and site pages
+   retain their own chrome and footer when users leave the battle. */
+.world-match-mobile-how{display:none}
+@media(max-width:760px){
+ body:has(#park-playing[data-park-mode="match3"]) #site-header,
+ body:has(#park-playing[data-park-mode="match3"]) .workspace>footer,
+ body:has(#park-playing[data-park-mode="match3"]) #bottom-nav{
+  display:none!important;
+ }
+ body:has(#park-playing[data-park-mode="match3"]) #main{
+  padding:0!important;margin:0!important;max-width:none!important;
+ }
+ body:has(#park-playing[data-park-mode="match3"]) .workspace{
+  min-width:0!important;
+ }
+ .motif-park.world-match-battle{
+  width:100%!important;max-width:none!important;left:auto!important;
+  transform:none!important;margin:0 auto 8px!important;
+  padding:8px 8px 13px!important;border:0!important;
+  box-shadow:none!important;background-position:center 32%!important;
+ }
+ .world-match-battle .park-play-heading{
+  display:flex!important;align-items:center!important;
+  margin:0!important;min-height:31px;gap:6px;
+ }
+ .world-match-battle .park-back{
+  min-height:31px!important;padding:4px 12px!important;
+  font-size:11px!important;border-radius:19px!important;
+ }
+ /* Score, target and steps are already present in the live mission panel. */
+ .world-match-battle .park-scoreboard{display:none!important}
+ .world-match-battle .park-play-heading .park-heading{display:none!important}
+ .world-match-battle .world-match-experience{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  grid-template-areas:'story' 'mission' 'board' 'guide'!important;
+  gap:6px!important;margin:0!important;
+ }
+ .world-match-battle .world-match-story{
+  display:flex!important;align-items:baseline;justify-content:center;gap:10px;
+  min-height:28px;padding:2px 9px!important;margin:0!important;
+  background:transparent!important;border:0!important;text-align:center;
+ }
+ .world-match-battle .world-match-story h3{
+  margin:0!important;font-size:19px!important;line-height:1.4!important;
+  white-space:nowrap
+ }
+ .world-match-battle .world-match-story h4{
+  margin:0!important;font-size:12px!important;line-height:1.3!important;
+ }
+ .world-match-battle .world-match-story .world-match-chapter,
+ .world-match-battle .world-match-story p,
+ .world-match-battle .world-match-story img,
+ .world-match-battle .world-match-story .world-match-seal{display:none!important}
+ .world-match-battle .world-match-task{
+  padding:6px 11px 7px!important;border-radius:8px!important;
+  border:1px solid #c2a986!important;
+  background:linear-gradient(120deg,#fdf8edea,#eee5d6de)!important;
+  box-shadow:0 2px 7px #52634327!important;min-height:0!important;
+ }
+ .world-match-battle .world-match-task>h3,
+ .world-match-battle .world-match-task>.world-match-task-chapter,
+ .world-match-battle .world-match-task:before{display:none!important}
+ .world-match-battle #world-match-mission{padding:0!important;margin:0!important}
+ .world-match-battle .world-match-head,
+ .world-match-battle .world-match-scoring{margin:0!important;gap:8px;font-size:11px!important}
+ .world-match-battle .world-match-track{height:6px!important;margin:4px 0!important}
+ .world-match-battle .world-match-task .world-match-scoring b{font-size:12px!important}
+ .world-match-battle .world-match-stage{
+  padding:23px 16px 22px!important;min-height:0!important;
+  margin:0!important;box-shadow:0 6px 15px #5147392c!important;
+ }
+ .world-match-battle .world-match-stage #park-match-grid{
+  padding:4px!important;gap:3px!important;margin:3px auto!important;
+  width:100%!important;
+ }
+ .world-match-battle .world-match-stage .park-board-overline{
+  padding:0!important;margin:0 2px 2px!important;line-height:1.3!important;
+  font-size:9px!important
+ }
+ .world-match-battle .world-match-stage .park-board-help{
+  margin:6px 1px 0!important;align-items:center;gap:6px
+ }
+ .world-match-battle .world-match-stage .park-board-help button{
+  min-height:29px!important;padding:4px 11px!important
+ }
+ .world-match-battle .world-match-stage .park-board-help #park-hint-text{
+  font-size:10px!important
+ }
+ .world-match-battle .world-match-experience .park-game-guide{
+  margin:0!important;padding:7px 9px!important;
+  border-radius:6px!important;min-height:0!important
+ }
+ .world-match-battle .park-game-guide>ol,
+ .world-match-battle .park-game-guide>.park-guide-kicker,
+ .world-match-battle .park-game-guide>p{display:none!important}
+ .world-match-battle .world-match-mobile-how{
+  display:block;margin:0 0 5px;font-size:11px;
+  color:#655540;
+ }
+ .world-match-battle .world-match-mobile-how summary{
+  cursor:pointer;padding:4px 0;
+  color:#6d5840;font-weight:600;list-style-position:inside
+ }
+ .world-match-battle .world-match-mobile-how p{
+  margin:4px 0!important;line-height:1.7;font-size:11px!important;
+ }
+ .world-match-battle .park-game-guide .park-guide-reference{
+  margin:0!important;padding:0!important;border:0!important
+ }
+ .world-match-battle .park-game-guide .park-guide-reference>strong{
+  font-size:11px!important;margin:0 0 4px!important;display:block
+ }
+ .world-match-battle .park-game-guide .park-guide-swatches{
+  gap:4px!important;margin:0!important;
+ }
+}
+@media(max-width:360px){
+ .world-match-battle .world-match-stage{padding:20px 11px 19px!important}
+ .world-match-battle .world-match-stage #park-match-grid{padding:3px!important;gap:2px!important}
+ .world-match-battle .world-match-story h3{font-size:17px!important}
+}
+
+
+/* Art pass 07 — sewn silk + warm carved wood, not plastic/glass overlays.
+   The textile is an independent local SVG so the match tokens remain real buttons. */
+.world-match-stage .park-match-tile{
+ border-color:#c6ae89!important;
+ background:linear-gradient(140deg,#fffdf5 0%,#f2e8d7 76%,#dbceb8)!important;
+ box-shadow:inset 0 1px 1px #fffaf0, inset 0 -1px 2px #7e67474b,
+ 0 2px 4px #51443730!important;
+}
+.world-match-stage .park-match-tile .park-piece-paper::before{
+ content:'';position:absolute;inset:2px;z-index:0;
+ background:linear-gradient(125deg,#ffffff28,#eedac525),
+ url('./pear-match-silk-weave.svg') center/96px 96px repeat;
+ border-radius:3px;opacity:.67;pointer-events:none;
+}
+.world-match-stage .park-match-tile .park-piece-paper img{
+ position:relative;z-index:1;
+ width:100%;height:100%;object-fit:contain;
+ filter:drop-shadow(0 .7px .9px #6f58445e) contrast(1.12) saturate(1.04)
+}
+.world-match-stage .park-match-tile::after{
+ content:'';position:absolute;inset:2px;z-index:3;border-radius:4px;
+ border:1px solid #fffcf5ab;pointer-events:none;
+ box-shadow:inset 1px 1px 2px #fffef1dc,inset -1px -1px 2px #8e785b48;
+ background:linear-gradient(155deg,#fffefd14 0%,transparent 42%,#715c3910 100%);
+}
+.world-match-stage .park-match-tile.picked{
+ box-shadow:inset 0 1px 1px #fffcf5,0 0 0 2px #b99761,
+ 0 2px 11px #ac92666b!important;
+}
+@media(max-width:760px){
+ .world-match-stage .park-match-tile .park-piece-paper::before{
+  background-size:60px 60px;
+ }
+ .world-match-stage .park-match-tile::after{inset:1px;border-width:.6px}
+}
+@media(prefers-reduced-motion:reduce){
+ .world-match-stage .park-match-tile{transition:none!important}
+}

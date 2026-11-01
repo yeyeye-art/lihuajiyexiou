@@ -1,0 +1,156 @@
+/* 梨花季·全球纹样奇遇乐园 — scoped to the game route; original Song-green/ivory identity. */
+body[data-page="game"] #main{max-width:1200px}
+.motif-park{max-width:1120px;margin:0 auto 45px;color:#315841}
+.motif-park button{cursor:pointer;transition:transform .18s,filter .18s,box-shadow .18s}
+.motif-park button:focus-visible,.motif-park input:focus-visible,.motif-park select:focus-visible{outline:3px solid #bb8849;outline-offset:3px}
+.motif-park button:disabled{cursor:not-allowed;opacity:.46}
+.motif-park .park-hero{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden;padding:29px 33px;border:3px solid #eddba9;border-radius:25px;background:radial-gradient(circle at 6% 85%,#f6f7d9 0%,transparent 40%),radial-gradient(circle at 95% 0%,#b9dccc,transparent 48%),linear-gradient(125deg,#fcfaef,#e4efdf);box-shadow:0 9px 0 #c5d6bd,0 14px 23px #58795d22}
+.motif-park .park-hero::after{content:"✿";position:absolute;right:28%;top:-100px;font-size:240px;color:#a4cab125;pointer-events:none}
+.motif-park .park-hero-name{z-index:1}
+.motif-park .park-hero-name>span,.motif-park .park-heading>span{font-size:10px;letter-spacing:.17em;color:#aa8757}
+.motif-park .park-hero h1{font:normal clamp(29px,4vw,47px)/1.4 "Songti SC","SimSun",serif;color:#3c6a50;letter-spacing:.08em;margin:8px 0;text-shadow:1px 2px 0 #fff}
+.motif-park .park-hero h1 span{color:#b2824d}
+.motif-park .park-hero p{color:#698573;font-size:13px;line-height:1.8;margin:0;max-width:600px}
+.motif-park .park-trophy{flex:none;z-index:1;min-width:174px;display:flex;flex-direction:column;gap:3px;text-align:center;align-items:center;padding:15px 13px;background:#fffaf0da;border:2px solid #e2d7a9;border-radius:19px;box-shadow:0 6px 0 #dbd0a4}
+.motif-park .park-trophy b{font-size:29px;color:#b98a4b}
+.motif-park .park-trophy span{font-size:12px;color:#54745e}
+.motif-park .park-trophy small{color:#8e9b8d;font-size:9px}
+.motif-park .park-section-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:29px 3px 19px}
+.motif-park .park-section-title h2{margin:0;font:normal 29px/1.45 "Songti SC","SimSun",serif;color:#3a664d}
+.motif-park .park-section-title p{font-size:12px;color:#92a18f;margin:0}
+.motif-park .park-games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.motif-park .park-game-card{position:relative;display:flex;flex-direction:column;align-items:stretch;text-align:left;min-width:0;min-height:252px;padding:15px 16px 13px;background:linear-gradient(#fffef6,#eff3e7);border:3px solid #d9e6d3;border-radius:23px;color:#3f604d;box-shadow:0 7px 0 #c0d3bc,0 10px 19px #4c775523}
+.motif-park .park-game-card:hover{transform:translateY(-5px);box-shadow:0 12px 0 #bed1b8,0 18px 26px #4c775533}
+.motif-park .park-game-card:nth-child(2n){border-color:#e3d9b5;box-shadow:0 7px 0 #d6d1ad}
+.motif-park .park-game-card:nth-child(3n){border-color:#cfddd9;box-shadow:0 7px 0 #bbd1c8}
+.motif-park .park-game-illustration{position:relative;display:flex;align-items:center;justify-content:center;min-height:110px;border:2px solid #d7e6d2;border-radius:15px;background:radial-gradient(circle at 48% 34%,#fdfef0 10%,#d3e6d4 72%,#b2d5c0);overflow:hidden;margin-bottom:14px}
+.motif-park .park-game-illustration::before,.motif-park .park-game-illustration::after{content:"";position:absolute;border:2px solid #e7f1dd9e;width:142px;height:142px;border-radius:50%}
+.motif-park .park-game-illustration::after{width:98px;height:98px}
+.motif-park .park-game-illustration i{font-style:normal;font:normal 72px/1 "Songti SC","SimSun",serif;color:#468567;text-shadow:2px 4px 0 #fbfaef;z-index:1}
+.motif-park .park-game-illustration em{position:absolute;z-index:2;top:8px;right:9px;background:#fff9e9;border:1px solid #e9d6a8;border-radius:14px;padding:3px 9px;font-style:normal;font-size:11px;color:#a98044}
+.motif-park .park-game-card>strong{font:normal 23px/1.3 "Songti SC","SimSun",serif;color:#3f6e55}
+.motif-park .park-game-card>span:not(.park-game-illustration):not(.park-game-footer){font-size:12px;margin-top:7px;color:#819985}
+.motif-park .park-game-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #dce6d6;margin-top:auto;padding-top:12px;color:#9b937b;font-size:11px}
+.motif-park .park-game-footer b{background:linear-gradient(#f9af75,#e67d60);border:2px solid #fce6b3;border-radius:14px;padding:7px 13px;color:white;font-weight:700;font-size:12px;box-shadow:0 3px 0 #b66a54}
+.motif-park .park-disclosure{font-size:11px;color:#8d9b8c;line-height:1.8;margin:25px 6px 0}
+.motif-park .park-play-heading{margin-bottom:17px}
+.motif-park .park-back,.motif-park #park-cancel{display:inline-flex;border:1px solid #d7e3d4;border-radius:16px;background:#f3f8eb;color:#557d64;padding:8px 13px;margin-bottom:12px;font-size:12px}
+.motif-park .park-heading h2{font:normal clamp(26px,4vw,38px)/1.3 "Songti SC","SimSun",serif;color:#3b6a4c;margin:5px 0}
+.motif-park .park-heading p{font-size:13px;color:#7f9882;margin:4px 0}
+.motif-park .park-select-hero{display:flex;align-items:center;gap:17px;background:linear-gradient(115deg,#e5f0de,#fbf9e9);border:2px solid #d5e0c6;border-radius:18px;padding:13px 20px;box-shadow:0 5px 0 #d7e4d0}
+.motif-park .park-big-icon{display:grid;place-items:center;flex:none;width:80px;height:76px;border-radius:19px;background:#fffbe9;border:3px solid #ebdda7;font:normal 50px serif;color:#a68b54}
+.motif-park .park-select-hero strong{font-size:22px;color:#426b50}
+.motif-park .park-select-hero p{font-size:12px;color:#83937f;margin:5px 0}
+.motif-park .park-level-heading{display:flex;justify-content:space-between;align-items:center;margin:21px 0 10px;font-size:19px;color:#456e50;font-weight:700}
+.motif-park .park-level-heading small{font-size:11px;font-weight:400;color:#919d86}
+.motif-park .park-level-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:9px;margin:0 0 22px;padding:17px 15px;border-radius:18px;border:2px solid #dbe7d6;background:linear-gradient(#f8fbf0,#e3eede)}
+.motif-park .park-level-node{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:68px;gap:3px;border:3px solid #fff1d0;border-radius:50%;background:radial-gradient(circle at 30% 18%,#fffef1,#acd4b5);box-shadow:0 5px 0 #7fa48d;color:#416748}
+.motif-park .park-level-node b{font-size:21px}.motif-park .park-level-node small{font-size:9px;color:#997b39}
+.motif-park .park-level-node.chosen{background:radial-gradient(circle at 30% 20%,#fffae6,#f8ca79);box-shadow:0 6px 0 #c59950,0 0 0 5px #f4e0a17c;transform:scale(1.06)}
+.motif-park .park-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.motif-park .park-filters label{display:flex;flex-direction:column;font-size:13px;color:#4a7155;gap:7px;font-weight:600}
+.motif-park .park-filters select,.motif-park .park-filters input{width:100%;min-height:47px;min-width:0;border:2px solid #d0e0d2;background:#fffcf5;border-radius:11px;padding:9px 10px;color:#496b55;font-size:13px}
+.motif-park .park-start-tray{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:23px 0 13px;padding:18px 22px;border:3px solid #e9dfb8;border-radius:19px;background:linear-gradient(120deg,#f9f5e6,#e5f0df);box-shadow:0 6px 0 #d3decb}
+.motif-park .park-start-tray strong{font-size:20px}.motif-park .park-start-tray p{font-size:12px;color:#7f9583;margin:5px 0 0}
+.motif-park .park-main-action{border:3px solid #fdf0bf;border-radius:16px;min-height:58px;padding:13px 22px;background:linear-gradient(#ffa977,#e77b59);color:white;font-weight:800;font-size:18px;box-shadow:0 6px 0 #b45f49;text-shadow:0 1px 1px #b85f4c}
+.motif-park .park-main-action:hover:not(:disabled){transform:translateY(-3px)}
+.motif-park .park-feedback{border-radius:11px;padding:12px 15px;background:#fff0de;color:#a16e48;font-size:13px}
+.motif-park .park-feedback[hidden]{display:none}
+.motif-park .park-loading{text-align:center;min-height:140px;padding:48px;background:#f2f6e9;border-radius:16px;color:#758d71}
+.motif-park .park-scoreboard{display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:14px;border:3px solid #e6dcb6;background:#fffae9;border-radius:18px;padding:13px 20px;box-shadow:0 4px 0 #d8dec5;margin-bottom:17px}
+.motif-park .park-scoreboard>div{font-size:14px;color:#779072}.motif-park .park-scoreboard b{color:#4b7856;font-size:20px}
+.motif-park .park-instructions{margin:10px 0 17px;text-align:center;color:#6c8d73;background:#f2f7eb;border-radius:14px;padding:10px;font-size:13px}
+.motif-park .park-match-grid,.motif-park .park-link-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;max-width:650px;margin:10px auto 26px;padding:18px;border:4px solid #d6dfbb;background:linear-gradient(135deg,#edf5e9,#e2efde);border-radius:23px;box-shadow:0 8px 0 #bfd3b3}
+.motif-park .park-match-tile,.motif-park .park-link-tile{display:grid;place-items:center;aspect-ratio:1/1;padding:7px;border:3px solid #d9e2c6;border-radius:13px;background:radial-gradient(circle at 20% 14%,#fffdf4,#edf3e5);box-shadow:0 4px 0 #abc49d;min-height:0;min-width:0}
+.motif-park .park-match-tile img,.motif-park .park-link-tile img{height:100%;width:100%;object-fit:contain;pointer-events:none}
+.motif-park .park-match-tile.picked,.motif-park .park-link-tile.picked{border-color:#f3c175;box-shadow:0 5px 0 #ba9c62,0 0 0 4px #ffebad;transform:translateY(-4px)}
+.motif-park .park-link-empty{aspect-ratio:1;background:#a0c0a31f;border:1px dashed #bad1ba;border-radius:11px}
+.motif-park .park-jigsaw-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.35fr);gap:20px;align-items:start}
+.motif-park .park-jigsaw-grid{display:grid;grid-template-columns:repeat(var(--piece-count),1fr);gap:2px;max-width:625px;aspect-ratio:1;background:#748a6e;border:6px solid #c4d4ae;border-radius:13px;overflow:hidden}
+.motif-park .park-jigsaw-tile{background-repeat:no-repeat;aspect-ratio:1;border:2px solid #fdf9e8;background-color:#fafbf5;min-width:0;padding:0;cursor:grab}
+.motif-park .park-jigsaw-tile.picked{border:4px solid #ed9e55;filter:brightness(1.1)}
+.motif-park .park-jigsaw-reference{display:flex;flex-direction:column;gap:9px;padding:11px;background:#fbfaec;border:2px solid #e5e7c9;border-radius:14px;color:#758976;text-align:center}
+.motif-park .park-jigsaw-reference img{width:100%;max-height:245px;object-fit:contain;border-radius:7px;background:white}
+.motif-park .park-jigsaw-reference small{font-size:12px}
+.motif-park .park-color-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,.8fr);gap:18px}
+.motif-park .park-color-work,.motif-park .park-color-layout aside,.motif-park .park-studio-tools,.motif-park .park-studio-work{padding:17px;border:3px solid #dde5c9;background:#f8faed;border-radius:19px}
+.motif-park .park-color-work h3,.motif-park .park-studio-tools h3{font:normal 21px "Songti SC",serif;color:#487453;margin:0 0 14px}
+.motif-park .park-color-canvas{display:grid;place-items:center;min-height:300px;background:#fffefa;border:2px dashed #e8d9b1;border-radius:15px}
+.motif-park .park-color-canvas svg{width:100%;max-width:410px;aspect-ratio:1;overflow:visible}
+.motif-park .park-color-preview{text-align:center;padding:10px;border-radius:10px;background:white}
+.motif-park .park-color-preview img{max-height:140px;width:100%;object-fit:contain}
+.motif-park .park-color-preview span{display:block;font-size:11px;color:#728a77;padding:7px 0}
+.motif-park .park-palette{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0}
+.motif-park .park-palette button{background:var(--paint-color);aspect-ratio:1;border:4px solid #fffbd8;border-radius:50%;max-height:69px;box-shadow:0 4px 0 #c2c4a2;color:#fff;text-shadow:0 1px 2px #333}
+.motif-park .park-palette button.selected{outline:4px solid #cb9965;transform:translateY(-5px)}
+.motif-park .park-palette button b{background:#ffffff7c;border-radius:50%;padding:2px 7px;font-size:15px;color:#3d594b;text-shadow:none}
+.motif-park .park-color-hint{font-size:11px;color:#83937f;line-height:1.7}
+.motif-park .park-studio-layout{display:grid;grid-template-columns:minmax(220px,.6fr) minmax(0,1.1fr);gap:16px}
+.motif-park .park-studio-tools p{font-size:12px;color:#809382}
+.motif-park .park-studio-catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.motif-park .park-studio-catalog button{min-width:0;display:flex;flex-direction:column;gap:4px;align-items:center;border:2px solid #dae7d5;border-radius:10px;background:#fffef8;padding:6px}
+.motif-park .park-studio-catalog img{width:100%;height:57px;object-fit:contain}
+.motif-park .park-studio-catalog span{font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.motif-park .park-studio-stage{position:relative;max-width:530px;aspect-ratio:1;background:radial-gradient(circle,#fdfdf4,#f2f3e2);border:3px solid #d5dabb;border-radius:13px;overflow:hidden;touch-action:none}
+.motif-park .park-studio-stage::before{content:"";position:absolute;inset:15px;border:1px dashed #c7cfb4;border-radius:50%;pointer-events:none}
+.motif-park .park-studio-item{position:absolute;padding:0;border:2px solid transparent;background:transparent;touch-action:none;cursor:grab}
+.motif-park .park-studio-item.selected{border:2px dashed #bd925f;background:#fff3}
+.motif-park .park-studio-item img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+.motif-park .park-studio-controls,.motif-park .park-studio-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.motif-park .park-studio-controls button,.motif-park .park-studio-actions button:not(.park-main-action){font-size:12px;padding:8px 10px;background:#fffaeb;border:1px solid #d9d4af;border-radius:9px;color:#667c65}
+.motif-park .park-studio-actions .park-main-action{font-size:15px;min-height:43px;padding:9px 14px}
+.motif-park .park-result{text-align:center;min-height:330px;padding:40px 20px;background:radial-gradient(circle at top,#fff7dd,#deedd9);border:4px solid #e8d8a5;border-radius:25px;box-shadow:0 10px 0 #cbdabf}
+.motif-park .park-win-symbol{font-size:80px;line-height:1.5;color:#c4a064}
+.motif-park .park-result-stars{font-size:40px;color:#bd923e;letter-spacing:.1em}
+.motif-park .park-result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+.motif-park .park-result-actions button:not(.park-main-action){padding:12px 18px;border:2px solid #d5e2d3;border-radius:12px;background:#fdfcf1;color:#5e8062}
+.motif-park .park-memory-nav{padding:10px 15px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:2px solid #d9e7d0;background:#edf5e6;border-radius:14px;margin-bottom:20px;font-size:12px;color:#71917b}
+.motif-park .park-memory-nav button{padding:10px 15px;border:2px solid #f3d7a4;border-radius:10px;color:#996943;background:#fff9df;font-weight:700}
+@media(max-width:850px){
+ .motif-park .park-games{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .motif-park .park-hero{padding:22px 19px}
+ .motif-park .park-level-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .motif-park .park-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+ .motif-park .park-hero{flex-direction:column;align-items:stretch;border-radius:18px;gap:14px}
+ .motif-park .park-hero h1{font-size:31px}
+ .motif-park .park-trophy{align-self:flex-start;min-width:0;flex-direction:row;gap:10px}
+ .motif-park .park-trophy b{font-size:19px}
+ .motif-park .park-section-title{display:block}
+ .motif-park .park-section-title h2{font-size:23px}
+ .motif-park .park-games{gap:9px}
+ .motif-park .park-game-card{padding:8px 9px;min-height:195px;border-radius:15px;border-width:2px}
+ .motif-park .park-game-illustration{min-height:83px;margin-bottom:9px}
+ .motif-park .park-game-illustration i{font-size:53px}
+ .motif-park .park-game-card>strong{font-size:17px}
+ .motif-park .park-game-card>span:not(.park-game-illustration):not(.park-game-footer){font-size:10px}
+ .motif-park .park-game-footer{font-size:9px}
+ .motif-park .park-game-footer b{font-size:10px;padding:5px 7px}
+ .motif-park .park-select-hero{padding:10px}
+ .motif-park .park-big-icon{width:57px;height:57px;font-size:38px}
+ .motif-park .park-select-hero strong{font-size:18px}
+ .motif-park .park-level-grid{gap:7px;padding:12px}
+ .motif-park .park-level-node{min-height:52px}
+ .motif-park .park-level-node b{font-size:17px}
+ .motif-park .park-filters{grid-template-columns:1fr}
+ .motif-park .park-start-tray{flex-direction:column;align-items:stretch;padding:12px}
+ .motif-park .park-main-action{font-size:16px}
+ .motif-park .park-match-grid,.motif-park .park-link-grid{gap:4px;padding:7px;border-width:2px;border-radius:13px}
+ .motif-park .park-match-tile,.motif-park .park-link-tile{padding:3px;border-width:2px;border-radius:7px;box-shadow:0 2px 0 #abc49d}
+ .motif-park .park-jigsaw-layout{grid-template-columns:1fr}
+ .motif-park .park-jigsaw-reference{flex-direction:row;align-items:center}
+ .motif-park .park-jigsaw-reference img{width:90px;height:90px}
+ .motif-park .park-color-layout{grid-template-columns:1fr}
+ .motif-park .park-color-canvas{min-height:210px}
+ .motif-park .park-studio-layout{grid-template-columns:1fr}
+ .motif-park .park-studio-catalog{grid-template-columns:repeat(6,1fr)}
+ .motif-park .park-studio-catalog img{height:45px}
+ .motif-park .park-studio-catalog span{display:none}
+ .motif-park .park-studio-controls{gap:5px}
+ .motif-park .park-studio-controls button{padding:7px;font-size:11px}
+ .motif-park .park-scoreboard{gap:8px;padding:8px}
+ .motif-park .park-scoreboard b{font-size:17px}
+}
+@media(max-width:355px){.motif-park .park-studio-catalog{grid-template-columns:repeat(4,1fr)}.motif-park .park-game-card>strong{font-size:15px}.motif-park .park-game-footer{gap:3px}}
+@media(prefers-reduced-motion:reduce){.motif-park *{animation:none!important;transition:none!important}}

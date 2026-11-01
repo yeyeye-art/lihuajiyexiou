@@ -1,10 +1,31 @@
+import {additionalPalettes} from './palette-presets.js';
+import {museumPalettes} from './museum-palette-presets.js';
+import {worldPalettes} from './world-palette-presets.js';
 export const motifs=[
  {name:'梨花',meaning:'纯净与相守',category:'花卉',key:'pear'}, {name:'牡丹',meaning:'富贵吉祥',category:'花卉',key:'peony'}, {name:'莲花',meaning:'清廉高洁',category:'花卉',key:'lotus'}, {name:'梅花',meaning:'坚韧报春',category:'花卉',key:'plum'}, {name:'兰草',meaning:'高雅品格',category:'花卉',key:'orchid'}, {name:'竹叶',meaning:'节节高升',category:'草木',key:'bamboo'}, {name:'锦鲤',meaning:'年年有余',category:'瑞兽',key:'fish'}, {name:'蝴蝶',meaning:'美好相伴',category:'瑞兽',key:'butterfly'}, {name:'蝙蝠',meaning:'福气临门',category:'瑞兽',key:'bat'}, {name:'祥云',meaning:'祥瑞如意',category:'吉纹',key:'cloud'}, {name:'石榴',meaning:'多子多福',category:'草木',key:'fruit'}, {name:'如意',meaning:'称心如意',category:'吉纹',key:'ruyi'}
 ];
-export const palettes=[{name:'梨白 · 苔绿',colors:['#f5eee0','#d6c69b','#9da985','#527d66','#294f43','#b9935a']},{name:'海棠 · 胭脂',colors:['#f8e8dd','#e8b4ad','#c7787b','#984d62','#677e67','#b5a171']},{name:'青瓷 · 烟蓝',colors:['#e4eee5','#b7cfc4','#83adb4','#4e788b','#2e515e','#b7a071']},{name:'秋桂 · 金棕',colors:['#f5e5b9','#dbbd70','#b98b43','#846143','#576850','#324d43']}];
+const originalPalettes=[{name:'梨白 · 苔绿',colors:['#f5eee0','#d6c69b','#9da985','#527d66','#294f43','#b9935a']},{name:'海棠 · 胭脂',colors:['#f8e8dd','#e8b4ad','#c7787b','#984d62','#677e67','#b5a171']},{name:'青瓷 · 烟蓝',colors:['#e4eee5','#b7cfc4','#83adb4','#4e788b','#2e515e','#b7a071']},{name:'秋桂 · 金棕',colors:['#f5e5b9','#dbbd70','#b98b43','#846143','#576850','#324d43']}];
+export const palettes=[...originalPalettes,...additionalPalettes,...museumPalettes,...worldPalettes];
+const builtInPaletteCount=palettes.length;
+const localPaletteKey='lihuaji:atlas-local-palette-v1';
+const validLocalPalette=p=>p&&typeof p.name==='string'&&p.name.length<=120&&Array.isArray(p.colors)&&p.colors.length===6&&p.colors.every(c=>/^#[0-9A-Fa-f]{6}$/.test(c));
+export function setAtlasCustomPalette(name,colors){
+ const entry={name:String(name).slice(0,120),colors:[...colors]};
+ if(!validLocalPalette(entry))return -1;
+ entry.colors=entry.colors.map(c=>c.toUpperCase());
+ if(palettes.length>builtInPaletteCount)palettes[builtInPaletteCount]=entry;
+ else palettes.push(entry);
+ try{sessionStorage.setItem(localPaletteKey,JSON.stringify(entry))}catch{}
+ return builtInPaletteCount;
+}
+try{
+ const raw=typeof sessionStorage==='undefined'?null:sessionStorage.getItem(localPaletteKey);
+ if(raw){const entry=JSON.parse(raw);if(validLocalPalette(entry))palettes.push({...entry,colors:entry.colors.map(c=>c.toUpperCase())});}
+}catch{/* No storage, built-in palettes remain unaffected. */}
+
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 export function rng(seed){let s=Number(seed)||1;return ()=>((s=(s*1664525+1013904223)>>>0)/4294967296);}
-export function motifSVG(index=0,variant=1,palette=0,{transparent=false}={}){const m=motifs[index%motifs.length],p=palettes[palette%4].colors,R=rng(variant*77+index*901),parts=[];
+export function motifSVG(index=0,variant=1,palette=0,{transparent=false}={}){const m=motifs[index%motifs.length],p=palettes[palette%palettes.length].colors,R=rng(variant*77+index*901),parts=[];
  const line=(x,y,X,Y,color,width=1,opacity=1)=>parts.push(`<path d="M${x.toFixed(1)},${y.toFixed(1)}L${X.toFixed(1)},${Y.toFixed(1)}" stroke="${color}" stroke-width="${width}" opacity="${opacity}" stroke-linecap="round"/>`);
  function leaf(x,y,angle,size,color){parts.push(`<g transform="translate(${x} ${y}) rotate(${angle})"><path d="M0 0 Q${size*.25} ${-size*.7} ${size} 0 Q${size*.3} ${size*.38} 0 0" fill="${color}"/>`);for(let i=2;i<32;i++){let a=i/32;parts.push(`<path d="M${a*size} 0 L${a*size-size*.12} ${-Math.sin(a*Math.PI)*size*.28}" fill="none" stroke="${p[2]}" stroke-width=".6" opacity=".55"/>`);}parts.push('</g>');}
  function flower(x,y,size,petals=5){parts.push(`<g transform="translate(${x} ${y}) rotate(${R()*80})">`);for(let k=0;k<petals;k++){parts.push(`<g transform="rotate(${k*360/petals})"><path d="M0 0 C${-size*.65} ${-size*.35} ${-size*.5} ${-size*1.15} 0 ${-size} C${size*.65} ${-size*1.12} ${size*.65} ${-size*.35} 0 0" fill="${p[0]}" stroke="${p[1]}" stroke-width=".7"/>`);for(let j=0;j<22;j++){let t=(j-11)/12;parts.push(`<path d="M${t*3} -4 Q${t*size*.48} ${-size*.46} ${t*size*.32} ${-size*(.78+.2*(1-Math.abs(t)))}" stroke="${p[1]}" opacity="${.3+R()*.3}" stroke-width=".65" fill="none"/>`);}parts.push('</g>');}for(let k=0;k<15;k++){let a=k/15*Math.PI*2,r=8+R()*7;parts.push(`<path d="M0 0L${Math.cos(a)*r} ${Math.sin(a)*r}" stroke="${p[5]}" stroke-width=".7"/><circle cx="${Math.cos(a)*r}" cy="${Math.sin(a)*r}" r="1.7" fill="${p[5]}"/>`);}parts.push('</g>');}
@@ -24,7 +45,7 @@ export function motifSVG(index=0,variant=1,palette=0,{transparent=false}={}){con
  return `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><title>${m.name}原创程序纹样 ${variant}</title>${transparent?'':'<rect width="600" height="600" fill="#faf8f0"/>'}${parts.join('')}</svg>`;
 }
 export function generateMotifConcept(intent,seed=1,options={}){
- const R=rng(seed),palette=Number.isInteger(options.palette)&&options.palette>=0&&options.palette<4?options.palette:intent.paletteCandidates[0]||0,p=palettes[palette].colors;
+ const R=rng(seed),palette=Number.isInteger(options.palette)&&options.palette>=0&&options.palette<palettes.length?options.palette:intent.paletteCandidates[0]||0,p=palettes[palette].colors;
  const composition=['circular','diagonal','paired'].includes(options.composition)?options.composition:intent.compositionCandidates[(seed>>>0)%intent.compositionCandidates.length]||'circular';
  const selected=(options.motifIds?intent.motifCandidates.filter(m=>options.motifIds.includes(m.id)):intent.motifCandidates.slice(0,3)).filter(m=>motifs.some(x=>x.key===m.key));
  function drawing(m,variant){

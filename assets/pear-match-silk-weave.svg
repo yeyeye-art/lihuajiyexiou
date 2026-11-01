@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="游戏绣牌专用数字绢布肌理">
+<title>梨花绣田·独立数码绢布底纹</title>
+<defs>
+ <linearGradient id="silk" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf5"/><stop offset=".4" stop-color="#f4efe3"/><stop offset="1" stop-color="#e5dcc9"/></linearGradient>
+ <linearGradient id="warp" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ae9b7a" stop-opacity=".13"/><stop offset=".28" stop-color="#fff" stop-opacity=".7"/><stop offset=".6" stop-color="#af9e80" stop-opacity=".09"/><stop offset="1" stop-color="#fff" stop-opacity=".22"/></linearGradient>
+ <linearGradient id="weft" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#aa9c7d" stop-opacity=".14"/><stop offset=".48" stop-color="#fffdf2" stop-opacity=".8"/><stop offset="1" stop-color="#bcaa89" stop-opacity=".17"/></linearGradient>
+ <pattern id="warpLine" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M1 0V6M3 0V6" stroke="url(#warp)" stroke-width="1.1"/><path d="M5 0V6" stroke="#c2b296" stroke-width=".35" opacity=".25"/></pattern>
+ <pattern id="weftLine" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 1H6M0 4H6" stroke="url(#weft)" stroke-width=".85"/><path d="M0 5.6H6" stroke="#fffdf9" stroke-width=".35" opacity=".62"/></pattern>
+ <pattern id="stitch" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M1 1l5 2M12 16l4 1" stroke="#ae9c81" stroke-opacity=".22" stroke-width=".5" fill="none" stroke-linecap="round"/></pattern>
+ <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="192" height="192" fill="url(#silk)"/>
+<rect width="192" height="192" fill="url(#warpLine)" opacity=".69"/>
+<rect width="192" height="192" fill="url(#weftLine)" opacity=".67"/>
+<rect width="192" height="192" fill="url(#stitch)" opacity=".39"/>
+<ellipse cx="60" cy="48" rx="114" ry="105" fill="url(#glow)"/>
+<path d="M0 159Q73 157 192 178" stroke="#b9ab92" stroke-opacity=".18" fill="none" stroke-width="1"/>
+</svg>

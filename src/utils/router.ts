@@ -13,7 +13,7 @@ export const pageNames: Record<string, string> = {
   ar: '针法与 AR 教学',
   face: '文创试搭',
   gallery: '梨花绣馆',
-  game: '祥云配对挑战',
+  game: '绣镜奇遇',
   guide: '苏绣知识',
   palette: '东方色谱',
   profile: '我的学习记录',
@@ -80,7 +80,7 @@ export function parseHash(rawHash: string): RouteState {
 
   if (page === 'mall') page = 'gallery';
   if (page === 'ai') page = 'create';
-  if (page === 'avatar') page = 'guide';
+  if (page === 'avatar' || page === 'encyclopedia') page = 'guide';
   if (!pageNames[page] && page !== 'product') page = 'about';
 
   return {

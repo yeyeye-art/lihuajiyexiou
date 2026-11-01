@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import { RestoredSection } from '../components/RestoredSection';
 import { PageTitle } from '../components/PageTitle';
 import { Icon } from '../components/Icon';
 import { downloadFile } from '../utils/download';
@@ -21,8 +22,10 @@ export const Profile: React.FC = () => {
     <>
       <PageTitle
         title="我的 · 慢绣日常"
-        sub="不赶时间，只积攒手上的熟练。练习记录仅保存在当前浏览器，不跨设备同步。"
+        sub="练习记录保存在本机；登录后可同步游戏关卡、绣点和道具。"
       />
+
+      <RestoredSection page="account" />
 
       <div className="metrics">
         <div className="metric-box">
@@ -49,7 +52,7 @@ export const Profile: React.FC = () => {
 
       <div className="profile-links">
         <a className="card" href="#game">
-          <Icon name="game" /> 纹样配对 <Icon name="arrow" />
+          <Icon name="game" /> 绣镜奇遇 <Icon name="arrow" />
         </a>
         <a className="card" href="#palette">
           <Icon name="palette" /> 东方色谱 <Icon name="arrow" />

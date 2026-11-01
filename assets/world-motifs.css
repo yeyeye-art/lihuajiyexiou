@@ -1,0 +1,34 @@
+/* Global motif accession archive, separate from the 1,088 original pattern images. */
+.world-motifs{--wm-ink:#375343;--wm-muted:#728275;--wm-gilt:#bba576;margin:16px 0 30px;padding:24px;border:1px solid #e0e4d8;border-radius:9px;background:linear-gradient(145deg,#f3f5ed,#fcfaf3 58%,#f0f1e7);color:var(--wm-ink)}
+.world-motif-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:18px}
+.world-motif-eyebrow{display:block;color:#929b7b;letter-spacing:.16em;font:10px/1.6 Georgia,serif}
+.world-motif-heading h2{color:#395f49;font:500 clamp(23px,3vw,32px)/1.4 Georgia,SimSun,serif;margin:8px 0}
+.world-motif-heading p{color:#64796a;max-width:740px;font-size:12px;line-height:1.9;margin:0}
+.world-motif-heading>a{flex:0 0 auto;max-width:250px;font-size:11px;color:#4c725a;line-height:1.8;text-decoration:underline}
+.world-motif-filter{margin:22px 0 11px;display:grid;gap:12px}
+.world-motif-filter label{display:grid;grid-template-columns:auto minmax(180px,400px);align-items:center;gap:14px;font-size:12px;color:#526d5d}
+.world-motif-filter input{min-height:42px;padding:9px 11px;border:1px solid #cbd8c8;border-radius:5px;background:white;color:#345040;min-width:0}
+#world-motif-tabs{display:flex;gap:7px;flex-wrap:wrap}
+#world-motif-tabs button{border:1px solid #d1ddcd;border-radius:20px;color:#627b6c;background:#f8f9f3;font-size:11px;padding:8px 12px;min-height:38px}
+#world-motif-tabs button[aria-pressed="true"]{color:white;background:#426b53;border-color:#426b53}
+#world-motif-status{font-size:11px;color:#718578;line-height:1.7;margin:8px 0 14px}
+.world-motif-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.world-motif-item{min-width:0;overflow:hidden;border-radius:7px;background:#fffdf8;border:1px solid #e0e8db;box-shadow:0 4px 13px #304b3710}
+.world-motif-picture{height:175px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;background:radial-gradient(circle at 50% 48%,#e3ece2,#e9eee4 56%,#f4f3e9);color:#8d9a87;font-size:11px;line-height:1.7;overflow:hidden}
+.world-motif-picture img{width:100%;height:100%;object-fit:contain;display:block;background:#e8e9e2}
+.world-motif-picture:has(img){height:auto;min-height:175px;max-height:270px;padding:4px;background:#ebece5}
+.world-motif-picture:has(img) img{max-height:232px}
+.world-motif-picture small{font-size:9px;line-height:1.5;color:#75836c;padding:3px 7px}
+.world-motif-body{padding:14px}
+.world-motif-place{font-size:10px;color:#728b70;letter-spacing:.04em}
+.world-motif-body h3{font:500 16px/1.55 Georgia,SimSun,serif;color:#3c614c;margin:7px 0}
+.world-motif-body p{font-size:11px;color:#66786d;line-height:1.8;margin:7px 0}
+.world-motif-body .world-motif-metadata{color:#8a8771}
+.world-motif-semantics{font-size:10px;border-left:2px solid #aeba9e;color:#74826f;line-height:1.7;padding:4px 8px;display:block;background:#f3f5ee}
+.world-motif-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:13px}
+.world-motif-actions button{min-height:39px;padding:8px 11px;background:#416b53;color:#fff;border-radius:4px;border:1px solid #416b53;font-size:11px}
+.world-motif-actions a{font-size:11px;color:#4b745c;line-height:1.7;text-decoration:underline;text-underline-offset:3px}
+.world-motif-caution{border-top:1px solid #dce2d7;margin:21px 0 0;padding-top:12px;color:#849081;font-size:10px;line-height:1.8}
+@media(max-width:1000px){.world-motif-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.world-motifs{padding:16px;margin-top:10px}.world-motif-heading{display:block}.world-motif-heading>a{display:block;margin-top:8px}.world-motif-grid{grid-template-columns:1fr}.world-motif-filter label{grid-template-columns:1fr;gap:6px}.world-motif-picture{height:200px}.world-motif-picture:has(img){max-height:320px}}
+@media(prefers-reduced-motion:reduce){.world-motifs *{scroll-behavior:auto}}

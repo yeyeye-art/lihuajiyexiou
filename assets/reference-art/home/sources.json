@@ -1,0 +1,63 @@
+{
+  "method": "User supplied references. Scenery-only rectangular crops; landscape mirrors the memory scene right-hand scenery. No generated artwork or baked controls.",
+  "landscape": {
+    "source": "memory.png",
+    "crop": [
+      1160,
+      80,
+      512,
+      690
+    ],
+    "mirrored": true
+  },
+  "crops": {
+    "match3": [
+      "garden",
+      650,
+      95,
+      390,
+      180
+    ],
+    "link": [
+      "garden",
+      950,
+      415,
+      290,
+      150
+    ],
+    "jigsaw": [
+      "jigsaw",
+      1110,
+      90,
+      360,
+      150
+    ],
+    "color": [
+      "color",
+      410,
+      95,
+      340,
+      195
+    ],
+    "studio": [
+      "garden",
+      636,
+      401,
+      238,
+      182
+    ],
+    "memory": [
+      "memory",
+      1190,
+      90,
+      420,
+      650
+    ]
+  },
+  "hashes": {
+    "garden": "cef69963ec12426949a90ceaa8db8d705141887031aacac3a78ad90cb8b7dddc",
+    "jigsaw": "8dd3278660588f81ba9a2ee1a9b70bb3d41802ee0aaa2a78a2f6a97c6d5b9157",
+    "color": "95c5784aae80f9362e469c81e46bb3a0f8edc411dfa5e2780e8631c9378e97c3",
+    "memory": "eab647a6d34e2ac45b096a6a8637135214330575477b0b5feaebcf510ef460c4"
+  }
+}

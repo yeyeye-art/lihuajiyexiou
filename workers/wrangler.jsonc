@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4/config-schema.json",
+  "name": "lihuaji-embroidery-qa",
+  "main": "embroidery-ai-worker.js",
+  "compatibility_date": "2026-10-20",
+  "ai": {
+    "binding": "AI"
+  },
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 8,
+        "period": 60
+      }
+    },
+    {
+      "name": "TOTAL_RATE_LIMITER",
+      "namespace_id": "1002",
+      "simple": {
+        "limit": 30,
+        "period": 60
+      }
+    }
+  ],
+  "vars": {
+    "AI_ENABLED": "false"
+  }
+}

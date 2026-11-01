@@ -1,0 +1,2907 @@
+{
+  "date": "2026-10-20",
+  "method": "sRGB to CIE Lab; screened by symmetric nearest-neighbor and verified by optimal one-to-one CIE Delta E 1976; screen-based not psychophysical expert review",
+  "bounds": "Only identical or similar visual signatures are reported; no museum record or existing palette is deleted automatically.",
+  "count": 1059,
+  "exactDuplicatePairs": 0,
+  "nearDuplicatePairs": 9242,
+  "weakSeparationCandidates": 118,
+  "exactDuplicates": [],
+  "nearDuplicateReviewQueue": [
+    {
+      "idA": "artist-cma-expanded-107161",
+      "nameA": "老卢卡斯·克拉纳赫 · Adam and Eve in Paradise",
+      "idB": "artist-cma-expanded-140441",
+      "nameB": "沈周 · Distant View of Tiger Hill from the Canal Mo",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 2
+    },
+    {
+      "idA": "world-CMA-1919-750",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1159",
+      "nameB": "藤蔓 · 狮纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.4
+    },
+    {
+      "idA": "world-CMA-1936-697",
+      "nameA": "四角花叶白绣手帕 · 馆藏取色",
+      "idB": "world-CMA-1936-730",
+      "nameB": "圆形中心花叶白绣手帕 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.5
+    },
+    {
+      "idA": "world-CMA-1919-745",
+      "nameA": "花卉 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1933-317",
+      "nameB": "花卉 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.7
+    },
+    {
+      "idA": "world-CMA-1948-480",
+      "nameA": "花卉 · 鸟纹 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1948-482",
+      "nameB": "花卉 · 鸟纹 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.7
+    },
+    {
+      "idA": "artist-cma-expanded-129221",
+      "nameA": "亨利·德·图卢兹-洛特雷克 · The Laundress",
+      "idB": "artist-cma-expanded-140452",
+      "nameB": "沈周 · The Thousand Acres of Clouds, from Twelve Vi",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 2.7
+    },
+    {
+      "idA": "world-CMA-1920-1141",
+      "nameA": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1161",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.8
+    },
+    {
+      "idA": "world-CMA-1947-193",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1982-296",
+      "nameB": "树木 · 团形纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.8
+    },
+    {
+      "idA": "world-CMA-1915-653",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1915-654",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1919-782",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-221",
+      "nameB": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1920-1128",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1271",
+      "nameB": "动物 · 人物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1920-1141",
+      "nameA": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1920-1159",
+      "nameA": "藤蔓 · 狮纹 · 动物 · 馆藏取色",
+      "idB": "world-CMA-1933-317",
+      "nameB": "花卉 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1920-1161",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-221",
+      "nameB": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1933-317",
+      "nameA": "花卉 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1933-344",
+      "nameB": "藤蔓 · 花卉 · 鸟纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 2.9
+    },
+    {
+      "idA": "world-CMA-1919-753",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3
+    },
+    {
+      "idA": "world-CMA-1920-1161",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3
+    },
+    {
+      "idA": "artist-cma-expanded-105105",
+      "nameA": "詹姆斯·惠斯勒 · The Garden",
+      "idB": "artist-cma-expanded-152544",
+      "nameB": "喜多川歌麿 · Act VII from the series The Storehouse of Lo",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3
+    },
+    {
+      "idA": "radix-mauve-1",
+      "nameA": "烟紫灰 · 雅韵",
+      "idB": "radix-mauve-3",
+      "nameB": "烟紫灰 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 3.1
+    },
+    {
+      "idA": "world-CMA-1918-19",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1918-27",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.1
+    },
+    {
+      "idA": "world-CMA-1920-1158",
+      "nameA": "人物 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-221",
+      "nameB": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.1
+    },
+    {
+      "idA": "world-CMA-1920-1159",
+      "nameA": "藤蔓 · 狮纹 · 动物 · 馆藏取色",
+      "idB": "world-CMA-1933-344",
+      "nameB": "藤蔓 · 花卉 · 鸟纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.1
+    },
+    {
+      "idA": "world-CMA-1920-1159",
+      "nameA": "藤蔓 · 狮纹 · 动物 · 馆藏取色",
+      "idB": "world-CMA-1933-95",
+      "nameB": "白地花卉丝披肩 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.1
+    },
+    {
+      "idA": "world-CMA-1919-745",
+      "nameA": "花卉 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1159",
+      "nameB": "藤蔓 · 狮纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "world-CMA-1919-745",
+      "nameA": "花卉 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1933-344",
+      "nameB": "藤蔓 · 花卉 · 鸟纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "world-CMA-1919-750",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1919-753",
+      "nameB": "花卉 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "world-CMA-1926-143",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1947-193",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "world-CMA-1936-94",
+      "nameA": "花卉 · 人物 · 馆藏取色",
+      "idB": "world-CMA-1936-95",
+      "nameB": "花卉 · 龙纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "world-MET-42247",
+      "nameA": "康熙旋涡云 A · 馆藏取色",
+      "idB": "artist-cma-expanded-106088",
+      "nameB": "温斯洛·霍默 · Early Morning After a Storm at Sea",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "artist-cma-expanded-108501",
+      "nameA": "阿尔布雷希特·丢勒 · Melencolia I",
+      "idB": "artist-cma-expanded-140441",
+      "nameB": "沈周 · Distant View of Tiger Hill from the Canal Mo",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3.2
+    },
+    {
+      "idA": "radix-jade-0",
+      "nameA": "玉绿 · 晨光",
+      "idB": "radix-mint-0",
+      "nameB": "薄荷 · 晨光",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 3.3
+    },
+    {
+      "idA": "world-CMA-1919-782",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1161",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.3
+    },
+    {
+      "idA": "world-CMA-1920-1245",
+      "nameA": "动物 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-95",
+      "nameB": "花卉 · 龙纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.3
+    },
+    {
+      "idA": "world-CMA-1921-85",
+      "nameA": "鸟纹 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1936-94",
+      "nameB": "花卉 · 人物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.3
+    },
+    {
+      "idA": "world-CMA-1923-876",
+      "nameA": "藤蔓 · 花卉 · 馆藏取色",
+      "idB": "world-CMA-1936-222",
+      "nameB": "花草藤蔓 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.3
+    },
+    {
+      "idA": "world-CMA-1916-1339",
+      "nameA": "袍服 · 馆藏取色",
+      "idB": "world-CMA-1982-265",
+      "nameB": "鸟纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.4
+    },
+    {
+      "idA": "world-CMA-1919-750",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1933-95",
+      "nameB": "白地花卉丝披肩 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.4
+    },
+    {
+      "idA": "artist-cma-expanded-152506",
+      "nameA": "葛饰北斋 · Poem by Minamoto no Muneyuki from the series",
+      "idB": "artist-cma-expanded-140441",
+      "nameB": "沈周 · Distant View of Tiger Hill from the Canal Mo",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3.4
+    },
+    {
+      "idA": "world-CMA-1917-64",
+      "nameA": "袍服 · 馆藏取色",
+      "idB": "world-CMA-1921-1596",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.5
+    },
+    {
+      "idA": "world-CMA-1920-1141",
+      "nameA": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1939-453",
+      "nameB": "动物 · 人物 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.5
+    },
+    {
+      "idA": "world-CMA-1936-221",
+      "nameA": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.5
+    },
+    {
+      "idA": "world-CMA-1917-26",
+      "nameA": "边饰与织锦 · 馆藏取色",
+      "idB": "world-CMA-1917-27",
+      "nameB": "边饰与织锦 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.6
+    },
+    {
+      "idA": "world-CMA-1920-1158",
+      "nameA": "人物 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.6
+    },
+    {
+      "idA": "world-CMA-1926-143",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1982-296",
+      "nameB": "树木 · 团形纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.6
+    },
+    {
+      "idA": "world-CMA-1934-193",
+      "nameA": "花卉 · 鸟纹 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1939-453",
+      "nameB": "动物 · 人物 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.6
+    },
+    {
+      "idA": "radix-sage-1",
+      "nameA": "鼠尾草灰 · 雅韵",
+      "idB": "radix-sage-2",
+      "nameB": "鼠尾草灰 · 层染",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "radix-sage-1",
+      "nameA": "鼠尾草灰 · 雅韵",
+      "idB": "radix-sage-3",
+      "nameB": "鼠尾草灰 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "world-CMA-1919-753",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1161",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "world-CMA-1920-1141",
+      "nameA": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1158",
+      "nameB": "人物 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "world-CMA-1936-223",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1939-453",
+      "nameB": "动物 · 人物 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "artist-cma-expanded-108501",
+      "nameA": "阿尔布雷希特·丢勒 · Melencolia I",
+      "idB": "artist-cma-expanded-107161",
+      "nameB": "老卢卡斯·克拉纳赫 · Adam and Eve in Paradise",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3.7
+    },
+    {
+      "idA": "world-CMA-1916-1305",
+      "nameA": "黑地中心团花坐榻罩 · 馆藏取色",
+      "idB": "artist-cma-expanded-108501",
+      "nameB": "阿尔布雷希特·丢勒 · Melencolia I",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 3.8
+    },
+    {
+      "idA": "world-CMA-1920-1141",
+      "nameA": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-221",
+      "nameB": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.8
+    },
+    {
+      "idA": "world-CMA-1920-1161",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1939-453",
+      "nameB": "动物 · 人物 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.8
+    },
+    {
+      "idA": "artist-cma-expanded-123964",
+      "nameA": "阿尔布雷希特·丢勒 · Adam and Eve",
+      "idB": "artist-cma-expanded-133655",
+      "nameB": "弗朗西斯科·戈雅 · When Day Breaks We Will Be Off, Plate 71",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3.8
+    },
+    {
+      "idA": "artist-cma-expanded-136154",
+      "nameA": "爱德华·蒙克 · Evening, Melancholy I",
+      "idB": "artist-cma-expanded-126086",
+      "nameB": "歌川广重 · Driving Rain at Shōno, from Fifty-Three Stat",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 3.8
+    },
+    {
+      "idA": "world-CMA-1919-750",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1933-317",
+      "nameB": "花卉 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "world-CMA-1919-782",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1128",
+      "nameB": "花卉 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "world-CMA-1920-1293",
+      "nameA": "庭园人物故事刺绣 · 馆藏取色",
+      "idB": "world-CMA-1920-1561",
+      "nameB": "黑地折枝花卉锦 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "world-CMA-1921-85",
+      "nameA": "鸟纹 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1936-95",
+      "nameB": "花卉 · 龙纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "world-CMA-1938-256",
+      "nameA": "黑白几何边框绣垫 · 馆藏取色",
+      "idB": "artist-cma-expanded-95253",
+      "nameB": "约翰·康斯特布尔 · Hampstead Heath, Looking Toward Harrow",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "world-MET-46608",
+      "nameA": "金元几何化朵云 A · 馆藏取色",
+      "idB": "world-MET-51020",
+      "nameB": "乾隆刻划如意云 A · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 3.9
+    },
+    {
+      "idA": "radix-gray-1",
+      "nameA": "灰 · 雅韵",
+      "idB": "radix-gray-3",
+      "nameB": "灰 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "radix-slate-1",
+      "nameA": "岩灰 · 雅韵",
+      "idB": "radix-slate-2",
+      "nameB": "岩灰 · 层染",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "radix-sand-1",
+      "nameA": "沙灰 · 雅韵",
+      "idB": "radix-sand-3",
+      "nameB": "沙灰 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1916-1233",
+      "nameA": "刺绣 · 馆藏取色",
+      "idB": "world-CMA-1920-1950-8",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1916-1266",
+      "nameA": "白地横列小花刺绣 · 馆藏取色",
+      "idB": "world-CMA-1921-136",
+      "nameB": "浅地花环卷叶织锦 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1916-1330",
+      "nameA": "鸟纹补子 · 馆藏取色",
+      "idB": "world-CMA-1919-585-a",
+      "nameB": "人物叙事刺绣横幅 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1916-1338",
+      "nameA": "边饰与织锦 · 馆藏取色",
+      "idB": "world-CMA-1952-15",
+      "nameB": "团形纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1920-1142",
+      "nameA": "树木 · 鸟纹 · 动物 · 馆藏取色",
+      "idB": "world-CMA-1920-1158",
+      "nameB": "人物 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1929-136",
+      "nameA": "边饰与织锦 · 馆藏取色",
+      "idB": "artist-cma-expanded-105105",
+      "nameB": "詹姆斯·惠斯勒 · The Garden",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "world-CMA-1933-95",
+      "nameA": "白地花卉丝披肩 · 馆藏取色",
+      "idB": "artist-cma-expanded-121188",
+      "nameB": "皮埃尔-奥古斯特·雷诺阿 · Romaine Lacaux",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4
+    },
+    {
+      "idA": "radix-teal-1",
+      "nameA": "水鸭青 · 雅韵",
+      "idB": "radix-teal-3",
+      "nameB": "水鸭青 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1915-654",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1952-257",
+      "nameB": "动物 · 团形纹 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1916-1420",
+      "nameA": "人物建筑礼仪绣饰 · 馆藏取色",
+      "idB": "world-CMA-1926-143",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1919-750",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1939-453",
+      "nameB": "动物 · 人物 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1919-753",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1129",
+      "nameB": "藤蔓 · 花卉 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1920-1128",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-221",
+      "nameB": "花卉 · 几何纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1923-876",
+      "nameA": "藤蔓 · 花卉 · 馆藏取色",
+      "idB": "world-CMA-1936-697",
+      "nameB": "四角花叶白绣手帕 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1933-311",
+      "nameA": "鸟纹 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1936-730",
+      "nameB": "圆形中心花叶白绣手帕 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "world-CMA-1952-255",
+      "nameA": "人物 · 团形纹 · 馆藏取色",
+      "idB": "world-CMA-1983-248",
+      "nameB": "树木 · 团形纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.1
+    },
+    {
+      "idA": "radix-ruby-1",
+      "nameA": "宝石红 · 雅韵",
+      "idB": "radix-ruby-2",
+      "nameB": "宝石红 · 层染",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "radix-sky-1",
+      "nameA": "天蓝 · 雅韵",
+      "idB": "radix-sky-3",
+      "nameB": "天蓝 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1915-622",
+      "nameA": "龙纹海水朝袍 · 馆藏取色",
+      "idB": "world-CMA-1940-594",
+      "nameB": "满地枝叶花卉披肩 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1915-622",
+      "nameA": "龙纹海水朝袍 · 馆藏取色",
+      "idB": "artist-cma-expanded-107161",
+      "nameB": "老卢卡斯·克拉纳赫 · Adam and Eve in Paradise",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1916-1266",
+      "nameA": "白地横列小花刺绣 · 馆藏取色",
+      "idB": "world-CMA-1924-1043",
+      "nameB": "白地密排金色花纹锦 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1918-288",
+      "nameA": "花卉 · 鸟纹 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1635",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1919-745",
+      "nameA": "花卉 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1933-95",
+      "nameB": "白地花卉丝披肩 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "world-CMA-1920-1161",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1272",
+      "nameB": "人物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "artist-cma-expanded-123964",
+      "nameA": "阿尔布雷希特·丢勒 · Adam and Eve",
+      "idB": "artist-cma-expanded-106987",
+      "nameB": "约翰内斯·维米尔 · Young Woman at a Window",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "artist-cma-expanded-123964",
+      "nameA": "阿尔布雷希特·丢勒 · Adam and Eve",
+      "idB": "artist-cma-expanded-95253",
+      "nameB": "约翰·康斯特布尔 · Hampstead Heath, Looking Toward Harrow",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "artist-cma-expanded-133655",
+      "nameA": "弗朗西斯科·戈雅 · When Day Breaks We Will Be Off, Plate 71",
+      "idB": "artist-cma-expanded-95253",
+      "nameB": "约翰·康斯特布尔 · Hampstead Heath, Looking Toward Harrow",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "artist-cma-expanded-111052",
+      "nameA": "扬·范·霍延 · Landscape with a Cottage and Figures",
+      "idB": "artist-cma-expanded-140452",
+      "nameB": "沈周 · The Thousand Acres of Clouds, from Twelve Vi",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 4.2
+    },
+    {
+      "idA": "radix-pink-1",
+      "nameA": "桃粉 · 雅韵",
+      "idB": "radix-pink-2",
+      "nameB": "桃粉 · 层染",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "radix-bronze-1",
+      "nameA": "古铜 · 雅韵",
+      "idB": "radix-bronze-2",
+      "nameB": "古铜 · 层染",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "radix-bronze-1",
+      "nameA": "古铜 · 雅韵",
+      "idB": "radix-bronze-3",
+      "nameB": "古铜 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1916-14",
+      "nameA": "边饰与织锦 · 馆藏取色",
+      "idB": "artist-cma-expanded-159727",
+      "nameB": "文徵明 · Old Trees by a Wintry Brook",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1916-1423",
+      "nameA": "团形纹 · 馆藏取色",
+      "idB": "world-CMA-1925-478",
+      "nameB": "褐白斜线肩巾 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1919-585-a",
+      "nameA": "人物叙事刺绣横幅 · 馆藏取色",
+      "idB": "world-CMA-1939-40",
+      "nameB": "莲花 · 花卉 · 狮纹 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1919-745",
+      "nameA": "花卉 · 边饰 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1919-750",
+      "nameB": "花卉 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1919-753",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1934-193",
+      "nameB": "花卉 · 鸟纹 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1919-782",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1141",
+      "nameB": "鸟纹 · 边饰 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "world-CMA-1936-222",
+      "nameA": "花草藤蔓 · 馆藏取色",
+      "idB": "artist-cma-expanded-106088",
+      "nameB": "温斯洛·霍默 · Early Morning After a Storm at Sea",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "artist-cma-expanded-129221",
+      "nameA": "亨利·德·图卢兹-洛特雷克 · The Laundress",
+      "idB": "artist-cma-expanded-111052",
+      "nameB": "扬·范·霍延 · Landscape with a Cottage and Figures",
+      "sources": [
+        "artist-open-access",
+        "artist-open-access"
+      ],
+      "distance": 4.3
+    },
+    {
+      "idA": "radix-gold-1",
+      "nameA": "金 · 雅韵",
+      "idB": "radix-gold-3",
+      "nameB": "金 · 点睛",
+      "sources": [
+        "radix-derived",
+        "radix-derived"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1916-1363",
+      "nameA": "刺绣 · 馆藏取色",
+      "idB": "world-CMA-1945-34",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1916-1374",
+      "nameA": "刺绣 · 丝绒 · 馆藏取色",
+      "idB": "world-CMA-1916-1375",
+      "nameB": "刺绣 · 丝绒 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1916-1422",
+      "nameA": "人物群像菱形绣饰 · 馆藏取色",
+      "idB": "world-CMA-1920-1569",
+      "nameB": "织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1916-1474",
+      "nameA": "边饰与织锦 · 馆藏取色",
+      "idB": "world-CMA-1920-1558",
+      "nameB": "菱格小花织锦 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1919-782",
+      "nameA": "花卉 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1158",
+      "nameB": "人物 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1920-1121",
+      "nameA": "树木 · 鸟纹 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1920-1128",
+      "nameB": "花卉 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1920-1161",
+      "nameA": "藤蔓 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1921-1138",
+      "nameB": "树木 · 边饰 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1920-1271",
+      "nameA": "动物 · 人物 · 馆藏取色",
+      "idB": "world-CMA-1936-95",
+      "nameB": "花卉 · 龙纹 · 动物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1920-1293",
+      "nameA": "庭园人物故事刺绣 · 馆藏取色",
+      "idB": "world-CMA-1946-409",
+      "nameB": "新艺术风格对称花叶丝织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1920-1561",
+      "nameA": "黑地折枝花卉锦 · 馆藏取色",
+      "idB": "world-CMA-1967-9",
+      "nameB": "蓝地花叶袈裟 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1921-1596",
+      "nameA": "织物 · 馆藏取色",
+      "idB": "world-CMA-1967-9",
+      "nameB": "蓝地花叶袈裟 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1930-458",
+      "nameA": "动物 · 馆藏取色",
+      "idB": "artist-cma-expanded-129221",
+      "nameB": "亨利·德·图卢兹-洛特雷克 · The Laundress",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1933-317",
+      "nameA": "花卉 · 边饰 · 馆藏取色",
+      "idB": "world-CMA-1933-95",
+      "nameB": "白地花卉丝披肩 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1934-193",
+      "nameA": "花卉 · 鸟纹 · 织物 · 馆藏取色",
+      "idB": "world-CMA-1936-223",
+      "nameB": "藤蔓 · 织物 · 馆藏取色",
+      "sources": [
+        "world-pattern",
+        "world-pattern"
+      ],
+      "distance": 4.4
+    },
+    {
+      "idA": "world-CMA-1967-9",
+      "nameA": "蓝地花叶袈裟 · 馆藏取色",
+      "idB": "artist-cma-expanded-133655",
+      "nameB": "弗朗西斯科·戈雅 · When Day Breaks We Will Be Off, Plate 71",
+      "sources": [
+        "world-pattern",
+        "artist-open-access"
+      ],
+      "distance": 4.4
+    }
+  ],
+  "weakSeparationReviewQueue": [
+    {
+      "id": "artist-cma-expanded-111395",
+      "name": "巴勃罗·毕加索 · Salomé",
+      "source": "artist-open-access",
+      "min": 1.4,
+      "mean": 8.5,
+      "lightness": 20.6
+    },
+    {
+      "id": "world-CMA-1927-57",
+      "name": "花卉 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.5,
+      "mean": 10.9,
+      "lightness": 22.6
+    },
+    {
+      "id": "world-CMA-1916-1217",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.1,
+      "mean": 12.2,
+      "lightness": 26
+    },
+    {
+      "id": "world-CMA-1974-98",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5,
+      "mean": 12.4,
+      "lightness": 22.3
+    },
+    {
+      "id": "world-CMA-1976-1088-b",
+      "name": "袍服 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.4,
+      "mean": 12.6,
+      "lightness": 26.4
+    },
+    {
+      "id": "world-CMA-1950-541",
+      "name": "坐姿人物圆形纹饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.7,
+      "mean": 12.7,
+      "lightness": 28.2
+    },
+    {
+      "id": "world-CMA-1920-1588",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.9,
+      "mean": 13.1,
+      "lightness": 22.6
+    },
+    {
+      "id": "world-CMA-1956-680",
+      "name": "浅地弧形花叶毛巾边饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.2,
+      "mean": 13.8,
+      "lightness": 28.3
+    },
+    {
+      "id": "world-CMA-1950-84",
+      "name": "狮纹 · 动物 · 团形纹 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.5,
+      "mean": 14,
+      "lightness": 20.6
+    },
+    {
+      "id": "world-CMA-1946-258",
+      "name": "团形纹 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.5,
+      "mean": 14.2,
+      "lightness": 28.6
+    },
+    {
+      "id": "world-CMA-1924-1043",
+      "name": "白地密排金色花纹锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 14.3,
+      "lightness": 28.9
+    },
+    {
+      "id": "world-CMA-1934-201",
+      "name": "披肩 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.4,
+      "mean": 14.5,
+      "lightness": 25.1
+    },
+    {
+      "id": "style-original-1",
+      "name": "莫兰迪式 · 雾灰陶罐",
+      "source": "art-style-original",
+      "min": 5.1,
+      "mean": 14.5,
+      "lightness": 29.7
+    },
+    {
+      "id": "world-CMA-1920-1606",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.5,
+      "mean": 14.7,
+      "lightness": 33.7
+    },
+    {
+      "id": "world-CMA-1916-1252",
+      "name": "刺绣 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.7,
+      "mean": 15,
+      "lightness": 24.8
+    },
+    {
+      "id": "world-CMA-1988-246",
+      "name": "树枝群鸟织锦挂幅 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.1,
+      "mean": 15.3,
+      "lightness": 27.8
+    },
+    {
+      "id": "world-CMA-1989-476",
+      "name": "双护法人物绘画挂幅 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4,
+      "mean": 15.4,
+      "lightness": 30.4
+    },
+    {
+      "id": "world-CMA-1916-1266",
+      "name": "白地横列小花刺绣 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.5,
+      "mean": 15.5,
+      "lightness": 27
+    },
+    {
+      "id": "world-CMA-1925-519",
+      "name": "白地蓝色折枝花织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.1,
+      "mean": 15.5,
+      "lightness": 27.4
+    },
+    {
+      "id": "world-CMA-1917-747",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.1,
+      "mean": 15.7,
+      "lightness": 18.4
+    },
+    {
+      "id": "world-CMA-1916-1309",
+      "name": "花卉 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.9,
+      "mean": 15.8,
+      "lightness": 24.1
+    },
+    {
+      "id": "world-CMA-1920-781",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7.4,
+      "mean": 15.8,
+      "lightness": 24.7
+    },
+    {
+      "id": "world-CMA-1931-240",
+      "name": "人物 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.2,
+      "mean": 16,
+      "lightness": 30.6
+    },
+    {
+      "id": "artist-cma-expanded-151078",
+      "name": "尾形光琳 · Plum Tree",
+      "source": "artist-open-access",
+      "min": 5.1,
+      "mean": 16,
+      "lightness": 32.7
+    },
+    {
+      "id": "world-CMA-1916-1256",
+      "name": "彩色连枝花叶刺绣罩 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7.2,
+      "mean": 16.1,
+      "lightness": 26.9
+    },
+    {
+      "id": "world-CMA-1921-136",
+      "name": "浅地花环卷叶织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.7,
+      "mean": 16.1,
+      "lightness": 29.9
+    },
+    {
+      "id": "world-CMA-1920-1566",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.2,
+      "mean": 16.2,
+      "lightness": 29.2
+    },
+    {
+      "id": "world-CMA-1920-766",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.7,
+      "mean": 16.3,
+      "lightness": 28.7
+    },
+    {
+      "id": "world-CMA-1992-95",
+      "name": "牡丹 · 树木 · 凤鸟 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.2,
+      "mean": 16.5,
+      "lightness": 32.3
+    },
+    {
+      "id": "world-CMA-1979-1",
+      "name": "圆框人物群像绣片 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.8,
+      "mean": 16.6,
+      "lightness": 31.9
+    },
+    {
+      "id": "artist-cma-expanded-128392",
+      "name": "卡米耶·毕沙罗 · Edge of the Woods Near L'Hermitage, Pontoise",
+      "source": "artist-open-access",
+      "min": 6.5,
+      "mean": 16.7,
+      "lightness": 34.5
+    },
+    {
+      "id": "artist-cma-expanded-125104",
+      "name": "埃德加·德加 · Frieze of Dancers",
+      "source": "artist-open-access",
+      "min": 8.9,
+      "mean": 16.7,
+      "lightness": 31.6
+    },
+    {
+      "id": "world-CMA-1920-761",
+      "name": "浅蓝地花蝶条纹锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 16.8,
+      "lightness": 32.9
+    },
+    {
+      "id": "world-CMA-1920-1534",
+      "name": "金地缠枝大花织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.3,
+      "mean": 17,
+      "lightness": 33.4
+    },
+    {
+      "id": "world-CMA-1933-421",
+      "name": "花卉 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 9.4,
+      "mean": 17,
+      "lightness": 32.7
+    },
+    {
+      "id": "world-CMA-1939-38",
+      "name": "动物 · 人物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.1,
+      "mean": 17,
+      "lightness": 30.7
+    },
+    {
+      "id": "world-CMA-1937-23",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 17.1,
+      "lightness": 35.9
+    },
+    {
+      "id": "world-CMA-1930-458",
+      "name": "动物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.3,
+      "mean": 17.2,
+      "lightness": 37
+    },
+    {
+      "id": "world-CMA-1992-112-2-a",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6,
+      "mean": 17.3,
+      "lightness": 20.5
+    },
+    {
+      "id": "artist-cma-expanded-111052",
+      "name": "扬·范·霍延 · Landscape with a Cottage and Figures",
+      "source": "artist-open-access",
+      "min": 5.3,
+      "mean": 17.4,
+      "lightness": 35.1
+    },
+    {
+      "id": "world-CMA-1925-522",
+      "name": "黄地红色折枝花织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.7,
+      "mean": 17.6,
+      "lightness": 25.6
+    },
+    {
+      "id": "world-CMA-1940-486",
+      "name": "花卉 · 鸟纹 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 8.1,
+      "mean": 17.6,
+      "lightness": 27.5
+    },
+    {
+      "id": "world-CMA-1944-280",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.7,
+      "mean": 17.6,
+      "lightness": 32.9
+    },
+    {
+      "id": "world-CMA-1920-780",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.8,
+      "mean": 17.7,
+      "lightness": 33.9
+    },
+    {
+      "id": "world-CMA-1956-316",
+      "name": "褐地散点花锦段 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.2,
+      "mean": 17.7,
+      "lightness": 35.7
+    },
+    {
+      "id": "world-CMA-1920-1569",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.7,
+      "mean": 17.8,
+      "lightness": 38.9
+    },
+    {
+      "id": "world-CMA-1945-34",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.6,
+      "mean": 17.8,
+      "lightness": 34
+    },
+    {
+      "id": "world-CMA-1982-92",
+      "name": "团形纹 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.5,
+      "mean": 17.8,
+      "lightness": 28.8
+    },
+    {
+      "id": "artist-cma-expanded-141549",
+      "name": "迭戈·委拉斯开兹 · Portrait of the Jester Calabazas",
+      "source": "artist-open-access",
+      "min": 4.6,
+      "mean": 17.8,
+      "lightness": 34.5
+    },
+    {
+      "id": "world-CMA-1916-1474",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.4,
+      "mean": 17.9,
+      "lightness": 38.6
+    },
+    {
+      "id": "world-CMA-1939-505",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.1,
+      "mean": 18,
+      "lightness": 32.6
+    },
+    {
+      "id": "world-CMA-1951-91",
+      "name": "花卉 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.9,
+      "mean": 18.1,
+      "lightness": 33.2
+    },
+    {
+      "id": "world-CMA-2009-342-1",
+      "name": "佛教三尊人物绢画 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.1,
+      "mean": 18.1,
+      "lightness": 35
+    },
+    {
+      "id": "style-original-6",
+      "name": "莫兰迪式 · 静谧紫灰",
+      "source": "art-style-original",
+      "min": 8.7,
+      "mean": 18.1,
+      "lightness": 35
+    },
+    {
+      "id": "world-CMA-1950-540",
+      "name": "蓝地花叶团纹残片 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.7,
+      "mean": 18.2,
+      "lightness": 31.1
+    },
+    {
+      "id": "world-CMA-1950-551",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.6,
+      "mean": 18.2,
+      "lightness": 35.9
+    },
+    {
+      "id": "style-original-2",
+      "name": "莫兰迪式 · 雾蓝静物",
+      "source": "art-style-original",
+      "min": 5.3,
+      "mean": 18.2,
+      "lightness": 35.4
+    },
+    {
+      "id": "world-CMA-1920-1630",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.6,
+      "mean": 18.3,
+      "lightness": 23.7
+    },
+    {
+      "id": "world-CMA-1956-678",
+      "name": "浅地扇形花卉毛巾边饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.7,
+      "mean": 18.3,
+      "lightness": 30.3
+    },
+    {
+      "id": "world-CMA-1989-50",
+      "name": "狮纹 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.9,
+      "mean": 18.3,
+      "lightness": 31.9
+    },
+    {
+      "id": "artist-cma-expanded-123490",
+      "name": "弗朗西斯科·戈雅 · Portrait of Don Juan Antonio Cuervo",
+      "source": "artist-open-access",
+      "min": 8.8,
+      "mean": 18.3,
+      "lightness": 37.9
+    },
+    {
+      "id": "world-CMA-1918-209",
+      "name": "连环人物头像织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.8,
+      "mean": 18.4,
+      "lightness": 40.4
+    },
+    {
+      "id": "world-CMA-1953-330",
+      "name": "龙纹 · 孔雀 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 8.3,
+      "mean": 18.5,
+      "lightness": 31.9
+    },
+    {
+      "id": "style-original-3",
+      "name": "莫兰迪式 · 暖砂影子",
+      "source": "art-style-original",
+      "min": 7,
+      "mean": 18.5,
+      "lightness": 34.8
+    },
+    {
+      "id": "world-CMA-1977-207",
+      "name": "书法页花卉装饰边框 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.1,
+      "mean": 18.9,
+      "lightness": 26.1
+    },
+    {
+      "id": "world-CMA-1964-371",
+      "name": "虎丘十二景册面装饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.5,
+      "mean": 19,
+      "lightness": 34.7
+    },
+    {
+      "id": "world-CMA-1993-253",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.6,
+      "mean": 19,
+      "lightness": 37.5
+    },
+    {
+      "id": "world-CMA-1923-877",
+      "name": "几何纹 · 边饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 19.1,
+      "lightness": 40.1
+    },
+    {
+      "id": "world-CMA-1953-332",
+      "name": "人物故事 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7,
+      "mean": 19.1,
+      "lightness": 36.1
+    },
+    {
+      "id": "world-CMA-1959-124",
+      "name": "团形纹 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 8.7,
+      "mean": 19.1,
+      "lightness": 42.9
+    },
+    {
+      "id": "world-CMA-1995-73",
+      "name": "龙纹 · 凤鸟 · 织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7.7,
+      "mean": 19.1,
+      "lightness": 38.6
+    },
+    {
+      "id": "world-CMA-1920-1633",
+      "name": "边饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 8.4,
+      "mean": 19.2,
+      "lightness": 32.3
+    },
+    {
+      "id": "world-CMA-1916-1214",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.8,
+      "mean": 19.3,
+      "lightness": 21.5
+    },
+    {
+      "id": "world-CMA-1920-1611",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.1,
+      "mean": 19.3,
+      "lightness": 44.5
+    },
+    {
+      "id": "world-CMA-1916-1258",
+      "name": "刺绣 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5.7,
+      "mean": 19.4,
+      "lightness": 37
+    },
+    {
+      "id": "world-CMA-1916-1294",
+      "name": "青绿色连续花纹绣袋 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 10.7,
+      "mean": 19.4,
+      "lightness": 30.2
+    },
+    {
+      "id": "world-CMA-1920-1949",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6,
+      "mean": 19.4,
+      "lightness": 27.6
+    },
+    {
+      "id": "world-CMA-1926-22",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.6,
+      "mean": 19.4,
+      "lightness": 39
+    },
+    {
+      "id": "world-CMA-1929-136",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 6.3,
+      "mean": 19.4,
+      "lightness": 42.8
+    },
+    {
+      "id": "world-CMA-1968-229",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.9,
+      "mean": 19.4,
+      "lightness": 38.4
+    },
+    {
+      "id": "world-CMA-1915-316",
+      "name": "曼荼罗 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 8.4,
+      "mean": 19.5,
+      "lightness": 39.7
+    },
+    {
+      "id": "world-CMA-1920-1653",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 19.5,
+      "lightness": 38.1
+    },
+    {
+      "id": "world-CMA-1966-513",
+      "name": "光背人物接引绣像 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.1,
+      "mean": 19.5,
+      "lightness": 33.3
+    },
+    {
+      "id": "world-CMA-1916-1303",
+      "name": "彩色星形几何绣面 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 9.1,
+      "mean": 19.6,
+      "lightness": 33.7
+    },
+    {
+      "id": "world-CMA-1925-670",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7.7,
+      "mean": 19.6,
+      "lightness": 39.1
+    },
+    {
+      "id": "world-CMA-1960-274",
+      "name": "中心团花人物绣被 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 7.9,
+      "mean": 19.8,
+      "lightness": 40
+    },
+    {
+      "id": "world-CMA-1991-114",
+      "name": "黄绿花鸟交织织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 5,
+      "mean": 19.8,
+      "lightness": 26.3
+    },
+    {
+      "id": "world-CMA-1950-533",
+      "name": "藤蔓 · 鸟纹 · 刺绣 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.7,
+      "mean": 20.3,
+      "lightness": 36.4
+    },
+    {
+      "id": "world-CMA-1934-183",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.7,
+      "mean": 20.4,
+      "lightness": 34.6
+    },
+    {
+      "id": "world-CMA-1990-80",
+      "name": "天鹅狩猎纹织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.6,
+      "mean": 20.8,
+      "lightness": 35.2
+    },
+    {
+      "id": "world-CMA-1920-1881",
+      "name": "金色龙纹云纹织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.8,
+      "mean": 21.4,
+      "lightness": 48.9
+    },
+    {
+      "id": "world-CMA-1950-526",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.8,
+      "mean": 21.4,
+      "lightness": 34.4
+    },
+    {
+      "id": "world-CMA-1994-292",
+      "name": "凤鸟 · 云纹 · 织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3,
+      "mean": 21.9,
+      "lightness": 48.7
+    },
+    {
+      "id": "world-CMA-1916-1191",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.5,
+      "mean": 23.1,
+      "lightness": 34.7
+    },
+    {
+      "id": "world-CMA-1916-1183",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.1,
+      "mean": 23.3,
+      "lightness": 52.4
+    },
+    {
+      "id": "world-CMA-1925-505",
+      "name": "红地散点小花书衣 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.1,
+      "mean": 23.3,
+      "lightness": 31.3
+    },
+    {
+      "id": "world-CMA-1925-489",
+      "name": "褐地细密卷叶礼仪织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.6,
+      "mean": 23.9,
+      "lightness": 50.9
+    },
+    {
+      "id": "world-CMA-1925-484",
+      "name": "红地中心菱格头巾 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.1,
+      "mean": 24.2,
+      "lightness": 47.4
+    },
+    {
+      "id": "world-CMA-1920-1857",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.9,
+      "mean": 25,
+      "lightness": 54
+    },
+    {
+      "id": "world-CMA-1937-578",
+      "name": "淡紫地铃兰散点织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.6,
+      "mean": 25.2,
+      "lightness": 42.6
+    },
+    {
+      "id": "world-CMA-1991-5",
+      "name": "花卉 · 凤鸟 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.5,
+      "mean": 25.2,
+      "lightness": 48.7
+    },
+    {
+      "id": "world-MET-76609",
+      "name": "明代细长上扬流云 A · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4,
+      "mean": 25.5,
+      "lightness": 28.1
+    },
+    {
+      "id": "world-CMA-1990-2",
+      "name": "鸟兽团纹金织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.8,
+      "mean": 25.7,
+      "lightness": 50.9
+    },
+    {
+      "id": "world-CMA-1943-380",
+      "name": "边饰与织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.5,
+      "mean": 27.7,
+      "lightness": 55.7
+    },
+    {
+      "id": "world-CMA-1946-409",
+      "name": "新艺术风格对称花叶丝织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.6,
+      "mean": 27.9,
+      "lightness": 57.5
+    },
+    {
+      "id": "world-CMA-1946-412",
+      "name": "几何交织圆形纹饰 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.5,
+      "mean": 28.3,
+      "lightness": 53.4
+    },
+    {
+      "id": "world-CMA-1920-1664",
+      "name": "金色卷云与结形纹 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.3,
+      "mean": 28.5,
+      "lightness": 44.6
+    },
+    {
+      "id": "world-CMA-1920-1476",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.8,
+      "mean": 29.1,
+      "lightness": 55.3
+    },
+    {
+      "id": "world-CMA-1991-113",
+      "name": "织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.4,
+      "mean": 29.3,
+      "lightness": 60.4
+    },
+    {
+      "id": "world-CMA-1920-1559",
+      "name": "织物 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 4.4,
+      "mean": 29.4,
+      "lightness": 58.3
+    },
+    {
+      "id": "radix-sand-0",
+      "name": "沙灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.5,
+      "mean": 29.7,
+      "lightness": 57.5
+    },
+    {
+      "id": "radix-slate-0",
+      "name": "岩灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.2,
+      "mean": 29.8,
+      "lightness": 56.7
+    },
+    {
+      "id": "world-CMA-1991-4",
+      "name": "织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 2.2,
+      "mean": 32,
+      "lightness": 51.5
+    },
+    {
+      "id": "world-CMA-1994-293",
+      "name": "莲花 · 花卉 · 织锦 · 馆藏取色",
+      "source": "world-pattern",
+      "min": 3.2,
+      "mean": 32.6,
+      "lightness": 54.7
+    },
+    {
+      "id": "radix-sage-0",
+      "name": "鼠尾草灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.3,
+      "mean": 34,
+      "lightness": 56.9
+    },
+    {
+      "id": "radix-gray-0",
+      "name": "灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.2,
+      "mean": 41.2,
+      "lightness": 56.6
+    },
+    {
+      "id": "radix-olive-0",
+      "name": "橄榄灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.3,
+      "mean": 42.4,
+      "lightness": 57
+    },
+    {
+      "id": "radix-mauve-0",
+      "name": "烟紫灰 · 晨光",
+      "source": "radix-derived",
+      "min": 4.6,
+      "mean": 43,
+      "lightness": 56.6
+    }
+  ],
+  "originalStyleReviews": [
+    {
+      "id": "style-original-1",
+      "name": "莫兰迪式 · 雾灰陶罐",
+      "style": "莫兰迪式（原创）",
+      "min": 5.1,
+      "mean": 14.5,
+      "lightness": 29.7,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-2",
+      "name": "莫兰迪式 · 雾蓝静物",
+      "style": "莫兰迪式（原创）",
+      "min": 5.3,
+      "mean": 18.2,
+      "lightness": 35.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-3",
+      "name": "莫兰迪式 · 暖砂影子",
+      "style": "莫兰迪式（原创）",
+      "min": 7,
+      "mean": 18.5,
+      "lightness": 34.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-4",
+      "name": "莫兰迪式 · 旧玫瑰",
+      "style": "莫兰迪式（原创）",
+      "min": 10.5,
+      "mean": 20.2,
+      "lightness": 37.3,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-5",
+      "name": "莫兰迪式 · 鼠尾草",
+      "style": "莫兰迪式（原创）",
+      "min": 8,
+      "mean": 20.7,
+      "lightness": 40.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-6",
+      "name": "莫兰迪式 · 静谧紫灰",
+      "style": "莫兰迪式（原创）",
+      "min": 8.7,
+      "mean": 18.1,
+      "lightness": 35,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-7",
+      "name": "印象派灵感 · 水光绿蓝",
+      "style": "印象派灵感（原创）",
+      "min": 10.8,
+      "mean": 27.9,
+      "lightness": 34.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-8",
+      "name": "印象派灵感 · 午后花园",
+      "style": "印象派灵感（原创）",
+      "min": 17.2,
+      "mean": 36.5,
+      "lightness": 32,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-9",
+      "name": "印象派灵感 · 湖岸倒影",
+      "style": "印象派灵感（原创）",
+      "min": 10.8,
+      "mean": 24.1,
+      "lightness": 32.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-10",
+      "name": "印象派灵感 · 夏日草地",
+      "style": "印象派灵感（原创）",
+      "min": 11.7,
+      "mean": 31.6,
+      "lightness": 36.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-11",
+      "name": "后印象派灵感 · 蓝与金",
+      "style": "后印象派灵感（原创）",
+      "min": 16,
+      "mean": 66.6,
+      "lightness": 58.5,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-12",
+      "name": "后印象派灵感 · 黄夜群星",
+      "style": "后印象派灵感（原创）",
+      "min": 17.4,
+      "mean": 64.2,
+      "lightness": 57.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-13",
+      "name": "后印象派灵感 · 花田",
+      "style": "后印象派灵感（原创）",
+      "min": 33.6,
+      "mean": 59.5,
+      "lightness": 41.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-14",
+      "name": "后印象派灵感 · 暖橙天空",
+      "style": "后印象派灵感（原创）",
+      "min": 14.1,
+      "mean": 53.9,
+      "lightness": 49.3,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-15",
+      "name": "浮世绘灵感 · 靛蓝与朱",
+      "style": "日本木版画灵感（原创）",
+      "min": 13.2,
+      "mean": 54.9,
+      "lightness": 63.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-16",
+      "name": "浮世绘灵感 · 山海",
+      "style": "日本木版画灵感（原创）",
+      "min": 19.6,
+      "mean": 46.8,
+      "lightness": 46.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-17",
+      "name": "浮世绘灵感 · 夜樱",
+      "style": "日本木版画灵感（原创）",
+      "min": 9.5,
+      "mean": 41,
+      "lightness": 65.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-18",
+      "name": "装饰艺术灵感 · 墨金翡翠",
+      "style": "装饰艺术灵感（原创）",
+      "min": 29.3,
+      "mean": 48.2,
+      "lightness": 75.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-19",
+      "name": "装饰艺术灵感 · 青铜玻璃",
+      "style": "装饰艺术灵感（原创）",
+      "min": 21.2,
+      "mean": 40.5,
+      "lightness": 64.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-20",
+      "name": "波斯织锦灵感 · 钴蓝金红",
+      "style": "波斯纹样灵感（原创）",
+      "min": 15.6,
+      "mean": 55.7,
+      "lightness": 64.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-21",
+      "name": "波斯织锦灵感 · 石榴蔓草",
+      "style": "波斯纹样灵感（原创）",
+      "min": 22.2,
+      "mean": 48.8,
+      "lightness": 61.2,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-22",
+      "name": "印度织物灵感 · 茜红松绿",
+      "style": "南亚织物灵感（原创）",
+      "min": 25.7,
+      "mean": 58.4,
+      "lightness": 47,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-23",
+      "name": "地中海陶艺灵感 · 蓝赭",
+      "style": "地中海陶艺灵感（原创）",
+      "min": 14.9,
+      "mean": 45.2,
+      "lightness": 54.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-24",
+      "name": "北欧自然灵感 · 冷杉暮色",
+      "style": "北欧自然色灵感（原创）",
+      "min": 13,
+      "mean": 29.1,
+      "lightness": 45.3,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-25",
+      "name": "宋画 · 溪山青岚",
+      "style": "水墨山水（原创）",
+      "min": 13.5,
+      "mean": 31.1,
+      "lightness": 60.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-26",
+      "name": "唐彩 · 石窟云霞",
+      "style": "东方壁画（原创）",
+      "min": 15.7,
+      "mean": 38.4,
+      "lightness": 43.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-27",
+      "name": "明式 · 青花白瓷",
+      "style": "陶瓷与釉色（原创）",
+      "min": 15,
+      "mean": 38.5,
+      "lightness": 65.3,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-28",
+      "name": "清织 · 缂丝霞光",
+      "style": "织锦纹样（原创）",
+      "min": 20.4,
+      "mean": 36.2,
+      "lightness": 50.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-29",
+      "name": "江户 · 海天木版",
+      "style": "浮世绘（原创）",
+      "min": 18.6,
+      "mean": 47.7,
+      "lightness": 62.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-30",
+      "name": "琳派 · 金箔秋草",
+      "style": "琳派（原创）",
+      "min": 18.5,
+      "mean": 41.5,
+      "lightness": 57.5,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-31",
+      "name": "和风 · 侘寂苔庭",
+      "style": "日式自然（原创）",
+      "min": 13.2,
+      "mean": 27.6,
+      "lightness": 56.2,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-32",
+      "name": "朝鲜民画 · 朱青",
+      "style": "民画（原创）",
+      "min": 17.9,
+      "mean": 44.8,
+      "lightness": 52.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-33",
+      "name": "丹青纹彩 · 丹青",
+      "style": "建筑彩绘（原创）",
+      "min": 23.4,
+      "mean": 51,
+      "lightness": 49.7,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-34",
+      "name": "莫卧儿 · 绢本花苑",
+      "style": "宫廷细密画（原创）",
+      "min": 21.3,
+      "mean": 41.6,
+      "lightness": 53.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-35",
+      "name": "拉杰普特 · 日落宫殿",
+      "style": "印度宫廷画（原创）",
+      "min": 22.8,
+      "mean": 48.8,
+      "lightness": 47.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-36",
+      "name": "卡拉姆卡里 · 天然染",
+      "style": "纺织印染（原创）",
+      "min": 12.3,
+      "mean": 36.7,
+      "lightness": 49.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-37",
+      "name": "萨法维 · 宝石细密",
+      "style": "波斯细密画（原创）",
+      "min": 18.2,
+      "mean": 49.5,
+      "lightness": 53.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-38",
+      "name": "伊斯法罕 · 蓝釉星穹",
+      "style": "伊斯兰装饰（原创）",
+      "min": 17.8,
+      "mean": 44.3,
+      "lightness": 57.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-39",
+      "name": "伊兹尼克 · 蓝红陶绘",
+      "style": "伊斯兰陶瓷（原创）",
+      "min": 18.2,
+      "mean": 48.2,
+      "lightness": 56.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-40",
+      "name": "奥斯曼 · 丝绒石榴",
+      "style": "织锦纹样（原创）",
+      "min": 16.7,
+      "mean": 46.5,
+      "lightness": 51.2,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-41",
+      "name": "摩洛哥 · 泽利吉",
+      "style": "几何镶嵌（原创）",
+      "min": 14.7,
+      "mean": 44,
+      "lightness": 56.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-42",
+      "name": "阿拉伯 · 马赛克花窗",
+      "style": "几何镶嵌（原创）",
+      "min": 14.1,
+      "mean": 37.4,
+      "lightness": 51.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-43",
+      "name": "肯特织纹 · 赤金绿",
+      "style": "西非织物（原创）",
+      "min": 24.1,
+      "mean": 58.4,
+      "lightness": 55.5,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-44",
+      "name": "阿丁克拉 · 靛土记号",
+      "style": "西非纹样（原创）",
+      "min": 11.5,
+      "mean": 37.7,
+      "lightness": 56.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-45",
+      "name": "约鲁巴 · 阿迪雷靛染",
+      "style": "西非染织（原创）",
+      "min": 15.8,
+      "mean": 38.4,
+      "lightness": 61.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-46",
+      "name": "埃塞俄比亚 · 抄本红金",
+      "style": "非洲手抄本（原创）",
+      "min": 22.5,
+      "mean": 44.8,
+      "lightness": 47,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-47",
+      "name": "埃及 · 沙壁蓝金",
+      "style": "古代壁画（原创）",
+      "min": 18.7,
+      "mean": 40.3,
+      "lightness": 45.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-48",
+      "name": "拜占庭 · 金石圣像",
+      "style": "宗教镶嵌（原创）",
+      "min": 16.1,
+      "mean": 39.6,
+      "lightness": 45.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-49",
+      "name": "古希腊 · 黑绘陶纹",
+      "style": "古典陶绘（原创）",
+      "min": 17.4,
+      "mean": 33.4,
+      "lightness": 60,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-50",
+      "name": "文艺复兴 · 壁画肌理",
+      "style": "文艺复兴（原创）",
+      "min": 13.5,
+      "mean": 30.6,
+      "lightness": 45.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-51",
+      "name": "巴洛克 · 暮金明暗",
+      "style": "巴洛克（原创）",
+      "min": 8.3,
+      "mean": 40.1,
+      "lightness": 57.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-52",
+      "name": "洛可可 · 粉壁花间",
+      "style": "洛可可（原创）",
+      "min": 13.8,
+      "mean": 27.9,
+      "lightness": 29.7,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-53",
+      "name": "荷兰画派 · 金褐窗光",
+      "style": "荷兰黄金时代（原创）",
+      "min": 8.6,
+      "mean": 33.2,
+      "lightness": 51.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-54",
+      "name": "浪漫主义 · 苍云光晕",
+      "style": "浪漫主义（原创）",
+      "min": 12.9,
+      "mean": 33.5,
+      "lightness": 56.8,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-55",
+      "name": "工艺美术 · 蔓藤织印",
+      "style": "工艺美术运动（原创）",
+      "min": 13.9,
+      "mean": 33.7,
+      "lightness": 49.2,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-56",
+      "name": "新艺术 · 鸢尾曲线",
+      "style": "新艺术运动（原创）",
+      "min": 15.2,
+      "mean": 34,
+      "lightness": 39,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-57",
+      "name": "分离派 · 金叶几何",
+      "style": "维也纳分离派（原创）",
+      "min": 16.2,
+      "mean": 36.9,
+      "lightness": 60.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-58",
+      "name": "包豪斯 · 原色构成",
+      "style": "包豪斯（原创）",
+      "min": 24.2,
+      "mean": 59.9,
+      "lightness": 69.2,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-59",
+      "name": "风格派 · 几何秩序",
+      "style": "风格派（原创）",
+      "min": 10.1,
+      "mean": 67.9,
+      "lightness": 77.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-60",
+      "name": "构成主义 · 斜切红黑",
+      "style": "构成主义（原创）",
+      "min": 16.8,
+      "mean": 52,
+      "lightness": 64.5,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-61",
+      "name": "装饰艺术 · 镶金孔雀",
+      "style": "装饰艺术（原创）",
+      "min": 20.4,
+      "mean": 45.4,
+      "lightness": 71.5,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-62",
+      "name": "塔拉韦拉 · 蓝黄陶片",
+      "style": "拉美陶艺（原创）",
+      "min": 16.8,
+      "mean": 50.4,
+      "lightness": 54.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-63",
+      "name": "奥托米 · 绚彩花鸟",
+      "style": "拉美刺绣（原创）",
+      "min": 12.4,
+      "mean": 49.3,
+      "lightness": 44.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-64",
+      "name": "安第斯 · 山脉织毯",
+      "style": "南美纺织（原创）",
+      "min": 15.9,
+      "mean": 44,
+      "lightness": 37.6,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-65",
+      "name": "爪哇 · 蜡染蓝棕",
+      "style": "东南亚蜡染（原创）",
+      "min": 12.7,
+      "mean": 35.3,
+      "lightness": 54.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-66",
+      "name": "东湖版画 · 民俗朱黄",
+      "style": "东南亚版画（原创）",
+      "min": 22.2,
+      "mean": 47.5,
+      "lightness": 47.1,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-67",
+      "name": "高棉 · 寺宇暖砂",
+      "style": "东南亚艺术（原创）",
+      "min": 14.1,
+      "mean": 29.6,
+      "lightness": 37.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-68",
+      "name": "班加隆 · 五彩瓷绘",
+      "style": "东南亚陶绘（原创）",
+      "min": 23.4,
+      "mean": 50.3,
+      "lightness": 49.4,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    },
+    {
+      "id": "style-original-69",
+      "name": "现代北欧 · 雪松留白",
+      "style": "北欧现代设计（原创）",
+      "min": 11.5,
+      "mean": 24.6,
+      "lightness": 47.9,
+      "reviewState": "algorithm-reviewed; manual designer review still required"
+    }
+  ],
+  "protocol": [
+    "Check the original picture beside the six colors before removing/merging any color proposal.",
+    "Never merge distinct museum provenance records just because sampled colors look alike.",
+    "Review accessibility and contrast on both light and dark embroidery grounds.",
+    "Mark designer approval explicitly; automatic distance does not constitute professional aesthetic approval."
+  ]
+}

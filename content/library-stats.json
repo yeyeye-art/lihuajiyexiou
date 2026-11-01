@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "originalPatterns": 1088,
+  "metMuseumReferences": 43,
+  "addedMuseumReferences": 990,
+  "worldMuseumReferences": 1033,
+  "totalCatalogRecords": 2143,
+  "addedByRegion": {
+    "东亚邻邦": 120,
+    "东南亚": 50,
+    "南亚": 120,
+    "中亚": 50,
+    "波斯与西亚": 145,
+    "埃及与地中海": 120,
+    "欧洲": 145,
+    "非洲": 120,
+    "美洲": 120
+  },
+  "editorialNote": "原有1088份传统纹样+1033份世界馆藏原作参考+22件首批独立教学SVG元素，共2143条检索记录。方案B的1000条为总计划目标，未生成或未验证者不能计入总数。22件为有官方馆藏出处的原创结构化教学重绘，不声称直接从原作提取或已通过历史复原审核。",
+  "latestBatchMuseumReferences": 540,
+  "latestBatchByRegion": {
+    "东亚邻邦": 70,
+    "东南亚": 0,
+    "南亚": 70,
+    "中亚": 0,
+    "波斯与西亚": 95,
+    "埃及与地中海": 70,
+    "欧洲": 95,
+    "非洲": 70,
+    "美洲": 70
+  },
+  "basicElementReferences": 22,
+  "basicElementGoal": 1000,
+  "basicElementBatch": "basic-elements-editorial-study-20261020",
+  "basicElementType": "独立 SVG 教学原创简化重绘（非馆藏纹样忠实复原）"
+}

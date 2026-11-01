@@ -1,0 +1,77 @@
+/* Five supplied chapter paintings; only live data/control patches are replaced. */
+#main .chapter-selection,#main .motif-park:has(.chapter-memory){position:relative!important;min-height:0!important;background:#f6eddf!important;padding:0!important;overflow-x:auto}
+#main .chapter-scene{position:relative;container-type:inline-size;width:100%;min-width:1000px;aspect-ratio:1672/866;background-size:100% 100%;background-repeat:no-repeat;color:#493723;font-family:"Songti SC","SimSun",serif;isolation:isolate}
+#main [data-chapter-scene=link]{background-image:url('./chapter-scenes/link.webp')}
+#main [data-chapter-scene=jigsaw]{background-image:url('./chapter-scenes/jigsaw.webp')}
+#main [data-chapter-scene=color]{background-image:url('./chapter-scenes/color.webp')}
+#main [data-chapter-scene=studio]{background-image:url('./chapter-scenes/studio.webp')}
+#main [data-chapter-scene=memory]{background-image:url('./chapter-scenes/memory.webp')}
+#main .chapter-accessible-title{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#main .chapter-scene .chapter-node{position:absolute!important;left:var(--node-x)!important;top:var(--node-y)!important;transform:translate(-50%,-26%)!important;width:8.1%!important;height:17%!important;min-height:0!important;min-width:0!important;padding:0!important;margin:0!important;border:0!important;border-radius:12px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:0!important;background:transparent!important;box-shadow:none!important;z-index:4;color:#493723!important;opacity:1!important}
+#main .chapter-scene .chapter-node[hidden]{display:none!important}
+#main .chapter-node b{display:grid;place-items:center;font:normal 2cqw/1.2 Georgia,"SimSun",serif!important;color:#fff8e8!important;height:36%;width:37%;background:#947d59;border-radius:50%;text-shadow:0 1px 2px #443222}
+#main .chapter-node small{font:normal 1.25cqw/1.5 Georgia,serif!important;color:#bf9457!important;background:#f7eddb;letter-spacing:.05em;margin-top:2%;width:67%;text-align:center}
+#main .chapter-node>span{font:600 1.1cqw/1.5 "SimSun",serif!important;background:#f6eddf;width:90%;text-align:center;margin-top:0}
+#main [data-chapter-scene=link] .chapter-node>span{display:none}
+#main .chapter-node:disabled b{background:#837b6d;color:#e6dfd2!important}#main .chapter-node:disabled small{color:#9a9488!important}
+#main .chapter-node.chosen:after{content:'';position:absolute;inset:-5%;border:2px solid #e5b56c;border-radius:45% 45% 18% 18%;box-shadow:0 0 18px #fff0bd;pointer-events:none}
+#main .chapter-node:focus-visible{outline:3px solid #894829!important;outline-offset:5px}
+#main .chapter-progress{position:absolute;left:83%;top:8%;width:14%;padding:.5cqw;box-sizing:border-box;font:1cqw/1.6 "SimSun",serif}
+#main .chapter-progress h3{font-size:1.5cqw;margin:0 0 .4cqw;color:#493723}#main .chapter-progress p{margin:.4cqw 0}#main .chapter-progress strong{color:#8d4c2b}
+#main .chapter-progress progress{width:100%;height:.65cqw;accent-color:#c49b61}
+#main [data-chapter-scene=link] .chapter-progress{top:10%;left:83.5%}
+#main [data-chapter-scene=link] .chapter-progress p:last-child{margin-top:6.5cqw;padding:1cqw 0;font-size:1.3cqw;line-height:2}
+#main .chapter-start{position:absolute;left:82.8%;top:83.5%;width:14.6%;height:7.8%;z-index:6;display:flex;align-items:center;justify-content:center}
+#main .chapter-start button{width:100%!important;height:100%!important;min-height:0!important;border:0!important;border-radius:30px!important;background:#9b4a2c!important;color:#fff6df!important;font:normal 1.7cqw/1.2 "SimSun",serif!important;padding:.4cqw!important;box-shadow:none!important;white-space:nowrap}
+#main [data-chapter-scene=link] .chapter-start{top:61.2%;height:5.4%;left:83%;width:13.5%}#main [data-chapter-scene=link] .chapter-start button{background:#647b72!important;font-size:1.35cqw!important}
+#main .chapter-start button:disabled{opacity:.55}
+#main .chapter-rewards{position:absolute;left:4.4%;top:79.3%;width:31.5%;height:14%;display:flex;flex-direction:column;justify-content:center;gap:.5cqw;font:1.05cqw/1.6 "SimSun",serif;color:#71583c}
+#main .chapter-rewards strong{font-size:1.45cqw;color:#493723}
+#main [data-chapter-scene=link] .chapter-rewards{left:5.5%;top:82%;width:87%;height:12%;flex-direction:row;align-items:center;justify-content:space-around}
+#main [data-chapter-scene=studio] .chapter-rewards{left:6%;top:82.5%;width:66%;height:12%;flex-direction:row;align-items:center;justify-content:space-around}
+#main .chapter-pagination{position:absolute;left:27%;top:2%;width:50%;display:flex;justify-content:center;gap:.45cqw;z-index:7}
+#main .chapter-pagination button{font:1cqw "SimSun",serif!important;min-height:30px!important;border:1px solid #b79b70!important;border-radius:18px!important;background:#fbf2e2eb!important;color:#6b5034!important;padding:.45cqw 1cqw!important;box-shadow:none!important}
+#main .chapter-pagination button[aria-pressed=true]{background:#826345!important;color:#fff7df!important}
+#main .chapter-current{position:absolute;bottom:1%;left:40%;width:36%;text-align:center;font:.8cqw "SimSun",serif;margin:0;background:#fff6e4d9;padding:.3cqw;color:#6b5034}
+#main .chapter-back,#main .motif-park:has(.chapter-memory) #park-memory-return{position:absolute!important;left:2.2%;top:2.9%;width:8.5%;min-width:100px;z-index:20!important;padding:.3cqw!important;background:#fbf4e5!important;border:1px solid #c8b495!important;border-radius:25px!important;font:1.1cqw "SimSun",serif!important;color:#473526!important;min-height:30px}
+#main .chapter-filters{padding:12px 24px;background:#f8f0e4;max-width:100vw;box-sizing:border-box}#main .chapter-filters summary{cursor:pointer}
+#main .motif-park:has(.chapter-memory) .reference-memory-title,#main .motif-park:has(.chapter-memory) .park-memory-nav>span{display:none!important}
+#main .motif-park:has(.chapter-memory) .park-memory-nav{position:static!important;padding:0!important;margin:0!important;height:0!important;border:0!important}
+#main .motif-park:has(.chapter-memory) #park-memory-inner{position:static!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+#main .chapter-memory{padding:0!important;margin:0!important;background:none!important;max-width:none!important;width:100%!important;border:0!important}
+#main .chapter-memory .mg-arcade-hero,#main .chapter-memory .mg-arcade-footnote{display:none!important}
+#main .chapter-memory .mg-arcade-tabs{margin:0!important;padding:6px!important;position:relative;order:2}
+#main .chapter-memory{display:flex!important;flex-direction:column!important}#main .chapter-memory #motif-game-setup{order:1}#main .chapter-memory #motif-game-message{order:3}
+@media(max-width:900px){#main .chapter-selection,#main .motif-park:has(.chapter-memory){overflow-x:auto!important}#main .chapter-back,#main .motif-park:has(.chapter-memory) #park-memory-return{left:22px;top:17px;font-size:14px!important}#main .chapter-filters{position:sticky;left:0;width:100vw}#main .chapter-scene{min-width:1100px}#main .chapter-node b{font-size:22px!important}#main .chapter-node>span{font-size:13px!important}#main .chapter-pagination button{font-size:12px!important}#main .chapter-memory .mg-arcade-tabs{max-width:100vw;position:sticky;left:0}}
+/* Preserve the supplied reward illustrations and plaques rather than replacing
+   their panels; live values occupy the original small text fields. */
+#main .chapter-scene .chapter-node{transform:translate(-50%,-1.5cqw)!important;height:8.5cqw!important}
+#main .chapter-node b{position:absolute;left:50%;top:0;transform:translateX(-50%);width:2.75cqw;height:3cqw;font-size:1.8cqw!important}
+#main .chapter-node small{position:absolute;left:50%;transform:translateX(-50%);top:3.18cqw;width:4.55cqw;height:1.25cqw;line-height:1.25cqw!important;margin:0;background:#f6ecda;font-size:1.1cqw!important}
+#main .chapter-node.chosen:after{inset:-.4cqw 1.7cqw 3.5cqw;border-radius:40%}
+#main .chapter-progress{left:83.3%;top:7.1%;width:14%;height:19%;padding:0}
+#main .chapter-progress h3{position:absolute;top:0;left:0;margin:0;font-size:1.45cqw}
+#main .chapter-completed{position:absolute;right:0;top:0;font-size:1.15cqw}
+#main .chapter-progress progress{position:absolute;top:25%;left:0;border:1px solid #d1b58b;border-radius:10px;overflow:hidden;height:.65cqw;background:#ead9be;appearance:none}
+#main .chapter-progress progress::-webkit-progress-bar{background:#ead9be}#main .chapter-progress progress::-webkit-progress-value{background:linear-gradient(90deg,#bd8c48,#f0cd90)}
+#main .chapter-progress .chapter-stars{position:absolute;top:87%;left:0;font-size:1cqw;margin:0!important;padding:0!important}
+#main [data-chapter-scene=link] .chapter-progress{top:8.3%;left:87.5%;width:9.7%;height:9%}
+#main [data-chapter-scene=link] .chapter-completed{top:43%;left:0;right:auto}#main [data-chapter-scene=link] .chapter-progress progress{top:95%;left:-43%;width:115%}#main [data-chapter-scene=link] .chapter-stars{top:150%}
+#main [data-chapter-scene=memory] .chapter-progress,#main [data-chapter-scene=studio] .chapter-progress{left:84.9%;width:12.2%;top:7.7%;height:21%}
+#main .chapter-record{display:none;position:absolute;left:85.5%;top:31%;width:11.8%;font:1.1cqw/1.7 "SimSun",serif;color:#624c32}
+#main .chapter-record strong{font-size:1.4cqw}#main .chapter-record p{margin:.6cqw 0}
+#main [data-chapter-scene=link] .chapter-record{display:block;left:86%;top:30.8%;width:10.8%}
+#main [data-chapter-scene=link] .chapter-record p{margin:2.2cqw 0}
+#main [data-chapter-scene=memory] .chapter-record,#main [data-chapter-scene=studio] .chapter-record{display:block}
+#main [data-chapter-scene=memory] .chapter-record strong,#main [data-chapter-scene=studio] .chapter-record strong{display:none}
+#main .chapter-rewards{left:41%;top:93.6%;width:38%;height:3%;flex-direction:row;gap:1cqw;align-items:center;justify-content:center;background:#fbf1dfed;border-radius:15px;font:.85cqw "SimSun",serif}
+#main [data-chapter-scene=link] .chapter-rewards,#main [data-chapter-scene=studio] .chapter-rewards{left:8%;top:85%;width:15.3%;height:8%;flex-direction:column;justify-content:center;font:.9cqw/1.8 "SimSun",serif;background:none}
+#main .chapter-current{bottom:.1%;font-size:.65cqw}
+#main .motif-park:has(.chapter-memory) #park-memory-return{white-space:nowrap;font-size:14px!important;width:145px}
+#main [data-chapter-scene=studio] .chapter-unlocked,#main [data-chapter-scene=memory] .chapter-unlocked{display:none}
+#main .chapter-replay{position:absolute;left:87.4%;top:44.2%;width:8.6%;height:4.8%;background:#6d7e70!important;color:#fff7e6!important;border:1px solid #baa071!important;border-radius:20px!important;font:1.05cqw "SimSun",serif!important;min-height:0!important;padding:0!important;z-index:6}
+#main [data-chapter-scene=memory] .chapter-replay{top:45%;background:#897951!important}
+#main [data-chapter-scene=link] .chapter-progress .chapter-stars{display:none}
+#main .chapter-node:disabled{cursor:not-allowed!important}
+#main .chapter-node small{top:3cqw;height:1.7cqw;line-height:1.7cqw!important;font-size:1.15cqw!important}
+#main .chapter-node em{position:absolute;top:-.2cqw;right:1.9cqw;border-radius:50%;background:#f9f0df;color:#706b60;font:1cqw Georgia,serif;width:1.2cqw;height:1.2cqw;line-height:1.2cqw}

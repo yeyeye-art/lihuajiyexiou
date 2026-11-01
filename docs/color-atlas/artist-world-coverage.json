@@ -1,0 +1,1026 @@
+{
+  "generatedAt": "2026-10-20",
+  "method": "Derived from verified artwork references and separately labeled editorial country/style indexing",
+  "notice": "画家国家和艺术风格分类用于本项目导航，具体作品版权、作者与年代以每件馆方记录为准。",
+  "artists": [
+    {
+      "name": "Albrecht Durer",
+      "label": "阿尔布雷希特·丢勒",
+      "country": "德国",
+      "era": "文艺复兴",
+      "style": "北方文艺复兴",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Melencolia I",
+          "url": "https://www.clevelandart.org/art/1926.211",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-108501.webp"
+        },
+        {
+          "title": "Adam and Eve",
+          "url": "https://www.clevelandart.org/art/1944.473",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-123964.webp"
+        }
+      ]
+    },
+    {
+      "name": "Camille Pissarro",
+      "label": "卡米耶·毕沙罗",
+      "country": "法国",
+      "era": "19世纪",
+      "style": "印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Edge of the Woods Near L'Hermitage, Pontoise",
+          "url": "https://www.clevelandart.org/art/1951.356",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-128392.webp"
+        },
+        {
+          "title": "The Lock at Pontoise",
+          "url": "https://www.clevelandart.org/art/1990.7",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-155626.webp"
+        }
+      ]
+    },
+    {
+      "name": "Claude Monet",
+      "label": "Claude Monet",
+      "country": "法国",
+      "era": "以逐件馆藏创作时间为准",
+      "style": "馆藏作品",
+      "workCount": 5,
+      "examples": [
+        {
+          "title": "Gardener's House at Antibes",
+          "url": "https://www.clevelandart.org/art/1916.1044",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-monet-1916-1044.webp"
+        },
+        {
+          "title": "Water Lilies (Agapanthus)",
+          "url": "https://www.clevelandart.org/art/1960.81",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-monet-1960-81.webp"
+        }
+      ]
+    },
+    {
+      "name": "Diego Velazquez",
+      "label": "迭戈·委拉斯开兹",
+      "country": "西班牙",
+      "era": "17世纪",
+      "style": "巴洛克",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Figures",
+          "url": "https://www.clevelandart.org/art/1952.12",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-129228.webp"
+        },
+        {
+          "title": "Portrait of the Jester Calabazas",
+          "url": "https://www.clevelandart.org/art/1965.15",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-141549.webp"
+        }
+      ]
+    },
+    {
+      "name": "Dong Qichang",
+      "label": "董其昌",
+      "country": "中国",
+      "era": "明代",
+      "style": "中国文人画",
+      "workCount": 1,
+      "examples": [
+        {
+          "title": "Mt. Qingbian",
+          "url": "https://www.clevelandart.org/art/1980.10",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-149791.webp"
+        }
+      ]
+    },
+    {
+      "name": "Edgar Degas",
+      "label": "埃德加·德加",
+      "country": "法国",
+      "era": "19世纪",
+      "style": "印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Frieze of Dancers",
+          "url": "https://www.clevelandart.org/art/1946.83",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-125104.webp"
+        },
+        {
+          "title": "Paul Lafond and Alphonse Cherfils Examining a Painting",
+          "url": "https://www.clevelandart.org/art/1958.25",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135238.webp"
+        }
+      ]
+    },
+    {
+      "name": "Edvard Munch",
+      "label": "爱德华·蒙克",
+      "country": "挪威",
+      "era": "19—20世纪",
+      "style": "表现主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Evening, Melancholy I",
+          "url": "https://www.clevelandart.org/art/1959.82",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-136154.webp"
+        },
+        {
+          "title": "Woman with Red Hair and Green Eyes (The Sin)",
+          "url": "https://www.clevelandart.org/art/1983.185",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-151336.webp"
+        }
+      ]
+    },
+    {
+      "name": "Francisco Goya",
+      "label": "弗朗西斯科·戈雅",
+      "country": "西班牙",
+      "era": "18—19世纪",
+      "style": "浪漫主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Portrait of Don Juan Antonio Cuervo",
+          "url": "https://www.clevelandart.org/art/1943.90",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-123490.webp"
+        },
+        {
+          "title": "When Day Breaks We Will Be Off, Plate 71",
+          "url": "https://www.clevelandart.org/art/1956.274",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-133655.webp"
+        }
+      ]
+    },
+    {
+      "name": "Gustav Klimt",
+      "label": "古斯塔夫·克里姆特",
+      "country": "奥地利",
+      "era": "19—20世纪",
+      "style": "维也纳分离派",
+      "workCount": 1,
+      "examples": [
+        {
+          "title": "Hermine Gallia",
+          "url": "https://www.clevelandart.org/art/1972.312",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-146909.webp"
+        }
+      ]
+    },
+    {
+      "name": "Henri de Toulouse-Lautrec",
+      "label": "亨利·德·图卢兹-洛特雷克",
+      "country": "法国",
+      "era": "19世纪末",
+      "style": "后印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Laundress",
+          "url": "https://www.clevelandart.org/art/1952.113",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-129221.webp"
+        },
+        {
+          "title": "May Belfort",
+          "url": "https://www.clevelandart.org/art/1958.54",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135515.webp"
+        }
+      ]
+    },
+    {
+      "name": "J. M. W. Turner",
+      "label": "J. M. W. 特纳",
+      "country": "英国",
+      "era": "19世纪",
+      "style": "浪漫主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Burning of the Houses of Lords and Commons, 16 October 1834",
+          "url": "https://www.clevelandart.org/art/1942.647",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-122351.webp"
+        },
+        {
+          "title": "Flüelen, from the Lake of Lucerne",
+          "url": "https://www.clevelandart.org/art/1954.129",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-131338.webp"
+        }
+      ]
+    },
+    {
+      "name": "James McNeill Whistler",
+      "label": "詹姆斯·惠斯勒",
+      "country": "美国",
+      "era": "19世纪",
+      "style": "唯美主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Garden",
+          "url": "https://www.clevelandart.org/art/1923.31",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-105105.webp"
+        },
+        {
+          "title": "Japanese Woman Painting a Fan (recto); Standing Woman Holding Up Her Dress (verso)",
+          "url": "https://www.clevelandart.org/art/1933.222",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-113947.webp"
+        }
+      ]
+    },
+    {
+      "name": "Jan van Goyen",
+      "label": "扬·范·霍延",
+      "country": "荷兰",
+      "era": "17世纪",
+      "style": "荷兰黄金时代",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Landscape with a Cottage and Figures",
+          "url": "https://www.clevelandart.org/art/1929.548",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-111052.webp"
+        },
+        {
+          "title": "View of Emmerich",
+          "url": "https://www.clevelandart.org/art/1959.351",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135840.webp"
+        }
+      ]
+    },
+    {
+      "name": "Johannes Vermeer",
+      "label": "约翰内斯·维米尔",
+      "country": "荷兰",
+      "era": "17世纪",
+      "style": "荷兰黄金时代",
+      "workCount": 1,
+      "examples": [
+        {
+          "title": "Young Woman at a Window",
+          "url": "https://www.clevelandart.org/art/1924.989",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-106987.webp"
+        }
+      ]
+    },
+    {
+      "name": "John Constable",
+      "label": "约翰·康斯特布尔",
+      "country": "英国",
+      "era": "19世纪",
+      "style": "浪漫主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Branch Hill Pond, Hampstead",
+          "url": "https://www.clevelandart.org/art/1972.48",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-147017.webp"
+        },
+        {
+          "title": "Hampstead Heath, Looking Toward Harrow",
+          "url": "https://www.clevelandart.org/art/1916.1027",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-95253.webp"
+        }
+      ]
+    },
+    {
+      "name": "John Singer Sargent",
+      "label": "约翰·辛格·萨金特",
+      "country": "美国",
+      "era": "19—20世纪",
+      "style": "肖像与现实主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Patio",
+          "url": "https://www.clevelandart.org/art/1946.293",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-124814.webp"
+        },
+        {
+          "title": "Portrait of Lisa Colt Curtis",
+          "url": "https://www.clevelandart.org/art/1998.168",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-160289.webp"
+        }
+      ]
+    },
+    {
+      "name": "Jose Guadalupe Posada",
+      "label": "何塞·瓜达卢佩·波萨达",
+      "country": "墨西哥",
+      "era": "19—20世纪",
+      "style": "墨西哥版画",
+      "workCount": 1,
+      "examples": [
+        {
+          "title": "The Skeleton of the Buses",
+          "url": "https://www.clevelandart.org/art/2000.97",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-161744.webp"
+        }
+      ]
+    },
+    {
+      "name": "Katsushika Hokusai",
+      "label": "葛饰北斋",
+      "country": "日本",
+      "era": "江户时代",
+      "style": "日本浮世绘",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "South Wind, Clear Sky, from Thirty-Six Views of Mount Fuji",
+          "url": "https://www.clevelandart.org/art/1930.189",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-111654.webp"
+        },
+        {
+          "title": "Poem by Minamoto no Muneyuki from the series One Hundred Poems by One Hundred Poets Explained by the Nurse",
+          "url": "https://www.clevelandart.org/art/1985.327",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-152506.webp"
+        }
+      ]
+    },
+    {
+      "name": "Kitagawa Utamaro",
+      "label": "喜多川歌麿",
+      "country": "日本",
+      "era": "江户时代",
+      "style": "日本浮世绘",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Flirtatious Type, from Ten Types in the Physiognomy of Women",
+          "url": "https://www.clevelandart.org/art/1930.218",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-111689.webp"
+        },
+        {
+          "title": "Act VII from the series The Storehouse of Loyal Retainers",
+          "url": "https://www.clevelandart.org/art/1985.360",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-152544.webp"
+        }
+      ]
+    },
+    {
+      "name": "Lucas Cranach the Elder",
+      "label": "老卢卡斯·克拉纳赫",
+      "country": "德国",
+      "era": "文艺复兴",
+      "style": "北方文艺复兴",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Adam and Eve in Paradise",
+          "url": "https://www.clevelandart.org/art/1925.115",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-107161.webp"
+        },
+        {
+          "title": "Hunting near Hartenfels Castle",
+          "url": "https://www.clevelandart.org/art/1958.425",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135428.webp"
+        }
+      ]
+    },
+    {
+      "name": "Mary Cassatt",
+      "label": "玛丽·卡萨特",
+      "country": "美国",
+      "era": "19世纪",
+      "style": "印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "After the Bath",
+          "url": "https://www.clevelandart.org/art/1920.379",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-101646.webp"
+        },
+        {
+          "title": "In the Omnibus",
+          "url": "https://www.clevelandart.org/art/1941.71",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-121035.webp"
+        }
+      ]
+    },
+    {
+      "name": "Ogata Korin",
+      "label": "尾形光琳",
+      "country": "日本",
+      "era": "江户时代",
+      "style": "琳派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Square Dish with Design of Plovers over Waves",
+          "url": "https://www.clevelandart.org/art/1966.365",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-142640.webp"
+        },
+        {
+          "title": "Plum Tree",
+          "url": "https://www.clevelandart.org/art/1983.10",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-151078.webp"
+        }
+      ]
+    },
+    {
+      "name": "Pablo Picasso",
+      "label": "巴勃罗·毕加索",
+      "country": "西班牙",
+      "era": "20世纪初",
+      "style": "现代艺术",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Frugal Meal",
+          "url": "https://www.clevelandart.org/art/1929.888",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-111385.webp"
+        },
+        {
+          "title": "Salomé",
+          "url": "https://www.clevelandart.org/art/1929.897",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-111395.webp"
+        }
+      ]
+    },
+    {
+      "name": "Paul Cezanne",
+      "label": "保罗·塞尚",
+      "country": "法国",
+      "era": "19世纪末",
+      "style": "后印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Brook",
+          "url": "https://www.clevelandart.org/art/1958.20",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135173.webp"
+        },
+        {
+          "title": "Mount Sainte-Victoire",
+          "url": "https://www.clevelandart.org/art/1958.21",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-135185.webp"
+        }
+      ]
+    },
+    {
+      "name": "Paul Gauguin",
+      "label": "保罗·高更",
+      "country": "法国",
+      "era": "19世纪末",
+      "style": "后印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Large Tree",
+          "url": "https://www.clevelandart.org/art/1975.263",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-148297.webp"
+        },
+        {
+          "title": "In the Waves (Dans les Vagues)",
+          "url": "https://www.clevelandart.org/art/1978.63",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-149410.webp"
+        }
+      ]
+    },
+    {
+      "name": "Pierre-Auguste Renoir",
+      "label": "皮埃尔-奥古斯特·雷诺阿",
+      "country": "法国",
+      "era": "19世纪",
+      "style": "印象派",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Romaine Lacaux",
+          "url": "https://www.clevelandart.org/art/1942.1065",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-121188.webp"
+        },
+        {
+          "title": "Laundress and Her Child (Aline and Pierre)",
+          "url": "https://www.clevelandart.org/art/1977.167",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-149014.webp"
+        }
+      ]
+    },
+    {
+      "name": "Rembrandt van Rijn",
+      "label": "伦勃朗",
+      "country": "荷兰",
+      "era": "17世纪",
+      "style": "荷兰黄金时代",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "A Young Man with a Chain",
+          "url": "https://www.clevelandart.org/art/1942.644",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-122348.webp"
+        },
+        {
+          "title": "Portrait of a Woman",
+          "url": "https://www.clevelandart.org/art/1944.90",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-124089.webp"
+        }
+      ]
+    },
+    {
+      "name": "Shen Zhou",
+      "label": "沈周",
+      "country": "中国",
+      "era": "明代",
+      "style": "中国文人画",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Distant View of Tiger Hill from the Canal Mooring, from Twelve Views of Tiger Hill, Suzhou",
+          "url": "https://www.clevelandart.org/art/1964.371.1",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-140441.webp"
+        },
+        {
+          "title": "The Thousand Acres of Clouds, from Twelve Views of Tiger Hill, Suzhou",
+          "url": "https://www.clevelandart.org/art/1964.371.9",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-140452.webp"
+        }
+      ]
+    },
+    {
+      "name": "Shitao",
+      "label": "石涛",
+      "country": "中国",
+      "era": "清代",
+      "style": "中国文人画",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Reminiscences of Qinhuai River",
+          "url": "https://www.clevelandart.org/art/1966.31.7",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-142578.webp"
+        },
+        {
+          "title": "Reminiscences of Qinhuai River",
+          "url": "https://www.clevelandart.org/art/1966.31.8",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-142579.webp"
+        }
+      ]
+    },
+    {
+      "name": "Utagawa Hiroshige",
+      "label": "歌川广重",
+      "country": "日本",
+      "era": "江户时代",
+      "style": "日本浮世绘",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Driving Rain at Shōno, from Fifty-Three Stations of the Tokaidō",
+          "url": "https://www.clevelandart.org/art/1948.306",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-126086.webp"
+        },
+        {
+          "title": "The Moon-Viewing Promontory, from One Hundred Views of Famous Places in Edo",
+          "url": "https://www.clevelandart.org/art/1985.320",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-152499.webp"
+        }
+      ]
+    },
+    {
+      "name": "Utagawa Kuniyoshi",
+      "label": "歌川国芳",
+      "country": "日本",
+      "era": "江户时代",
+      "style": "日本浮世绘",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Splendid View at Futamigaura Bay",
+          "url": "https://www.clevelandart.org/art/1943.10",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-122833.webp"
+        },
+        {
+          "title": "Ōmori, from the series Famous Places in the Eastern Capital",
+          "url": "https://www.clevelandart.org/art/1985.335",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-152515.webp"
+        }
+      ]
+    },
+    {
+      "name": "Vincent van Gogh",
+      "label": "Vincent van Gogh",
+      "country": "荷兰",
+      "era": "以逐件馆藏创作时间为准",
+      "style": "馆藏作品",
+      "workCount": 5,
+      "examples": [
+        {
+          "title": "Irises",
+          "url": "https://www.metmuseum.org/art/collection/search/436528",
+          "license": "Public Domain",
+          "imagePath": "assets/color-atlas/artworks/met-436528.webp"
+        },
+        {
+          "title": "Oleanders",
+          "url": "https://www.metmuseum.org/art/collection/search/436530",
+          "license": "Public Domain",
+          "imagePath": "assets/color-atlas/artworks/met-436530.webp"
+        }
+      ]
+    },
+    {
+      "name": "Wen Zhengming",
+      "label": "文徵明",
+      "country": "中国",
+      "era": "明代",
+      "style": "中国文人画",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Playing the Qin in a Secluded Valley",
+          "url": "https://www.clevelandart.org/art/1969.60",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-144829.webp"
+        },
+        {
+          "title": "Old Trees by a Wintry Brook",
+          "url": "https://www.clevelandart.org/art/1997.102",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-159727.webp"
+        }
+      ]
+    },
+    {
+      "name": "William Blake",
+      "label": "威廉·布莱克",
+      "country": "英国",
+      "era": "18—19世纪",
+      "style": "浪漫主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "The Holy Family (Christ in the Lap of Truth)",
+          "url": "https://www.clevelandart.org/art/1950.239",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-127561.webp"
+        },
+        {
+          "title": "St. Matthew",
+          "url": "https://www.clevelandart.org/art/2017.4",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-294155.webp"
+        }
+      ]
+    },
+    {
+      "name": "William Morris",
+      "label": "威廉·莫里斯",
+      "country": "英国",
+      "era": "19世纪",
+      "style": "工艺美术运动",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Strawberry Thief",
+          "url": "https://www.clevelandart.org/art/1937.696",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-117129.webp"
+        },
+        {
+          "title": "Winged Fortune",
+          "url": "https://www.clevelandart.org/art/1970.54",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-145298.webp"
+        }
+      ]
+    },
+    {
+      "name": "Winslow Homer",
+      "label": "温斯洛·霍默",
+      "country": "美国",
+      "era": "19世纪",
+      "style": "美国现实主义",
+      "workCount": 2,
+      "examples": [
+        {
+          "title": "Early Morning After a Storm at Sea",
+          "url": "https://www.clevelandart.org/art/1924.195",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-106088.webp"
+        },
+        {
+          "title": "The Brierwood Pipe",
+          "url": "https://www.clevelandart.org/art/1944.524",
+          "license": "CC0",
+          "imagePath": "assets/color-atlas/artworks/cma-expanded-124040.webp"
+        }
+      ]
+    }
+  ],
+  "countryGroups": {
+    "德国": 2,
+    "法国": 7,
+    "西班牙": 3,
+    "中国": 4,
+    "挪威": 1,
+    "奥地利": 1,
+    "英国": 4,
+    "美国": 4,
+    "荷兰": 4,
+    "墨西哥": 1,
+    "日本": 5
+  },
+  "eraGroups": {
+    "文艺复兴": 2,
+    "19世纪": 9,
+    "以逐件馆藏创作时间为准": 2,
+    "17世纪": 4,
+    "明代": 3,
+    "19—20世纪": 4,
+    "18—19世纪": 2,
+    "19世纪末": 3,
+    "江户时代": 5,
+    "20世纪初": 1,
+    "清代": 1
+  },
+  "artistStyleGroups": {
+    "北方文艺复兴": 2,
+    "印象派": 4,
+    "馆藏作品": 2,
+    "巴洛克": 1,
+    "中国文人画": 4,
+    "表现主义": 1,
+    "浪漫主义": 4,
+    "维也纳分离派": 1,
+    "后印象派": 3,
+    "唯美主义": 1,
+    "荷兰黄金时代": 3,
+    "肖像与现实主义": 1,
+    "墨西哥版画": 1,
+    "日本浮世绘": 4,
+    "琳派": 1,
+    "现代艺术": 1,
+    "工艺美术运动": 1,
+    "美国现实主义": 1
+  },
+  "styleCulturalGroups": {
+    "未特别标注": 24,
+    "中国": 4,
+    "日本": 3,
+    "韩国": 2,
+    "印度": 3,
+    "伊朗": 2,
+    "土耳其": 2,
+    "摩洛哥": 1,
+    "西亚与北非": 1,
+    "加纳": 2,
+    "尼日利亚": 1,
+    "埃塞俄比亚": 1,
+    "埃及": 1,
+    "东地中海": 1,
+    "希腊": 1,
+    "意大利": 1,
+    "意大利与欧洲": 1,
+    "法国": 1,
+    "荷兰": 2,
+    "英国与欧洲": 1,
+    "英国": 1,
+    "法国与比利时": 1,
+    "奥地利": 1,
+    "德国": 1,
+    "俄罗斯": 1,
+    "跨文化": 1,
+    "墨西哥": 2,
+    "秘鲁与安第斯": 1,
+    "印度尼西亚": 1,
+    "越南": 1,
+    "柬埔寨": 1,
+    "泰国": 1,
+    "北欧": 1
+  },
+  "stylePaletteCount": 69,
+  "culturalMotifCount": 692,
+  "culturalRegions": [
+    {
+      "region": "中国传统",
+      "artistNames": [
+        "Dong Qichang",
+        "Shen Zhou",
+        "Shitao",
+        "Wen Zhengming"
+      ],
+      "styleIds": [
+        "style-original-25",
+        "style-original-26",
+        "style-original-27",
+        "style-original-28"
+      ],
+      "cultureCount": 171,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "东亚邻邦",
+      "artistNames": [
+        "Katsushika Hokusai",
+        "Kitagawa Utamaro",
+        "Ogata Korin",
+        "Utagawa Hiroshige",
+        "Utagawa Kuniyoshi"
+      ],
+      "styleIds": [
+        "style-original-29",
+        "style-original-30",
+        "style-original-31",
+        "style-original-32",
+        "style-original-33"
+      ],
+      "cultureCount": 76,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "南亚织绣",
+      "artistNames": [],
+      "styleIds": [
+        "style-original-34",
+        "style-original-35",
+        "style-original-36",
+        "style-original-65"
+      ],
+      "cultureCount": 96,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "波斯与西亚",
+      "artistNames": [],
+      "styleIds": [
+        "style-original-37",
+        "style-original-38",
+        "style-original-39",
+        "style-original-40"
+      ],
+      "cultureCount": 108,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "埃及与地中海",
+      "artistNames": [],
+      "styleIds": [
+        "style-original-47",
+        "style-original-49",
+        "style-original-50",
+        "style-original-51"
+      ],
+      "cultureCount": 55,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "东南亚织绣",
+      "artistNames": [],
+      "styleIds": [
+        "style-original-65",
+        "style-original-66",
+        "style-original-67",
+        "style-original-68"
+      ],
+      "cultureCount": 42,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "欧洲与其他传统",
+      "artistNames": [
+        "Albrecht Durer",
+        "Camille Pissarro",
+        "Claude Monet",
+        "Diego Velazquez",
+        "Edgar Degas",
+        "Edvard Munch",
+        "Francisco Goya",
+        "Gustav Klimt",
+        "Henri de Toulouse-Lautrec",
+        "J. M. W. Turner",
+        "Jan van Goyen",
+        "Johannes Vermeer",
+        "John Constable",
+        "Lucas Cranach the Elder",
+        "Pablo Picasso",
+        "Paul Cezanne",
+        "Paul Gauguin",
+        "Pierre-Auguste Renoir",
+        "Rembrandt van Rijn",
+        "Vincent van Gogh",
+        "William Blake",
+        "William Morris"
+      ],
+      "styleIds": [
+        "style-original-50",
+        "style-original-51",
+        "style-original-52",
+        "style-original-53",
+        "style-original-54",
+        "style-original-55",
+        "style-original-56",
+        "style-original-57",
+        "style-original-58",
+        "style-original-59"
+      ],
+      "cultureCount": 103,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "中亚与丝路",
+      "artistNames": [
+        "Dong Qichang",
+        "Shen Zhou",
+        "Shitao",
+        "Wen Zhengming"
+      ],
+      "styleIds": [
+        "style-original-25",
+        "style-original-26",
+        "style-original-27",
+        "style-original-28",
+        "style-original-37",
+        "style-original-38"
+      ],
+      "cultureCount": 27,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    },
+    {
+      "region": "藏地与喜马拉雅",
+      "artistNames": [
+        "Dong Qichang",
+        "Shen Zhou",
+        "Shitao",
+        "Wen Zhengming"
+      ],
+      "styleIds": [
+        "style-original-25",
+        "style-original-26",
+        "style-original-27",
+        "style-original-28",
+        "style-original-34",
+        "style-original-35",
+        "style-original-36",
+        "style-original-65"
+      ],
+      "cultureCount": 14,
+      "notice": "当代跨文化浏览索引；不构成作品作者、流派、创作年代或历史影响关系的鉴定。"
+    }
+  ],
+  "manualReview": "Review visual variety, original picture condition and exact creator roles individually before labeling professional artistic approval"
+}

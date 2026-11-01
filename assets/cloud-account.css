@@ -1,0 +1,25 @@
+/* 125-stage account / cloud save controls, minimal functional UI until art phase. */
+.cloud-account-panel{display:grid;gap:12px;margin:16px 0;padding:18px;max-width:920px}
+.cloud-account-panel h2{margin:0;color:#3f5a4f;font-size:20px}
+.cloud-account-panel p{margin:0;line-height:1.8}
+#cloud-account-message{padding:9px 12px;background:#f2f4ea;border-left:3px solid #8fa38c;
+ color:#445f53;min-height:42px;line-height:1.7}
+.cloud-account-controls{display:flex;align-items:center;flex-wrap:wrap;gap:11px}
+.cloud-account-controls>button,.cloud-account-controls form button{border:1px solid #a0b09e;
+ border-radius:7px;padding:9px 14px;min-height:39px;background:#f7f7ec;color:#354d40;
+ cursor:pointer;font:inherit}
+.cloud-account-controls button:hover:not(:disabled),.cloud-account-controls button:focus-visible{
+ background:#e8efe4;outline:2px solid #839c8a;outline-offset:2px}
+.cloud-account-controls button:disabled{opacity:.5;cursor:wait}
+#cloud-account-form{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+#cloud-account-form>label:not(.cloud-import-label){display:flex;flex-direction:column;gap:5px;font-size:14px}
+#cloud-account-form input[type=email],#cloud-account-form input[type=password]{
+ width:100%;max-width:100%;padding:9px 11px;border:1px solid #9fae9f;
+ border-radius:6px;background:#fefdf8;color:#23382d;font:inherit}
+.cloud-import-label{display:flex;align-items:flex-start;gap:9px;grid-column:1/-1;
+ font-size:13px;line-height:1.7;color:#5b645a}
+.cloud-import-label input{width:17px;height:17px;flex:none}
+.cloud-user-label{display:block;width:100%;overflow-wrap:anywhere}
+@media(max-width:640px){#cloud-account-form{grid-template-columns:1fr}
+ .cloud-account-panel{padding:12px}.cloud-account-controls{align-items:stretch}
+ .cloud-account-controls>button{flex:1 0 auto}}
