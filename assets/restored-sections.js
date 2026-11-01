@@ -5,6 +5,35 @@ import {icon} from './ui.js';
 import {createCloudAccountController} from './cloud-account-controller.js';
 let account;
 let initialized;
+const gameStyles=[
+ ['motifPark','motif-game-park.css?v=20261021'],
+ ['worldScene','embroidered-world.css?v=wayfinding-20261021'],
+ ['pearGardenStage','pear-garden-stage.css?v=scene2-font-20261021'],
+ ['pearMatchScene','pear-match-experience.css?v=20261021-silk-relief'],
+ ['motifParkBrand','motif-park-brand.css?v=20261021-functional-store'],
+ ['referenceVisual','reference-visuals.css?v=20261022-materials'],
+ ['worldHome','world-home.css?v=20261022'],
+ ['referenceArt','reference-art.css?v=20261022-materials'],
+ ['chapterScenes','chapter-scenes.css?v=20261022'],
+ ['motifGame','motif-game.css?v=20261021'],
+ ['motifArcade','motif-arcade.css?v=20261021-stage-hit-target']
+];
+// Native modules add styles lazily. Finish that work before exposing their controls.
+function ensureStyle(key,file){
+ const selector='link[data-'+key.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())+']';
+ let link=document.querySelector(selector);
+ if(link?.sheet)return Promise.resolve();
+ const fresh=!link;
+ if(fresh){link=document.createElement('link');link.rel='stylesheet';link.href=new URL(file,import.meta.url).href;link.dataset[key]='';}
+ return new Promise((resolve,reject)=>{
+  const finish=error=>{clearTimeout(timer);link.removeEventListener('load',loaded);link.removeEventListener('error',failed);if(error){link.remove();reject(error);}else resolve();};
+  const loaded=()=>finish();
+  const failed=()=>finish(Error('界面样式加载失败，请刷新重试。'));
+  const timer=setTimeout(failed,30000);
+  link.addEventListener('load',loaded,{once:true});link.addEventListener('error',failed,{once:true});
+  if(fresh)document.head.append(link);
+ });
+}
 export function cloudReady(){
  if(!account){
   account=createCloudAccountController();
@@ -108,11 +137,12 @@ async function guide(query=''){
 
  try{
   if(page==='palette'){
-   if(!document.querySelector('link[data-restored-atlas]')){const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./color-atlas.css',import.meta.url).href;css.dataset.restoredAtlas='';document.head.append(css);}
+   await ensureStyle('restoredAtlas','./color-atlas.css');
    const {mountColorAtlas}=await import('./color-atlas-page.js');
    if(isCurrent()){const dispose=await mountColorAtlas(root,{isCurrent});if(dispose)cleanups.push(dispose);}
   }else if(page==='guide')await guide(query);
   else if(page==='game'){
+   await Promise.all(gameStyles.map(([key,file])=>ensureStyle(key,file)));
    const response=await fetch(new URL('../content/patterns.json',import.meta.url));if(!response.ok)throw Error('纹样资料暂未加载');patterns=await response.json();
    if(isCurrent())await game();
   }else if(page==='account'){
