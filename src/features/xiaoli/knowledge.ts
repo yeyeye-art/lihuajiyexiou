@@ -11,7 +11,7 @@ export interface KnowledgeModule {
 export type AnswerKind = 'welcome' | 'evidence' | 'missing' | 'model' | 'guide' | 'clarify';
 export type Intent = 'ask' | 'simple' | 'detail' | 'show' | 'source' | 'next';
 export interface LearningAction { label:string; href:string; description:string }
-export interface Topic { id:string;category:string;title:string;question:string;records:string[];prompt:string;aliases?:string[];simple?:{recordId:string;text:string}[];demo?:string }
+export interface Topic { id:string;category:string;title:string;question:string;records:string[];prompt:string;aliases?:string[];simple?:{recordId:string;text:string}[];demo?:string;overview?:boolean }
 export const learningTopics:Topic[]=topicData.topics;
 export interface Answer extends Reply { kind: AnswerKind; question: string; suggestions: string[]; topicId?:string; intent?:Intent; actions?:LearningAction[]; illustration?:{src:string;caption:string}; museumRecordId?:string }
 export type Detail = 'brief' | 'detailed';
@@ -57,21 +57,28 @@ export function learningActions(rows:RecordEntry[],topic?:Topic):LearningAction[
   return actions;
 }
 export function prepareAnswer(question: string, history: Turn[], archive: Archive, api: KnowledgeModule, detail: Detail): Answer {
-  const q=question.trim().slice(0,500),intent=questionIntent(q);
+  const q=question.trim().slice(0,500);
+  let intent=questionIntent(q);
   if (/^(你好|您好|嗨|hello|hi|谢谢|多谢|你是谁|你叫什么)[呀啊呢。！!?？\s]*$/i.test(q)) {
     return {kind:'welcome',question:q,answer:/谢/.test(q)?'不客气。我们可以接着看，也可以换一个你感兴趣的主题。':'你好，我是小梨。可以从下面的专题开始，也可以直接告诉我想了解的绣品或针法。',citations:[],records:[],suggestions:['苏绣和湘绣有什么区别？','散套针怎么理解？']};
   }
+  if(/^(?:我是)?(?:零基础|新手)(?:从哪(?:里)?开始|怎么开始|入门)?$|^我想学刺绣$|^刺绣入门$/.test(conversationalQuestion(q))){
+    const first=prepareAnswer('平针是什么？',[],archive,api,detail);
+    return {...first,answer:'我们可以先从平针开始，观察线条怎样排列；也可以先认识工具。这是本站的入门阅读建议，你可以选自己感兴趣的方向。\n\n'+first.answer,suggestions:['给我看看','苏绣需要哪些工具？','滚针怎么练？'],contextUsed:false};
+  }
   let resolved=resolveQuestion(q,history),topic=findTopic(resolved);
+  const namedPractice=conversationalQuestion(q).match(/^(平针|滚针|散套针)(?:怎么绣|怎么练|如何练习)$/);
+  if(namedPractice){topic=learningTopics.find(t=>t.records[0]===({'平针':'stitch-plain','滚针':'stitch-gun','散套针':'stitch-santao'} as Record<string,string>)[namedPractice[1]]);if(topic){resolved=topic.question;intent='show';}}
   const conversational=conversationalQuestion(q);
   const ambiguousComparison=/^(?:这个|那个|它)?(?:和|跟|与)(?:刚才的?|之前的?|另一个|那个|这个)(?:那个|这个)?(?:有)?(?:什么)?(?:区别|不同|差别)$|^(?:这|那)两种(?:绣法|针法|刺绣)?(?:有)?(?:什么)?(?:区别|不同|差别)$/.test(conversational);
   const noSubject=/^(?:这个|那个|它)(?:是什么|怎么回事|有什么特点)$/.test(conversational);
   const prior=priorQuestion(history);
-  if(ambiguousComparison || (noSubject&&!prior) || (intent!=='ask'&&!prior)) {
+  if(ambiguousComparison || (noSubject&&!prior) || (intent!=='ask'&&!prior&&!namedPractice)) {
     const priorTopic=findTopic(prior);
     return {kind:intent==='show'&&!prior?'missing':'clarify',question:q,intent,answer:ambiguousComparison?'你想比较哪两种？把两个名字告诉我，我再按资料分别讲，避免把针法或绣种混在一起。':intent==='show'?'先告诉我你想看哪一种针法或哪件作品，我就能带你到对应页面。':'你指的是哪一种针法或哪件作品？可以点下面的主题，也可以直接告诉我名字。',records:[],citations:[],suggestions:priorTopic?[priorTopic.question,'苏绣和湘绣有什么区别？']:['散套针怎么理解？','平针是什么？','苏绣和湘绣有什么区别？']};
   }
   if(noSubject&&prior){resolved=prior;topic=findTopic(resolved);}
-  if(intent==='next'&&topic){const peers=learningTopics.filter(t=>t.category===topic?.category);topic=peers[(peers.findIndex(t=>t.id===topic?.id)+1)%peers.length];resolved=topic.question;}
+  if(intent==='next'&&topic){let peers=learningTopics.filter(t=>t.category===topic?.category);if(peers.length<2)peers=learningTopics;topic=peers[(peers.findIndex(t=>t.id===topic?.id)+1)%peers.length];resolved=topic.question;}
   if(intent==='simple')detail='brief';else if(intent==='detail')detail='detailed';
   const result=api.evidenceReply(resolved,archive,history);
   // Only exact curated questions bypass free-text retrieval. Specific unsupported claims
@@ -80,12 +87,12 @@ export function prepareAnswer(question: string, history: Turn[], archive: Archiv
   let rows=requestedIds.map(id=>archive.records.find(r=>r.id===id)).filter((r):r is RecordEntry=>!!r&&r.citations.some(id=>archive.sources.get(id)?.url.startsWith('https://')));
   if(!rows.length)return {kind:'missing',question:resolved,intent,answer:intent==='show'?'先告诉我你想看哪一种针法或哪件作品，我就能带你到对应页面。':'这个问题的依据还不够。可以补充具体作品、针法或出处，我再帮你找；不会用相近资料代替答案。',citations:[],records:[],suggestions:['苏绣和湘绣有什么区别？','带我看辽代龙虎纹刺绣残片']};
   topic=topic||topicForRows(rows);
-  rows=rows.slice(0,topic?.id==='four'?4:detail==='detailed'?3:2);
+  rows=rows.slice(0,topic?.id==='four'||topic?.overview?4:detail==='detailed'?3:2);
   const citations=rows.map(r=>({...archive.sources.get(r.citations.find(id=>archive.sources.get(id)?.url.startsWith('https://'))!)!,recordId:r.id}));
   const simple=intent==='simple';
   const lines=rows.map((r,i)=>{
     const simplified=topic?.simple?.find(s=>s.recordId===r.id)?.text;
-    if(simple)return `${simplified||r.summary.split(/(?<=[。！？])/u).filter(Boolean)[0]}〔${i+1}〕`;
+    if(simple||topic?.overview)return `${simplified||r.summary.split(/(?<=[。！？])/u).filter(Boolean)[0]}〔${i+1}〕`;
     const facts=detail==='detailed'?r.facts.filter(f=>!r.summary.includes(f)).slice(0,2):[];
     return `${rows.length>1?r.title+'：':''}${[r.summary,...facts].join(' ')}〔${i+1}〕`;
   });

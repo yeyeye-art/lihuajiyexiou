@@ -13,6 +13,7 @@ export function validateXiaoliTopics(data=read('content/xiaoli-topics.json')){
   assert(/^[a-z-]+$/.test(t.id)&&!ids.has(t.id),'Duplicate/invalid topic');ids.add(t.id);
   for(const key of ['category','title','question','prompt'])assert(typeof t[key]==='string'&&t[key].trim(),'Missing topic '+key);
   assert(Array.isArray(t.records)&&t.records.length>0&&new Set(t.records).size===t.records.length);
+  if(t.overview!==undefined)assert(typeof t.overview==='boolean'&&t.records.length<=4,'Overview needs at most four cited records');
   for(const id of t.records){const r=records.get(id);assert(r,'Topic refers to unverified/missing record: '+id);assert(r.source?.url?.startsWith('https://')||r.sourceIds?.some(id=>sourceIds.has(id)),'Missing provenance');}
   assert(Array.isArray(t.simple)&&t.simple.length>0,'Topic needs a sourced simple explanation');
   for(const s of t.simple)assert(t.records.includes(s.recordId)&&typeof s.text==='string'&&s.text.length>4,'Unlinked explanation');
