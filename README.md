@@ -4,7 +4,7 @@
 
 [打开小梨](https://yeyeye-art.github.io/lihuajiyexiou/#xiaoli) · [刺绣百科](https://yeyeye-art.github.io/lihuajiyexiou/#guide) · [代码开源范围与资源许可](OPEN_SOURCE.md)
 
-新增12个有出处专题、连续追问和针法/作品/色谱导览。小梨新增原创代码按MIT许可开放，图片、模型与历史资源不自动重新授权。公开版不包含受限的本机试听语音包。详情见 [实现与验证说明](docs/xiaoli/README.md)。
+提供18个有出处专题、新手入门引导、连续追问和针法/作品/色谱导览。小梨新增原创代码按MIT许可开放，图片、模型与历史资源不自动重新授权。公开版不包含受限的本机试听语音包。详情见 [实现与验证说明](docs/xiaoli/README.md)。
 
 ## 2026-10-27 前端现代化框架重构 (React + TypeScript + Vite)
 

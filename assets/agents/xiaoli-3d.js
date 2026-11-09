@@ -1,7 +1,9 @@
 import * as THREE from '../vendor/three/build/three.module.js';
 
 export function createXiaoli3D(container, options = {}) {
-  const { modelPath = new URL('../models/xiaoli.glb', import.meta.url).href, reducedMotion = false, modelRotationY = 0, keepFacing = false } = options;
+  const { modelPath = new URL('../models/xiaoli.glb', import.meta.url).href, reducedMotion = false, modelRotationY = 0, keepFacing = false, onLoadStatus = () => {} } = options;
+  delete container.dataset.modelLoaded;
+  onLoadStatus('loading');
 
   const scene = new THREE.Scene();
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -117,6 +119,7 @@ export function createXiaoli3D(container, options = {}) {
       if (disposed) return;
       console.warn('[xiaoli-3d] GLTFLoader 动态导入失败，回退占位:', e.message);
       addFallbackModel();
+      onLoadStatus('error');
       if (reducedMotion) renderer.render(scene, camera);
       return;
     }
@@ -139,12 +142,14 @@ export function createXiaoli3D(container, options = {}) {
         if (!gltfScene) {
           console.warn('[xiaoli-3d] GLB 场景为空，回退占位');
           addFallbackModel();
+          onLoadStatus('error');
         } else {
           applyShadowFlags(gltfScene);
           gltfScene.rotation.y = modelRotationY;
           centerAndScale(gltfScene);
           modelGroup.add(gltfScene);
           container.dataset.modelLoaded = 'true';
+          onLoadStatus('ready');
         }
         if (reducedMotion) renderer.render(scene, camera);
       },
@@ -153,6 +158,7 @@ export function createXiaoli3D(container, options = {}) {
         if (disposed) return;
         console.warn('[xiaoli-3d] GLB 加载失败，已回退到占位几何体:', error.message);
         addFallbackModel();
+        onLoadStatus('error');
         if (reducedMotion) renderer.render(scene, camera);
       }
     );

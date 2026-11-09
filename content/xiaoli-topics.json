@@ -253,6 +253,167 @@
           "text": "已有资料列出了“配线”这道工序，但没有公布具体操作参数。我们可以先到色谱里观察颜色组合。"
         }
       ]
+    },
+    {
+      "id": "tools",
+      "category": "工具与流程",
+      "title": "苏绣常用工具",
+      "question": "苏绣需要哪些工具？",
+      "records": [
+        "tool-frame",
+        "tool-bench",
+        "tool-needle",
+        "tool-rest"
+      ],
+      "prompt": "先认识工具名称；具体规格要结合实际练习。",
+      "aliases": [
+        "苏绣工具有哪些",
+        "刺绣需要哪些工具",
+        "苏绣有哪些工具"
+      ],
+      "simple": [
+        {
+          "recordId": "tool-frame",
+          "text": "苏州官方资料列出的苏绣工具包括绷架。"
+        },
+        {
+          "recordId": "tool-bench",
+          "text": "苏州官方资料列出的苏绣工具包括绷凳。"
+        },
+        {
+          "recordId": "tool-needle",
+          "text": "苏州官方资料列出的苏绣工具包括绣针。"
+        },
+        {
+          "recordId": "tool-rest",
+          "text": "苏州官方资料列出的苏绣工具包括搁手板。"
+        }
+      ],
+      "overview": true
+    },
+    {
+      "id": "process",
+      "category": "工具与流程",
+      "title": "从绣稿到装裱",
+      "question": "苏绣制作有哪些工序？",
+      "records": [
+        "process-main"
+      ],
+      "prompt": "先观察工序之间的关系，再进入针法演示。",
+      "aliases": [
+        "苏绣的制作流程",
+        "苏绣有哪些步骤",
+        "苏绣制作流程是什么"
+      ],
+      "simple": [
+        {
+          "recordId": "process-main",
+          "text": "苏州官方资料列出的工序依次是：设计绣稿、勾稿、染线、上绷、钉稿、配线、刺绣、下绷、装裱。"
+        }
+      ],
+      "overview": true
+    },
+    {
+      "id": "dazi",
+      "category": "针法入门",
+      "title": "打籽针：观察颗粒",
+      "question": "打籽针是什么？",
+      "records": [
+        "stitch-dazi"
+      ],
+      "prompt": "观察小粒状结如何组成绣面。",
+      "aliases": [
+        "什么是打籽针",
+        "打籽针"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-dazi",
+          "text": "绣线绕成小粒状结，逐粒组成绣面。"
+        }
+      ]
+    },
+    {
+      "id": "tao",
+      "category": "针法入门",
+      "title": "套针与三种分型",
+      "question": "套针有哪些分型？",
+      "records": [
+        "stitch-tao",
+        "stitch-pingtao",
+        "stitch-jitao",
+        "stitch-santao"
+      ],
+      "prompt": "对照平套、集套和散套的线条组织。",
+      "aliases": [
+        "套针有哪些种类",
+        "套针是什么",
+        "平套集套散套有什么区别"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-tao",
+          "text": "故宫将套针列为苏绣主要针法，并列出平套、集套和散套等分型。"
+        },
+        {
+          "recordId": "stitch-pingtao",
+          "text": "后层线条嵌入前层之间，形成平整、色彩衔接自然的块面。"
+        },
+        {
+          "recordId": "stitch-jitao",
+          "text": "用于圆形纹样，针线向圆心汇集。"
+        },
+        {
+          "recordId": "stitch-santao",
+          "text": "线条错落相嵌，由外向内绣制，可表现花卉、树石及翎毛。"
+        }
+      ],
+      "overview": true
+    },
+    {
+      "id": "ding",
+      "category": "针法入门",
+      "title": "认识钉线与钉针",
+      "question": "钉线和钉针是什么？",
+      "records": [
+        "stitch-dingxian",
+        "stitch-ding"
+      ],
+      "prompt": "对照两条记录，观察固定线条这一特点。",
+      "aliases": [
+        "钉线是什么",
+        "钉针是什么"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-dingxian",
+          "text": "以针脚把已经铺成的线条固定。"
+        },
+        {
+          "recordId": "stitch-ding",
+          "text": "用针脚加固长线，使已绣线条整齐。"
+        }
+      ]
+    },
+    {
+      "id": "wang",
+      "category": "针法入门",
+      "title": "网针：从格子到花纹",
+      "question": "网针是什么？",
+      "records": [
+        "stitch-wang"
+      ],
+      "prompt": "先看几何格，再观察格内花纹。",
+      "aliases": [
+        "网针",
+        "什么是网针"
+      ],
+      "simple": [
+        {
+          "recordId": "stitch-wang",
+          "text": "故宫将其列为苏绣针法，以横直斜线组成连续几何格，再在格内绣花纹。"
+        }
+      ]
     }
   ]
 }

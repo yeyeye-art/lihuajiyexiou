@@ -11,7 +11,8 @@ import '../styles/xiaoli.css';
 
 type Message = ConversationMessage;
 type Avatar = {dispose:()=>void;setState:(state:string)=>void};
-interface AvatarModule {createXiaoli3D:(container:HTMLElement,options:{reducedMotion:boolean;modelRotationY:number;keepFacing:boolean})=>Avatar}
+type AvatarStatus='loading'|'ready'|'error';
+interface AvatarModule {createXiaoli3D:(container:HTMLElement,options:{reducedMotion:boolean;modelRotationY:number;keepFacing:boolean;onLoadStatus:(status:AvatarStatus)=>void})=>Avatar}
 const asset=(path:string)=>new URL(`${import.meta.env.BASE_URL}${path}`,location.origin).href;
 const greeting:Message={id:0,role:'assistant',text:'你好，我是小梨。今天想了解一件绣品，还是一起弄懂一种针法？你也可以告诉我：“说简单一点。”'};
 const sample='你好，我是小梨。我们慢慢来。你想先听一段刺绣故事，还是看看一根丝线怎样变成一幅画？';
@@ -23,7 +24,7 @@ export const Xiaoli:React.FC=()=>{
   const [archive,setArchive]=useState<Archive>();
   const moduleRef=useRef<KnowledgeModule | undefined>(undefined);
   const [messages,setMessages]=useState<Message[]>(()=>readConversation().length?readConversation():[greeting]);
-  const [topicCategory,setTopicCategory]=useState('针法入门');
+  const [topicCategory,setTopicCategory]=useState('工具与流程');
   const messagesRef=useRef(messages);messagesRef.current=messages;
   const [input,setInput]=useState('');
   const [detail,setDetail]=useState<Detail>('brief');
@@ -37,7 +38,8 @@ export const Xiaoli:React.FC=()=>{
   const [voiceNotice,setVoiceNotice]=useState('正在检查试听包…');
   const [voiceBusy,setVoiceBusy]=useState(false);
   const [audioUrl,setAudioUrl]=useState('');
-  const [avatarFailed,setAvatarFailed]=useState(false);
+  const [avatarStatus,setAvatarStatus]=useState<AvatarStatus>('loading');
+  const [avatarAttempt,setAvatarAttempt]=useState(0);
   const avatarEl=useRef<HTMLDivElement>(null),avatar=useRef<Avatar | undefined>(undefined);
   const log=useRef<HTMLDivElement>(null),audio=useRef<HTMLAudioElement>(null);
   const model=useRef<LocalModel | undefined>(undefined),voice=useRef<LocalVoice | undefined>(undefined),abort=useRef<AbortController | undefined>(undefined);
@@ -63,13 +65,14 @@ export const Xiaoli:React.FC=()=>{
     let disposed=false;
     if(modelState!=='off')return;
     const node=avatarEl.current;if(!node)return;
+    setAvatarStatus('loading');
     const url=asset('assets/agents/xiaoli-3d.js');
     import(/* @vite-ignore */ url).then((api:AvatarModule)=>{
       if(disposed)return;
-      avatar.current=api.createXiaoli3D(node,{reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,modelRotationY:-Math.PI/2,keepFacing:true});
-    }).catch(()=>{if(!disposed)setAvatarFailed(true);});
+      avatar.current=api.createXiaoli3D(node,{reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,modelRotationY:-Math.PI/2,keepFacing:true,onLoadStatus:status=>{if(!disposed)setAvatarStatus(status);}});
+    }).catch(()=>{if(!disposed)setAvatarStatus('error');});
     return()=>{disposed=true;avatar.current?.dispose();avatar.current=undefined;};
-  },[modelState]);
+  },[modelState,avatarAttempt]);
   useLayoutEffect(()=>{
     const node=log.current;if(!node)return;
     let follow=true;
@@ -145,10 +148,10 @@ export const Xiaoli:React.FC=()=>{
   const latest=[...messages].reverse().find(m=>m.role==='assistant'&&m.reply);
   const currentTopic=learningTopics.find(t=>t.id===latest?.reply?.topicId);
   return <div className="xiaoli-preview">
-    <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 刺绣讲解</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p></header>
+    <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 刺绣讲解</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p><a className="xiaoli-ask-jump" href="#xiaoli-question" onClick={e=>{e.preventDefault();document.getElementById('xiaoli-question')?.focus();document.getElementById('xiaoli-question')?.scrollIntoView({block:'center'});}}>直接提问 ↓</a></header>
     <div className="xiaoli-layout">
       <aside className="xiaoli-companion">
-        <div className="xiaoli-avatar" ref={avatarEl} aria-label="小梨讲解形象">{(modelState!=='off'||avatarFailed)&&<div className="xiaoli-avatar-rest"><span>梨</span><p>{modelState!=='off'?'小梨正在专心读资料':'小梨在这里'}</p></div>}</div>
+        <div className="xiaoli-avatar" ref={avatarEl} aria-label="小梨讲解形象">{(modelState!=='off'||avatarStatus!=='ready')&&<div className="xiaoli-avatar-rest" role="status"><span>梨</span><p>{modelState!=='off'?'小梨正在专心读资料':avatarStatus==='loading'?'小梨的形象正在载入，你可以先提问。':'形象暂未载入，文字讲解可以照常使用。'}</p>{modelState==='off'&&avatarStatus==='error'&&<button onClick={()=>setAvatarAttempt(n=>n+1)}>重新载入形象</button>}</div>}</div>
         <h2>小梨</h2><p>你可以问得很细，也可以让我讲得简单一点。</p>
         <dl><dt>可查资料</dt><dd>{archive?`${archive.records.length} 条`:'加载中'}</dd><dt>当前回答</dt><dd>{modelState==='ready'?'本机模型＋资料':'有出处的资料摘要'}</dd></dl>
         <label htmlFor="xiaoli-detail">你喜欢怎样讲解？</label><select id="xiaoli-detail" value={detail} onChange={e=>setDetail(e.target.value as Detail)}><option value="brief">先简单说说</option><option value="detailed">把细节讲清楚</option></select>
@@ -166,6 +169,7 @@ export const Xiaoli:React.FC=()=>{
       </aside>
       <section className="xiaoli-dialogue" aria-label="与小梨对话">
         <div className="xiaoli-dialogue-title"><h2>问问小梨</h2><button onClick={()=>{stop();setMessages([greeting]);setInput('');}}>重新聊</button></div>
+        {messages.length===1&&<div className="xiaoli-start"><p>第一次来？可以先从一根线的走向看起。</p><button disabled={busy||!archive} onClick={()=>void send('我是新手，从哪里开始？')}>带我入门</button><button disabled={busy||!archive} onClick={()=>void send('苏绣需要哪些工具？')}>先认识工具</button></div>}
         <details className="xiaoli-topics" open={messages.length===1}>
           <summary>从一个专题开始 · {learningTopics.length} 个讲解专题</summary>
           <div className="xiaoli-topic-categories" aria-label="选择专题分类">{[...new Set(learningTopics.map(t=>t.category))].map(category=><button key={category} aria-pressed={topicCategory===category} onClick={()=>setTopicCategory(category)}>{category}</button>)}</div>

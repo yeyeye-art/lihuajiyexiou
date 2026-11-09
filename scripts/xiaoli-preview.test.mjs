@@ -49,7 +49,7 @@ import {validateXiaoliTopics} from './validate-xiaoli-topics.mjs';
 import {readConversation,saveConversation,hasConversation} from '../src/features/xiaoli/session.ts';
 const talk=(history,q,detail='brief')=>{const reply=prepareAnswer(q,history,archive,api,detail);history.push({role:'user',content:q},{role:'assistant',content:reply.answer,records:reply.records,question:reply.question,topicId:reply.topicId});return reply;};
 test('Every curated topic has existing verified records, cited explanations and real lesson assets',()=>{
- assert.equal(validateXiaoliTopics().topics,12);
+ assert.equal(validateXiaoliTopics().topics,18);
  for(const t of learningTopics){
   const h=[];const brief=talk(h,t.question);const simple=talk(h,'我还是不懂');const detailed=talk(h,'详细一点');
   for(const a of [brief,simple,detailed]){assert.equal(a.kind,'evidence',t.id);assert.equal(a.topicId,t.id);assert(a.records.every(id=>t.records.includes(id)));assert(a.citations.length>0);}
@@ -102,4 +102,24 @@ test('Everyday pronouns lead to clarification or the current lesson without gues
  assert.equal(talk(h,'跟刚才那个有什么区别？').kind,'clarify');
  assert.equal(talk(h,'请给我看看图片').kind,'missing');
  for(const q of ['请问苏绣在2099年获得什么奖呀','请问散套针在2099年获得什么奖'])assert.equal(prepareAnswer(q,[],archive,api,'brief').kind,'missing');
+});
+
+test('Beginner guidance preserves citations and leads to an actual first lesson',()=>{
+ for(const q of ['我是零基础，从哪里开始？','我是新手，从哪里开始？','我想学刺绣']){
+  const h=[];const first=talk(h,q);assert.equal(first.topicId,'plain');assert(first.answer.includes('入门阅读建议'));
+  assert(first.citations.every(c=>c.url.startsWith('https://')));
+  assert(talk(h,'给我看看').actions.some(a=>a.href==='#guide/practice-demo-straight-basic'));
+ }
+ assert.equal(prepareAnswer('我是新手，苏绣在2099年获得什么奖？',[],archive,api,'brief').kind,'missing');
+});
+
+test('Tools are complete, named practice selects the right lesson, and singleton topics advance',()=>{
+ const tools=prepareAnswer('苏绣需要哪些工具？',[],archive,api,'brief');
+ for(const name of ['绷架','绷凳','绣针','搁手板'])assert(tools.answer.includes(name));
+ assert.equal(tools.citations.length,4);
+ for(const [q,id] of [['平针怎么绣','demo-straight-basic'],['滚针怎么练','demo-gun-basic'],['散套针怎么绣','demo-santao-pear-petal']]){
+  const a=prepareAnswer(q,[],archive,api,'brief');assert.equal(a.kind,'guide');assert(a.illustration.src.endsWith(id+'.svg'));
+ }
+ const h=[];talk(h,'带我看辽代龙虎纹刺绣残片');assert.notEqual(talk(h,'换一个').topicId,'liao');
+ for(const t of learningTopics.filter(t=>['tools','process','dazi','tao','ding','wang'].includes(t.id)))assert.equal(prepareAnswer(t.question+'在2099年获得什么奖',[],archive,api,'brief').kind,'missing');
 });
