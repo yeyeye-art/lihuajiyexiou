@@ -92,3 +92,14 @@ test('Follow-up intent accepts everyday phrasing without treating a new subject 
  for(const q of ['让我看看图片','带我看演示','怎么练'])assert.equal(questionIntent(q),'show');
  assert.equal(questionIntent('那滚针呢'),'ask');assert.equal(questionIntent('苏绣在2099年获得什么奖'),'ask');
 });
+
+test('Everyday pronouns lead to clarification or the current lesson without guessing a comparison',()=>{
+ assert.equal(prepareAnswer('这个是什么？',[],archive,api,'brief').kind,'clarify');
+ assert.equal(prepareAnswer('这个怎么绣？',[],archive,api,'brief').kind,'missing');
+ const h=[];talk(h,'请问散套针怎么理解呀？');
+ assert.equal(talk(h,'能不能讲简单一点？').topicId,'santao');
+ assert(talk(h,'这个怎么绣？').actions.some(a=>a.href==='#guide/practice-demo-santao-pear-petal'));
+ assert.equal(talk(h,'跟刚才那个有什么区别？').kind,'clarify');
+ assert.equal(talk(h,'请给我看看图片').kind,'missing');
+ for(const q of ['请问苏绣在2099年获得什么奖呀','请问散套针在2099年获得什么奖'])assert.equal(prepareAnswer(q,[],archive,api,'brief').kind,'missing');
+});

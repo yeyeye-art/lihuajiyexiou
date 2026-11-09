@@ -8,7 +8,7 @@ export interface KnowledgeModule {
   loadEmbroideryArchive: () => Promise<Archive>;
   evidenceReply: (question: string, archive: Archive, history: Turn[]) => Reply;
 }
-export type AnswerKind = 'welcome' | 'evidence' | 'missing' | 'model' | 'guide';
+export type AnswerKind = 'welcome' | 'evidence' | 'missing' | 'model' | 'guide' | 'clarify';
 export type Intent = 'ask' | 'simple' | 'detail' | 'show' | 'source' | 'next';
 export interface LearningAction { label:string; href:string; description:string }
 export interface Topic { id:string;category:string;title:string;question:string;records:string[];prompt:string;aliases?:string[];simple?:{recordId:string;text:string}[];demo?:string }
@@ -16,8 +16,15 @@ export const learningTopics:Topic[]=topicData.topics;
 export interface Answer extends Reply { kind: AnswerKind; question: string; suggestions: string[]; topicId?:string; intent?:Intent; actions?:LearningAction[]; illustration?:{src:string;caption:string}; museumRecordId?:string }
 export type Detail = 'brief' | 'detailed';
 const clean=(q:string)=>q.trim().replace(/[。？！!?，、\s]/g,'');
+// Strip only conversational wrappers, never dates, names or factual qualifiers.
+function conversationalQuestion(question:string):string {
+  return clean(question).replace(/^(?:小梨)?(?:请问|请|能不能|可不可以|可以)?(?:帮我|给我)?/, '').replace(/(?:吗|呀|啊|吧)$/, '');
+}
 export function questionIntent(question:string):Intent {
-  const q=clean(question);
+  const q=conversationalQuestion(question);
+  if(/^(?:这个|那个|它|这种针法)?(?:怎么绣|怎么练|怎么操作|如何练习)$/.test(q))return 'show';
+  if(/^(?:我)?(?:还是)?(?:听不懂|看不懂)$|^(?:再)?(?:用大白话讲|讲得通俗点|说人话|换种说法)$/.test(q))return 'simple';
+  if(/^(?:这个|它)?(?:有图|有图片|有演示|能看图)$/.test(q))return 'show';
   if(/^(我)?(还是|仍然)?(不懂|没懂|没听懂|不明白|没明白)$|^(再)?(说得|讲得|说|讲)?(简单|通俗)(一点|些)?$|^换(个|一种)说法$/.test(q))return 'simple';
   if(/^(再)?(说得|讲得|说|讲)?详细(一点|些)?$|^(继续|展开讲讲|还有呢|它有什么特点)$/.test(q))return 'detail';
   if(/^(你)?(给我|带我|让我|我想)?(看|看看)(一下|图片|图|演示|示范)?$|^(怎么练|我想练习|打开演示|我想看看针法课堂)$/.test(q))return 'show';
@@ -34,7 +41,7 @@ export function resolveQuestion(question: string, history: Turn[]): string {
   return questionIntent(question)!=='ask' ? priorQuestion(history)||question : question;
 }
 export function findTopic(question:string):Topic|undefined {
-  const q=clean(question).replace(/^那/,'').replace(/呢$/,'');
+  const q=conversationalQuestion(question).replace(/^那/,'').replace(/呢$/,'');
   return learningTopics.find(t=>[t.question,...t.aliases||[]].some(alias=>clean(alias)===q));
 }
 function topicForRows(rows:RecordEntry[]):Topic|undefined {
@@ -55,6 +62,15 @@ export function prepareAnswer(question: string, history: Turn[], archive: Archiv
     return {kind:'welcome',question:q,answer:/谢/.test(q)?'不客气。我们可以接着看，也可以换一个你感兴趣的主题。':'你好，我是小梨。可以从下面的专题开始，也可以直接告诉我想了解的绣品或针法。',citations:[],records:[],suggestions:['苏绣和湘绣有什么区别？','散套针怎么理解？']};
   }
   let resolved=resolveQuestion(q,history),topic=findTopic(resolved);
+  const conversational=conversationalQuestion(q);
+  const ambiguousComparison=/^(?:这个|那个|它)?(?:和|跟|与)(?:刚才的?|之前的?|另一个|那个|这个)(?:那个|这个)?(?:有)?(?:什么)?(?:区别|不同|差别)$|^(?:这|那)两种(?:绣法|针法|刺绣)?(?:有)?(?:什么)?(?:区别|不同|差别)$/.test(conversational);
+  const noSubject=/^(?:这个|那个|它)(?:是什么|怎么回事|有什么特点)$/.test(conversational);
+  const prior=priorQuestion(history);
+  if(ambiguousComparison || (noSubject&&!prior) || (intent!=='ask'&&!prior)) {
+    const priorTopic=findTopic(prior);
+    return {kind:intent==='show'&&!prior?'missing':'clarify',question:q,intent,answer:ambiguousComparison?'你想比较哪两种？把两个名字告诉我，我再按资料分别讲，避免把针法或绣种混在一起。':intent==='show'?'先告诉我你想看哪一种针法或哪件作品，我就能带你到对应页面。':'你指的是哪一种针法或哪件作品？可以点下面的主题，也可以直接告诉我名字。',records:[],citations:[],suggestions:priorTopic?[priorTopic.question,'苏绣和湘绣有什么区别？']:['散套针怎么理解？','平针是什么？','苏绣和湘绣有什么区别？']};
+  }
+  if(noSubject&&prior){resolved=prior;topic=findTopic(resolved);}
   if(intent==='next'&&topic){const peers=learningTopics.filter(t=>t.category===topic?.category);topic=peers[(peers.findIndex(t=>t.id===topic?.id)+1)%peers.length];resolved=topic.question;}
   if(intent==='simple')detail='brief';else if(intent==='detail')detail='detailed';
   const result=api.evidenceReply(resolved,archive,history);

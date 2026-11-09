@@ -6,6 +6,7 @@ import { LocalVoice } from '../features/xiaoli/local-voice';
 import {readConversation,saveConversation} from '../features/xiaoli/session';
 import type {ConversationMessage} from '../features/xiaoli/session';
 import {XiaoliMetImage} from '../components/XiaoliMetImage';
+import {XiaoliReadAloud} from '../components/XiaoliReadAloud';
 import '../styles/xiaoli.css';
 
 type Message = ConversationMessage;
@@ -28,6 +29,7 @@ export const Xiaoli:React.FC=()=>{
   const [detail,setDetail]=useState<Detail>('brief');
   const [remember,setRemember]=useState(false);
   const [busy,setBusy]=useState(false);
+  const [speechStop,setSpeechStop]=useState(0);
   const [notice,setNotice]=useState('正在打开刺绣资料…');
   const [modelState,setModelState]=useState<'off'|'loading'|'ready'>('off');
   const [modelNotice,setModelNotice]=useState('可选：在此设备上运行小模型，让资料解释更连贯。');
@@ -52,7 +54,7 @@ export const Xiaoli:React.FC=()=>{
     fetch(asset('content/xiaoli-runtime.json')).then(r=>r.json()).then((data:unknown)=>{
       if(!alive.current)return;
       const available=import.meta.env.VITE_XIAOLI_VOICE==='true'||(typeof data==='object'&&data!==null&&'voiceAvailable'in data&&data.voiceAvailable===true);
-      setVoiceAvailable(available);setVoiceNotice(available?'免费中文女声 · 本机合成 · 非商业试听':'此预览未包含声音包，文字问答可以照常使用。');
+      setVoiceAvailable(available);setVoiceNotice(available?'免费中文女声 · 本机合成 · 非商业试听':'当前公开版未启用此声音包，文字讲解可以照常使用。');
     }).catch(()=>{if(alive.current)setVoiceNotice('声音包暂不可用。');});
     try{const saved=localStorage.getItem('lihuaji.xiaoli.preferences.v1');if(saved){const p=JSON.parse(saved) as {detail?:string};if(p.detail==='detailed')setDetail('detailed');setRemember(true);}}catch{/* storage is optional */}
     return()=>{alive.current=false;modelEpoch.current++;voiceEpoch.current++;abort.current?.abort();model.current?.dispose();voice.current?.dispose();};
@@ -85,19 +87,20 @@ export const Xiaoli:React.FC=()=>{
   },[detail,remember]);
 
   const stop=()=>{
+    setSpeechStop(value=>value+1);
     if(busy){model.current?.dispose();model.current=undefined;setModelState('off');setBusy(false);}
     if(voiceBusy)setVoiceNotice('声音生成已停止，可以重新试听。');
     abort.current?.abort();audio.current?.pause();voiceEpoch.current++;voice.current?.dispose();voice.current=undefined;setVoiceBusy(false);avatar.current?.setState('idle');setNotice('已停止。你可以换个问题继续。');
   };
-  const send=async(value:string)=>{
+  const send=async(value:string, refine=false)=>{
     if(busy||!archive||!moduleRef.current||!value.trim())return;
     stop();const request=new AbortController();abort.current=request;
     const history:Turn[]=messagesRef.current.filter(m=>m.id!==0).map(m=>({role:m.role,content:m.text,records:m.reply?.records,question:m.reply?.question,topicId:m.reply?.topicId}));
-    setInput('');setMessages(m=>[...m,{id:++id.current,role:'user',text:value.trim()}]);setBusy(true);setNotice('正在查找相关资料…');
+    setInput('');setMessages(m=>[...m,{id:++id.current,role:'user',text:refine?'请换一种讲法：'+value.trim():value.trim()}]);setBusy(true);setNotice('正在查找相关资料…');
     try {
       let reply=prepareAnswer(value,history,archive,moduleRef.current,detail);
       let fallbackNotice='';
-      if(reply.kind==='evidence'&&reply.intent==='ask'&&modelState==='ready'&&model.current){
+      if(refine&&reply.kind==='evidence'&&modelState==='ready'&&model.current){
         setNotice('小梨正在用本机模型整理解释…');
         try {
           const answerDetail=/简单|通俗/.test(value)?'brief':/详细/.test(value)?'detailed':detail;
@@ -122,7 +125,7 @@ export const Xiaoli:React.FC=()=>{
       if(epoch!==modelEpoch.current||!alive.current)return;
       const instance=new LocalModel();model.current=instance;
       await instance.load(text=>{if(alive.current&&epoch===modelEpoch.current)setModelNotice(text);});
-      if(alive.current&&epoch===modelEpoch.current){setModelState('ready');setModelNotice('本机小模型已就绪，不调用付费接口。复杂问题仍可能解释不准确。');}
+      if(alive.current&&epoch===modelEpoch.current){setModelState('ready');setModelNotice('模型已就绪。资料回答仍会立即显示；想换一种讲法时，点击“用本机模型再解释”。');}
     }catch(error){if(alive.current&&epoch===modelEpoch.current){setModelState('off');setModelNotice(error instanceof Error?error.message:'模型未能加载。资料问答仍可用。');}}
   };
   const disableModel=()=>{abort.current?.abort();modelEpoch.current++;model.current?.dispose();model.current=undefined;setModelState('off');setBusy(false);setModelNotice('已释放模型运行内存，下载缓存仍保留。');};
@@ -142,7 +145,7 @@ export const Xiaoli:React.FC=()=>{
   const latest=[...messages].reverse().find(m=>m.role==='assistant'&&m.reply);
   const currentTopic=learningTopics.find(t=>t.id===latest?.reply?.topicId);
   return <div className="xiaoli-preview">
-    <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 免费体验版</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p></header>
+    <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 刺绣讲解</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p></header>
     <div className="xiaoli-layout">
       <aside className="xiaoli-companion">
         <div className="xiaoli-avatar" ref={avatarEl} aria-label="小梨讲解形象">{(modelState!=='off'||avatarFailed)&&<div className="xiaoli-avatar-rest"><span>梨</span><p>{modelState!=='off'?'小梨正在专心读资料':'小梨在这里'}</p></div>}</div>
@@ -155,9 +158,9 @@ export const Xiaoli:React.FC=()=>{
           {modelState==='off'?<button onClick={()=>void enableModel()}>下载并启用本机模型</button>:<button onClick={disableModel}>{modelState==='loading'?'取消加载':'关闭本机模型'}</button>}
           <p role="status" className="xiaoli-status">{modelNotice}</p>
           <button onClick={()=>{disableModel();void import('../features/xiaoli/local-model').then(m=>m.clearModelCache()).then(()=>setModelNotice('模型缓存已清除；游戏与云存档未改动。')).catch(()=>setModelNotice('缓存清理未完成，请稍后重试。'));}}>清理此模型的下载缓存</button>
-          <hr/><p>中文声音在本机合成，首次加载约 145MB。本次提供同一女声的两种语速，供非商业研究试听。</p>
+          {voiceAvailable&&<><hr/><p>中文声音在本机合成，首次加载约 145MB。本次提供同一女声的两种语速，供非商业研究试听。</p>
           <div className="xiaoli-voice-actions"><button disabled={!voiceAvailable||voiceBusy} onClick={()=>void speak(sample,0.92)}>舒缓语速试听</button><button disabled={!voiceAvailable||voiceBusy} onClick={()=>void speak(sample,1.08)}>明快语速试听</button></div>
-          <p role="status" className="xiaoli-status">{voiceNotice}</p>
+          <p role="status" className="xiaoli-status">{voiceNotice}</p></>}
         </details>
         {audioUrl&&<audio ref={audio} controls src={audioUrl} aria-label="小梨试听播放器" onPlay={()=>avatar.current?.setState('speaking')} onPause={()=>avatar.current?.setState('idle')} onEnded={()=>avatar.current?.setState('idle')}/>}
       </aside>
@@ -179,8 +182,9 @@ export const Xiaoli:React.FC=()=>{
           </article>)}
           {busy&&<p className="xiaoli-thinking">小梨正在读资料…</p>}
         </div>
-        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=><button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}</div>
-        <form onSubmit={e=>{e.preventDefault();void send(input);}}><label className="sr-only" htmlFor="xiaoli-question">你的问题</label><textarea id="xiaoli-question" value={input} onChange={e=>setInput(e.target.value)} maxLength={500} rows={3} placeholder="比如：这两种绣法有什么区别？"/><div className="xiaoli-compose"><button type="button" onClick={stop}>停止</button><button type="button" disabled={!voiceAvailable||voiceBusy||!latest} onClick={()=>latest&&void speak(latest.text)}>听上一条回答</button><button type="submit" disabled={busy||!archive||!input.trim()}>发送 ↗</button></div></form>
+        <XiaoliReadAloud text={latest?.text||''} stopSignal={speechStop} onSpeaking={speaking=>avatar.current?.setState(speaking?'speaking':'idle')}/>
+        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=><button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}{modelState==='ready'&&latest?.reply?.kind==='evidence'&&<button disabled={busy} onClick={()=>void send(latest.reply!.question,true)}>用本机模型再解释</button>}</div>
+        <form onSubmit={e=>{e.preventDefault();void send(input);}}><label className="sr-only" htmlFor="xiaoli-question">你的问题</label><textarea id="xiaoli-question" value={input} onChange={e=>setInput(e.target.value)} maxLength={500} rows={3} placeholder="比如：这两种绣法有什么区别？"/><div className="xiaoli-compose"><button type="button" onClick={stop}>停止</button>{voiceAvailable&&<button type="button" disabled={voiceBusy||!latest} onClick={()=>latest&&void speak(latest.text)}>听上一条回答</button>}<button type="submit" disabled={busy||!archive||!input.trim()}>发送 ↗</button></div></form>
         <p className="xiaoli-status" role="status">{notice}</p><p className="xiaoli-footnote">对话仅留在本次页面内存中，站内阅读后可返回接着聊；刷新或关闭页面即清除。专题讲解沿用已收录出处，数字示意不等同实物教学。</p>
       </section>
     </div>

@@ -60,6 +60,7 @@ function appendMessage(chat,role,text,citations=[],records=[],archive=null){
  };
  root.innerHTML=`<div class="encyclopedia-root">
  <header class="encyclopedia-hero"><div><span class="encyclopedia-eyebrow">LIHUAJI / EMBROIDERY CULTURE ARCHIVE</span><h1>刺绣文化百科 <small>· 苏绣专藏</small></h1><p>从苏州绣艺到四大名绣，再走向世界刺绣文明。读有出处的文化档案，向绣娘提问；进入 AR 绣境，看针线与纹样在空间中展开。</p><div class="encyclopedia-hero-tags"><span>苏绣重点深研</span><span>原始文献可追溯</span><span>文字与语音互动</span></div></div><a class="encyclopedia-ar-link" href="#ar">进入 AR 绣境 ↗</a></header>
+ <p class="encyclopedia-xiaoli-entry"><a class="btn primary" href="#xiaoli">和小梨聊聊 · 专题讲解 ↗</a> <span class="small">按专题读懂刺绣，接着追问，再去看针法与作品。</span></p>
  <section class="encyclopedia-featured" aria-label="刺绣重点典藏入口">
  <button type="button" data-feature-topic="suxiu" data-feature-query=""><span>01 · SUZHOU</span><strong>苏绣 · 源流谱系</strong><small>绣谱、细绣、仿真绣与乱针绣</small><i>浏览专藏 ↗</i></button>
  <button type="button" data-feature-topic="four" data-feature-query=""><span>02 · FOUR SCHOOLS</span><strong>四大名绣 · 地域比较</strong><small>苏、湘、粤、蜀分别考据</small><i>了解流派 ↗</i></button>
