@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {validateSuxiuFiles} from './validate-suxiu.mjs';
 import {validateStitchFiles} from './validate-stitch.mjs';
+import {validateXiaoliTopics} from './validate-xiaoli-topics.mjs';
+console.log('Validated Xiaoli topic catalogue:',validateXiaoliTopics());
 import {validateLearningPaths} from '../assets/learning-path-store.js';
 const stitchReport=validateStitchFiles();
 console.log(`Validated ${stitchReport.demos.length} stitch demos, ${stitchReport.videos} official source links and ${stitchReport.digitalTools} digital embroidery tool.`);
@@ -75,6 +77,10 @@ const isLightDeploy = process.env.DEPLOY_LIGHT === 'true' || /^https?:\/\//.test
 if (isLightDeploy) {
   console.log('Lightweight deployment mode: skipping bulk asset copying (served via external assets repository).');
 } else {
-  for(const f of ['content','assets'])fs.cpSync(f,path.join('_site',f),{recursive:true});
+  const voiceDirectory=path.resolve('assets/xiaoli-voice');
+  for(const f of ['content','assets'])fs.cpSync(f,path.join('_site',f),{
+    recursive:true,
+    filter:source=>process.env.VITE_XIAOLI_VOICE==='true'||path.resolve(source)!==voiceDirectory
+  });
 }
 console.log(`Validated ${patterns.length} patterns, ${products.length} showcase items; assembled static site.`);

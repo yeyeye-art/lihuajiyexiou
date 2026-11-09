@@ -60,6 +60,7 @@ function appendMessage(chat,role,text,citations=[],records=[],archive=null){
  };
  root.innerHTML=`<div class="encyclopedia-root">
  <header class="encyclopedia-hero"><div><span class="encyclopedia-eyebrow">LIHUAJI / EMBROIDERY CULTURE ARCHIVE</span><h1>刺绣文化百科 <small>· 苏绣专藏</small></h1><p>从苏州绣艺到四大名绣，再走向世界刺绣文明。读有出处的文化档案，向绣娘提问；进入 AR 绣境，看针线与纹样在空间中展开。</p><div class="encyclopedia-hero-tags"><span>苏绣重点深研</span><span>原始文献可追溯</span><span>文字与语音互动</span></div></div><a class="encyclopedia-ar-link" href="#ar">进入 AR 绣境 ↗</a></header>
+ <p class="encyclopedia-xiaoli-entry"><a class="btn primary" href="#xiaoli">和小梨聊聊 · 专题讲解 ↗</a> <span class="small">按专题读懂刺绣，接着追问，再去看针法与作品。</span></p>
  <section class="encyclopedia-featured" aria-label="刺绣重点典藏入口">
  <button type="button" data-feature-topic="suxiu" data-feature-query=""><span>01 · SUZHOU</span><strong>苏绣 · 源流谱系</strong><small>绣谱、细绣、仿真绣与乱针绣</small><i>浏览专藏 ↗</i></button>
  <button type="button" data-feature-topic="four" data-feature-query=""><span>02 · FOUR SCHOOLS</span><strong>四大名绣 · 地域比较</strong><small>苏、湘、粤、蜀分别考据</small><i>了解流派 ↗</i></button>
@@ -72,7 +73,7 @@ function appendMessage(chat,role,text,citations=[],records=[],archive=null){
  <label class="encyclopedia-find-label" for="knowledge-search">搜索馆藏、绣种、人物与针法</label><input id="knowledge-search" type="search" placeholder="苏绣历史、四大名绣、湘绣、沈寿、套针…" autocomplete="off">
  <p class="encyclopedia-library-help" id="encyclopedia-library-help" role="status"></p>
  <div id="knowledge-list" class="grid encyclopedia-list" aria-live="polite"></div></div>
- <aside class="embroider-assistant" aria-label="智能绣娘问答"><div class="embroider-assistant-top"><span class="encyclopedia-eyebrow">02 / EMBROIDERY GUIDE</span><h2>问问绣娘</h2><div class="embroider-persona" data-speaking="false"><div class="xiaoli-3d-container" aria-label="3D 小梨顾问"></div><noscript>${persona}</noscript></div><p id="embroider-mode">文献资料问答 · 非大模型模式</p><small>我是《梨花季》设计的数字文化讲解形象，不代表真实苏绣传承人。所有回答应以资料出处为依据。</small></div>
+ <aside class="embroider-assistant" aria-label="智能绣娘问答"><div class="embroider-assistant-top"><span class="encyclopedia-eyebrow">02 / EMBROIDERY GUIDE</span><h2>问问绣娘</h2><p><a class="btn primary" href="#xiaoli">进入小梨连续对话 ↗</a></p><small>想接着追问、看针法演示，可以进入小梨讲解页。</small><div class="embroider-persona" data-speaking="false"><div class="xiaoli-3d-container" aria-label="3D 小梨顾问"></div><noscript>${persona}</noscript></div><p id="embroider-mode">文献资料问答 · 非大模型模式</p><small>我是《梨花季》设计的数字文化讲解形象，不代表真实苏绣传承人。所有回答应以资料出处为依据。</small></div>
  <div class="embroider-conversation" id="embroider-conversation" role="log" aria-live="polite"></div>
  <div class="embroider-suggestions"><button data-embroider-suggest="苏绣起源于哪个朝代？">苏绣起源</button><button data-embroider-suggest="苏绣和湘绣有什么区别？">四大名绣区别</button><button data-embroider-suggest="散套针怎么理解？">散套针</button></div>
  <form id="embroider-form"><label class="sr-only" for="embroider-question">向绣娘输入问题</label><textarea id="embroider-question" rows="2" maxlength="320" placeholder="例如：沈寿对苏绣的发展有什么影响？" required></textarea><div class="embroider-compose-actions"><button type="button" id="embroider-phone" title="电话式连续对话：无需手操作，说一句答一句">📞 电话对话</button><button type="button" id="embroider-mic" title="语音输入">🎙 语音输入</button><button type="button" id="embroider-speak" title="朗读上一条答复">♫ 朗读</button><button type="button" id="embroider-stop" title="停止语音">■ 停止</button><button type="submit" id="embroider-submit">发送提问 ↗</button></div></form>
@@ -84,7 +85,7 @@ function appendMessage(chat,role,text,citations=[],records=[],archive=null){
  </div>`;
  const search=root.querySelector('#knowledge-search'),list=root.querySelector('#knowledge-list'),tabArea=root.querySelector('#encyclopedia-tabs'),chat=root.querySelector('#embroider-conversation');
  let topic='all',q=initialQuery;
- if(q.startsWith('learn-')||q==='mooc-suxiu')q='';
+ if(q.startsWith('learn-')||q.startsWith('practice-')||q==='mooc-suxiu')q='';
  search.value=q;
  const recalc=()=>{
   if(!alive||!isCurrent())return;

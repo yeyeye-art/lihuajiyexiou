@@ -133,6 +133,14 @@ async function guide(query=''){
  main.querySelectorAll('[data-learn]').forEach(b=>b.onclick=()=>{const day=new Date().toLocaleDateString('sv-SE');if(!progress.days.includes(day))progress.days.push(day);save();toast('今日练习已记在此浏览器')});
  cleanups.push(()=>{dispose?.();learningController.dispose();labController?.();digitalController?.();videoController?.();});
  if(['learn-tao','learn-gun','mooc-suxiu'].includes(query))requestAnimationFrame(()=>document.querySelector('#encyclopedia-learning')?.scrollIntoView({block:'start'}));
+ const requestedDemo=query.startsWith('practice-')?query.slice('practice-'.length):'';
+ if(labModule.demoCatalogue.some(d=>d.id===requestedDemo)){
+  await labController.selectDemo(requestedDemo);
+  if(isCurrent())$('#stitch-lab')?.scrollIntoView({block:'start'});
+ }else if(query&&!query.startsWith('learn-')){
+  const record=main.querySelector(`[data-global-embroidery="${CSS.escape(query)}"], [data-suxiu="${CSS.escape(query)}"]`);
+  if(isCurrent())record?.scrollIntoView({block:'start'});
+ }
 }
 
  try{

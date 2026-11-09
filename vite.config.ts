@@ -39,8 +39,13 @@ export default defineConfig({
         // Embedded AR and face HTML must not receive the React shell.
         navigateFallbackAllowlist: [/^\/lihuajiyexiou\/(?:index\.html)?(?:\?.*)?$/],
         globPatterns: ['**/*.{js,css,html,json,ico,png,svg,webp,woff2}'],
-        globIgnores: ['**/vendor-three*.js', '**/assets/vendor/three/**'],
+        globIgnores: ['**/vendor-three*.js', '**/assets/vendor/three/**', '**/webllm-worker-*.js', '**/local-model-*.js'],
         runtimeCaching: [
+          {
+            urlPattern: /\/assets-app\/(?:webllm-worker|local-model)-[^/]+\.js$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'lihuaji-xiaoli-runtime', expiration: { maxEntries: 4, maxAgeSeconds: 60 * 60 * 24 * 30 } },
+          },
           {
             urlPattern: /.*\/vendor-three.*\.js/,
             handler: 'CacheFirst',
