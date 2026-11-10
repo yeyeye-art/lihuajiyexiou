@@ -66,12 +66,16 @@ export const Xiaoli:React.FC=()=>{
     if(modelState!=='off')return;
     const node=avatarEl.current;if(!node)return;
     setAvatarStatus('loading');
+    // A cached pre-update renderer reports readiness only through this attribute.
+    delete node.dataset.modelLoaded;
+    const observer=new MutationObserver(()=>{if(!disposed&&node.dataset.modelLoaded==='true')setAvatarStatus('ready');});
+    observer.observe(node,{attributes:true,attributeFilter:['data-model-loaded']});
     const url=asset('assets/agents/xiaoli-3d.js');
     import(/* @vite-ignore */ url).then((api:AvatarModule)=>{
       if(disposed)return;
       avatar.current=api.createXiaoli3D(node,{reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,modelRotationY:-Math.PI/2,keepFacing:true,onLoadStatus:status=>{if(!disposed)setAvatarStatus(status);}});
     }).catch(()=>{if(!disposed)setAvatarStatus('error');});
-    return()=>{disposed=true;avatar.current?.dispose();avatar.current=undefined;};
+    return()=>{disposed=true;observer.disconnect();avatar.current?.dispose();avatar.current=undefined;};
   },[modelState,avatarAttempt]);
   useLayoutEffect(()=>{
     const node=log.current;if(!node)return;
