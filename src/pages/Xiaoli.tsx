@@ -19,6 +19,9 @@ const greeting:Message={id:0,role:'assistant',text:'你好，我是小梨。今�
 const sample='你好，我是小梨。我们慢慢来。你想先听一段刺绣故事，还是看看一根丝线怎样变成一幅画？';
 export const Xiaoli:React.FC=()=>{
   const [archive,setArchive]=useState<Archive>();
+  const [archiveState,setArchiveState]=useState<'loading'|'ready'|'error'>('loading');
+  const [archiveAttempt,setArchiveAttempt]=useState(0);
+  const [showLatest,setShowLatest]=useState(false);
   const moduleRef=useRef<KnowledgeModule | undefined>(undefined);
   const [messages,setMessages]=useState<Message[]>(()=>readConversation().length?readConversation():[greeting]);
   const [topicCategory,setTopicCategory]=useState('工具与流程');
@@ -44,12 +47,6 @@ export const Xiaoli:React.FC=()=>{
 
   useEffect(()=>{
     alive.current=true;
-    const url=asset('assets/embroidery-knowledge.js');
-    (async()=>{
-      const api=await import(/* @vite-ignore */ url) as KnowledgeModule;
-      const data=await api.loadEmbroideryArchive();
-      if(alive.current){moduleRef.current=api;setArchive(data);setNotice('可以开始了。资料回答会附上出处。');}
-    })().catch(()=>{if(alive.current)setNotice('资料没有加载成功，请刷新后重试。');});
     fetch(asset('content/xiaoli-runtime.json')).then(r=>r.json()).then((data:unknown)=>{
       if(!alive.current)return;
       const available=import.meta.env.VITE_XIAOLI_VOICE==='true'||(typeof data==='object'&&data!==null&&'voiceAvailable'in data&&data.voiceAvailable===true);
@@ -58,6 +55,22 @@ export const Xiaoli:React.FC=()=>{
     try{const saved=localStorage.getItem('lihuaji.xiaoli.preferences.v1');if(saved){const p=JSON.parse(saved) as {detail?:string};if(p.detail==='detailed')setDetail('detailed');setRemember(true);}}catch{/* storage is optional */}
     return()=>{alive.current=false;modelEpoch.current++;voiceEpoch.current++;abort.current?.abort();model.current?.dispose();voice.current?.dispose();};
   },[]);
+  useEffect(()=>{
+    let cancelled=false;
+    setArchiveState('loading');
+    setNotice('正在打开刺绣资料…');
+    // Retrying a failed module request needs a fresh URL; a loaded module is reused.
+    const url=asset('assets/embroidery-knowledge.js')+(archiveAttempt?`?retry=${archiveAttempt}`:'');
+    (async()=>{
+      const api=moduleRef.current??await import(/* @vite-ignore */ url) as KnowledgeModule;
+      if(cancelled)return;
+      moduleRef.current=api;
+      const data=await api.loadEmbroideryArchive();
+      if(cancelled)return;
+      setArchive(data);setArchiveState('ready');setNotice('可以开始了。资料回答会附上出处。');
+    })().catch(()=>{if(!cancelled){setArchiveState('error');setNotice('资料暂未载入，可以保留问题并重试。');}});
+    return()=>{cancelled=true;};
+  },[archiveAttempt]);
   useEffect(()=>{
     let disposed=false;
     if(modelState!=='off')return;
@@ -74,16 +87,23 @@ export const Xiaoli:React.FC=()=>{
     }).catch(()=>{if(!disposed)setAvatarStatus('error');});
     return()=>{disposed=true;observer.disconnect();avatar.current?.dispose();avatar.current=undefined;};
   },[modelState,avatarAttempt]);
-  useLayoutEffect(()=>{
-    const node=log.current;if(!node)return;
-    let follow=true;
-    const update=()=>{if(follow)node.scrollTop=node.scrollHeight;};
-    const onScroll=()=>{follow=node.scrollHeight-node.scrollTop-node.clientHeight<70;};
-    update();node.addEventListener('scroll',onScroll);
-    const observer=new ResizeObserver(update);
-    if(node.lastElementChild)observer.observe(node.lastElementChild);
-    return()=>{observer.disconnect();node.removeEventListener('scroll',onScroll);};
-  },[messages,busy]);
+  const revealLatest=()=>{
+    const node=log.current;
+    const last=node?.querySelector<HTMLElement>('.xiaoli-message:last-of-type');
+    if(!node||!last)return;
+    node.scrollTop+=last.getBoundingClientRect().top-node.getBoundingClientRect().top-12;
+    setShowLatest(false);
+  };
+  const checkReadingPosition=()=>{
+    const node=log.current;
+    const last=node?.querySelector<HTMLElement>('.xiaoli-message:last-of-type');
+    if(!node||!last)return;
+    const position=last.getBoundingClientRect().top-node.getBoundingClientRect().top;
+    setShowLatest(position < -24 || position > node.clientHeight-48);
+  };
+  // Begin each new answer at its first line, without moving keyboard focus or the page.
+  // Expanding a citation or loading an illustration must not pull readers to the bottom.
+  useLayoutEffect(revealLatest,[messages]);
   useEffect(()=>{saveConversation(messages);},[messages]);
   useEffect(()=>()=>{if(audioUrl)URL.revokeObjectURL(audioUrl);},[audioUrl]);
   useEffect(()=>{
@@ -166,6 +186,33 @@ export const Xiaoli:React.FC=()=>{
   return <div className="xiaoli-preview">
     <header className="xiaoli-heading"><a href="#guide">← 刺绣文化百科</a><span>小梨 · 刺绣讲解</span><h1>一针一线，慢慢聊。</h1><p>问一个好奇的问题，听小梨陪你读懂刺绣。</p><a className="xiaoli-ask-jump" href="#xiaoli-question" onClick={e=>{e.preventDefault();document.getElementById('xiaoli-question')?.focus();document.getElementById('xiaoli-question')?.scrollIntoView({block:'center'});}}>直接提问 ↓</a></header>
     <div className="xiaoli-layout">
+      <section className="xiaoli-dialogue" aria-label="与小梨对话">
+        <div className="xiaoli-dialogue-title"><h2>问问小梨</h2><button onClick={()=>{stop();setMessages([greeting]);setInput('');}}>重新聊</button></div>
+        {messages.length===1&&<div className="xiaoli-start"><p>第一次来？可以先从一根线的走向看起。</p><button disabled={busy||!archive} onClick={()=>void send('我是新手，从哪里开始？')}>带我入门</button><button disabled={busy||!archive} onClick={()=>void send('苏绣需要哪些工具？')}>先认识工具</button></div>}
+        <details className="xiaoli-topics">
+          <summary>从一个专题开始 · {learningTopics.length} 个讲解专题</summary>
+          <div className="xiaoli-topic-categories" aria-label="选择专题分类">{[...new Set(learningTopics.map(t=>t.category))].map(category=><button key={category} aria-pressed={topicCategory===category} onClick={()=>setTopicCategory(category)}>{category}</button>)}</div>
+          <div className="xiaoli-topic-list">{learningTopics.filter(t=>t.category===topicCategory).map(t=><button key={t.id} disabled={busy||!archive} onClick={()=>void send(t.question)}><strong>{t.title}</strong><span>{t.prompt}</span></button>)}</div>
+        </details>
+        {currentTopic&&<p className="xiaoli-current-topic">正在聊：{currentTopic.title}</p>}
+        <div className="xiaoli-messages" ref={log} onScroll={checkReadingPosition} role="log" aria-live="polite" aria-relevant="additions">
+          {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span>{m.reply?<XiaoliEvidence text={m.text} sources={m.reply.citations} archive={archive}/>:<p>{m.text}</p>}
+            {m.reply&&<small>{m.reply.kind==='model'?'本机模型解释':m.reply.kind==='evidence'?'文献摘要':m.reply.kind==='missing'?'需要更多资料':'小梨'}</small>}
+            {m.reply?.illustration&&<figure className="xiaoli-lesson-image"><img src={asset(m.reply.illustration.src)} alt="对应针法的数字线条示意" loading="lazy"/><figcaption>{m.reply.illustration.caption}</figcaption></figure>}
+            {m.reply?.museumRecordId&&archive?.records.find(r=>r.id===m.reply?.museumRecordId)&&<XiaoliMetImage record={archive.records.find(r=>r.id===m.reply?.museumRecordId)!}/>}
+            {!!m.reply?.actions?.length&&<nav className="xiaoli-reading-actions" aria-label="继续看与练习">{m.reply.actions.map(action=><a key={action.href} href={action.href} onClick={stop}><strong>{action.label} ↗</strong><span>{action.description}</span></a>)}</nav>}
+            {!!m.reply?.candidates?.length&&<div className="xiaoli-candidates" role="group" aria-label="选择相关资料">{m.reply.candidates.map(candidate=><button type="button" key={candidate.id} disabled={busy} onClick={()=>void send(candidate.question,false,{query:m.reply!.askedQuestion||m.reply!.question,id:candidate.id})}>{candidate.label}</button>)}</div>}
+            {m.id===latest?.id&&<div className="xiaoli-feedback" role="group" aria-label="调整这次回答"><button type="button" disabled={busy} onClick={()=>feedback('missed')}>没答到点上</button><button type="button" disabled={busy} onClick={()=>feedback('complex')}>太复杂</button><button type="button" disabled={busy} onClick={()=>feedback('demo')}>想看示范</button></div>}
+          </article>)}
+          {busy&&<p className="xiaoli-thinking">小梨正在读资料…</p>}
+        </div>
+        {showLatest&&<button type="button" className="xiaoli-latest" onClick={revealLatest}>回到最新回答开头 ↓</button>}
+        <XiaoliReadAloud text={latest?.text||''} stopSignal={speechStop} onSpeaking={speaking=>avatar.current?.setState(speaking?'speaking':'idle')}/>
+        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=><button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}{modelState==='ready'&&latest?.reply?.kind==='evidence'&&<button disabled={busy} onClick={()=>void send(latest.reply!.question,true)}>用本机模型再解释</button>}</div>
+        {archiveState==='error'&&<div className="xiaoli-load-error" role="alert"><p>刺绣资料暂时没打开。输入的内容会保留，检查网络后可以再试一次。</p><button type="button" onClick={()=>{setArchiveState('loading');setArchiveAttempt(n=>n+1);}}>重新加载资料</button></div>}
+        <form onSubmit={e=>{e.preventDefault();void send(input);}}><label className="sr-only" htmlFor="xiaoli-question">你的问题</label><textarea id="xiaoli-question" value={input} onChange={e=>setInput(e.target.value)} maxLength={500} rows={3} placeholder="比如：这两种绣法有什么区别？"/><div className="xiaoli-compose"><button type="button" onClick={stop}>停止</button>{voiceAvailable&&<button type="button" disabled={voiceBusy||!latest} onClick={()=>latest&&void speak(latest.text)}>听上一条回答</button>}<button type="submit" disabled={busy||!archive||!input.trim()}>发送 ↗</button></div></form>
+        <p className="xiaoli-status" role="status">{notice}</p><p className="xiaoli-footnote">对话仅留在本次页面内存中，站内阅读后可返回接着聊；刷新或关闭页面即清除。专题讲解沿用已收录出处，数字示意不等同实物教学。</p>
+      </section>
       <aside className="xiaoli-companion">
         <div className="xiaoli-avatar" ref={avatarEl} aria-label="小梨讲解形象">{(modelState!=='off'||avatarStatus!=='ready')&&<div className="xiaoli-avatar-rest" role="status"><span>梨</span><p>{modelState!=='off'?'小梨正在专心读资料':avatarStatus==='loading'?'小梨的形象正在载入，你可以先提问。':'形象暂未载入，文字讲解可以照常使用。'}</p>{modelState==='off'&&avatarStatus==='error'&&<button onClick={()=>setAvatarAttempt(n=>n+1)}>重新载入形象</button>}</div>}</div>
         <h2>小梨</h2><p>你可以问得很细，也可以让我讲得简单一点。</p>
@@ -183,31 +230,6 @@ export const Xiaoli:React.FC=()=>{
         </details>
         {audioUrl&&<audio ref={audio} controls src={audioUrl} aria-label="小梨试听播放器" onPlay={()=>avatar.current?.setState('speaking')} onPause={()=>avatar.current?.setState('idle')} onEnded={()=>avatar.current?.setState('idle')}/>}
       </aside>
-      <section className="xiaoli-dialogue" aria-label="与小梨对话">
-        <div className="xiaoli-dialogue-title"><h2>问问小梨</h2><button onClick={()=>{stop();setMessages([greeting]);setInput('');}}>重新聊</button></div>
-        {messages.length===1&&<div className="xiaoli-start"><p>第一次来？可以先从一根线的走向看起。</p><button disabled={busy||!archive} onClick={()=>void send('我是新手，从哪里开始？')}>带我入门</button><button disabled={busy||!archive} onClick={()=>void send('苏绣需要哪些工具？')}>先认识工具</button></div>}
-        <details className="xiaoli-topics" open={messages.length===1}>
-          <summary>从一个专题开始 · {learningTopics.length} 个讲解专题</summary>
-          <div className="xiaoli-topic-categories" aria-label="选择专题分类">{[...new Set(learningTopics.map(t=>t.category))].map(category=><button key={category} aria-pressed={topicCategory===category} onClick={()=>setTopicCategory(category)}>{category}</button>)}</div>
-          <div className="xiaoli-topic-list">{learningTopics.filter(t=>t.category===topicCategory).map(t=><button key={t.id} disabled={busy||!archive} onClick={()=>void send(t.question)}><strong>{t.title}</strong><span>{t.prompt}</span></button>)}</div>
-        </details>
-        {currentTopic&&<p className="xiaoli-current-topic">正在聊：{currentTopic.title}</p>}
-        <div className="xiaoli-messages" ref={log} role="log" aria-live="polite" aria-relevant="additions">
-          {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span>{m.reply?<XiaoliEvidence text={m.text} sources={m.reply.citations} archive={archive}/>:<p>{m.text}</p>}
-            {m.reply&&<small>{m.reply.kind==='model'?'本机模型解释':m.reply.kind==='evidence'?'文献摘要':m.reply.kind==='missing'?'需要更多资料':'小梨'}</small>}
-            {m.reply?.illustration&&<figure className="xiaoli-lesson-image"><img src={asset(m.reply.illustration.src)} alt="对应针法的数字线条示意" loading="lazy"/><figcaption>{m.reply.illustration.caption}</figcaption></figure>}
-            {m.reply?.museumRecordId&&archive?.records.find(r=>r.id===m.reply?.museumRecordId)&&<XiaoliMetImage record={archive.records.find(r=>r.id===m.reply?.museumRecordId)!}/>}
-            {!!m.reply?.actions?.length&&<nav className="xiaoli-reading-actions" aria-label="继续看与练习">{m.reply.actions.map(action=><a key={action.href} href={action.href} onClick={stop}><strong>{action.label} ↗</strong><span>{action.description}</span></a>)}</nav>}
-            {!!m.reply?.candidates?.length&&<div className="xiaoli-candidates" role="group" aria-label="选择相关资料">{m.reply.candidates.map(candidate=><button type="button" key={candidate.id} disabled={busy} onClick={()=>void send(candidate.question,false,{query:m.reply!.askedQuestion||m.reply!.question,id:candidate.id})}>{candidate.label}</button>)}</div>}
-            {m.id===latest?.id&&<div className="xiaoli-feedback" role="group" aria-label="调整这次回答"><button type="button" disabled={busy} onClick={()=>feedback('missed')}>没答到点上</button><button type="button" disabled={busy} onClick={()=>feedback('complex')}>太复杂</button><button type="button" disabled={busy} onClick={()=>feedback('demo')}>想看示范</button></div>}
-          </article>)}
-          {busy&&<p className="xiaoli-thinking">小梨正在读资料…</p>}
-        </div>
-        <XiaoliReadAloud text={latest?.text||''} stopSignal={speechStop} onSpeaking={speaking=>avatar.current?.setState(speaking?'speaking':'idle')}/>
-        <div className="xiaoli-suggestions">{(latest?.reply?.suggestions||['苏绣和湘绣有什么区别？','散套针怎么理解？','沈寿是谁？']).map(q=><button key={q} disabled={busy||!archive} onClick={()=>void send(q)}>{q}</button>)}{modelState==='ready'&&latest?.reply?.kind==='evidence'&&<button disabled={busy} onClick={()=>void send(latest.reply!.question,true)}>用本机模型再解释</button>}</div>
-        <form onSubmit={e=>{e.preventDefault();void send(input);}}><label className="sr-only" htmlFor="xiaoli-question">你的问题</label><textarea id="xiaoli-question" value={input} onChange={e=>setInput(e.target.value)} maxLength={500} rows={3} placeholder="比如：这两种绣法有什么区别？"/><div className="xiaoli-compose"><button type="button" onClick={stop}>停止</button>{voiceAvailable&&<button type="button" disabled={voiceBusy||!latest} onClick={()=>latest&&void speak(latest.text)}>听上一条回答</button>}<button type="submit" disabled={busy||!archive||!input.trim()}>发送 ↗</button></div></form>
-        <p className="xiaoli-status" role="status">{notice}</p><p className="xiaoli-footnote">对话仅留在本次页面内存中，站内阅读后可返回接着聊；刷新或关闭页面即清除。专题讲解沿用已收录出处，数字示意不等同实物教学。</p>
-      </section>
     </div>
   </div>;
 };
