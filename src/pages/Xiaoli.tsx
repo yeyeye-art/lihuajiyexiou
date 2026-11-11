@@ -1,12 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { prepareAnswer, modelMessages, acceptModelAnswer, speechText, learningTopics } from '../features/xiaoli/knowledge';
-import type { Archive, KnowledgeModule, Turn, Source, Detail } from '../features/xiaoli/knowledge';
+import { prepareAnswer, prepareFeedback, feedbackQuestion, modelMessages, acceptModelAnswer, speechText, learningTopics } from '../features/xiaoli/knowledge';
+import type { Archive, KnowledgeModule, Turn, Detail, CandidateSelection, FeedbackKind } from '../features/xiaoli/knowledge';
 import type { LocalModel } from '../features/xiaoli/local-model';
 import { LocalVoice } from '../features/xiaoli/local-voice';
 import {readConversation,saveConversation} from '../features/xiaoli/session';
 import type {ConversationMessage} from '../features/xiaoli/session';
 import {XiaoliMetImage} from '../components/XiaoliMetImage';
 import {XiaoliReadAloud} from '../components/XiaoliReadAloud';
+import {XiaoliEvidence} from '../components/XiaoliEvidence';
 import '../styles/xiaoli.css';
 
 type Message = ConversationMessage;
@@ -16,10 +17,6 @@ interface AvatarModule {createXiaoli3D:(container:HTMLElement,options:{reducedMo
 const asset=(path:string)=>new URL(`${import.meta.env.BASE_URL}${path}`,location.origin).href;
 const greeting:Message={id:0,role:'assistant',text:'你好，我是小梨。今天想了解一件绣品，还是一起弄懂一种针法？你也可以告诉我：“说简单一点。”'};
 const sample='你好，我是小梨。我们慢慢来。你想先听一段刺绣故事，还是看看一根丝线怎样变成一幅画？';
-function relatedSources(source:Source,archive?:Archive):Source[]{
-  const row=archive?.records.find(r=>r.id===source.recordId);
-  return (row?.citations.map(id=>archive?.sources.get(id))||[]).filter((s):s is Source=>!!s&&s.url.startsWith('https://')&&s.url!==source.url);
-}
 export const Xiaoli:React.FC=()=>{
   const [archive,setArchive]=useState<Archive>();
   const moduleRef=useRef<KnowledgeModule | undefined>(undefined);
@@ -99,13 +96,13 @@ export const Xiaoli:React.FC=()=>{
     if(voiceBusy)setVoiceNotice('声音生成已停止，可以重新试听。');
     abort.current?.abort();audio.current?.pause();voiceEpoch.current++;voice.current?.dispose();voice.current=undefined;setVoiceBusy(false);avatar.current?.setState('idle');setNotice('已停止。你可以换个问题继续。');
   };
-  const send=async(value:string, refine=false)=>{
+  const send=async(value:string, refine=false, selection?:CandidateSelection)=>{
     if(busy||!archive||!moduleRef.current||!value.trim())return;
     stop();const request=new AbortController();abort.current=request;
     const history:Turn[]=messagesRef.current.filter(m=>m.id!==0).map(m=>({role:m.role,content:m.text,records:m.reply?.records,question:m.reply?.question,topicId:m.reply?.topicId}));
     setInput('');setMessages(m=>[...m,{id:++id.current,role:'user',text:refine?'请换一种讲法：'+value.trim():value.trim()}]);setBusy(true);setNotice('正在查找相关资料…');
     try {
-      let reply=prepareAnswer(value,history,archive,moduleRef.current,detail);
+      let reply=prepareAnswer(value,history,archive,moduleRef.current,detail,selection);
       let fallbackNotice='';
       if(refine&&reply.kind==='evidence'&&modelState==='ready'&&model.current){
         setNotice('小梨正在用本机模型整理解释…');
@@ -122,6 +119,21 @@ export const Xiaoli:React.FC=()=>{
       setNotice(fallbackNotice||(reply.kind==='model'?'本机模型解释 · 请结合所列出处核对。':reply.contextUsed?'已承接上一问的主题。':reply.kind==='evidence'?'资料摘要已显示。你可以继续追问。':'可以换个角度继续聊。'));
     }catch(error){if(alive.current&&!request.signal.aborted)setNotice(error instanceof Error?error.message:'暂时没有完成，请重试。');}
     finally{if(alive.current&&abort.current===request)setBusy(false);}
+  };
+  const feedback=(kind:FeedbackKind)=>{
+    if(busy||!archive||!moduleRef.current)return;
+    const previous=[...messagesRef.current].reverse().find(m=>m.role==='assistant'&&m.reply)?.reply;
+    if(!previous)return;
+    stop();
+    const history:Turn[]=messagesRef.current.filter(m=>m.id!==0).map(m=>({role:m.role,content:m.text,records:m.reply?.records,question:m.reply?.question,topicId:m.reply?.topicId}));
+    const reply=prepareFeedback(kind,previous,history,archive,moduleRef.current,detail);
+    const labels:Record<FeedbackKind,string>={missed:'没答到点上',complex:'太复杂',demo:'想看示范'};
+    setMessages(m=>[...m,{id:++id.current,role:'user',text:labels[kind]},{id:++id.current,role:'assistant',text:reply.answer,reply}]);
+    if(kind==='missed'){
+      setInput(feedbackQuestion(previous));
+      requestAnimationFrame(()=>document.getElementById('xiaoli-question')?.focus());
+    }
+    setNotice(kind==='missed'?'已把刚才的问题放回输入框，你可以补充或改写。':!previous.records.length?'先选择或补充对象，我再接着讲。':kind==='complex'?'已按刚才的资料换成简明讲解。':'已查找对应示范；有资料边界时会说明。');
   };
   const enableModel=async()=>{
     stop();
@@ -181,12 +193,13 @@ export const Xiaoli:React.FC=()=>{
         </details>
         {currentTopic&&<p className="xiaoli-current-topic">正在聊：{currentTopic.title}</p>}
         <div className="xiaoli-messages" ref={log} role="log" aria-live="polite" aria-relevant="additions">
-          {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span><p>{m.text}</p>
+          {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span>{m.reply?<XiaoliEvidence text={m.text} sources={m.reply.citations} archive={archive}/>:<p>{m.text}</p>}
             {m.reply&&<small>{m.reply.kind==='model'?'本机模型解释':m.reply.kind==='evidence'?'文献摘要':m.reply.kind==='missing'?'需要更多资料':'小梨'}</small>}
             {m.reply?.illustration&&<figure className="xiaoli-lesson-image"><img src={asset(m.reply.illustration.src)} alt="对应针法的数字线条示意" loading="lazy"/><figcaption>{m.reply.illustration.caption}</figcaption></figure>}
             {m.reply?.museumRecordId&&archive?.records.find(r=>r.id===m.reply?.museumRecordId)&&<XiaoliMetImage record={archive.records.find(r=>r.id===m.reply?.museumRecordId)!}/>}
             {!!m.reply?.actions?.length&&<nav className="xiaoli-reading-actions" aria-label="继续看与练习">{m.reply.actions.map(action=><a key={action.href} href={action.href} onClick={stop}><strong>{action.label} ↗</strong><span>{action.description}</span></a>)}</nav>}
-            {!!m.reply?.citations.length&&<details><summary>查看出处 · {m.reply.citations.length} 项</summary><ol>{m.reply.citations.map((s,i)=><li key={`${s.url}-${i}`}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title} ↗</a>{s.organization&&<small>{s.organization}</small>}{relatedSources(s,archive).map(extra=><p key={extra.url}><a href={extra.url} target="_blank" rel="noopener noreferrer">相关出处：{extra.title} ↗</a></p>)}</li>)}</ol></details>}
+            {!!m.reply?.candidates?.length&&<div className="xiaoli-candidates" role="group" aria-label="选择相关资料">{m.reply.candidates.map(candidate=><button type="button" key={candidate.id} disabled={busy} onClick={()=>void send(candidate.question,false,{query:m.reply!.askedQuestion||m.reply!.question,id:candidate.id})}>{candidate.label}</button>)}</div>}
+            {m.id===latest?.id&&<div className="xiaoli-feedback" role="group" aria-label="调整这次回答"><button type="button" disabled={busy} onClick={()=>feedback('missed')}>没答到点上</button><button type="button" disabled={busy} onClick={()=>feedback('complex')}>太复杂</button><button type="button" disabled={busy} onClick={()=>feedback('demo')}>想看示范</button></div>}
           </article>)}
           {busy&&<p className="xiaoli-thinking">小梨正在读资料…</p>}
         </div>
