@@ -123,3 +123,42 @@ test('Tools are complete, named practice selects the right lesson, and singleton
  const h=[];talk(h,'带我看辽代龙虎纹刺绣残片');assert.notEqual(talk(h,'换一个').topicId,'liao');
  for(const t of learningTopics.filter(t=>['tools','process','dazi','tao','ding','wang'].includes(t.id)))assert.equal(prepareAnswer(t.question+'在2099年获得什么奖',[],archive,api,'brief').kind,'missing');
 });
+
+test('Ordinal follow-ups select only the requested cited item and retain it through rephrasing',()=>{
+ const h=[];talk(h,'苏绣和湘绣有什么区别？');
+ const chosen=talk(h,'那第二种呢？');assert.deepEqual(chosen.records,['world-xiang']);assert.equal(chosen.citations[0].recordId,'world-xiang');
+ for(const q of ['再解释一下','这个是什么','详细一点','这是真的吗？','给我看看']){
+  const a=talk(h,q);assert.deepEqual(a.records,['world-xiang'],q);assert(a.citations.every(c=>c.recordId==='world-xiang'));
+ }
+ const four=[];talk(four,'四大名绣有什么区别？');assert.deepEqual(talk(four,'第四种呢').records,['world-shu']);
+});
+
+test('Ambiguous other prompts offer choices without guessing, then accept an ordinal selection',()=>{
+ const h=[];talk(h,'苏绣和湘绣有什么区别？');const choices=talk(h,'那另一种呢？');
+ assert.equal(choices.kind,'clarify');assert(choices.answer.includes('湘绣'));assert(choices.suggestions.includes('第二种呢'));
+ assert.deepEqual(talk(h,'第一种呢').records,['world-suxiu']);
+ const single=[];talk(single,'滚针');assert.equal(talk(single,'另一种呢').kind,'clarify');
+ const outOfRange=[];talk(outOfRange,'苏绣和湘绣有什么区别？');assert.equal(talk(outOfRange,'第四种呢').kind,'clarify');
+});
+
+test('A bare why asks for the exact claim and preserves the topic without inventing a cause',()=>{
+ const h=[];talk(h,'滚针');const why=talk(h,'那为什么呢？');assert.equal(why.kind,'clarify');assert.match(why.answer,/哪一点的原因/);
+ assert.equal(talk(h,'出处在哪里').kind,'guide');assert.equal(talk(h,'给我看看').topicId,'gun');
+ assert.equal(prepareAnswer('为什么',[],archive,api,'brief').kind,'clarify');
+});
+
+test('Selection never crosses an unsupported question or invents an absent referent',()=>{
+ for(const q of ['第二种呢','另一种呢','为什么']){
+  const h=[];talk(h,'苏绣和湘绣有什么区别？');talk(h,'苏绣在2099年获得了什么奖？');
+  const a=talk(h,q);assert.equal(a.kind,'clarify');assert.equal(a.records.length,0);
+  assert.equal(prepareAnswer(q,[],archive,api,'brief').records.length,0);
+ }
+ const h=[];talk(h,'苏绣和湘绣有什么区别？');talk(h,'谢谢');assert.deepEqual(talk(h,'第二种呢').records,['world-xiang']);
+});
+
+test('Factual qualifiers never get swallowed by a conversational intent',()=>{
+ for(const q of ['第二种在2099年获得什么奖','为什么苏绣在2099年获得什么奖','另一种在2099年获得什么奖','这是真的吗，苏绣在2099年获得什么奖']){
+  assert.equal(questionIntent(q),'ask');const h=[];talk(h,'苏绣和湘绣有什么区别？');assert.equal(talk(h,q).kind,'missing');
+ }
+ for(const [q,intent] of [['能不能再讲通俗一点','simple'],['这段话有依据吗','source'],['你是从哪里知道的','source']])assert.equal(questionIntent(q),intent);
+});
