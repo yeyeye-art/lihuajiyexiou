@@ -21,3 +21,23 @@ export function validateXiaoliTopics(data=read('content/xiaoli-topics.json')){
  }
  return {topics:data.topics.length,records:new Set(data.topics.flatMap(t=>t.records)).size};
 }
+
+export function validateXiaoliSupport(hints=read('content/xiaoli-search-hints.json'),excerpts=read('content/xiaoli-source-excerpts.json')){
+ const topics=new Set(read('content/xiaoli-topics.json').topics.map(t=>t.id));
+ const records=new Map(read('content/suxiu-knowledge.json').filter(r=>r.verified).map(r=>[r.id,r]));
+ const sources=new Map(read('content/suxiu-sources.json').filter(s=>s.verified).map(s=>[s.id,s]));
+ assert.equal(hints.version,1);assert.equal(excerpts.version,1);
+ const ids=new Set(),phrases=new Set();
+ for(const hint of hints.topics){
+  assert(topics.has(hint.id)&&!ids.has(hint.id),'Unknown/duplicate search topic');ids.add(hint.id);
+  for(const group of [hint.phrases,hint.direct]){assert(Array.isArray(group));for(const text of group)assert(typeof text==='string'&&text.trim().length>=2&&text.length<=150);}
+  for(const phrase of hint.direct){assert(!phrases.has(phrase),'Ambiguous automatic match');phrases.add(phrase);}
+ }
+ for(const excerpt of excerpts.excerpts){
+  assert(sources.get(excerpt.sourceId)?.url===excerpt.url,'Excerpt source URL mismatch');
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(excerpt.checkedAt),'Missing excerpt verification date');
+  assert(typeof excerpt.text==='string'&&excerpt.text.length>0&&excerpt.text.length<=80,'Excerpt must remain short');
+  assert(excerpt.recordIds.length>0);for(const id of excerpt.recordIds)assert(records.get(id)?.sourceIds.includes(excerpt.sourceId),'Excerpt record/source mismatch');
+ }
+ return {searchTopics:ids.size,originalExcerpts:excerpts.excerpts.length};
+}

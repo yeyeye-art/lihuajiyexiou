@@ -1,6 +1,8 @@
 import topicData from '../../../content/xiaoli-topics.json' with { type: 'json' };
+import {searchCandidates,directSearchTopic,canSuggestCandidates} from './retrieval.ts';
+import type {SearchCandidate} from './retrieval';
 export interface Source { url: string; title: string; organization?: string; recordId?: string }
-export interface RecordEntry { id: string; title: string; summary: string; facts: string[]; citations: string[]; source?:Source; museum?:{objectNumber:string;classification:string;rights:string;attributionNote:string;apiObjectId?:number} }
+export interface RecordEntry { id: string; title: string; summary: string; facts: string[]; citations: string[]; keywords?:string[]; source?:Source; museum?:{objectNumber:string;classification:string;rights:string;attributionNote:string;apiObjectId?:number} }
 export interface Archive { records: RecordEntry[]; sources: Map<string, Source> }
 export interface Turn { role: 'user' | 'assistant'; content: string; records?: string[]; question?:string; topicId?:string }
 export interface Reply { answer: string; citations: Source[]; records: string[]; contextUsed?: boolean }
@@ -13,7 +15,8 @@ export type Intent = 'ask' | 'simple' | 'detail' | 'show' | 'source' | 'next' | 
 export interface LearningAction { label:string; href:string; description:string }
 export interface Topic { id:string;category:string;title:string;question:string;records:string[];prompt:string;aliases?:string[];simple?:{recordId:string;text:string}[];demo?:string;overview?:boolean }
 export const learningTopics:Topic[]=topicData.topics;
-export interface Answer extends Reply { kind: AnswerKind; question: string; suggestions: string[]; topicId?:string; intent?:Intent; actions?:LearningAction[]; illustration?:{src:string;caption:string}; museumRecordId?:string }
+export interface Answer extends Reply { kind: AnswerKind; question: string; suggestions: string[]; topicId?:string; intent?:Intent; actions?:LearningAction[]; illustration?:{src:string;caption:string}; museumRecordId?:string; candidates?:SearchCandidate[]; askedQuestion?:string }
+export interface CandidateSelection {query:string;id:string}
 export type Detail = 'brief' | 'detailed';
 const clean=(q:string)=>q.trim().replace(/[。？！!?，、\s]/g,'');
 // Strip only conversational wrappers, never dates, names or factual qualifiers.
@@ -71,7 +74,7 @@ export function learningActions(rows:RecordEntry[],topic?:Topic):LearningAction[
   for(const row of rows.slice(0,4))actions.push({label:row.museum?'查看作品档案':'阅读：'+row.title,href:'#guide/'+encodeURIComponent(row.id),description:row.museum?'核对馆藏编号、材料、年代，并查看馆方开放图像。':'打开此条百科资料及完整来源。'});
   return actions;
 }
-export function prepareAnswer(question: string, history: Turn[], archive: Archive, api: KnowledgeModule, detail: Detail): Answer {
+export function prepareAnswer(question: string, history: Turn[], archive: Archive, api: KnowledgeModule, detail: Detail, selection?:CandidateSelection): Answer {
   const q=question.trim().slice(0,500);
   let intent=questionIntent(q);
   if (/^(你好|您好|嗨|hello|hi|谢谢|多谢|你是谁|你叫什么)[呀啊呢。！!?？\s]*$/i.test(q)) {
@@ -82,8 +85,15 @@ export function prepareAnswer(question: string, history: Turn[], archive: Archiv
     return {...first,answer:'我们可以先从平针开始，观察线条怎样排列；也可以先认识工具。这是本站的入门阅读建议，你可以选自己感兴趣的方向。\n\n'+first.answer,suggestions:['给我看看','苏绣需要哪些工具？','滚针怎么练？'],contextUsed:false};
   }
   let resolved=resolveQuestion(q,history),topic=findTopic(resolved);
+  const oralTopic=intent==='ask'&&!topic?learningTopics.find(t=>t.id===directSearchTopic(q)):undefined;
+  if(oralTopic){topic=oralTopic;resolved=topic.question;}
   const context=latestContext(history);
   let selectedIds:string[]|undefined;
+  if(selection){
+    const candidate=canSuggestCandidates(selection.query)?searchCandidates(selection.query,archive).find(c=>c.id===selection.id):undefined;
+    if(!candidate)return {kind:'clarify',question:q,answer:'这项选择已无法对应刚才的资料，请重新提问或选择专题。',records:[],citations:[],suggestions:[]};
+    selectedIds=candidate.records;resolved=candidate.question;topic=learningTopics.find(t=>t.id===candidate.topicId);intent='ask';
+  }
   if(['simple','detail','show','source'].includes(intent)&&context?.question===resolved&&!context.topicId)selectedIds=context.records;
   if(intent==='select'||intent==='other'||intent==='reason'){
     const contextRows=(context?.records||[]).map(id=>archive.records.find(r=>r.id===id)).filter((r):r is RecordEntry=>!!r&&r.citations.some(id=>archive.sources.get(id)?.url.startsWith('https://')));
@@ -116,7 +126,10 @@ export function prepareAnswer(question: string, history: Turn[], archive: Archiv
   // (e.g. dates or awards appended to a topic) continue through the evidence guard.
   const requestedIds=selectedIds||topic?.records||result.records;
   let rows=requestedIds.map(id=>archive.records.find(r=>r.id===id)).filter((r):r is RecordEntry=>!!r&&r.citations.some(id=>archive.sources.get(id)?.url.startsWith('https://')));
-  if(!rows.length)return {kind:'missing',question:resolved,intent,answer:intent==='show'?'先告诉我你想看哪一种针法或哪件作品，我就能带你到对应页面。':'这个问题的依据还不够。可以补充具体作品、针法或出处，我再帮你找；不会用相近资料代替答案。',citations:[],records:[],suggestions:['苏绣和湘绣有什么区别？','带我看辽代龙虎纹刺绣残片']};
+  if(!rows.length){
+    const candidates=intent==='ask'&&canSuggestCandidates(q)?searchCandidates(q,archive):[];
+    return {kind:'missing',question:resolved,askedQuestion:q,intent,answer:candidates.length?'还不能确定你具体想了解什么。我找到几项可能相关的资料，请选一项，我们接着讲。':intent==='show'?'先告诉我你想看哪一种针法或哪件作品，我就能带你到对应页面。':'这个问题的依据还不够。可以补充具体作品、针法或出处，我再帮你找；不会用相近资料代替答案。',citations:[],records:[],candidates,suggestions:candidates.length?[]:['苏绣和湘绣有什么区别？','带我看辽代龙虎纹刺绣残片']};
+  }
   topic=selectedIds?learningTopics.find(t=>t.records.length===rows.length&&rows.every(r=>t.records.includes(r.id))):topic||topicForRows(rows);
   rows=rows.slice(0,topic?.id==='four'||topic?.overview?4:detail==='detailed'?3:2);
   const citations=rows.map(r=>({...archive.sources.get(r.citations.find(id=>archive.sources.get(id)?.url.startsWith('https://'))!)!,recordId:r.id}));
@@ -128,15 +141,27 @@ export function prepareAnswer(question: string, history: Turn[], archive: Archiv
     return `${rows.length>1?r.title+'：':''}${[r.summary,...facts].join(' ')}〔${i+1}〕`;
   });
   let answer=(simple?'我们换个说法，先抓住重点：\n':rows.length>1?'我们分开看：\n':'')+lines.join('\n\n');
+  if(oralTopic)answer='先按本站收录的苏绣资料说明：\n\n'+answer;
   if(detail==='detailed'&&topic)answer+='\n\n观察提示：'+topic.prompt;
   if(intent==='show')answer=topic?.demo?'可以。下面先看这份数字针迹示意，再点“打开对应针法演示”，就能逐针观察。':rows.some(r=>r.museum)?'可以。我们先核对这件作品的馆藏编号，再查看馆方提供的图像。':'可以。下面是和刚才话题对应的页面，点开就能继续看。';
   if(intent==='source')answer='这次讲解对应下面这些资料。可以展开出处核对，也可以进入百科查看完整记录。';
   const museum=rows.find(r=>r.museum);
-  return {kind:intent==='show'||intent==='source'?'guide':'evidence',question:resolved,intent,topicId:topic?.id,answer,citations,records:rows.map(r=>r.id),contextUsed:resolved!==q||result.contextUsed,
+  return {kind:intent==='show'||intent==='source'?'guide':'evidence',question:resolved,askedQuestion:q,intent,topicId:topic?.id,answer,citations,records:rows.map(r=>r.id),contextUsed:resolved!==q||result.contextUsed,
     actions:learningActions(rows,topic),
     illustration:topic?.demo&&intent==='show'?{src:`assets/xiaoli-lessons/${topic.demo}.svg`,caption:'项目数字针迹示意，取自现有练习数据；不是历史实物照片或完整实操教学。'}:undefined,
     museumRecordId:intent==='show'?museum?.id:undefined,
     suggestions:intent==='simple'?['给我看看','详细一点','出处在哪里']:['我还是不懂','给我看看','详细一点','换一个']};
+}
+
+export type FeedbackKind='missed'|'complex'|'demo';
+export function feedbackQuestion(previous:Answer):string {
+  return previous.askedQuestion&&questionIntent(previous.askedQuestion)==='ask'?previous.askedQuestion:previous.question;
+}
+export function prepareFeedback(kind:FeedbackKind,previous:Answer,history:Turn[],archive:Archive,api:KnowledgeModule,detail:Detail):Answer {
+  if(kind!=='missed'&&previous.records.length)return prepareAnswer(kind==='complex'?'说简单一点':'给我看看',history,archive,api,detail);
+  const question=feedbackQuestion(previous);
+  const candidates=canSuggestCandidates(question)?searchCandidates(question,archive):[];
+  return {kind:'clarify',question:'重新确认：'+question,askedQuestion:question,answer:kind==='missed'?'好，我们重新确认你的意思。可以选下面更接近的一项，或在输入框补充你真正想问的内容。':'先确定你想了解的对象，再继续讲解或看示范。可以选择资料，也可以补充名字。',records:[],citations:[],suggestions:[],candidates};
 }
 
 export function modelMessages(answer: Answer, history: Turn[], detail: Detail): Array<{role:'system'|'user'|'assistant';content:string}> {

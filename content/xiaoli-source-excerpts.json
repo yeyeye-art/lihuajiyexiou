@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "notice": "短原文人工核对来源网页；未收录原文的条目只能展示本站整理摘录。",
+  "excerpts": [
+    {"recordIds":["tool-frame","tool-bench"],"sourceId":"sz-official","url":"https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8","text":"绷架和绷凳","checkedAt":"2026-11-11"},
+    {"recordIds":["tool-needle"],"sourceId":"sz-official","url":"https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8","text":"绣针","checkedAt":"2026-11-11"},
+    {"recordIds":["tool-rest"],"sourceId":"sz-official","url":"https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8","text":"搁手板","checkedAt":"2026-11-11"},
+    {"recordIds":["process-main"],"sourceId":"sz-official","url":"https://szfy.wglj.suzhou.com.cn/index.php/fy-project/8","text":"设计绣稿、勾稿","checkedAt":"2026-11-11"}
+  ]
+}

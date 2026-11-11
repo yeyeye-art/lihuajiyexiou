@@ -2,7 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as api from '../assets/embroidery-knowledge.js';
-import {prepareAnswer,acceptModelAnswer,modelMessages,speechText} from '../src/features/xiaoli/knowledge.ts';
+import {prepareAnswer,prepareFeedback,feedbackQuestion,acceptModelAnswer,modelMessages,speechText} from '../src/features/xiaoli/knowledge.ts';
+import {searchCandidates} from '../src/features/xiaoli/retrieval.ts';
+import {sourceEvidence} from '../src/features/xiaoli/evidence.ts';
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
 const legacy=read('content/suxiu-knowledge.json'),world=read('content/embroidery-world.json');
 const sources=new Map(read('content/suxiu-sources.json').map(s=>[s.id,s]));
@@ -45,7 +47,7 @@ test('Read-aloud omits reference markers and links without sending questions any
 });
 
 import {learningTopics,questionIntent} from '../src/features/xiaoli/knowledge.ts';
-import {validateXiaoliTopics} from './validate-xiaoli-topics.mjs';
+import {validateXiaoliTopics,validateXiaoliSupport} from './validate-xiaoli-topics.mjs';
 import {readConversation,saveConversation,hasConversation} from '../src/features/xiaoli/session.ts';
 const talk=(history,q,detail='brief')=>{const reply=prepareAnswer(q,history,archive,api,detail);history.push({role:'user',content:q},{role:'assistant',content:reply.answer,records:reply.records,question:reply.question,topicId:reply.topicId});return reply;};
 test('Every curated topic has existing verified records, cited explanations and real lesson assets',()=>{
@@ -161,4 +163,55 @@ test('Factual qualifiers never get swallowed by a conversational intent',()=>{
   assert.equal(questionIntent(q),'ask');const h=[];talk(h,'苏绣和湘绣有什么区别？');assert.equal(talk(h,q).kind,'missing');
  }
  for(const [q,intent] of [['能不能再讲通俗一点','simple'],['这段话有依据吗','source'],['你是从哪里知道的','source']])assert.equal(questionIntent(q),intent);
+});
+
+test('Everyday questions retrieve useful candidates and require an explicit choice',()=>{
+ const cases=[['绣之前要准备些什么？',['tools','materials']],['一幅绣品是怎么一步步做出来的？',['process']],['用什么针法绣弯曲的线？',['gun']],['我想让花瓣的颜色过渡自然一点',['santao','color']]];
+ for(const [question,topics] of cases){
+  const reply=prepareAnswer(question,[],archive,api,'brief');assert.equal(reply.kind,'missing');assert.deepEqual(reply.records,[]);
+  for(const topic of topics){const candidate=reply.candidates.find(c=>c.topicId===topic);assert(candidate,question+' / '+topic);
+   const chosen=prepareAnswer(candidate.question,[],archive,api,'brief',{query:question,id:candidate.id});
+   assert.equal(chosen.kind,'evidence');assert(chosen.records.every(id=>candidate.records.includes(id)));assert(chosen.citations.length>0);
+  }
+ }
+});
+
+test('Chinese segmentation indexes real record names beyond the curated topics without unrelated matches',()=>{
+ const candidate=searchCandidates('钉线',archive)[0];assert.deepEqual(candidate.records,['stitch-dingxian']);
+ const selected=prepareAnswer(candidate.question,[],archive,api,'brief',{query:'钉线',id:candidate.id});assert.deepEqual(selected.records,['stitch-dingxian']);
+ assert(searchCandidates('刺绣的底布和丝线',archive).some(c=>c.topicId==='materials'));
+ for(const q of ['今天股票怎么涨','火箭发动机维修','云肩','   '])assert.deepEqual(searchCandidates(q,archive),[],q);
+});
+
+test('Reviewed oral aliases stay scoped to Su embroidery and never absorb extra claims',()=>{
+ for(const [q,topic] of [['苏绣开始前需要准备什么工具？','tools'],['苏绣要用什么工具','tools'],['一幅苏绣是怎么一步步做出来的？','process'],['苏绣的制作步骤是什么','process']]){
+  const a=prepareAnswer(q,[],archive,api,'brief');assert.equal(a.topicId,topic);assert.match(a.answer,/苏绣资料/);
+  assert.equal(prepareAnswer(q+'在2099年获得什么奖',[],archive,api,'brief').kind,'missing');
+ }
+ for(const q of ['苏绣在2099年获得什么奖','最早的绣针是谁发明的','苏绣工具保证治疗疾病'])assert.equal(prepareAnswer(q,[],archive,api,'brief').candidates?.length||0,0);
+ assert.equal(prepareAnswer('滚针',[],archive,api,'brief',{query:'苏绣在2099年获得什么奖',id:'topic:gun'}).kind,'clarify');
+ assert.equal(prepareAnswer('滚针',[],archive,api,'brief',{query:'绣之前要准备些什么',id:'topic:gun'}).kind,'clarify');
+});
+
+test('Source excerpts retain record and URL binding; paraphrases are not claimed as original quotes',()=>{
+ const tools=prepareAnswer('苏绣需要哪些工具？',[],archive,api,'brief');
+ for(const source of tools.citations){const e=sourceEvidence(source,archive);assert(e.original);assert.equal(e.original.url,source.url);assert(e.original.recordIds.includes(source.recordId));assert(e.summary.includes(archive.records.find(r=>r.id===source.recordId).summary));}
+ const gun=prepareAnswer('滚针',[],archive,api,'brief');assert.equal(sourceEvidence(gun.citations[0],archive).original,undefined);
+ assert.equal(sourceEvidence({...gun.citations[0],url:'https://example.invalid'},archive),undefined);
+});
+
+test('Search hints and original excerpts fail validation on missing provenance or ambiguous automatic aliases',()=>{
+ assert.deepEqual(validateXiaoliSupport(),{searchTopics:7,originalExcerpts:4});
+ const bad=read('content/xiaoli-source-excerpts.json');bad.excerpts[0].recordIds=['stitch-gun'];assert.throws(()=>validateXiaoliSupport(undefined,bad));
+ const hints=read('content/xiaoli-search-hints.json');hints.topics[1].direct=hints.topics[0].direct;assert.throws(()=>validateXiaoliSupport(hints));
+});
+
+test('Feedback changes the next step, keeps simplification cited, and never treats correction as new evidence',()=>{
+ const h=[];const previous=talk(h,'散套针怎么理解？');
+ const simple=prepareFeedback('complex',previous,h,archive,api,'detailed');assert.equal(simple.intent,'simple');assert.deepEqual(simple.records,previous.records);assert(simple.citations.length>0);
+ const demo=prepareFeedback('demo',previous,h,archive,api,'brief');assert(demo.actions.some(a=>a.href==='#guide/practice-demo-santao-pear-petal'));
+ assert.equal(feedbackQuestion(demo),previous.question);assert.notEqual(feedbackQuestion(demo),'给我看看');
+ const missed=prepareFeedback('missed',previous,h,archive,api,'brief');assert.equal(missed.kind,'clarify');assert.deepEqual(missed.records,[]);assert.notEqual(missed.answer,previous.answer);
+ h.push({role:'assistant',content:missed.answer,question:missed.question,records:missed.records});assert.equal(talk(h,'第二种呢').records.length,0);
+ const missing=talk([],'苏绣在2099年获得什么奖');for(const kind of ['missed','complex','demo']){const a=prepareFeedback(kind,missing,[],archive,api,'brief');assert.equal(a.kind,'clarify');assert.equal(a.candidates.length,0);}
 });
