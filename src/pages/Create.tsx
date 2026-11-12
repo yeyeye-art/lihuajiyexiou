@@ -9,6 +9,7 @@ interface CreateProps {
 
 export const Create: React.FC<CreateProps> = ({ id = '', active = true }) => {
   const { patterns, ensurePatternsLoaded } = useApp();
+  const [sourceState,setSourceState]=useState<'ready'|'reading'|'error'>('ready');
   const [source, setSource] = useState(resolveAsset('assets/ivory/embroidery.webp'));
   const [sourceRecord, setSourceRecord] = useState<any>(null);
   const [title, setTitle] = useState('花间绣稿');
@@ -66,15 +67,18 @@ export const Create: React.FC<CreateProps> = ({ id = '', active = true }) => {
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
+    setSourceState('reading');
     try {
       const { readImage } = await import('../assets-proxy/engine.js');
       const dataUri = await readImage(file);
       setSource(dataUri);
+      setSourceState('ready');
       setSourceRecord(null);
       setStorySession(null);
       setResult(null);
       setStatusText('');
     } catch (err: any) {
+      setSourceState('error');
       setStatusText(err.message || '图片读取失败');
     }
   };
@@ -181,7 +185,7 @@ export const Create: React.FC<CreateProps> = ({ id = '', active = true }) => {
       </ol>
 
       <div className="split create-layout">
-        <div className="card">
+        <div className="card" data-guide="photo-source" data-source-state={sourceState}>
           <img id="source-preview" className="image-fit" src={source} alt="当前转稿素材" />
           <label>
             选择自己有权使用的图片
