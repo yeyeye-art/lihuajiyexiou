@@ -9,6 +9,7 @@ import {XiaoliMetImage} from '../components/XiaoliMetImage';
 import {XiaoliReadAloud} from '../components/XiaoliReadAloud';
 import {XiaoliEvidence} from '../components/XiaoliEvidence';
 import '../styles/xiaoli.css';
+import {takeQuestion,handoffEvent} from '../features/libao/handoff';
 
 type Message = ConversationMessage;
 type Avatar = {dispose:()=>void;setState:(state:string)=>void};
@@ -45,6 +46,11 @@ export const Xiaoli:React.FC=()=>{
   const model=useRef<LocalModel | undefined>(undefined),voice=useRef<LocalVoice | undefined>(undefined),abort=useRef<AbortController | undefined>(undefined);
   const alive=useRef(true),modelEpoch=useRef(0),voiceEpoch=useRef(0),id=useRef(Math.max(0,...messages.map(m=>m.id)));
 
+  useEffect(()=>{
+    const receive=()=>{const question=takeQuestion();if(question){setInput(question);requestAnimationFrame(()=>document.getElementById('xiaoli-question')?.focus());}};
+    receive();window.addEventListener(handoffEvent,receive);
+    return()=>window.removeEventListener(handoffEvent,receive);
+  },[]);
   useEffect(()=>{
     alive.current=true;
     fetch(asset('content/xiaoli-runtime.json')).then(r=>r.json()).then((data:unknown)=>{
@@ -196,7 +202,7 @@ export const Xiaoli:React.FC=()=>{
         </details>
         {currentTopic&&<p className="xiaoli-current-topic">正在聊：{currentTopic.title}</p>}
         <div className="xiaoli-messages" ref={log} onScroll={checkReadingPosition} role="log" aria-live="polite" aria-relevant="additions">
-          {messages.map(m=><article key={m.id} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span>{m.reply?<XiaoliEvidence text={m.text} sources={m.reply.citations} archive={archive}/>:<p>{m.text}</p>}
+          {messages.map(m=><article key={m.id} data-libao-answer={m.reply?.kind==='evidence'?m.id:undefined} data-libao-topic={m.reply?.topicId} className={`xiaoli-message ${m.role}`}><span>{m.role==='user'?'你':'小梨'}</span>{m.reply?<XiaoliEvidence text={m.text} sources={m.reply.citations} archive={archive}/>:<p>{m.text}</p>}
             {m.reply&&<small>{m.reply.kind==='model'?'本机模型解释':m.reply.kind==='evidence'?'文献摘要':m.reply.kind==='missing'?'需要更多资料':'小梨'}</small>}
             {m.reply?.illustration&&<figure className="xiaoli-lesson-image"><img src={asset(m.reply.illustration.src)} alt="对应针法的数字线条示意" loading="lazy"/><figcaption>{m.reply.illustration.caption}</figcaption></figure>}
             {m.reply?.museumRecordId&&archive?.records.find(r=>r.id===m.reply?.museumRecordId)&&<XiaoliMetImage record={archive.records.find(r=>r.id===m.reply?.museumRecordId)!}/>}

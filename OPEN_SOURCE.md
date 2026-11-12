@@ -22,3 +22,8 @@
 图片、字体、图样、文创照片、3D模型、馆藏图像和数字针迹数据不在上述代码许可范围。请逐项查看原有来源、许可证与元数据。`assets/xiaoli-lessons/` 的图示来自现有数字练习数据，其素材权利沿用原数据说明。不要把博物馆公有领域图像的许可扩大解释为馆方文字、商标或所有馆藏图像的许可。
 
 依赖库保持各自许可：MiniSearch 使用 MIT 许可，WebLLM与Qwen模型按上游说明，Three.js及其他第三方代码保留其原始声明，具体入口见 [小梨说明](docs/xiaoli/README.md)。语音运行库许可不等于训练数据许可；本机 Baker 中文试听包有非商业限制，不提交到仓库，普通网站构建也不包含其权重。
+
+
+梨宝本轮新增的原创导览代码按 [MIT License](licenses/LIBAO-MIT.txt) 开源，范围为 `src/features/libao/`、`src/components/LibaoGuide.tsx`、`src/components/LibaoAvatar.tsx`、`src/styles/libao.css`、`scripts/libao.test.mjs`、`scripts/libao.acceptance.py` 和 `docs/libao/`。历史文件及其修改不因此改变许可；原梨宝模型也不在此代码授权范围。
+
+Driver.js 固定为 1.12.1，使用 MIT 许可；版权声明同时保留在网站资源 `assets/licenses/driver-MIT.txt`。上游：https://github.com/nilbuild/driver.js 。

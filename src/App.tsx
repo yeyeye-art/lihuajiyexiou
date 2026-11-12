@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { Modal } from './components/Modal';
 import { loadRestoredSections } from './components/RestoredSection';
 import { PageSkeleton } from './components/PageSkeleton';
+import {LibaoGuide} from './components/LibaoGuide';
 
 // Route-level code splitting with lazy loading
 const Home = lazy(() => import('./pages/Home').then((m) => ({ default: m.Home })));
@@ -102,6 +103,7 @@ export const App: React.FC = () => {
       </div>
       <BottomNav currentPage={page} />
       <Modal />
+      <LibaoGuide page={page} param={param}/>
     </>
   );
 };

@@ -8,7 +8,7 @@
     "build": "node scripts/normalize-patterns.mjs && node scripts/seed-database.mjs && node scripts/validate-embroidery-world.mjs && node scripts/build.mjs && node scripts/verify-pages.mjs",
     "export:assets": "node scripts/package-assets-repo.mjs",
     "db:normalize": "node scripts/normalize-patterns.mjs && node scripts/seed-database.mjs",
-    "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs scripts/met-clouds.test.cjs scripts/suxiu.test.cjs scripts/stitch.test.cjs scripts/stitch-course.test.cjs scripts/digital-tools.test.cjs scripts/learning-paths.test.cjs scripts/santao-cinematic.test.cjs scripts/ar-santao.test.cjs scripts/color-atlas.test.cjs scripts/encyclopedia.test.cjs scripts/motif-game.test.cjs scripts/motif-mini-games.test.cjs scripts/motif-park-economy.test.cjs scripts/embroidered-world-stage1.test.cjs scripts/cloud-save.test.cjs scripts/motif-friend-duel.test.cjs scripts/xiaoli-preview.test.mjs",
+    "test": "node --test scripts/ar-state.test.cjs scripts/story.test.cjs scripts/library.test.cjs scripts/met-clouds.test.cjs scripts/suxiu.test.cjs scripts/stitch.test.cjs scripts/stitch-course.test.cjs scripts/digital-tools.test.cjs scripts/learning-paths.test.cjs scripts/santao-cinematic.test.cjs scripts/ar-santao.test.cjs scripts/color-atlas.test.cjs scripts/encyclopedia.test.cjs scripts/motif-game.test.cjs scripts/motif-mini-games.test.cjs scripts/motif-park-economy.test.cjs scripts/embroidered-world-stage1.test.cjs scripts/cloud-save.test.cjs scripts/motif-friend-duel.test.cjs scripts/xiaoli-preview.test.mjs scripts/libao.test.mjs",
     "prepare:xiaoli-voice": "node scripts/prepare-xiaoli-voice.mjs"
   },
   "engines": {
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@mlc-ai/web-llm": "0.2.87",
+    "driver.js": "1.12.1",
     "minisearch": "^7.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
