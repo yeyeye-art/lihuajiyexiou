@@ -2,6 +2,7 @@ import {pageNames} from '../../utils/router.ts';
 
 export interface Destination {page:string; href:string; description:string}
 export const destinations:Destination[]=[
+  {page:'home',href:'#home',description:'回到首页，查看主要体验入口。'},
   {page:'about',href:'#about',description:'查看功能边界、资料来源和隐私说明。'},
   {page:'library',href:'#library',description:'按题材、地区与资料类型查找纹样，查看来源。'},
   {page:'create',href:'#create',description:'照片转化和故事译绣在同一个工坊，选择一种方式开始。'},
@@ -12,9 +13,13 @@ export const destinations:Destination[]=[
   {page:'gallery',href:'#gallery',description:'浏览文创展示和资料，再进入试搭体验。'},
   {page:'guide',href:'#guide',description:'浏览刺绣文化百科、学习路线和数字针迹实验室。'},
   {page:'profile',href:'#profile',description:'查看本机学习记录与已有账号、云存档入口。'},
+  {page:'face',href:'#face',description:'选择文创物件试搭；使用相机需要你的授权。'},
+  {page:'search',href:'#search',description:'搜索绣品、针法和灵感资料。'},
+  {page:'exhibit',href:'#exhibit',description:'查看梨花新绣的展陈内容。'},
+  {page:'collaborate',href:'#collaborate',description:'了解如何通过公开仓库参与协作修改。'},
 ];
 export const destinationName=(item:Destination)=>pageNames[item.page]||item.page;
-export interface Help {text:string; links:Destination[]; handoff?:string}
+export interface Help {text:string; links:Destination[]; handoff?:string;tour?:TourId}
 const links=(...pages:string[])=>pages.flatMap(page=>destinations.filter(d=>d.page===page));
 export function pageHelp(page:string,param=''):Help{
   const descriptions:Record<string,string>={
@@ -29,22 +34,30 @@ export function pageHelp(page:string,param=''):Help{
     ar:'按页面提示选择针法或体验。只有进入相机体验并授权后才使用摄像头；不支持时仍可阅读资料。',
     face:'先选展示物件，再按页面提示进行试搭。相机是否可用取决于设备与授权。',
     game:'选择绣境、章节和可玩的关卡。玩游戏时我会隐藏，避免挡住棋盘。',
+    search:'在搜索框输入绣品、针法或灵感关键词，再打开对应结果查看资料。',
+    exhibit:'浏览梨花新绣的展陈内容，再根据页面入口查看相关文创资料。',
+    collaborate:'这里介绍项目协作方式。修改公开代码需要通过 GitHub 仓库提交，没有站内假登录。',
   };
   return {text:descriptions[page]||'告诉我你想找什么，我会提供网站上真实存在的入口。',links:page==='create'?links('library','palette'):page==='guide'?links('xiaoli','ar'):links('library','create','xiaoli')};
 }
-export function guideAnswer(raw:string,page:string,param=''):Help{
+export function guideAnswer(raw:string,page:string,param='',previous?:Help):Help{
   const question=raw.trim().slice(0,500),q=question.toLowerCase().replace(/\s/g,'');
   if(!q)return pageHelp(page,param);
   if(/^(你好|您好|你是谁|梨宝|hello|hi)[！!。？?]*$/.test(q))return {text:'我是梨宝，帮你找到入口、看懂页面和走完一段操作。刺绣知识可以交给小梨。',links:links('library','create','xiaoli')};
-  if(/这[一]?页|这里|当前|怎么用|怎么开始|第一次|新手/.test(q))return pageHelp(page,param);
+  if(/^(那|这个|它|然后|接下来|那这个|那它)?(呢|怎么用|怎么操作|怎么开始|怎么做|下一步)[？?。！!]*$/.test(q)&&previous?.links.length===1){
+    const destination=previous.links[0];
+    return {...pageHelp(destination.page,destination.href==='#create/text'?'text':''),links:[destination],tour:destination.href==='#create'?'photo':undefined};
+  }
+  if(/第一次|新手|带我(逛|看看|参观)|导览/.test(q))return {...pageHelp('home'),tour:'visit'};
   if(/失败|打不开|没反应|不能|无法/.test(q))return {text:'先看当前页面的错误提示：资料未加载可尝试重试；生成参考稿前需要确认图片使用权限；相机需要设备支持和授权。我不会代替你修改权限或清除存档。',links:links('about','profile','xiaoli')};
-  if(/保存|隐私|上传.*(吗|哪里)|数据/.test(q))return {text:'照片转化在浏览器本机处理，当前照片和参考稿刷新后会清除，请先下载。学习记录和游戏云存档各有自己的保存方式，不能把它们都当作临时数据。',links:links('create','profile')};
+  if(/保存|隐私|上传.*(服务器|云端|吗)|数据/.test(q))return {text:'照片转化在浏览器本机处理，当前照片和参考稿刷新后会清除，请先下载。学习记录和游戏云存档各有自己的保存方式，不能把它们都当作临时数据。',links:links('create','profile')};
   if(/小梨|问答|百科/.test(q))return {text:'小梨在独立的“问问小梨”页面，专门讲解刺绣知识。你也可以先浏览百科。',links:links('xiaoli','guide')};
   if(/针法|苏绣|湘绣|蜀绣|粤绣|滚针|散套|历史|沈寿|为什么|怎么绣/.test(q))return {text:'这个问题适合请小梨结合资料讲解。我可以把原问题放进她的输入框，由你确认后发送。',links:[],handoff:question};
   if(/故事|文字/.test(q))return {text:'故事译绣和照片转化是同一个工坊里的两个功能。',links:[{page:'create',href:'#create/text',description:'打开故事译绣'}]};
-  const mapping:[RegExp,string][]=[[/照片|绣稿|上传|图片转|工坊/,'create'],[/颜色|配色|色谱|色卡/,'palette'],[/纹样|图案|花纹|灵感/,'library'],[/游戏|玩|三消|关卡|绣境地图/,'game'],[/相机|扫描|(?:^|[^a-z])ar(?:$|[^a-z])|增强现实/,'ar'],[/文创|绣馆|试搭/,'gallery'],[/记录|账号|云存档|登录/,'profile']];
+  const mapping:[RegExp,string][]=[[/照片|绣稿|上传|图片转|工坊/,'create'],[/颜色|配色|色谱|色卡/,'palette'],[/纹样|图案|花纹|灵感/,'library'],[/游戏|玩|三消|关卡|绣境地图/,'game'],[/试搭|试戴/,'face'],[/相机|扫描|(?:^|[^a-z])ar(?:$|[^a-z])|增强现实/,'ar'],[/文创|绣馆/,'gallery'],[/记录|账号|云存档|登录/,'profile'],[/首页|主页/,'home'],[/搜索|查找/,'search'],[/协作|贡献|开源/,'collaborate'],[/新绣|展陈/,'exhibit']];
   const found=mapping.find(([pattern])=>pattern.test(q));
-  if(found){const target=links(found[1]);return {text:target[0].description,links:target};}
+  if(found){const target=links(found[1]);const how=/怎么|教我|步骤/.test(q);return {text:how?pageHelp(found[1]).text:target[0].description,links:target,tour:found[1]==='create'?'photo':undefined};}
+  if(/这[一]?页|这里|当前|怎么用|怎么开始/.test(q))return pageHelp(page,param);
   return {text:'还不确定你想找哪个功能。可以说“找纹样”“用照片做绣稿”“去玩游戏”，或把刺绣问题交给小梨。',links:links('library','create','xiaoli')};
 }
 

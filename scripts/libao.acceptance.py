@@ -14,7 +14,8 @@ with sync_playwright() as p:
  b=p.chromium.launch(executable_path=args.browser,headless=True,args=['--enable-unsafe-swiftshader'])
  page=b.new_page(viewport={'width':1440,'height':1000},service_workers='block',reduced_motion='reduce');page.set_default_timeout(30000)
  page.on('pageerror',lambda e:errors.append(str(e)))
- page.goto(base,wait_until='networkidle',timeout=90000)
+ page.goto(base,wait_until='domcontentloaded',timeout=90000)
+ page.locator('.hero-cta').wait_for(timeout=60000)
  page.get_by_role('button',name='打开梨宝导览',exact=True).wait_for()
  assert page.locator('.driver-popover').count()==0
  page.get_by_role('button',name='打开梨宝导览',exact=True).click()
@@ -78,14 +79,15 @@ with sync_playwright() as p:
  assert box['x']>=0 and box['x']+box['width']<=390 and box['y']>=0 and box['y']+box['height']<844-65
  assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
  page.screenshot(path=str(out/'mobile-panel.png'),full_page=True)
- page.get_by_role('button',name='免打扰 · 收起形象',exact=True).click();page.reload(wait_until='networkidle')
+ page.get_by_role('button',name='免打扰 · 收起形象',exact=True).click();page.reload(wait_until='domcontentloaded')
+ page.get_by_role('button',name='打开梨宝导览',exact=True).wait_for()
  assert page.locator('.libao-avatar').count()==0
  assert page.evaluate("localStorage.getItem('libao-test-progress')==='keep'")
  page.get_by_role('button',name='打开梨宝导览',exact=True).click();page.get_by_role('button',name='恢复梨宝形象',exact=True).click()
  for route in ['game','ar','face']:
   page.goto(base.split('#')[0]+'#'+route,wait_until='domcontentloaded');page.wait_for_function('(p)=>document.body.dataset.page===p',arg=route)
   page.locator('.libao-guide').wait_for(state='detached')
- page.goto(base,wait_until='networkidle');page.get_by_role('button',name='打开梨宝导览',exact=True).wait_for()
+ page.goto(base,wait_until='domcontentloaded');page.get_by_role('button',name='打开梨宝导览',exact=True).wait_for()
  checks.append('mobile panel fits; quiet preference persists; game/camera pages hide guide; stored progress preserved')
  # Mobile tour targets and controls remain within the viewport.
  page.get_by_role('button',name='打开梨宝导览',exact=True).click();page.get_by_role('button',name='第一次逛梨花季',exact=False).click()

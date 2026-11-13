@@ -1,10 +1,10 @@
 import {useEffect, useRef, useState} from 'react';
 import {speechText} from '../features/xiaoli/knowledge';
 
-interface Props {text:string; stopSignal:number; onSpeaking:(speaking:boolean)=>void}
+interface Props {text:string; stopSignal:number; onSpeaking:(speaking:boolean)=>void;onStart?:()=>void;label?:string;idPrefix?:string}
 
 /** Use only installed voices: no text is handed to a remote voice provider. */
-export function XiaoliReadAloud({text,stopSignal,onSpeaking}:Props) {
+export function XiaoliReadAloud({text,stopSignal,onSpeaking,onStart,label='听小梨讲 · 设备朗读',idPrefix='xiaoli'}:Props) {
   const [voices,setVoices]=useState<SpeechSynthesisVoice[]>([]);
   const [selected,setSelected]=useState('');
   const [rate,setRate]=useState(0.95);
@@ -32,6 +32,7 @@ export function XiaoliReadAloud({text,stopSignal,onSpeaking}:Props) {
   useEffect(()=>{if(owned.current)setStatus('已停止朗读。');cancel();setReading(false);},[stopSignal,text]);
   const stop=()=>{cancel();setReading(false);setStatus('已停止朗读。');};
   const play=()=>{
+    onStart?.();
     cancel();
     const voice=voices.find(v=>v.voiceURI===selected);
     const sentences=speechText(text).match(/[^。！？!?]+[。！？!?]?/g)||[];
@@ -50,8 +51,8 @@ export function XiaoliReadAloud({text,stopSignal,onSpeaking}:Props) {
     next(0);
   };
   return <details className="xiaoli-read-aloud">
-    <summary>听小梨讲 · 设备朗读</summary>
-    {voices.length>0&&<><label htmlFor="xiaoli-device-voice">中文声音</label><select id="xiaoli-device-voice" value={selected} onChange={e=>{stop();setSelected(e.target.value);}}>{voices.map(v=><option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>)}</select><label htmlFor="xiaoli-speech-rate">讲解速度</label><select id="xiaoli-speech-rate" value={rate} onChange={e=>{stop();setRate(Number(e.target.value));}}><option value={0.85}>慢一点</option><option value={0.95}>舒缓</option><option value={1.1}>明快</option></select></>}
+    <summary>{label}</summary>
+    {voices.length>0&&<><label htmlFor={`${idPrefix}-device-voice`}>中文声音</label><select id={`${idPrefix}-device-voice`} value={selected} onChange={e=>{stop();setSelected(e.target.value);}}>{voices.map(v=><option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>)}</select><label htmlFor={`${idPrefix}-speech-rate`}>讲解速度</label><select id={`${idPrefix}-speech-rate`} value={rate} onChange={e=>{stop();setRate(Number(e.target.value));}}><option value={0.85}>慢一点</option><option value={0.95}>舒缓</option><option value={1.1}>明快</option></select></>}
     <p role="status">{status}</p>
     {text.length>500&&<p>长回答先朗读前 500 字，完整内容可在上方阅读。</p>}
     <button type="button" onClick={play} disabled={!voices.length||!text||reading}>朗读这条回答</button>

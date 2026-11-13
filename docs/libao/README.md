@@ -2,6 +2,24 @@
 
 梨宝负责站点使用和指路；小梨负责有出处的刺绣讲解。三个短导览仅由访客主动开始，没有收费接口或自动录音。
 
+## 主动迎宾与语音（2026-11-14）
+
+- 首页首次停留出现小型迎宾卡，访客可选“带我逛一圈”“我想找个功能”或“先自己看看”。不会抢焦点、自动换页或自动发声。选择后记录 `lihuaji.libao.welcome.v1=seen`；不触及原有学习与游戏存档。
+- “每一页有什么”列出全部15个命名页面与用途。明确的功能名称优先于“怎么用”；单一目的地支持“那怎么操作？”追问，照片操作可直接开始真实三步导览。
+- `LibaoVoice` 的麦克风必须由访客阅读提示、勾选并点击开启。浏览器语音识别可能把音频交给浏览器厂商的在线服务，不能宣传为纯离线。每次最多20秒，转写只填入输入框，确认后才找入口，不凭语音自动跳页。无接口、未授权、离线服务报错时保留文字入口。
+- 朗读复用设备中文声音，访客主动播放、换声音、调语速或停止；不新增收费服务。选用 `localService` 声音，没有本机中文声音时如实提示。音色取决于设备，不等同于真人或商业实时语音助手。
+- 收起、切页、进入后台会卸载语音控件并清理录音与朗读。开始朗读先结束录音，避免把梨宝的声音再次识别。
+
+### 开源学习来源
+
+2026-11-14 查阅：
+
+- [Driver.js](https://github.com/nilbuild/driver.js)：继续使用已安装的 MIT 版本做目标高亮、键盘退出、步骤控制，未追更依赖版本。
+- [react-speech-recognition](https://github.com/JamesBrill/react-speech-recognition)：借鉴显式启停、权限失败处理和不支持浏览器的文字回退；没有复制代码或新增依赖。其文档明确说明 Chrome 识别可能依赖服务器，产品提示保留这个边界。
+- [Transformers.js](https://github.com/huggingface/transformers.js)：可用于浏览器内语音识别，但需要模型资源与设备测试。本轮未接入，不把尚未验证的离线语音当作已交付能力。
+
+现行维护与发布地址为 https://yeyeye-art.github.io/lihuajiyexiou/ 。旧 https://yzou6525-ai.github.io/lihuaji/ 于本次检查返回旧的 `app.js?v=perf-v10` 页面，不代表新版部署内容。
+
 ## 入口与状态
 
 - 新版在 App 的全站层挂载 `LibaoGuide`。页面名称读取现有 `pageNames`，目的地与页面说明位于 `src/features/libao/guide.ts`。
@@ -30,5 +48,7 @@ python scripts/libao.acceptance.py --url https://yeyeye-art.github.io/lihuajiyex
 ```
 
 可通过 `--browser` 指定已有Chromium可执行文件。验收实际执行示例图转稿、下载SVG、滚针播放，并检查390px手机布局、键盘阻止跳步、来源问答转交、异常目标重试、关闭遮罩、免打扰与本机存储保持。脚本保存截图和结果JSON，不使用真实个人照片。
+
+`python scripts/libao-voice.acceptance.py --url <站点地址> --output outputs/libao-voice` 检查首次迎宾、关闭保持、手机布局、连续指路、全部页面入口及语音错误和清理流程。语音API在此脚本中明确使用测试替身；结果不代表真实麦克风识别率或设备音质验收。真实设备仍需本人允许麦克风后试说一句，并试听本机声音。页面就绪按实际操作区可见判断，不依赖所有可选资源进入网络空闲。
 
 原文化资料、游戏关卡、模型文件和云服务不在本轮修改范围。旧 `assets/agents/libao-knowledge.js` 仅供历史兼容，其过时入口和能力说明同步修正；新版不加载它。
