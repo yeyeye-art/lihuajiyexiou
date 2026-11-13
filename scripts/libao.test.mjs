@@ -3,6 +3,37 @@ import assert from 'node:assert/strict';
 import {destinations,guideAnswer,pageHelp,tours,gatePassed,quietPage} from '../src/features/libao/guide.ts';
 import {queueQuestion,takeQuestion} from '../src/features/libao/handoff.ts';
 import {parseHash,pageNames} from '../src/utils/router.ts';
+import {beginListening,voiceError} from '../src/features/libao/voice.ts';
+
+test('Specific requests beat generic how-to language and follow-up keeps the selected destination',()=>{
+ const photo=guideAnswer('照片转绣稿怎么用','home');assert.equal(photo.links[0].href,'#create');assert.equal(photo.tour,'photo');
+ const follow=guideAnswer('那怎么操作？','home','',photo);assert.equal(follow.links[0].href,'#create');assert.match(follow.text,/使用权限/);
+ assert.equal(guideAnswer('图片在哪里上传','home').links[0].href,'#create');
+ assert.equal(guideAnswer('试戴在哪里','home').links[0].href,'#face');
+ assert.equal(guideAnswer('第一次来，带我逛逛','home').tour,'visit');
+ assert.match(guideAnswer('照片会上传服务器吗','home').text,/本机处理/);
+ assert.deepEqual(new Set(destinations.map(item=>item.page)),new Set(Object.keys(pageNames)));
+});
+
+test('Speech uses explicit one-shot Chinese recognition and ignores late results after disposal',()=>{
+ let instance,ended=0;const texts=[],statuses=[];
+ class Recognition {constructor(){instance=this;}start(){this.started=true;}stop(){this.stopped=true;}abort(){this.aborted=true;}}
+ const session=beginListening(Recognition,{text:value=>texts.push(value),status:value=>statuses.push(value),end:()=>ended++});
+ assert(instance.started);assert.equal(instance.lang,'zh-CN');assert.equal(instance.continuous,false);
+ instance.onresult({resultIndex:0,results:[{isFinal:false,0:{transcript:'未完成'}}]});assert.equal(texts.length,0);
+ instance.onresult({resultIndex:0,results:[{isFinal:true,0:{transcript:'  我想找纹样  '}}]});assert.deepEqual(texts,['我想找纹样']);
+ session.stop();assert(instance.stopped);instance.onend();assert.equal(ended,1);assert.match(statuses.at(-1),/修改/);
+ const late=instance.onresult;session.dispose();late({resultIndex:0,results:[{isFinal:true,0:{transcript:'不应该出现'}}]});assert.equal(texts.length,1);assert(instance.aborted);
+});
+
+test('Speech errors, unavailable permissions and timeout return to typing without loops',t=>{
+ t.mock.timers.enable({apis:['setTimeout']});let instance,ended=0,status='';
+ class Recognition {constructor(){instance=this;}start(){}stop(){}abort(){this.aborted=true;}}
+ const callbacks={text:()=>assert.fail('Must not fabricate transcript'),status:value=>status=value,end:()=>ended++};
+ const first=beginListening(Recognition,callbacks);instance.onerror({error:'not-allowed'});assert.equal(ended,1);assert.match(status,/授权/);first.dispose();
+ const second=beginListening(Recognition,callbacks);t.mock.timers.tick(20001);assert(instance.aborted);assert.equal(ended,2);assert.match(status,/到时/);second.dispose();
+ assert.match(voiceError('network'),/连不上/);assert.match(voiceError('no-speech'),/没有听清楚/);
+});
 
 test('Libao routes follow the current studio and Xiaoli destinations',()=>{
  for(const item of destinations){assert(pageNames[item.page]);assert.equal(parseHash(item.href).page,item.page);}

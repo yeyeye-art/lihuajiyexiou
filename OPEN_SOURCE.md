@@ -27,3 +27,5 @@
 梨宝本轮新增的原创导览代码按 [MIT License](licenses/LIBAO-MIT.txt) 开源，范围为 `src/features/libao/`、`src/components/LibaoGuide.tsx`、`src/components/LibaoAvatar.tsx`、`src/styles/libao.css`、`scripts/libao.test.mjs`、`scripts/libao.acceptance.py` 和 `docs/libao/`。历史文件及其修改不因此改变许可；原梨宝模型也不在此代码授权范围。
 
 Driver.js 固定为 1.12.1，使用 MIT 许可；版权声明同时保留在网站资源 `assets/licenses/driver-MIT.txt`。上游：https://github.com/nilbuild/driver.js 。
+
+2026-11-14 新增的原创 `src/components/LibaoVoice.tsx` 与 `scripts/libao-voice.acceptance.py` 同样纳入上述梨宝 MIT 代码范围。语音浏览器兼容思路参考 react-speech-recognition 文档，没有复制该库代码或引入新的语音服务依赖；浏览器服务的条款不属于本站代码许可。
